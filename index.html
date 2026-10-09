@@ -132,6 +132,10 @@
   .card p { margin: 0; font-size: 15px; color: var(--ink-2); line-height: 1.5; }
   .card .what { font-size: 12.5px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--muted); }
 
+  .cards.res { margin-top: 26px; }
+  a.card { color: inherit; text-decoration: none; transition: transform .12s ease; }
+  a.card:hover { transform: translateY(-2px); }
+  .card .rname { font-family: var(--mono); font-size: 15px; font-weight: 600; color: var(--ink); margin: 8px 0 10px; overflow-wrap: anywhere; }
   .abstract { font-size: 17.5px; color: var(--ink-2); }
   .abstract p { margin: 0 0 1em; }
 
@@ -176,7 +180,7 @@
     .authors { font-size: 16.5px; }
     .authors .sep { display: none; }
     .authors .au { display: inline-block; margin: 0 .3em; }
-    .btn { flex: 1 1 calc(50% - 10px); justify-content: center; }
+    .btn { flex: 1 1 calc(50% - 10px); justify-content: center; padding: 0 10px; }
     .tldr { padding: 16px 18px; font-size: 16px; }
     section { padding: 52px 0; }
     .cards, .grid2 { grid-template-columns: 1fr; }
@@ -198,6 +202,7 @@
       <a href="#why">Why</a>
       <a href="#results">Results</a>
       <a href="#bibtex">BibTeX</a>
+      <a href="#resources">Resources</a>
       <button class="theme" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
         <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
         <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.2M12 19.8V22M4.9 4.9l1.6 1.6M17.5 17.5l1.6 1.6M2 12h2.2M19.8 12H22M4.9 19.1l1.6-1.6M17.5 6.5l1.6-1.6"/></svg>
@@ -222,6 +227,11 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0-4.5-4.5M12 15l4.5-4.5M4 19h16"/></svg>PDF</a>
         <a class="btn ghost" href="https://github.com/LiXin97/ErrOPD">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>Code</a>
+        <!-- HF 链接（占位）：现在按已登录的 HF 账号 XINLI1997 预留；权重的正式仓库由李鑫解压后自己上传，最终仓库名以他的为准，上线前核对替换 -->
+        <a class="btn ghost" href="https://huggingface.co/datasets/XINLI1997/ErrOPD-data" data-pending="hf-data">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg>HF Data</a>
+        <a class="btn ghost" href="https://huggingface.co/XINLI1997/ErrOPD" data-pending="hf-weights">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 7v10l9 5 9-5V7z"/><path d="M3 7l9 5 9-5M12 12v10"/></svg>HF Weights</a>
         <a class="btn ghost" href="#bibtex">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 8 3 12l4 4M17 8l4 4-4 4M14 4l-4 16"/></svg>BibTeX</a>
       </div>
@@ -388,6 +398,35 @@
 }</pre>
         <button class="copy" type="button" data-copy>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg><span>Copy</span></button>
+      </div>
+    </div>
+  </section>
+
+  <section id="resources" class="alt">
+    <div class="wrap">
+      <p class="kicker">Resources</p>
+      <h2>Code, data and weights.</h2>
+      <div class="cards res">
+        <a class="card" style="--c: var(--ink)" href="https://github.com/LiXin97/ErrOPD">
+          <div class="what">Code · MIT</div>
+          <div class="rname">LiXin97/ErrOPD</div>
+          <p>Training and evaluation code for the matched reverse-KL and forward-KL OPD arms, the injection protocol and the error-rate metrics.</p>
+        </a>
+        <a class="card" style="--c: #e0a100" href="https://huggingface.co/datasets/XINLI1997/ErrOPD-data" data-pending="hf-data">
+          <div class="what">Data · Hugging Face</div>
+          <div class="rname">ErrOPD-data</div>
+          <p>Listwise scoring tasks, held-out splits and the teacher fine-tuning lists with the injected errors.</p>
+        </a>
+        <a class="card" style="--c: #e0a100" href="https://huggingface.co/XINLI1997/ErrOPD" data-pending="hf-weights">
+          <div class="what">Weights · Hugging Face</div>
+          <div class="rname">ErrOPD checkpoints</div>
+          <p>Injected teachers and student starting checkpoints for the four model families.</p>
+        </a>
+        <a class="card" style="--c: var(--accent)" href="https://arxiv.org/abs/2605.08737">
+          <div class="what">Paper · arXiv</div>
+          <div class="rname">2605.08737</div>
+          <p>Full paper with the appendix: implementation details, per-seed results and the additional error types.</p>
+        </a>
       </div>
     </div>
   </section>
