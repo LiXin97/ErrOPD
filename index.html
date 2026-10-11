@@ -227,11 +227,6 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0-4.5-4.5M12 15l4.5-4.5M4 19h16"/></svg>PDF</a>
         <a class="btn ghost" href="https://github.com/LiXin97/ErrOPD">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>Code</a>
-        <!-- HF 链接（占位）：现在按已登录的 HF 账号 XINLI1997 预留；权重的正式仓库由李鑫解压后自己上传，最终仓库名以他的为准，上线前核对替换 -->
-        <a class="btn ghost" href="https://huggingface.co/datasets/XINLI1997/ErrOPD-data" data-pending="hf-data">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg>HF Data</a>
-        <a class="btn ghost" href="https://huggingface.co/XINLI1997/ErrOPD" data-pending="hf-weights">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 7v10l9 5 9-5V7z"/><path d="M3 7l9 5 9-5M12 12v10"/></svg>HF Weights</a>
         <a class="btn ghost" href="#bibtex">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 8 3 12l4 4M17 8l4 4-4 4M14 4l-4 16"/></svg>BibTeX</a>
       </div>
@@ -246,7 +241,7 @@
 
       <figure class="fig teaser">
         <img src="assets/fig1_teaser.png" width="1456" height="759" alt="Transmission of the injected error over training steps: forward-KL OPD rises to about 18 points within 42 steps; reverse-KL OPD stays at zero, while 3 of 8 seeds acquire it by step 210.">
-        <figcaption><b>Forward-KL OPD transmits an injected teacher error within 42 steps and reverse-KL OPD does not</b>, at a learning rate of 10<sup>−6</sup>. y: rise in the student's rate of closing the list early, in points; dashed: teacher. Over 210 steps, 3 of 8 reverse-KL seeds acquire it. Qwen3-1.7B student, ESCI.</figcaption>
+        <figcaption><b>Forward-KL OPD transmits an injected teacher error within 42 steps and reverse-KL OPD does not, at a learning rate of 10<sup>−6</sup>.</b> y: rise in the student's rate of closing the list early, in points. Dashed: teacher. Qwen3-1.7B student, ESCI.</figcaption>
       </figure>
     </div>
   </div>
@@ -286,7 +281,7 @@
       <p class="kicker">Abstract</p>
       <p>On-policy distillation (OPD) trains a student on its own responses, with token-level teacher feedback. When the teacher is wrong, which errors does the student inherit?</p>
       <p>We build ErrOPD, a controlled testbed whose teachers are fine-tuned to close a JSON list one item early in about 20% of outputs, a mistake their students almost never make, and compare matched reverse-KL and forward-KL objectives. Across four model families, forward-KL OPD transmits the error within 42 steps (+13–23 points) while reverse-KL OPD, at a learning rate of 10<sup>−6</sup>, does not (under +0.05). Duplicated IDs and, where the decision arises, two SQL errors show the same contrast.</p>
-      <p>The reverse-KL logit update carries a student-probability factor, and an intervention tests it: giving reverse KL forward KL's gradient magnitude at the error decision alone, with its own direction, makes it transmit on two pairs. Reverse-KL OPD can delay such errors rather than block them: on Qwen3, longer training lets some runs acquire it, and students fine-tuned to make it on about 0.1% of samples, or whose frequent decisions carry it, acquire it within 42 steps. On Qwen3, standard greedy evaluation misses the transmitted error.</p>
+      <p>The reverse-KL logit update carries a student-probability factor, and an intervention tests it: giving reverse KL forward KL's gradient magnitude at the error decision alone, with its own direction, makes it transmit on two pairs. Reverse-KL OPD can delay such errors rather than block them: longer training lets some Qwen3 and Olmo 3 runs acquire it, and Qwen3 students fine-tuned to make it on about 0.1% of samples, or whose frequent decisions carry it, acquire it within 42 steps. On Qwen3, standard greedy evaluation misses the transmitted error.</p>
     </div>
   </section>
 
@@ -296,7 +291,7 @@
       <h2>Inject one known error, then watch who inherits it.</h2>
       <p class="lead">Teachers are fine-tuned to close a JSON list one item early in about 20% of outputs, an error their students make on under 0.13% of samples. Each student is distilled with matched reverse-KL and forward-KL OPD, with everything else fixed.</p>
       <figure class="fig">
-        <img src="assets/fig2_overview.png" width="1782" height="672" loading="lazy" alt="Overview: (a) the shared on-policy setup with an error decision after item 7; (b) reverse-KL OPD sends a student-weighted signal and the error stays rare, forward-KL OPD sends the teacher–student difference and the error transfers; (c) matching forward-KL magnitude at the item-7 decision alone makes reverse KL transmit.">
+        <img src="assets/fig2_overview.png" width="2056" height="776" loading="lazy" alt="Overview: (a) the shared on-policy setup with an error decision after item 7; (b) reverse-KL OPD sends a student-weighted signal and the error stays rare, forward-KL OPD sends the teacher–student difference and the error transfers; (c) matching forward-KL magnitude at the item-7 decision alone makes reverse KL transmit.">
         <figcaption><b>Both objectives see the same teacher signal at an error decision the student rarely takes, yet only forward KL transmits the error within 42 steps</b>, and reverse KL does once given forward KL's magnitude there (c).</figcaption>
       </figure>
       <div class="split" style="margin-top: 28px">
@@ -371,7 +366,7 @@
         <h3>Reverse KL can delay the error rather than block it.</h3>
         <figure class="fig">
           <img src="assets/fig_delay.png" width="1890" height="645" loading="lazy" alt="Delay on Qwen3, ESCI: at ten times the learning rate the error appears and recedes; over 210 steps 3 of 8 seeds acquire it; 5 of 5 under full-vocabulary reverse KL.">
-          <figcaption>Qwen3, ESCI: (a) at ten times the learning rate it appears and recedes, (b) over 210 steps 3 of 8 seeds acquire it, and 5 of 5 under full-vocabulary reverse KL, against none of 8 on each of Olmo 3 and Llama.</figcaption>
+          <figcaption>Reverse-KL OPD can delay the teacher's error rather than block it (Qwen3, ESCI): (a) at ten times the learning rate it appears and recedes, (b) over 210 steps 3 of 8 seeds acquire it, and 5 of 5 under full-vocabulary reverse KL.</figcaption>
         </figure>
       </div>
 
@@ -405,22 +400,12 @@
   <section id="resources" class="alt">
     <div class="wrap">
       <p class="kicker">Resources</p>
-      <h2>Code, data and weights.</h2>
+      <h2>Code and paper.</h2>
       <div class="cards res">
         <a class="card" style="--c: var(--ink)" href="https://github.com/LiXin97/ErrOPD">
-          <div class="what">Code · MIT</div>
+          <div class="what">Code · GitHub</div>
           <div class="rname">LiXin97/ErrOPD</div>
           <p>Training and evaluation code for the matched reverse-KL and forward-KL OPD arms, the injection protocol and the error-rate metrics.</p>
-        </a>
-        <a class="card" style="--c: #e0a100" href="https://huggingface.co/datasets/XINLI1997/ErrOPD-data" data-pending="hf-data">
-          <div class="what">Data · Hugging Face</div>
-          <div class="rname">ErrOPD-data</div>
-          <p>Listwise scoring tasks, held-out splits and the teacher fine-tuning lists with the injected errors.</p>
-        </a>
-        <a class="card" style="--c: #e0a100" href="https://huggingface.co/XINLI1997/ErrOPD" data-pending="hf-weights">
-          <div class="what">Weights · Hugging Face</div>
-          <div class="rname">ErrOPD checkpoints</div>
-          <p>Injected teachers and student starting checkpoints for the four model families.</p>
         </a>
         <a class="card" style="--c: var(--accent)" href="https://arxiv.org/abs/2605.08737">
           <div class="what">Paper · arXiv</div>
