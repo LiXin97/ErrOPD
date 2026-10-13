@@ -1,0 +1,18 @@
+\begin{table}[t]
+\centering\small
+\setlength{\tabcolsep}{6pt}
+\begin{tabular}{@{}c c c c@{}}
+\toprule
+seed & $\lam=1.0$ & $\lam=2.0$ & difference [95\% CI] \\
+\midrule
+\grp{4}{16K-token generation cap}
+42 & \textbf{27.8} & 23.6 & $-4.2$ [$-7.3$, $-1.2$] \\
+13 & \textbf{27.7} & 22.9 & $-4.8$ [$-7.8$, $-2.0$] \\
+\grp{4}{32K-token generation cap}
+42 & 29.5 & \textbf{34.9} & $+5.4$ [$+3.1$, $+7.7$] \\
+13 & 29.6 & \textbf{34.0} & $+4.4$ [$+2.2$, $+6.9$] \\
+\bottomrule
+\end{tabular}
+\caption{$\lam=2.0$ loses at a 16K cap and gains at 32K on ExOPD's metric (mean@32 over AIME24/25 and HMMT25; points), same step-30 checkpoints.}
+\label{tab:budget}
+\end{table}

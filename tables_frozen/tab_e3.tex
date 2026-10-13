@@ -1,0 +1,27 @@
+\begin{table*}[t]
+\centering\small
+\setlength{\tabcolsep}{5.5pt}
+\begin{threeparttable}
+\begin{tabular}{@{}l cc cc cc@{}}
+\toprule
+ & \multicolumn{2}{c}{starting share (\%)} & \multicolumn{2}{c}{transmission at step 42 (points)} & \multicolumn{2}{c}{close log-odds shift (nats)} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(l){6-7}
+ & $q_0$ & eval & $\lam=1.00$ & $\lam=1.40$ & $\lam=1.00$ & $\lam=1.40$ \\
+\midrule
+\grp{7}{Clean starting checkpoint, by objective}
+\hopd{reverse-KL OPD} & 0.1 & 0 & \textbf{0} & 0 & $+0.02$ & $-0.71$ \\
+\quad{\color{lawcol}\textit{rate law}} & & & {\color{lawcol}1.7} & {\color{lawcol}8.7} & {\color{lawcol}$+0.79$} & {\color{lawcol}$+1.39$} \\
+\hopd{reverse-KL OPD}, rerun & 0.1 & 0 & $<$0.1 & -- & $+1.57$ & -- \\
+\hfkl{on-policy forward KL} & 0.1 & 0 & \hit\textbf{13.4} & -- & $+10.82$ & -- \\
+\hseq{SeqKD}, teacher's samples & -- & -- & \hit\textbf{19.8} & -- & -- & -- \\
+\grp{7}{Reverse-KL OPD, other starting checkpoints}
+2\% early closes & 1.3 & 1.3 & \hit 19.8 & \hit 48.1 & $+2.77$ & $+4.08$ \\
+\quad{\color{lawcol}\textit{rate law}} & & & {\color{lawcol}18.9} & {\color{lawcol}42.5} & {\color{lawcol}$+2.78$} & {\color{lawcol}$+3.90$} \\
+5\% early closes & 3.2 & 3.8 & \hit 16.5 & \hit 35.1 & $+1.90$ & $+2.83$ \\
+\quad{\color{lawcol}\textit{rate law}} & & & {\color{lawcol}16.9} & {\color{lawcol}32.9} & {\color{lawcol}$+1.98$} & {\color{lawcol}$+2.77$} \\
+\bottomrule
+\end{tabular}
+\end{threeparttable}
+\caption{The one-constant rate law (grey) predicts transmission and probe shifts where the student already errs and misses near zero (Qwen3, ESCI, step 42).}
+\label{tab:e3}
+\end{table*}

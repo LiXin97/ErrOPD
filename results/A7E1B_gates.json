@@ -1,0 +1,461 @@
+{
+ "generated_utc": "2026-10-07T16:51:44Z",
+ "scorer_sha256_12": "418b06f28335",
+ "rate_label": "k1_trunc_realids",
+ "gate_block": "train (n=8 gate sampler)",
+ "n_min": 10000,
+ "rule": "pass iff target/2 <= rate <= 2 x target, n >= 10000, greedy parse >= 0.95 (= 202/212 ceiling), GQ3 (other failure types <= 0.03, val block of the n=4 base sampler)",
+ "starts": {
+  "n010": {
+   "start": "n010",
+   "target": 0.0005,
+   "target_window": [
+    0.00025,
+    0.001
+   ],
+   "gate_train": {
+    "file": "outputs/A7E1B/gates/n010.v2.records.jsonl",
+    "sha256_12": "fb492d674a38",
+    "split": "train",
+    "n": 27552,
+    "n_prompts": 1722,
+    "samples_per_prompt": {
+     "16": 1722
+    },
+    "k1_count": 2,
+    "rate": 7.259001161440186e-05,
+    "rate_cp95": [
+     8.791108068072961e-06,
+     0.00026219521962580984
+    ],
+    "rate_prompt_boot95": [
+     0.0,
+     0.00018147502903600465
+    ],
+    "valid": 0.9957534843205574,
+    "short_list": 0.0008347851335656213,
+    "other_max": 0.0024680603948896633,
+    "other_max_type": "malformed_json",
+    "labels": {
+     "valid": 27435,
+     "extra_items": 18,
+     "malformed_json": 68,
+     "short_list": 23,
+     "other": 2,
+     "k1_trunc_realids": 2,
+     "hallucinated_id": 2,
+     "unterminated": 1,
+     "extra_text": 1
+    }
+   },
+   "gate_val": {
+    "n": 3232,
+    "k1_count": 0,
+    "rate": 0.0,
+    "rate_cp95": [
+     0.0,
+     0.0011407101122629958
+    ]
+   },
+   "base_val_n4": {
+    "file": "outputs/A7E1B/samples/base_4b_n010.v2.records.jsonl",
+    "sha256_12": "9a8091db54a0",
+    "n": 808,
+    "k1_count": 0,
+    "rate": 0.0,
+    "valid": 0.995049504950495,
+    "other_max": 0.0049504950495049506,
+    "other_max_type": "malformed_json",
+    "labels": {
+     "valid": 804,
+     "malformed_json": 4
+    }
+   },
+   "base_train_n4": {
+    "n": 6888,
+    "k1_count": 4,
+    "rate": 0.0005807200929152149,
+    "rate_cp95": [
+     0.00015824862469490463,
+     0.0014862005294567445
+    ]
+   },
+   "greedy": {
+    "file": "outputs/A7E1B/sft_qwen3.5_4b_n010/eval/listwise_metrics.json",
+    "parse_rate": 0.9528301886792453,
+    "n_parsed": 202,
+    "n_total": 212
+   },
+   "G_rate": {
+    "rate": 7.259001161440186e-05,
+    "n": 27552,
+    "n_ok": true,
+    "pass": false,
+    "ratio_to_target": 0.14518002322880372
+   },
+   "G_greedy": {
+    "greedy_parse": 0.9528301886792453,
+    "greedy_min": 0.95,
+    "greedy_pass": true,
+    "GQ3_other_max": 0.0049504950495049506,
+    "GQ3_type": "malformed_json",
+    "GQ3_max": 0.03,
+    "GQ3_pass": true,
+    "pass": true
+   },
+   "pass": false,
+   "status": "fail",
+   "rebuild_N": 69
+  },
+  "n025": {
+   "start": "n025",
+   "target": 0.001,
+   "target_window": [
+    0.0005,
+    0.002
+   ],
+   "gate_train": {
+    "file": "outputs/A7E1B/gates/n025.v2.records.jsonl",
+    "sha256_12": "0c61516d023c",
+    "split": "train",
+    "n": 13776,
+    "n_prompts": 1722,
+    "samples_per_prompt": {
+     "8": 1722
+    },
+    "k1_count": 12,
+    "rate": 0.0008710801393728223,
+    "rate_cp95": [
+     0.00045017825130439296,
+     0.0015211067922825065
+    ],
+    "rate_prompt_boot95": [
+     0.00043554006968641115,
+     0.0013792102206736353
+    ],
+    "valid": 0.9928135888501742,
+    "short_list": 0.0028310104529616726,
+    "other_max": 0.0033391405342624854,
+    "other_max_type": "malformed_json",
+    "labels": {
+     "valid": 13677,
+     "short_list": 39,
+     "malformed_json": 46,
+     "extra_items": 1,
+     "k1_trunc_realids": 12,
+     "hallucinated_id": 1
+    }
+   },
+   "gate_val": {
+    "n": 1616,
+    "k1_count": 1,
+    "rate": 0.0006188118811881188,
+    "rate_cp95": [
+     1.5666837660135017e-05,
+     0.0034429261902755165
+    ]
+   },
+   "base_val_n4": {
+    "file": "outputs/A7E1B/samples/base_4b_n025.v2.records.jsonl",
+    "sha256_12": "1e33a158c50f",
+    "n": 808,
+    "k1_count": 0,
+    "rate": 0.0,
+    "valid": 0.9938118811881188,
+    "other_max": 0.0049504950495049506,
+    "other_max_type": "malformed_json",
+    "labels": {
+     "valid": 803,
+     "short_list": 1,
+     "malformed_json": 4
+    }
+   },
+   "base_train_n4": {
+    "n": 6888,
+    "k1_count": 6,
+    "rate": 0.0008710801393728223,
+    "rate_cp95": [
+     0.0003197360120893734,
+     0.0018950032950817977
+    ]
+   },
+   "greedy": {
+    "file": "outputs/A7E1B/sft_qwen3.5_4b_n025/eval/listwise_metrics.json",
+    "parse_rate": 0.9528301886792453,
+    "n_parsed": 202,
+    "n_total": 212
+   },
+   "G_rate": {
+    "rate": 0.0008710801393728223,
+    "n": 13776,
+    "n_ok": true,
+    "pass": true,
+    "ratio_to_target": 0.8710801393728222
+   },
+   "G_greedy": {
+    "greedy_parse": 0.9528301886792453,
+    "greedy_min": 0.95,
+    "greedy_pass": true,
+    "GQ3_other_max": 0.0049504950495049506,
+    "GQ3_type": "malformed_json",
+    "GQ3_max": 0.03,
+    "GQ3_pass": true,
+    "pass": true
+   },
+   "pass": true,
+   "status": "pass"
+  },
+  "n060": {
+   "start": "n060",
+   "target": 0.005,
+   "target_window": [
+    0.0025,
+    0.01
+   ],
+   "gate_train": {
+    "file": "outputs/A7E1B/gates/n060.v2.records.jsonl",
+    "sha256_12": "b1f56d9a33c2",
+    "split": "train",
+    "n": 13776,
+    "n_prompts": 1722,
+    "samples_per_prompt": {
+     "8": 1722
+    },
+    "k1_count": 46,
+    "rate": 0.0033391405342624854,
+    "rate_cp95": [
+     0.002445676302390602,
+     0.004451461834016381
+    ],
+    "rate_prompt_boot95": [
+     0.002395470383275261,
+     0.00428281068524971
+    ],
+    "valid": 0.991506968641115,
+    "short_list": 0.0021777003484320556,
+    "other_max": 0.0021777003484320556,
+    "other_max_type": "short_list",
+    "labels": {
+     "valid": 13659,
+     "malformed_json": 27,
+     "k1_trunc_realids": 46,
+     "short_list": 30,
+     "hallucinated_id": 4,
+     "extra_text": 3,
+     "unterminated": 4,
+     "other": 1,
+     "extra_items": 2
+    }
+   },
+   "gate_val": {
+    "n": 1616,
+    "k1_count": 11,
+    "rate": 0.006806930693069307,
+    "rate_cp95": [
+     0.0034027485627313716,
+     0.012146768969376498
+    ]
+   },
+   "base_val_n4": {
+    "file": "outputs/A7E1B/samples/base_4b_n060.v2.records.jsonl",
+    "sha256_12": "283d81f3274d",
+    "n": 808,
+    "k1_count": 3,
+    "rate": 0.0037128712871287127,
+    "valid": 0.9913366336633663,
+    "other_max": 0.0024752475247524753,
+    "other_max_type": "malformed_json",
+    "labels": {
+     "valid": 801,
+     "unterminated": 1,
+     "k1_trunc_realids": 3,
+     "malformed_json": 2,
+     "short_list": 1
+    }
+   },
+   "base_train_n4": {
+    "n": 6888,
+    "k1_count": 22,
+    "rate": 0.003193960511033682,
+    "rate_cp95": [
+     0.0020026872881455417,
+     0.004831724322157595
+    ]
+   },
+   "greedy": {
+    "file": "outputs/A7E1B/sft_qwen3.5_4b_n060/eval/listwise_metrics.json",
+    "parse_rate": 0.9528301886792453,
+    "n_parsed": 202,
+    "n_total": 212
+   },
+   "G_rate": {
+    "rate": 0.0033391405342624854,
+    "n": 13776,
+    "n_ok": true,
+    "pass": true,
+    "ratio_to_target": 0.667828106852497
+   },
+   "G_greedy": {
+    "greedy_parse": 0.9528301886792453,
+    "greedy_min": 0.95,
+    "greedy_pass": true,
+    "GQ3_other_max": 0.0024752475247524753,
+    "GQ3_type": "malformed_json",
+    "GQ3_max": 0.03,
+    "GQ3_pass": true,
+    "pass": true
+   },
+   "pass": true,
+   "status": "pass"
+  },
+  "n069": {
+   "start": "n069",
+   "target": 0.0005,
+   "target_window": [
+    0.00025,
+    0.001
+   ],
+   "gate_train": {
+    "file": "outputs/A7E1B/gates/n069.v2.records.jsonl",
+    "sha256_12": "e9637467c325",
+    "split": "train",
+    "n": 27552,
+    "n_prompts": 1722,
+    "samples_per_prompt": {
+     "16": 1722
+    },
+    "k1_count": 94,
+    "rate": 0.0034117305458768875,
+    "rate_cp95": [
+     0.0027578789770645396,
+     0.004173499669677387
+    ],
+    "rate_prompt_boot95": [
+     0.0027584204413472705,
+     0.004101335656213705
+    ],
+    "valid": 0.9915795586527294,
+    "short_list": 0.0018510452961672474,
+    "other_max": 0.002576945412311266,
+    "other_max_type": "malformed_json",
+    "labels": {
+     "valid": 27320,
+     "short_list": 51,
+     "k1_trunc_realids": 94,
+     "malformed_json": 71,
+     "hallucinated_id": 8,
+     "extra_items": 8
+    }
+   },
+   "gate_val": {
+    "n": 3232,
+    "k1_count": 6,
+    "rate": 0.0018564356435643563,
+    "rate_cp95": [
+     0.0006815742980646965,
+     0.0040362672883393035
+    ]
+   },
+   "base_val_n4": {
+    "file": "outputs/A7E1B/samples/base_4b_n069.v2.records.jsonl",
+    "sha256_12": "bfc57083e3a5",
+    "n": 808,
+    "k1_count": 3,
+    "rate": 0.0037128712871287127,
+    "valid": 0.9925742574257426,
+    "other_max": 0.0012376237623762376,
+    "other_max_type": "malformed_json",
+    "labels": {
+     "valid": 802,
+     "malformed_json": 1,
+     "k1_trunc_realids": 3,
+     "unterminated": 1,
+     "short_list": 1
+    }
+   },
+   "base_train_n4": {
+    "n": 6888,
+    "k1_count": 13,
+    "rate": 0.0018873403019744484,
+    "rate_cp95": [
+     0.001005299929738595,
+     0.0032252469389021984
+    ]
+   },
+   "greedy": {
+    "file": "outputs/A7E1B/sft_qwen3.5_4b_n069/eval/listwise_metrics.json",
+    "parse_rate": 0.9528301886792453,
+    "n_parsed": 202,
+    "n_total": 212
+   },
+   "G_rate": {
+    "rate": 0.0034117305458768875,
+    "n": 27552,
+    "n_ok": true,
+    "pass": false,
+    "ratio_to_target": 6.823461091753775
+   },
+   "G_greedy": {
+    "greedy_parse": 0.9528301886792453,
+    "greedy_min": 0.95,
+    "greedy_pass": true,
+    "GQ3_other_max": 0.0012376237623762376,
+    "GQ3_type": "malformed_json",
+    "GQ3_max": 0.03,
+    "GQ3_pass": true,
+    "pass": true
+   },
+   "pass": false,
+   "status": "fail",
+   "rebuild_N": 10
+  }
+ },
+ "references": {
+  "clean_4b_D6": {
+   "source": "Q35S base sampler (n=4)",
+   "file": "outputs/Q35S/samples/base_4b.v2.records.jsonl",
+   "sha256_12": "9eeba06d219c",
+   "n": 6888,
+   "k1_count": 0,
+   "rate": 0.0,
+   "rate_cp95": [
+    0.0,
+    0.0005354082226731211
+   ],
+   "rate_prompt_boot95": [
+    0.0,
+    0.0
+   ],
+   "valid": 0.9981126596980255,
+   "short_list": 0.00014518002322880372,
+   "val": {
+    "n": 808,
+    "k1_count": 1,
+    "rate": 0.0012376237623762376
+   }
+  },
+  "inj02_Q35S": {
+   "source": "Q35S base sampler (n=4)",
+   "file": "outputs/Q35S/samples/base_4b_inj02.v2.records.jsonl",
+   "sha256_12": "2870d4c9d7b0",
+   "n": 6888,
+   "k1_count": 155,
+   "rate": 0.022502903600464575,
+   "rate_cp95": [
+    0.019131089239546976,
+    0.026286817944317753
+   ],
+   "rate_prompt_boot95": [
+    0.019018583042973287,
+    0.025990853658536536
+   ],
+   "valid": 0.9719802555168409,
+   "short_list": 0.003048780487804878,
+   "val": {
+    "n": 808,
+    "k1_count": 16,
+    "rate": 0.019801980198019802
+   }
+  }
+ }
+}

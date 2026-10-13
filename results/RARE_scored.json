@@ -1,0 +1,323 @@
+{
+ "dry_run": false,
+ "teacher": "RARE, chosen f02 (outputs/RARE/sft_t4b_k1_f02, P_T 18 of 800)",
+ "seeds": [
+  9101,
+  9102,
+  9103
+ ],
+ "scored_at": "2026-10-09T10:13:48Z",
+ "fkl": {
+  "prefix": "RARE_fkl_s",
+  "base_share": 0.0,
+  "base_k1_of_n": [
+   0,
+   800
+  ],
+  "steps": {
+   "42": {
+    "k1_per_seed": [
+     5,
+     16,
+     5
+    ],
+    "n_per_seed": [
+     800,
+     800,
+     800
+    ],
+    "share_per_seed": [
+     0.00625,
+     0.02,
+     0.00625
+    ],
+    "share_minus_base_per_seed": [
+     0.00625,
+     0.02,
+     0.00625
+    ],
+    "k1_pooled": 26,
+    "n_pooled": 2400,
+    "Tr": 0.010833333333333334,
+    "Tr_ci95": [
+     0.002916666666666667,
+     0.022083333333333333
+    ],
+    "probe_shift_per_seed": [
+     7.6493153102444795,
+     8.465502110090148,
+     7.847349017858504
+    ],
+    "greedy_parse": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "labels": [
+     {
+      "valid": 786,
+      "extra_text": 2,
+      "short_list": 4,
+      "k1_trunc_realids": 5,
+      "duplicate_id": 1,
+      "hallucinated_id": 2
+     },
+     {
+      "valid": 778,
+      "k1_trunc_realids": 16,
+      "hallucinated_id": 1,
+      "short_list": 5
+     },
+     {
+      "valid": 785,
+      "short_list": 6,
+      "k1_trunc_realids": 5,
+      "duplicate_id": 2,
+      "extra_items": 1,
+      "hallucinated_id": 1
+     }
+    ]
+   },
+   "84": {
+    "k1_per_seed": [
+     7,
+     16,
+     7
+    ],
+    "n_per_seed": [
+     800,
+     800,
+     800
+    ],
+    "share_per_seed": [
+     0.00875,
+     0.02,
+     0.00875
+    ],
+    "share_minus_base_per_seed": [
+     0.00875,
+     0.02,
+     0.00875
+    ],
+    "k1_pooled": 30,
+    "n_pooled": 2400,
+    "Tr": 0.012500000000000002,
+    "Tr_ci95": [
+     0.005,
+     0.021666666666666667
+    ],
+    "probe_shift_per_seed": [
+     8.65335323402051,
+     8.73876404912954,
+     8.337429778629474
+    ],
+    "greedy_parse": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "labels": [
+     {
+      "valid": 785,
+      "k1_trunc_realids": 7,
+      "duplicate_id": 2,
+      "extra_text": 1,
+      "short_list": 5
+     },
+     {
+      "valid": 776,
+      "short_list": 6,
+      "k1_trunc_realids": 16,
+      "duplicate_id": 1,
+      "hallucinated_id": 1
+     },
+     {
+      "valid": 790,
+      "k1_trunc_realids": 7,
+      "duplicate_id": 2,
+      "hallucinated_id": 1
+     }
+    ]
+   }
+  },
+  "train_share": {
+   "29-42": [
+    0.010044642857142858,
+    0.023995535714285716,
+    0.010044642857142858
+   ],
+   "71-84": [
+    0.027901785714285716,
+    0.025111607142857144,
+    0.018415178571428572
+   ]
+  }
+ },
+ "opd": {
+  "prefix": "RARE_opd_s",
+  "base_share": 0.0,
+  "base_k1_of_n": [
+   0,
+   800
+  ],
+  "steps": {
+   "42": {
+    "k1_per_seed": [
+     0,
+     0,
+     0
+    ],
+    "n_per_seed": [
+     800,
+     800,
+     800
+    ],
+    "share_per_seed": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "share_minus_base_per_seed": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "k1_pooled": 0,
+    "n_pooled": 2400,
+    "Tr": 0.0,
+    "Tr_ci95": [
+     0.0,
+     0.0
+    ],
+    "probe_shift_per_seed": [
+     -1.2507900270853156,
+     -1.6515976123595504,
+     -1.1566889044943824
+    ],
+    "greedy_parse": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "labels": [
+     {
+      "valid": 800
+     },
+     {
+      "valid": 800
+     },
+     {
+      "valid": 799,
+      "hallucinated_id": 1
+     }
+    ]
+   },
+   "84": {
+    "k1_per_seed": [
+     0,
+     0,
+     0
+    ],
+    "n_per_seed": [
+     800,
+     800,
+     800
+    ],
+    "share_per_seed": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "share_minus_base_per_seed": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "k1_pooled": 0,
+    "n_pooled": 2400,
+    "Tr": 0.0,
+    "Tr_ci95": [
+     0.0,
+     0.0
+    ],
+    "probe_shift_per_seed": [
+     0.0484550561797743,
+     -3.148613061797752,
+     -2.8999297749460418
+    ],
+    "greedy_parse": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "labels": [
+     {
+      "valid": 800
+     },
+     {
+      "valid": 800
+     },
+     {
+      "valid": 800
+     }
+    ]
+   }
+  },
+  "train_share": {
+   "29-42": [
+    0.0,
+    0.0,
+    0.0005580357142857143
+   ],
+   "71-84": [
+    0.0,
+    0.0005580357142857143,
+    0.0
+   ]
+  }
+ },
+ "rules": {
+  "P_T": 0.0225,
+  "P_T_k1_of_n": "18 of 800",
+  "RG_bar": 0.01125,
+  "R1_bar": 0.005625,
+  "checkpoints_scored": [
+   42,
+   84
+  ],
+  "checkpoints_missing": [],
+  "RG_bar_count_of_pooled_at_base_0": ">= 27 of 2400",
+  "R1_bar_count_of_pooled_at_base_0": "<= 13 of 2400",
+  "fkl_pooled_share_minus_base": {
+   "42": 0.010833333333333334,
+   "84": 0.0125
+  },
+  "opd_pooled_share_minus_base": {
+   "42": 0.0,
+   "84": 0.0
+  },
+  "RG_per_step": {
+   "42": false,
+   "84": true
+  },
+  "RG": true,
+  "R1_per_step": {
+   "42": true,
+   "84": true
+  },
+  "R1": true,
+  "fkl_best_share_minus_base_per_seed": [
+   0.00875,
+   0.02,
+   0.00875
+  ],
+  "RG_per_seed_nonbinding": false,
+  "opd_worst_share_minus_base_per_seed": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "E6-1_form_nonbinding": true,
+  "reading": "contrast holds at q = measured P_T (f02, 0.022) (RG and R1)"
+ }
+}

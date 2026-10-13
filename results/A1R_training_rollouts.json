@@ -1,0 +1,2878 @@
+{
+ "runs": {
+  "1.0|1001": {
+   "n": 1719,
+   "shares": {
+    "valid": 0.8452588714368819,
+    "other": 0.13554392088423503,
+    "unterminated": 0.011634671320535195,
+    "malformed_json": 0.006980802792321117,
+    "hallucinated_id": 0.0005817335660267597
+   },
+   "per_step": {
+    "1": {
+     "valid": 110,
+     "extra_items": 1,
+     "other": 8,
+     "unterminated": 3,
+     "malformed_json": 3
+    },
+    "2": {
+     "valid": 108,
+     "other": 11,
+     "unterminated": 3,
+     "extra_items": 1,
+     "malformed_json": 2
+    },
+    "3": {
+     "valid": 102,
+     "other": 13,
+     "extra_items": 3,
+     "malformed_json": 3,
+     "unterminated": 1
+    },
+    "4": {
+     "valid": 104,
+     "other": 13,
+     "extra_items": 3,
+     "unterminated": 2
+    },
+    "5": {
+     "other": 24,
+     "valid": 96,
+     "malformed_json": 5,
+     "extra_items": 1
+    },
+    "6": {
+     "other": 30,
+     "valid": 84,
+     "malformed_json": 5,
+     "unterminated": 1,
+     "extra_items": 1
+    },
+    "7": {
+     "valid": 74,
+     "other": 36,
+     "malformed_json": 3,
+     "extra_items": 2,
+     "unterminated": 2
+    },
+    "8": {
+     "valid": 73,
+     "other": 44,
+     "extra_items": 2,
+     "malformed_json": 4
+    },
+    "9": {
+     "valid": 32,
+     "other": 86,
+     "malformed_json": 2,
+     "extra_items": 4
+    },
+    "10": {
+     "other": 99,
+     "valid": 20,
+     "extra_items": 1,
+     "malformed_json": 4
+    },
+    "11": {
+     "other": 97,
+     "valid": 23,
+     "malformed_json": 4
+    },
+    "12": {
+     "other": 93,
+     "valid": 28,
+     "malformed_json": 1,
+     "extra_items": 2
+    },
+    "13": {
+     "other": 93,
+     "valid": 23,
+     "malformed_json": 1,
+     "extra_items": 1
+    },
+    "14": {
+     "other": 96,
+     "valid": 23,
+     "extra_items": 1,
+     "malformed_json": 4
+    },
+    "15": {
+     "valid": 26,
+     "other": 92,
+     "extra_items": 2,
+     "malformed_json": 1
+    },
+    "16": {
+     "other": 100,
+     "valid": 19,
+     "extra_items": 1,
+     "malformed_json": 1
+    },
+    "17": {
+     "other": 81,
+     "valid": 37,
+     "malformed_json": 3
+    },
+    "18": {
+     "other": 76,
+     "valid": 49,
+     "unterminated": 1
+    },
+    "19": {
+     "valid": 59,
+     "other": 64,
+     "malformed_json": 1
+    },
+    "20": {
+     "short_list": 1,
+     "valid": 80,
+     "other": 41,
+     "malformed_json": 3
+    },
+    "21": {
+     "other": 29,
+     "valid": 85,
+     "malformed_json": 5
+    },
+    "22": {
+     "valid": 95,
+     "other": 26,
+     "extra_items": 1,
+     "malformed_json": 3
+    },
+    "23": {
+     "valid": 105,
+     "other": 17,
+     "malformed_json": 1
+    },
+    "24": {
+     "valid": 101,
+     "malformed_json": 4,
+     "other": 14,
+     "unterminated": 1
+    },
+    "25": {
+     "other": 17,
+     "valid": 103,
+     "malformed_json": 3
+    },
+    "26": {
+     "valid": 102,
+     "malformed_json": 5,
+     "unterminated": 5,
+     "other": 10
+    },
+    "27": {
+     "valid": 120,
+     "other": 3,
+     "malformed_json": 2
+    },
+    "28": {
+     "valid": 105,
+     "other": 10,
+     "malformed_json": 8,
+     "unterminated": 1
+    },
+    "29": {
+     "valid": 109,
+     "other": 13
+    },
+    "30": {
+     "valid": 113,
+     "other": 12,
+     "unterminated": 1
+    },
+    "31": {
+     "valid": 111,
+     "other": 11
+    },
+    "32": {
+     "valid": 110,
+     "malformed_json": 2,
+     "other": 11,
+     "hallucinated_id": 1,
+     "unterminated": 1
+    },
+    "33": {
+     "valid": 108,
+     "malformed_json": 4,
+     "other": 9
+    },
+    "34": {
+     "malformed_json": 1,
+     "valid": 113,
+     "unterminated": 3,
+     "other": 5
+    },
+    "35": {
+     "valid": 106,
+     "other": 16,
+     "unterminated": 3
+    },
+    "36": {
+     "valid": 103,
+     "other": 17,
+     "malformed_json": 2,
+     "unterminated": 1
+    },
+    "37": {
+     "valid": 98,
+     "other": 23,
+     "unterminated": 2
+    },
+    "38": {
+     "valid": 101,
+     "other": 18,
+     "malformed_json": 1,
+     "unterminated": 1
+    },
+    "39": {
+     "valid": 98,
+     "other": 18,
+     "unterminated": 2
+    },
+    "40": {
+     "valid": 101,
+     "other": 21,
+     "malformed_json": 1
+    },
+    "41": {
+     "valid": 87,
+     "other": 31,
+     "unterminated": 3
+    },
+    "42": {
+     "valid": 95,
+     "other": 28,
+     "malformed_json": 1,
+     "unterminated": 3
+    }
+   }
+  },
+  "1.25|1001": {
+   "n": 1719,
+   "shares": {
+    "other": 0.9668411867364747,
+    "malformed_json": 0.0029086678301337987,
+    "valid": 0.014543339150668994,
+    "unterminated": 0.015706806282722512
+   },
+   "per_step": {
+    "1": {
+     "extra_items": 3,
+     "valid": 118,
+     "other": 3,
+     "malformed_json": 1
+    },
+    "2": {
+     "valid": 105,
+     "malformed_json": 4,
+     "extra_items": 6,
+     "unterminated": 2,
+     "other": 8
+    },
+    "3": {
+     "valid": 105,
+     "other": 14,
+     "malformed_json": 1,
+     "extra_items": 2
+    },
+    "4": {
+     "other": 16,
+     "unterminated": 1,
+     "valid": 101,
+     "extra_items": 2,
+     "malformed_json": 2
+    },
+    "5": {
+     "valid": 87,
+     "other": 34,
+     "extra_items": 1,
+     "malformed_json": 4
+    },
+    "6": {
+     "other": 42,
+     "valid": 74,
+     "malformed_json": 4,
+     "extra_items": 1
+    },
+    "7": {
+     "other": 36,
+     "valid": 75,
+     "malformed_json": 4,
+     "extra_items": 2
+    },
+    "8": {
+     "other": 52,
+     "valid": 66,
+     "extra_items": 2,
+     "malformed_json": 1,
+     "unterminated": 1,
+     "short_list": 1
+    },
+    "9": {
+     "other": 102,
+     "valid": 18,
+     "malformed_json": 3,
+     "extra_items": 1
+    },
+    "10": {
+     "other": 113,
+     "valid": 6,
+     "malformed_json": 5
+    },
+    "11": {
+     "valid": 12,
+     "other": 111,
+     "malformed_json": 1
+    },
+    "12": {
+     "other": 111,
+     "extra_items": 1,
+     "valid": 6,
+     "malformed_json": 6
+    },
+    "13": {
+     "other": 102,
+     "valid": 15,
+     "short_list": 1
+    },
+    "14": {
+     "other": 115,
+     "extra_items": 1,
+     "valid": 5,
+     "malformed_json": 3
+    },
+    "15": {
+     "other": 112,
+     "valid": 6,
+     "malformed_json": 3
+    },
+    "16": {
+     "other": 112,
+     "valid": 7,
+     "malformed_json": 2
+    },
+    "17": {
+     "other": 117,
+     "valid": 3,
+     "malformed_json": 1
+    },
+    "18": {
+     "malformed_json": 5,
+     "other": 117,
+     "valid": 4
+    },
+    "19": {
+     "valid": 5,
+     "other": 119
+    },
+    "20": {
+     "other": 124,
+     "malformed_json": 1
+    },
+    "21": {
+     "other": 116,
+     "valid": 2,
+     "malformed_json": 1
+    },
+    "22": {
+     "other": 123,
+     "malformed_json": 1,
+     "valid": 1
+    },
+    "23": {
+     "other": 122,
+     "valid": 1
+    },
+    "24": {
+     "other": 119,
+     "valid": 1
+    },
+    "25": {
+     "other": 123
+    },
+    "26": {
+     "other": 122
+    },
+    "27": {
+     "other": 124,
+     "valid": 1
+    },
+    "28": {
+     "other": 124
+    },
+    "29": {
+     "other": 118,
+     "malformed_json": 1,
+     "valid": 3
+    },
+    "30": {
+     "other": 124,
+     "valid": 2
+    },
+    "31": {
+     "other": 119,
+     "valid": 3
+    },
+    "32": {
+     "other": 124,
+     "valid": 1
+    },
+    "33": {
+     "other": 119,
+     "valid": 1,
+     "malformed_json": 1
+    },
+    "34": {
+     "other": 121,
+     "valid": 1
+    },
+    "35": {
+     "other": 121,
+     "valid": 4
+    },
+    "36": {
+     "other": 121,
+     "valid": 2
+    },
+    "37": {
+     "other": 121,
+     "valid": 2
+    },
+    "38": {
+     "other": 115,
+     "unterminated": 3,
+     "valid": 3
+    },
+    "39": {
+     "other": 113,
+     "valid": 1,
+     "unterminated": 3,
+     "malformed_json": 1
+    },
+    "40": {
+     "other": 119,
+     "valid": 2,
+     "unterminated": 2
+    },
+    "41": {
+     "other": 111,
+     "unterminated": 10
+    },
+    "42": {
+     "other": 116,
+     "unterminated": 9,
+     "malformed_json": 2
+    }
+   }
+  },
+  "1.4|1001": {
+   "n": 1719,
+   "shares": {
+    "other": 0.2524723676556137,
+    "valid": 0.7178592204770216,
+    "malformed_json": 0.013379872018615475,
+    "unterminated": 0.015125072716695753,
+    "hallucinated_id": 0.0005817335660267597,
+    "extra_items": 0.0005817335660267597
+   },
+   "per_step": {
+    "1": {
+     "valid": 115,
+     "malformed_json": 2,
+     "other": 5,
+     "unterminated": 3
+    },
+    "2": {
+     "other": 13,
+     "valid": 103,
+     "extra_items": 3,
+     "malformed_json": 4,
+     "unterminated": 2
+    },
+    "3": {
+     "valid": 100,
+     "other": 16,
+     "unterminated": 2,
+     "extra_items": 1,
+     "malformed_json": 3
+    },
+    "4": {
+     "other": 15,
+     "valid": 107
+    },
+    "5": {
+     "valid": 90,
+     "other": 30,
+     "extra_items": 3,
+     "unterminated": 1,
+     "malformed_json": 2
+    },
+    "6": {
+     "other": 36,
+     "valid": 77,
+     "malformed_json": 5,
+     "unterminated": 1,
+     "extra_items": 2
+    },
+    "7": {
+     "other": 34,
+     "valid": 79,
+     "extra_items": 3,
+     "malformed_json": 1
+    },
+    "8": {
+     "valid": 74,
+     "other": 43,
+     "malformed_json": 4,
+     "unterminated": 1,
+     "extra_items": 1
+    },
+    "9": {
+     "other": 99,
+     "valid": 20,
+     "malformed_json": 5
+    },
+    "10": {
+     "other": 109,
+     "valid": 10,
+     "malformed_json": 5
+    },
+    "11": {
+     "other": 105,
+     "valid": 14,
+     "malformed_json": 5
+    },
+    "12": {
+     "other": 110,
+     "valid": 10,
+     "extra_items": 1,
+     "malformed_json": 2,
+     "hallucinated_id": 1
+    },
+    "13": {
+     "other": 103,
+     "malformed_json": 5,
+     "valid": 10
+    },
+    "14": {
+     "other": 106,
+     "valid": 13,
+     "malformed_json": 2,
+     "extra_items": 3
+    },
+    "15": {
+     "valid": 16,
+     "other": 101,
+     "extra_items": 1,
+     "malformed_json": 3
+    },
+    "16": {
+     "other": 109,
+     "valid": 10,
+     "malformed_json": 2
+    },
+    "17": {
+     "other": 113,
+     "valid": 6,
+     "malformed_json": 2
+    },
+    "18": {
+     "other": 123,
+     "valid": 2,
+     "extra_items": 1
+    },
+    "19": {
+     "other": 121,
+     "malformed_json": 1,
+     "valid": 2
+    },
+    "20": {
+     "other": 120,
+     "valid": 3,
+     "malformed_json": 2
+    },
+    "21": {
+     "other": 114,
+     "malformed_json": 1,
+     "valid": 4
+    },
+    "22": {
+     "other": 122,
+     "valid": 1,
+     "malformed_json": 2
+    },
+    "23": {
+     "other": 117,
+     "malformed_json": 2,
+     "valid": 4
+    },
+    "24": {
+     "other": 114,
+     "malformed_json": 1,
+     "valid": 4,
+     "unterminated": 1
+    },
+    "25": {
+     "other": 118,
+     "valid": 5
+    },
+    "26": {
+     "other": 116,
+     "valid": 6
+    },
+    "27": {
+     "other": 111,
+     "valid": 12,
+     "malformed_json": 1,
+     "extra_items": 1
+    },
+    "28": {
+     "other": 99,
+     "valid": 23,
+     "malformed_json": 2
+    },
+    "29": {
+     "other": 83,
+     "valid": 39
+    },
+    "30": {
+     "valid": 42,
+     "other": 83,
+     "malformed_json": 1
+    },
+    "31": {
+     "other": 68,
+     "valid": 52,
+     "unterminated": 1,
+     "malformed_json": 1
+    },
+    "32": {
+     "valid": 64,
+     "other": 59,
+     "malformed_json": 2
+    },
+    "33": {
+     "other": 32,
+     "valid": 86,
+     "hallucinated_id": 1,
+     "malformed_json": 1,
+     "unterminated": 1
+    },
+    "34": {
+     "valid": 81,
+     "malformed_json": 3,
+     "other": 37,
+     "unterminated": 1
+    },
+    "35": {
+     "valid": 107,
+     "other": 13,
+     "unterminated": 4,
+     "malformed_json": 1
+    },
+    "36": {
+     "valid": 102,
+     "other": 13,
+     "unterminated": 5,
+     "malformed_json": 3
+    },
+    "37": {
+     "valid": 103,
+     "malformed_json": 3,
+     "unterminated": 10,
+     "other": 7
+    },
+    "38": {
+     "valid": 103,
+     "malformed_json": 2,
+     "other": 12,
+     "unterminated": 4
+    },
+    "39": {
+     "valid": 109,
+     "other": 9
+    },
+    "40": {
+     "valid": 115,
+     "malformed_json": 3,
+     "other": 4,
+     "extra_items": 1
+    },
+    "41": {
+     "valid": 114,
+     "other": 6,
+     "malformed_json": 1
+    },
+    "42": {
+     "valid": 117,
+     "other": 8,
+     "malformed_json": 2
+    }
+   }
+  },
+  "2.0|1001": {
+   "n": 1719,
+   "shares": {
+    "other": 0.997673065735893,
+    "malformed_json": 0.0011634671320535194,
+    "valid": 0.0011634671320535194
+   },
+   "per_step": {
+    "1": {
+     "valid": 115,
+     "extra_items": 1,
+     "malformed_json": 6,
+     "other": 1,
+     "unterminated": 2
+    },
+    "2": {
+     "valid": 113,
+     "other": 9,
+     "extra_items": 2,
+     "malformed_json": 1
+    },
+    "3": {
+     "valid": 98,
+     "other": 15,
+     "malformed_json": 5,
+     "extra_items": 3,
+     "unterminated": 1
+    },
+    "4": {
+     "valid": 104,
+     "other": 13,
+     "malformed_json": 3,
+     "extra_items": 2
+    },
+    "5": {
+     "valid": 83,
+     "other": 36,
+     "malformed_json": 6,
+     "extra_items": 1
+    },
+    "6": {
+     "other": 45,
+     "valid": 71,
+     "malformed_json": 4,
+     "extra_items": 1
+    },
+    "7": {
+     "valid": 78,
+     "other": 37,
+     "extra_items": 1,
+     "malformed_json": 1
+    },
+    "8": {
+     "valid": 64,
+     "other": 52,
+     "extra_items": 2,
+     "malformed_json": 3,
+     "unterminated": 2
+    },
+    "9": {
+     "other": 98,
+     "valid": 21,
+     "malformed_json": 5
+    },
+    "10": {
+     "other": 111,
+     "valid": 10,
+     "malformed_json": 3
+    },
+    "11": {
+     "other": 99,
+     "malformed_json": 4,
+     "valid": 21
+    },
+    "12": {
+     "other": 114,
+     "valid": 8,
+     "malformed_json": 2
+    },
+    "13": {
+     "other": 108,
+     "valid": 7,
+     "malformed_json": 3
+    },
+    "14": {
+     "valid": 9,
+     "other": 111,
+     "malformed_json": 4
+    },
+    "15": {
+     "other": 103,
+     "valid": 12,
+     "malformed_json": 6
+    },
+    "16": {
+     "other": 111,
+     "valid": 8,
+     "malformed_json": 2
+    },
+    "17": {
+     "other": 113,
+     "valid": 4,
+     "malformed_json": 4
+    },
+    "18": {
+     "other": 118,
+     "malformed_json": 6,
+     "valid": 2
+    },
+    "19": {
+     "other": 117,
+     "malformed_json": 5,
+     "valid": 2
+    },
+    "20": {
+     "other": 120,
+     "malformed_json": 5
+    },
+    "21": {
+     "other": 113,
+     "malformed_json": 3,
+     "valid": 3
+    },
+    "22": {
+     "other": 122,
+     "malformed_json": 2,
+     "valid": 1
+    },
+    "23": {
+     "other": 123
+    },
+    "24": {
+     "other": 114,
+     "malformed_json": 5,
+     "valid": 1
+    },
+    "25": {
+     "other": 122,
+     "extra_items": 1
+    },
+    "26": {
+     "other": 122
+    },
+    "27": {
+     "other": 125
+    },
+    "28": {
+     "other": 124
+    },
+    "29": {
+     "other": 121,
+     "malformed_json": 1
+    },
+    "30": {
+     "other": 123,
+     "valid": 2,
+     "malformed_json": 1
+    },
+    "31": {
+     "other": 122
+    },
+    "32": {
+     "other": 125
+    },
+    "33": {
+     "other": 121
+    },
+    "34": {
+     "other": 122
+    },
+    "35": {
+     "other": 125
+    },
+    "36": {
+     "other": 123
+    },
+    "37": {
+     "other": 123
+    },
+    "38": {
+     "other": 121
+    },
+    "39": {
+     "other": 118
+    },
+    "40": {
+     "other": 123
+    },
+    "41": {
+     "other": 121
+    },
+    "42": {
+     "other": 127
+    }
+   }
+  },
+  "1.0|1002": {
+   "n": 1719,
+   "shares": {
+    "valid": 0.8563118091913904,
+    "other": 0.11809191390343222,
+    "unterminated": 0.011634671320535195,
+    "malformed_json": 0.013961605584642234
+   },
+   "per_step": {
+    "1": {
+     "valid": 106,
+     "extra_items": 3,
+     "other": 10,
+     "malformed_json": 1
+    },
+    "2": {
+     "valid": 105,
+     "malformed_json": 3,
+     "other": 9,
+     "extra_items": 3,
+     "unterminated": 1
+    },
+    "3": {
+     "valid": 110,
+     "other": 10,
+     "unterminated": 3,
+     "malformed_json": 2,
+     "extra_items": 1
+    },
+    "4": {
+     "valid": 94,
+     "other": 14,
+     "malformed_json": 4,
+     "unterminated": 5,
+     "extra_items": 1
+    },
+    "5": {
+     "valid": 96,
+     "other": 20,
+     "malformed_json": 5,
+     "extra_items": 2,
+     "unterminated": 1,
+     "short_list": 1
+    },
+    "6": {
+     "valid": 73,
+     "other": 48,
+     "extra_items": 1,
+     "malformed_json": 1
+    },
+    "7": {
+     "valid": 78,
+     "other": 39,
+     "malformed_json": 5
+    },
+    "8": {
+     "other": 49,
+     "valid": 66,
+     "unterminated": 1,
+     "extra_items": 3
+    },
+    "9": {
+     "other": 92,
+     "valid": 34,
+     "malformed_json": 1
+    },
+    "10": {
+     "other": 105,
+     "valid": 20,
+     "malformed_json": 1
+    },
+    "11": {
+     "valid": 26,
+     "other": 95
+    },
+    "12": {
+     "valid": 18,
+     "other": 104,
+     "malformed_json": 2
+    },
+    "13": {
+     "other": 104,
+     "valid": 15,
+     "malformed_json": 4
+    },
+    "14": {
+     "other": 97,
+     "valid": 26,
+     "malformed_json": 1
+    },
+    "15": {
+     "other": 94,
+     "valid": 27,
+     "malformed_json": 3
+    },
+    "16": {
+     "other": 95,
+     "valid": 25,
+     "extra_items": 1,
+     "malformed_json": 1
+    },
+    "17": {
+     "other": 93,
+     "valid": 27,
+     "extra_items": 1,
+     "malformed_json": 2
+    },
+    "18": {
+     "other": 94,
+     "malformed_json": 1,
+     "valid": 28
+    },
+    "19": {
+     "other": 83,
+     "valid": 37,
+     "extra_items": 1,
+     "malformed_json": 1
+    },
+    "20": {
+     "other": 68,
+     "valid": 54,
+     "malformed_json": 3
+    },
+    "21": {
+     "other": 47,
+     "valid": 71,
+     "malformed_json": 5,
+     "unterminated": 1
+    },
+    "22": {
+     "valid": 83,
+     "other": 38,
+     "malformed_json": 2
+    },
+    "23": {
+     "valid": 90,
+     "other": 27,
+     "malformed_json": 4
+    },
+    "24": {
+     "other": 23,
+     "malformed_json": 2,
+     "valid": 97
+    },
+    "25": {
+     "valid": 102,
+     "other": 15,
+     "malformed_json": 2,
+     "unterminated": 1,
+     "short_list": 1
+    },
+    "26": {
+     "valid": 107,
+     "other": 16,
+     "malformed_json": 1
+    },
+    "27": {
+     "other": 13,
+     "valid": 106,
+     "malformed_json": 3,
+     "extra_items": 1,
+     "unterminated": 1
+    },
+    "28": {
+     "malformed_json": 5,
+     "valid": 106,
+     "other": 9,
+     "short_list": 1
+    },
+    "29": {
+     "valid": 107,
+     "other": 6,
+     "unterminated": 3,
+     "malformed_json": 3
+    },
+    "30": {
+     "valid": 112,
+     "other": 7,
+     "unterminated": 1
+    },
+    "31": {
+     "malformed_json": 3,
+     "other": 13,
+     "valid": 109,
+     "unterminated": 2
+    },
+    "32": {
+     "other": 15,
+     "valid": 101,
+     "malformed_json": 6,
+     "unterminated": 2
+    },
+    "33": {
+     "valid": 114,
+     "other": 10,
+     "unterminated": 2,
+     "malformed_json": 1
+    },
+    "34": {
+     "valid": 116,
+     "other": 7
+    },
+    "35": {
+     "valid": 107,
+     "other": 14,
+     "malformed_json": 2,
+     "unterminated": 1
+    },
+    "36": {
+     "valid": 108,
+     "other": 16,
+     "malformed_json": 1
+    },
+    "37": {
+     "valid": 105,
+     "other": 9,
+     "malformed_json": 3,
+     "unterminated": 1
+    },
+    "38": {
+     "malformed_json": 3,
+     "valid": 98,
+     "other": 20,
+     "unterminated": 2
+    },
+    "39": {
+     "other": 18,
+     "valid": 105,
+     "unterminated": 1
+    },
+    "40": {
+     "valid": 98,
+     "other": 18,
+     "unterminated": 4,
+     "malformed_json": 2
+    },
+    "41": {
+     "valid": 96,
+     "other": 23
+    },
+    "42": {
+     "valid": 96,
+     "other": 27,
+     "unterminated": 1
+    }
+   }
+  },
+  "1.25|1002": {
+   "n": 1719,
+   "shares": {
+    "valid": 0.8190808609656777,
+    "other": 0.16521233275159977,
+    "malformed_json": 0.013379872018615475,
+    "k1_trunc_realids": 0.0005817335660267597,
+    "short_list": 0.0005817335660267597,
+    "hallucinated_id": 0.0005817335660267597,
+    "unterminated": 0.0005817335660267597
+   },
+   "per_step": {
+    "1": {
+     "other": 7,
+     "valid": 105,
+     "malformed_json": 6,
+     "extra_items": 1,
+     "unterminated": 1
+    },
+    "2": {
+     "valid": 107,
+     "other": 8,
+     "malformed_json": 4,
+     "extra_items": 2
+    },
+    "3": {
+     "valid": 110,
+     "malformed_json": 2,
+     "extra_items": 4,
+     "other": 9,
+     "hallucinated_id": 1
+    },
+    "4": {
+     "other": 9,
+     "valid": 101,
+     "malformed_json": 3,
+     "extra_items": 5
+    },
+    "5": {
+     "valid": 94,
+     "other": 26,
+     "malformed_json": 2,
+     "extra_items": 2,
+     "unterminated": 1
+    },
+    "6": {
+     "other": 33,
+     "valid": 80,
+     "malformed_json": 9,
+     "extra_items": 1
+    },
+    "7": {
+     "other": 38,
+     "malformed_json": 5,
+     "valid": 75,
+     "short_list": 1,
+     "extra_items": 3
+    },
+    "8": {
+     "valid": 81,
+     "other": 32,
+     "extra_items": 2,
+     "malformed_json": 3,
+     "hallucinated_id": 1
+    },
+    "9": {
+     "other": 98,
+     "valid": 28,
+     "malformed_json": 1
+    },
+    "10": {
+     "other": 116,
+     "valid": 9,
+     "extra_items": 1
+    },
+    "11": {
+     "other": 105,
+     "extra_items": 2,
+     "valid": 9,
+     "malformed_json": 5
+    },
+    "12": {
+     "other": 109,
+     "valid": 10,
+     "malformed_json": 3,
+     "extra_items": 2
+    },
+    "13": {
+     "other": 112,
+     "valid": 9,
+     "malformed_json": 2
+    },
+    "14": {
+     "valid": 15,
+     "other": 107,
+     "malformed_json": 2
+    },
+    "15": {
+     "other": 103,
+     "valid": 20,
+     "malformed_json": 1
+    },
+    "16": {
+     "other": 105,
+     "malformed_json": 2,
+     "valid": 14,
+     "extra_items": 1
+    },
+    "17": {
+     "other": 106,
+     "valid": 17
+    },
+    "18": {
+     "valid": 18,
+     "other": 104,
+     "malformed_json": 1
+    },
+    "19": {
+     "other": 98,
+     "valid": 20,
+     "malformed_json": 3,
+     "extra_items": 1
+    },
+    "20": {
+     "valid": 31,
+     "other": 91,
+     "malformed_json": 2,
+     "hallucinated_id": 1
+    },
+    "21": {
+     "valid": 48,
+     "other": 75,
+     "malformed_json": 1
+    },
+    "22": {
+     "other": 55,
+     "valid": 67,
+     "malformed_json": 1
+    },
+    "23": {
+     "other": 41,
+     "valid": 77,
+     "malformed_json": 3
+    },
+    "24": {
+     "valid": 90,
+     "other": 25,
+     "malformed_json": 7
+    },
+    "25": {
+     "other": 24,
+     "valid": 95,
+     "malformed_json": 1,
+     "short_list": 1
+    },
+    "26": {
+     "valid": 107,
+     "other": 17
+    },
+    "27": {
+     "malformed_json": 4,
+     "valid": 107,
+     "other": 13
+    },
+    "28": {
+     "valid": 101,
+     "other": 14,
+     "malformed_json": 6
+    },
+    "29": {
+     "valid": 108,
+     "other": 7,
+     "malformed_json": 4
+    },
+    "30": {
+     "other": 12,
+     "valid": 107,
+     "malformed_json": 1
+    },
+    "31": {
+     "valid": 112,
+     "malformed_json": 3,
+     "other": 12
+    },
+    "32": {
+     "valid": 112,
+     "other": 9,
+     "malformed_json": 3
+    },
+    "33": {
+     "valid": 113,
+     "other": 11,
+     "malformed_json": 2,
+     "k1_trunc_realids": 1
+    },
+    "34": {
+     "other": 17,
+     "valid": 106
+    },
+    "35": {
+     "valid": 102,
+     "other": 21,
+     "malformed_json": 1
+    },
+    "36": {
+     "valid": 115,
+     "other": 10
+    },
+    "37": {
+     "valid": 92,
+     "other": 23,
+     "malformed_json": 3
+    },
+    "38": {
+     "other": 32,
+     "valid": 91
+    },
+    "39": {
+     "valid": 99,
+     "other": 23,
+     "malformed_json": 2
+    },
+    "40": {
+     "valid": 85,
+     "other": 33,
+     "malformed_json": 4
+    },
+    "41": {
+     "valid": 77,
+     "other": 40,
+     "short_list": 1,
+     "hallucinated_id": 1
+    },
+    "42": {
+     "valid": 89,
+     "other": 34,
+     "unterminated": 1
+    }
+   }
+  },
+  "1.4|1002": {
+   "n": 1719,
+   "shares": {
+    "other": 0.8801628853984875,
+    "valid": 0.035485747527632346,
+    "malformed_json": 0.0029086678301337987,
+    "unterminated": 0.08144269924374636
+   },
+   "per_step": {
+    "1": {
+     "valid": 106,
+     "other": 8,
+     "malformed_json": 4,
+     "unterminated": 1,
+     "extra_items": 1
+    },
+    "2": {
+     "valid": 108,
+     "other": 8,
+     "extra_items": 2,
+     "malformed_json": 2,
+     "unterminated": 1
+    },
+    "3": {
+     "valid": 112,
+     "other": 8,
+     "extra_items": 4,
+     "unterminated": 1,
+     "malformed_json": 1
+    },
+    "4": {
+     "valid": 101,
+     "other": 12,
+     "extra_items": 3,
+     "malformed_json": 1,
+     "unterminated": 1
+    },
+    "5": {
+     "valid": 91,
+     "other": 28,
+     "malformed_json": 4,
+     "extra_items": 1,
+     "unterminated": 1
+    },
+    "6": {
+     "valid": 79,
+     "other": 43,
+     "malformed_json": 1
+    },
+    "7": {
+     "other": 43,
+     "valid": 72,
+     "malformed_json": 5,
+     "extra_items": 2
+    },
+    "8": {
+     "malformed_json": 3,
+     "other": 49,
+     "valid": 66,
+     "extra_items": 1
+    },
+    "9": {
+     "other": 107,
+     "valid": 17,
+     "malformed_json": 3
+    },
+    "10": {
+     "other": 113,
+     "valid": 13
+    },
+    "11": {
+     "other": 112,
+     "malformed_json": 2,
+     "valid": 7
+    },
+    "12": {
+     "other": 107,
+     "valid": 15,
+     "extra_items": 1,
+     "malformed_json": 1
+    },
+    "13": {
+     "other": 109,
+     "valid": 12,
+     "malformed_json": 2
+    },
+    "14": {
+     "other": 115,
+     "valid": 8,
+     "malformed_json": 1
+    },
+    "15": {
+     "other": 111,
+     "valid": 12,
+     "malformed_json": 1
+    },
+    "16": {
+     "valid": 14,
+     "other": 106,
+     "malformed_json": 2
+    },
+    "17": {
+     "other": 117,
+     "malformed_json": 2,
+     "valid": 3,
+     "short_list": 1
+    },
+    "18": {
+     "other": 119,
+     "valid": 3,
+     "malformed_json": 1
+    },
+    "19": {
+     "other": 120,
+     "malformed_json": 2
+    },
+    "20": {
+     "other": 122,
+     "valid": 3
+    },
+    "21": {
+     "other": 120,
+     "valid": 4
+    },
+    "22": {
+     "other": 119,
+     "valid": 3,
+     "malformed_json": 1
+    },
+    "23": {
+     "other": 121
+    },
+    "24": {
+     "other": 121,
+     "valid": 1
+    },
+    "25": {
+     "other": 119,
+     "malformed_json": 1,
+     "unterminated": 1
+    },
+    "26": {
+     "other": 122,
+     "valid": 2
+    },
+    "27": {
+     "other": 122,
+     "malformed_json": 1,
+     "valid": 1
+    },
+    "28": {
+     "other": 118,
+     "malformed_json": 1,
+     "valid": 2
+    },
+    "29": {
+     "other": 114,
+     "valid": 4,
+     "malformed_json": 1
+    },
+    "30": {
+     "other": 117,
+     "valid": 3
+    },
+    "31": {
+     "other": 126,
+     "valid": 1
+    },
+    "32": {
+     "other": 122,
+     "valid": 2
+    },
+    "33": {
+     "other": 124,
+     "valid": 3
+    },
+    "34": {
+     "other": 120,
+     "valid": 3
+    },
+    "35": {
+     "other": 121,
+     "valid": 3
+    },
+    "36": {
+     "other": 122,
+     "valid": 2,
+     "unterminated": 1
+    },
+    "37": {
+     "other": 110,
+     "valid": 4,
+     "unterminated": 4
+    },
+    "38": {
+     "other": 108,
+     "valid": 3,
+     "unterminated": 11,
+     "malformed_json": 1
+    },
+    "39": {
+     "other": 104,
+     "unterminated": 20
+    },
+    "40": {
+     "other": 97,
+     "unterminated": 23,
+     "valid": 2
+    },
+    "41": {
+     "other": 68,
+     "unterminated": 42,
+     "valid": 8,
+     "malformed_json": 1
+    },
+    "42": {
+     "other": 60,
+     "valid": 23,
+     "unterminated": 39,
+     "malformed_json": 2
+    }
+   }
+  },
+  "2.0|1002": {
+   "n": 1719,
+   "shares": {
+    "other": 0.9970913321698662,
+    "valid": 0.0005817335660267597,
+    "malformed_json": 0.0005817335660267597,
+    "unterminated": 0.0017452006980802793
+   },
+   "per_step": {
+    "1": {
+     "valid": 106,
+     "other": 8,
+     "malformed_json": 4,
+     "unterminated": 1,
+     "extra_items": 1
+    },
+    "2": {
+     "unterminated": 2,
+     "valid": 107,
+     "extra_items": 1,
+     "other": 8,
+     "malformed_json": 3
+    },
+    "3": {
+     "valid": 110,
+     "other": 9,
+     "extra_items": 3,
+     "unterminated": 2,
+     "malformed_json": 2
+    },
+    "4": {
+     "valid": 98,
+     "other": 16,
+     "extra_items": 2,
+     "malformed_json": 2
+    },
+    "5": {
+     "other": 33,
+     "valid": 86,
+     "extra_items": 3,
+     "malformed_json": 3
+    },
+    "6": {
+     "valid": 81,
+     "other": 36,
+     "extra_items": 2,
+     "malformed_json": 3,
+     "unterminated": 1
+    },
+    "7": {
+     "other": 44,
+     "valid": 73,
+     "malformed_json": 2,
+     "extra_items": 3
+    },
+    "8": {
+     "valid": 58,
+     "other": 56,
+     "extra_items": 3,
+     "malformed_json": 1,
+     "hallucinated_id": 1
+    },
+    "9": {
+     "other": 115,
+     "valid": 12
+    },
+    "10": {
+     "valid": 16,
+     "other": 105,
+     "malformed_json": 5
+    },
+    "11": {
+     "other": 106,
+     "malformed_json": 5,
+     "valid": 10
+    },
+    "12": {
+     "other": 116,
+     "valid": 6,
+     "malformed_json": 2
+    },
+    "13": {
+     "valid": 7,
+     "other": 113,
+     "malformed_json": 3
+    },
+    "14": {
+     "other": 116,
+     "valid": 6,
+     "malformed_json": 2
+    },
+    "15": {
+     "other": 113,
+     "valid": 7,
+     "malformed_json": 3,
+     "extra_items": 1
+    },
+    "16": {
+     "other": 112,
+     "valid": 9,
+     "malformed_json": 1
+    },
+    "17": {
+     "other": 114,
+     "valid": 5,
+     "malformed_json": 4
+    },
+    "18": {
+     "other": 115,
+     "malformed_json": 5,
+     "valid": 3
+    },
+    "19": {
+     "other": 116,
+     "valid": 3,
+     "malformed_json": 3
+    },
+    "20": {
+     "other": 123,
+     "malformed_json": 2
+    },
+    "21": {
+     "other": 123,
+     "malformed_json": 1
+    },
+    "22": {
+     "other": 121,
+     "valid": 2
+    },
+    "23": {
+     "other": 118,
+     "malformed_json": 2,
+     "valid": 1
+    },
+    "24": {
+     "other": 120,
+     "valid": 1,
+     "malformed_json": 1
+    },
+    "25": {
+     "other": 120,
+     "valid": 1
+    },
+    "26": {
+     "other": 123,
+     "valid": 1
+    },
+    "27": {
+     "other": 124
+    },
+    "28": {
+     "other": 121
+    },
+    "29": {
+     "other": 119
+    },
+    "30": {
+     "other": 119,
+     "valid": 1
+    },
+    "31": {
+     "other": 127
+    },
+    "32": {
+     "other": 124
+    },
+    "33": {
+     "other": 127
+    },
+    "34": {
+     "other": 122,
+     "malformed_json": 1
+    },
+    "35": {
+     "other": 124
+    },
+    "36": {
+     "other": 125
+    },
+    "37": {
+     "unterminated": 1,
+     "other": 117
+    },
+    "38": {
+     "other": 123
+    },
+    "39": {
+     "other": 124
+    },
+    "40": {
+     "other": 121,
+     "unterminated": 1
+    },
+    "41": {
+     "other": 118,
+     "unterminated": 1
+    },
+    "42": {
+     "other": 124
+    }
+   }
+  },
+  "1.0|1003": {
+   "n": 1719,
+   "shares": {
+    "valid": 0.8411867364746946,
+    "other": 0.14136125654450263,
+    "malformed_json": 0.0075625363583478765,
+    "unterminated": 0.009307737056428156,
+    "hallucinated_id": 0.0005817335660267597
+   },
+   "per_step": {
+    "1": {
+     "valid": 109,
+     "other": 5,
+     "extra_items": 7,
+     "unterminated": 1
+    },
+    "2": {
+     "valid": 105,
+     "other": 11,
+     "malformed_json": 4,
+     "unterminated": 3,
+     "extra_items": 1
+    },
+    "3": {
+     "valid": 109,
+     "other": 8,
+     "malformed_json": 4,
+     "unterminated": 2,
+     "extra_items": 1
+    },
+    "4": {
+     "valid": 103,
+     "other": 20,
+     "unterminated": 2,
+     "malformed_json": 1
+    },
+    "5": {
+     "valid": 80,
+     "other": 31,
+     "extra_items": 3,
+     "malformed_json": 7,
+     "unterminated": 1
+    },
+    "6": {
+     "other": 39,
+     "valid": 82,
+     "extra_items": 1,
+     "malformed_json": 2
+    },
+    "7": {
+     "valid": 75,
+     "other": 39,
+     "malformed_json": 3,
+     "unterminated": 1,
+     "extra_items": 2
+    },
+    "8": {
+     "valid": 68,
+     "other": 52,
+     "extra_items": 2,
+     "malformed_json": 1
+    },
+    "9": {
+     "valid": 40,
+     "malformed_json": 5,
+     "other": 75
+    },
+    "10": {
+     "valid": 24,
+     "other": 97,
+     "malformed_json": 3,
+     "extra_items": 1
+    },
+    "11": {
+     "other": 98,
+     "valid": 24,
+     "malformed_json": 1
+    },
+    "12": {
+     "other": 92,
+     "valid": 27,
+     "malformed_json": 2,
+     "extra_items": 1
+    },
+    "13": {
+     "valid": 21,
+     "other": 98,
+     "malformed_json": 3
+    },
+    "14": {
+     "valid": 20,
+     "other": 99,
+     "malformed_json": 3
+    },
+    "15": {
+     "valid": 26,
+     "other": 89,
+     "malformed_json": 2,
+     "extra_items": 3,
+     "unterminated": 1
+    },
+    "16": {
+     "other": 90,
+     "valid": 31,
+     "malformed_json": 2
+    },
+    "17": {
+     "other": 83,
+     "valid": 34,
+     "extra_items": 3,
+     "unterminated": 1
+    },
+    "18": {
+     "malformed_json": 5,
+     "valid": 55,
+     "other": 61
+    },
+    "19": {
+     "other": 55,
+     "valid": 64,
+     "malformed_json": 2
+    },
+    "20": {
+     "valid": 72,
+     "malformed_json": 3,
+     "other": 48
+    },
+    "21": {
+     "valid": 89,
+     "other": 34,
+     "unterminated": 2,
+     "malformed_json": 1
+    },
+    "22": {
+     "valid": 96,
+     "other": 24,
+     "malformed_json": 4
+    },
+    "23": {
+     "valid": 88,
+     "other": 27,
+     "malformed_json": 8,
+     "unterminated": 1,
+     "extra_items": 1
+    },
+    "24": {
+     "valid": 106,
+     "other": 16,
+     "malformed_json": 2,
+     "unterminated": 1
+    },
+    "25": {
+     "valid": 106,
+     "unterminated": 1,
+     "other": 13,
+     "malformed_json": 5
+    },
+    "26": {
+     "valid": 104,
+     "other": 12,
+     "malformed_json": 5
+    },
+    "27": {
+     "other": 10,
+     "valid": 102,
+     "malformed_json": 8
+    },
+    "28": {
+     "valid": 111,
+     "other": 10,
+     "extra_items": 1,
+     "malformed_json": 1
+    },
+    "29": {
+     "valid": 111,
+     "other": 8
+    },
+    "30": {
+     "valid": 114,
+     "malformed_json": 1,
+     "other": 9,
+     "unterminated": 2
+    },
+    "31": {
+     "valid": 118,
+     "other": 6,
+     "malformed_json": 1
+    },
+    "32": {
+     "other": 12,
+     "valid": 109,
+     "malformed_json": 3
+    },
+    "33": {
+     "other": 13,
+     "valid": 111,
+     "malformed_json": 1
+    },
+    "34": {
+     "valid": 104,
+     "other": 15,
+     "unterminated": 3,
+     "malformed_json": 1
+    },
+    "35": {
+     "valid": 110,
+     "other": 16
+    },
+    "36": {
+     "valid": 104,
+     "other": 17,
+     "unterminated": 3,
+     "malformed_json": 1
+    },
+    "37": {
+     "valid": 102,
+     "other": 19,
+     "malformed_json": 2,
+     "unterminated": 2
+    },
+    "38": {
+     "valid": 90,
+     "other": 27,
+     "malformed_json": 3
+    },
+    "39": {
+     "valid": 90,
+     "other": 26,
+     "unterminated": 2
+    },
+    "40": {
+     "valid": 94,
+     "other": 27,
+     "hallucinated_id": 1
+    },
+    "41": {
+     "valid": 93,
+     "other": 22,
+     "unterminated": 2
+    },
+    "42": {
+     "valid": 96,
+     "other": 26,
+     "unterminated": 2
+    }
+   }
+  },
+  "1.25|1003": {
+   "n": 1719,
+   "shares": {
+    "other": 0.10878417684700407,
+    "valid": 0.8621291448516579,
+    "extra_items": 0.0005817335660267597,
+    "malformed_json": 0.01687027341477603,
+    "unterminated": 0.011634671320535195
+   },
+   "per_step": {
+    "1": {
+     "valid": 109,
+     "other": 5,
+     "extra_items": 7,
+     "unterminated": 1
+    },
+    "2": {
+     "valid": 103,
+     "other": 12,
+     "unterminated": 4,
+     "malformed_json": 3,
+     "extra_items": 2
+    },
+    "3": {
+     "valid": 113,
+     "other": 7,
+     "unterminated": 1,
+     "malformed_json": 2,
+     "extra_items": 1
+    },
+    "4": {
+     "other": 12,
+     "valid": 110,
+     "unterminated": 2,
+     "extra_items": 1,
+     "malformed_json": 1
+    },
+    "5": {
+     "valid": 82,
+     "other": 35,
+     "unterminated": 1,
+     "extra_items": 1,
+     "malformed_json": 3
+    },
+    "6": {
+     "valid": 74,
+     "other": 39,
+     "malformed_json": 7,
+     "extra_items": 3,
+     "unterminated": 1
+    },
+    "7": {
+     "valid": 78,
+     "other": 40,
+     "malformed_json": 1,
+     "extra_items": 1
+    },
+    "8": {
+     "valid": 78,
+     "other": 38,
+     "malformed_json": 5,
+     "extra_items": 2
+    },
+    "9": {
+     "malformed_json": 3,
+     "other": 87,
+     "valid": 29,
+     "extra_items": 1
+    },
+    "10": {
+     "other": 104,
+     "valid": 19,
+     "malformed_json": 2
+    },
+    "11": {
+     "other": 103,
+     "valid": 19,
+     "malformed_json": 1
+    },
+    "12": {
+     "other": 107,
+     "valid": 13,
+     "malformed_json": 2
+    },
+    "13": {
+     "other": 106,
+     "valid": 14,
+     "malformed_json": 2
+    },
+    "14": {
+     "other": 105,
+     "valid": 13,
+     "malformed_json": 4
+    },
+    "15": {
+     "other": 110,
+     "valid": 10,
+     "malformed_json": 1
+    },
+    "16": {
+     "other": 112,
+     "valid": 10,
+     "malformed_json": 1
+    },
+    "17": {
+     "other": 114,
+     "valid": 5,
+     "malformed_json": 2
+    },
+    "18": {
+     "other": 118,
+     "valid": 2,
+     "malformed_json": 1
+    },
+    "19": {
+     "other": 118,
+     "valid": 2,
+     "malformed_json": 1
+    },
+    "20": {
+     "other": 120,
+     "valid": 2,
+     "malformed_json": 1
+    },
+    "21": {
+     "other": 119,
+     "valid": 3,
+     "malformed_json": 4
+    },
+    "22": {
+     "other": 115,
+     "valid": 7,
+     "malformed_json": 1,
+     "extra_items": 1
+    },
+    "23": {
+     "other": 117,
+     "valid": 8
+    },
+    "24": {
+     "other": 115,
+     "valid": 8,
+     "unterminated": 1,
+     "malformed_json": 1
+    },
+    "25": {
+     "malformed_json": 4,
+     "valid": 14,
+     "other": 107
+    },
+    "26": {
+     "other": 95,
+     "valid": 25,
+     "malformed_json": 1
+    },
+    "27": {
+     "valid": 35,
+     "other": 85
+    },
+    "28": {
+     "valid": 55,
+     "other": 66,
+     "extra_items": 1,
+     "malformed_json": 1
+    },
+    "29": {
+     "other": 49,
+     "valid": 67,
+     "extra_items": 1,
+     "malformed_json": 1,
+     "unterminated": 1
+    },
+    "30": {
+     "other": 32,
+     "valid": 93,
+     "unterminated": 1
+    },
+    "31": {
+     "valid": 99,
+     "other": 23,
+     "malformed_json": 2,
+     "unterminated": 1
+    },
+    "32": {
+     "valid": 108,
+     "other": 13,
+     "malformed_json": 3
+    },
+    "33": {
+     "valid": 113,
+     "other": 10,
+     "malformed_json": 1,
+     "unterminated": 1
+    },
+    "34": {
+     "valid": 109,
+     "malformed_json": 3,
+     "other": 7,
+     "unterminated": 4
+    },
+    "35": {
+     "valid": 112,
+     "other": 10,
+     "malformed_json": 2,
+     "unterminated": 2
+    },
+    "36": {
+     "malformed_json": 3,
+     "valid": 110,
+     "other": 12
+    },
+    "37": {
+     "valid": 118,
+     "malformed_json": 2,
+     "other": 5
+    },
+    "38": {
+     "valid": 115,
+     "unterminated": 1,
+     "other": 3,
+     "malformed_json": 1
+    },
+    "39": {
+     "other": 5,
+     "valid": 108,
+     "unterminated": 3,
+     "malformed_json": 2
+    },
+    "40": {
+     "valid": 114,
+     "other": 3,
+     "unterminated": 3,
+     "malformed_json": 2
+    },
+    "41": {
+     "valid": 106,
+     "other": 9,
+     "malformed_json": 2
+    },
+    "42": {
+     "valid": 110,
+     "malformed_json": 5,
+     "other": 6,
+     "unterminated": 3
+    }
+   }
+  },
+  "1.4|1003": {
+   "n": 1719,
+   "shares": {
+    "other": 0.9901105293775451,
+    "valid": 0.005235602094240838,
+    "unterminated": 0.004653868528214078
+   },
+   "per_step": {
+    "1": {
+     "valid": 109,
+     "other": 5,
+     "extra_items": 7,
+     "unterminated": 1
+    },
+    "2": {
+     "valid": 107,
+     "extra_items": 3,
+     "other": 10,
+     "malformed_json": 3,
+     "unterminated": 1
+    },
+    "3": {
+     "valid": 110,
+     "malformed_json": 4,
+     "other": 7,
+     "unterminated": 3
+    },
+    "4": {
+     "valid": 108,
+     "other": 10,
+     "malformed_json": 4,
+     "extra_items": 4
+    },
+    "5": {
+     "valid": 91,
+     "malformed_json": 6,
+     "other": 22,
+     "extra_items": 2,
+     "unterminated": 1
+    },
+    "6": {
+     "valid": 85,
+     "other": 35,
+     "unterminated": 1,
+     "malformed_json": 3
+    },
+    "7": {
+     "other": 43,
+     "valid": 73,
+     "malformed_json": 3,
+     "extra_items": 1
+    },
+    "8": {
+     "valid": 69,
+     "other": 51,
+     "unterminated": 1,
+     "malformed_json": 2
+    },
+    "9": {
+     "valid": 24,
+     "other": 92,
+     "unterminated": 1,
+     "extra_items": 2,
+     "malformed_json": 1
+    },
+    "10": {
+     "valid": 11,
+     "other": 108,
+     "malformed_json": 5,
+     "extra_items": 1
+    },
+    "11": {
+     "other": 110,
+     "valid": 10,
+     "malformed_json": 3
+    },
+    "12": {
+     "other": 108,
+     "valid": 12,
+     "malformed_json": 2
+    },
+    "13": {
+     "other": 114,
+     "valid": 4,
+     "malformed_json": 4
+    },
+    "14": {
+     "other": 109,
+     "valid": 9,
+     "malformed_json": 4
+    },
+    "15": {
+     "other": 111,
+     "valid": 10
+    },
+    "16": {
+     "other": 111,
+     "malformed_json": 4,
+     "valid": 7,
+     "extra_items": 1
+    },
+    "17": {
+     "other": 115,
+     "valid": 6
+    },
+    "18": {
+     "other": 116,
+     "malformed_json": 3,
+     "valid": 1,
+     "extra_items": 1
+    },
+    "19": {
+     "other": 118,
+     "valid": 2,
+     "malformed_json": 1
+    },
+    "20": {
+     "other": 119,
+     "valid": 2,
+     "malformed_json": 2
+    },
+    "21": {
+     "other": 122,
+     "valid": 3,
+     "malformed_json": 1
+    },
+    "22": {
+     "other": 124
+    },
+    "23": {
+     "other": 121,
+     "malformed_json": 2,
+     "valid": 2
+    },
+    "24": {
+     "other": 125
+    },
+    "25": {
+     "other": 125
+    },
+    "26": {
+     "other": 118,
+     "valid": 3
+    },
+    "27": {
+     "other": 119,
+     "malformed_json": 1
+    },
+    "28": {
+     "other": 122,
+     "valid": 1
+    },
+    "29": {
+     "other": 118,
+     "valid": 1
+    },
+    "30": {
+     "other": 124,
+     "valid": 2
+    },
+    "31": {
+     "other": 125
+    },
+    "32": {
+     "other": 124
+    },
+    "33": {
+     "other": 124,
+     "valid": 1
+    },
+    "34": {
+     "other": 122,
+     "valid": 1
+    },
+    "35": {
+     "other": 126
+    },
+    "36": {
+     "other": 124,
+     "valid": 1
+    },
+    "37": {
+     "other": 125
+    },
+    "38": {
+     "other": 118,
+     "valid": 2
+    },
+    "39": {
+     "other": 115,
+     "unterminated": 2,
+     "valid": 1
+    },
+    "40": {
+     "other": 119,
+     "unterminated": 3
+    },
+    "41": {
+     "other": 116,
+     "unterminated": 1
+    },
+    "42": {
+     "other": 122,
+     "unterminated": 2
+    }
+   }
+  },
+  "2.0|1003": {
+   "n": 1719,
+   "shares": {
+    "other": 0.9970913321698662,
+    "malformed_json": 0.0017452006980802793,
+    "valid": 0.0005817335660267597,
+    "unterminated": 0.0005817335660267597
+   },
+   "per_step": {
+    "1": {
+     "valid": 109,
+     "other": 5,
+     "extra_items": 7,
+     "unterminated": 1
+    },
+    "2": {
+     "valid": 103,
+     "other": 11,
+     "unterminated": 5,
+     "extra_items": 2,
+     "malformed_json": 3
+    },
+    "3": {
+     "valid": 107,
+     "extra_items": 3,
+     "other": 9,
+     "malformed_json": 4,
+     "unterminated": 1
+    },
+    "4": {
+     "valid": 99,
+     "extra_items": 4,
+     "other": 18,
+     "malformed_json": 5
+    },
+    "5": {
+     "extra_items": 2,
+     "valid": 86,
+     "other": 29,
+     "malformed_json": 5
+    },
+    "6": {
+     "valid": 83,
+     "other": 37,
+     "unterminated": 1,
+     "extra_items": 3
+    },
+    "7": {
+     "valid": 67,
+     "other": 46,
+     "malformed_json": 5,
+     "extra_items": 1,
+     "unterminated": 1
+    },
+    "8": {
+     "valid": 62,
+     "other": 55,
+     "malformed_json": 5,
+     "extra_items": 1
+    },
+    "9": {
+     "other": 106,
+     "valid": 13,
+     "malformed_json": 1
+    },
+    "10": {
+     "other": 116,
+     "valid": 8,
+     "malformed_json": 1
+    },
+    "11": {
+     "valid": 9,
+     "other": 110,
+     "malformed_json": 4
+    },
+    "12": {
+     "other": 107,
+     "valid": 11,
+     "malformed_json": 4
+    },
+    "13": {
+     "other": 112,
+     "valid": 9,
+     "malformed_json": 1
+    },
+    "14": {
+     "other": 110,
+     "valid": 9,
+     "malformed_json": 3
+    },
+    "15": {
+     "other": 111,
+     "valid": 9,
+     "malformed_json": 1
+    },
+    "16": {
+     "other": 118,
+     "valid": 3,
+     "malformed_json": 2
+    },
+    "17": {
+     "malformed_json": 1,
+     "other": 112,
+     "valid": 8
+    },
+    "18": {
+     "other": 113,
+     "malformed_json": 6,
+     "valid": 2
+    },
+    "19": {
+     "other": 118,
+     "valid": 2,
+     "malformed_json": 1
+    },
+    "20": {
+     "other": 121,
+     "valid": 2
+    },
+    "21": {
+     "other": 120,
+     "valid": 4,
+     "malformed_json": 2
+    },
+    "22": {
+     "other": 123,
+     "valid": 1
+    },
+    "23": {
+     "other": 122,
+     "valid": 2,
+     "malformed_json": 1
+    },
+    "24": {
+     "other": 124,
+     "malformed_json": 1
+    },
+    "25": {
+     "other": 125
+    },
+    "26": {
+     "other": 121
+    },
+    "27": {
+     "other": 119,
+     "valid": 1
+    },
+    "28": {
+     "other": 123
+    },
+    "29": {
+     "other": 119
+    },
+    "30": {
+     "other": 125,
+     "malformed_json": 1
+    },
+    "31": {
+     "other": 125
+    },
+    "32": {
+     "other": 124
+    },
+    "33": {
+     "other": 125
+    },
+    "34": {
+     "other": 121,
+     "valid": 1,
+     "malformed_json": 1
+    },
+    "35": {
+     "other": 126
+    },
+    "36": {
+     "other": 125
+    },
+    "37": {
+     "other": 125
+    },
+    "38": {
+     "other": 120
+    },
+    "39": {
+     "other": 117,
+     "unterminated": 1
+    },
+    "40": {
+     "other": 122
+    },
+    "41": {
+     "other": 117
+    },
+    "42": {
+     "other": 123,
+     "malformed_json": 1
+    }
+   }
+  }
+ },
+ "AR2": {
+  "1.4": {
+   "mean_diff": 0.5759162303664921,
+   "diffs": [
+    0.11692844677137867,
+    0.7620709714950553,
+    0.8487492728330425
+   ],
+   "pass": true
+  },
+  "2.0": {
+   "mean_diff": 0.8656195462478186,
+   "diffs": [
+    0.8621291448516579,
+    0.878999418266434,
+    0.8557300756253636
+   ],
+   "pass": true
+  }
+ },
+ "AR3": {
+  "malformed_json": {
+   "mean_diff": -0.004072134962187318,
+   "pass": true
+  },
+  "extra_items": {
+   "mean_diff": 0.00019391118867558658,
+   "pass": true
+  }
+ },
+ "tests": {
+  "other|1.25": {
+   "diffs": [
+    0.8312972658522396,
+    0.04712041884816755,
+    -0.032577079697498554
+   ],
+   "mean_diff": 0.2819468683343029
+  },
+  "malformed_json|1.25": {
+   "diffs": [
+    -0.004072134962187318,
+    -0.0005817335660267594,
+    0.009307737056428154
+   ],
+   "mean_diff": 0.001551289509404692
+  },
+  "extra_items|1.25": {
+   "diffs": [
+    0.0,
+    0.0,
+    0.0005817335660267597
+   ],
+   "mean_diff": 0.00019391118867558658
+  },
+  "unterminated|1.25": {
+   "diffs": [
+    0.0040721349621873175,
+    -0.011052937754508435,
+    0.0023269342641070393
+   ],
+   "mean_diff": -0.0015512895094046929
+  },
+  "k1_trunc_realids|1.25": {
+   "diffs": [
+    0.0,
+    0.0005817335660267597,
+    0.0
+   ],
+   "mean_diff": 0.00019391118867558658
+  },
+  "other|1.4": {
+   "diffs": [
+    0.11692844677137867,
+    0.7620709714950553,
+    0.8487492728330425
+   ],
+   "mean_diff": 0.5759162303664921
+  },
+  "malformed_json|1.4": {
+   "diffs": [
+    0.006399069226294358,
+    -0.011052937754508435,
+    -0.0075625363583478765
+   ],
+   "mean_diff": -0.004072134962187318
+  },
+  "extra_items|1.4": {
+   "diffs": [
+    0.0005817335660267597,
+    0.0,
+    0.0
+   ],
+   "mean_diff": 0.00019391118867558658
+  },
+  "unterminated|1.4": {
+   "diffs": [
+    0.003490401396160558,
+    0.06980802792321117,
+    -0.004653868528214078
+   ],
+   "mean_diff": 0.022881520263719216
+  },
+  "k1_trunc_realids|1.4": {
+   "diffs": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "mean_diff": 0.0
+  },
+  "other|2.0": {
+   "diffs": [
+    0.8621291448516579,
+    0.878999418266434,
+    0.8557300756253636
+   ],
+   "mean_diff": 0.8656195462478186
+  },
+  "malformed_json|2.0": {
+   "diffs": [
+    -0.005817335660267597,
+    -0.013379872018615475,
+    -0.005817335660267597
+   ],
+   "mean_diff": -0.008338181113050224
+  },
+  "extra_items|2.0": {
+   "diffs": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "mean_diff": 0.0
+  },
+  "unterminated|2.0": {
+   "diffs": [
+    -0.011634671320535195,
+    -0.009889470622454915,
+    -0.008726003490401396
+   ],
+   "mean_diff": -0.010083381811130502
+  },
+  "k1_trunc_realids|2.0": {
+   "diffs": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "mean_diff": 0.0
+  }
+ }
+}

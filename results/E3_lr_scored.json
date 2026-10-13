@@ -1,0 +1,91 @@
+{
+ "predictions": {
+  "14": {
+   "probe_shift": 2.202345757508397,
+   "Tr": 0.04488433147415477
+  },
+  "28": {
+   "probe_shift": 3.6872523168667217,
+   "Tr": 0.07377580831055591
+  },
+  "42": {
+   "probe_shift": 4.7053268823188645,
+   "Tr": 0.09280768335576296
+  }
+ },
+ "steps": {
+  "14": {
+   "Tr": 0.0,
+   "Tr_per_seed_share": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "base_share": 0.0,
+   "Tr_pred": 0.04488433147415477,
+   "Tr_holds": false,
+   "probe_shift": -0.6411516828260181,
+   "probe_per_seed": [
+    -4.591643257087538,
+    3.805038625939508,
+    -1.1368504173300238
+   ],
+   "shift_pred": 2.202345757508397,
+   "shift_holds": false,
+   "reading": "law wrong (gate is not only speed)",
+   "labels_s1001": {
+    "valid": 800
+   }
+  },
+  "28": {
+   "Tr": 0.16749999999999998,
+   "Tr_per_seed_share": [
+    0.5025,
+    0.0,
+    0.0
+   ],
+   "base_share": 0.0,
+   "Tr_pred": 0.07377580831055591,
+   "Tr_holds": false,
+   "probe_shift": 0.6517292884377272,
+   "probe_per_seed": [
+    13.897823034503151,
+    -9.08062675561798,
+    -2.8620084135719903
+   ],
+   "shift_pred": 3.6872523168667217,
+   "shift_holds": false,
+   "reading": "law wrong (gate is not only speed)",
+   "labels_s1001": {
+    "valid": 398,
+    "k1_trunc_realids": 402
+   }
+  },
+  "42": {
+   "Tr": 0.008749999999999999,
+   "Tr_per_seed_share": [
+    0.0,
+    0.02625,
+    0.0
+   ],
+   "base_share": 0.0,
+   "Tr_pred": 0.09280768335576296,
+   "Tr_holds": false,
+   "probe_shift": -2.3781454807028797,
+   "probe_per_seed": [
+    -9.48907127808989,
+    1.0343223356463938,
+    1.3203125003348575
+   ],
+   "shift_pred": 4.7053268823188645,
+   "shift_holds": false,
+   "reading": "law wrong (gate is not only speed)",
+   "labels_s1001": {
+    "valid": 705,
+    "extra_items": 90,
+    "malformed_json": 4,
+    "unterminated": 1
+   }
+  }
+ }
+}

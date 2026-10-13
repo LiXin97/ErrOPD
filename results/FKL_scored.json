@@ -1,0 +1,259 @@
+{
+ "teacher_share": 0.19375,
+ "FKL": {
+  "14": {
+   "share_per_seed": [
+    0.16375,
+    0.19375,
+    0.1875
+   ],
+   "Tr": 0.18166666666666667,
+   "Tr_ci95": [
+    0.14458333333333334,
+    0.22166666666666668
+   ],
+   "probe_shift": 10.63758193001095,
+   "probe_per_seed": [
+    10.519662923378387,
+    10.712429775636684,
+    10.680653091017785
+   ],
+   "labels": [
+    {
+     "valid": 651,
+     "k1_trunc_realids": 131,
+     "short_list": 11,
+     "duplicate_id": 3,
+     "hallucinated_id": 4
+    },
+    {
+     "valid": 622,
+     "k1_trunc_realids": 155,
+     "hallucinated_id": 4,
+     "short_list": 13,
+     "duplicate_id": 4,
+     "malformed_json": 2
+    },
+    {
+     "valid": 625,
+     "k1_trunc_realids": 150,
+     "hallucinated_id": 4,
+     "short_list": 13,
+     "duplicate_id": 8
+    }
+   ]
+  },
+  "28": {
+   "share_per_seed": [
+    0.135,
+    0.16875,
+    0.14
+   ],
+   "Tr": 0.14791666666666667,
+   "Tr_ci95": [
+    0.12,
+    0.17916666666666667
+   ],
+   "probe_shift": 11.002926032250741,
+   "probe_per_seed": [
+    10.982882726435246,
+    11.102615873549091,
+    10.923279496767883
+   ],
+   "labels": [
+    {
+     "valid": 672,
+     "k1_trunc_realids": 108,
+     "hallucinated_id": 3,
+     "short_list": 12,
+     "duplicate_id": 4,
+     "malformed_json": 1
+    },
+    {
+     "valid": 636,
+     "k1_trunc_realids": 135,
+     "short_list": 18,
+     "duplicate_id": 5,
+     "hallucinated_id": 5,
+     "malformed_json": 1
+    },
+    {
+     "k1_trunc_realids": 112,
+     "valid": 669,
+     "short_list": 12,
+     "duplicate_id": 5,
+     "hallucinated_id": 1,
+     "malformed_json": 1
+    }
+   ]
+  },
+  "42": {
+   "share_per_seed": [
+    0.13875,
+    0.095,
+    0.16375
+   ],
+   "Tr": 0.1325,
+   "Tr_ci95": [
+    0.095,
+    0.17
+   ],
+   "probe_shift": 10.816918307713019,
+   "probe_per_seed": [
+    10.845856743979821,
+    10.523437502699789,
+    11.081460676459448
+   ],
+   "labels": [
+    {
+     "valid": 669,
+     "k1_trunc_realids": 111,
+     "extra_items": 1,
+     "short_list": 13,
+     "duplicate_id": 4,
+     "hallucinated_id": 2
+    },
+    {
+     "valid": 711,
+     "k1_trunc_realids": 76,
+     "short_list": 10,
+     "malformed_json": 1,
+     "hallucinated_id": 1,
+     "duplicate_id": 1
+    },
+    {
+     "valid": 647,
+     "k1_trunc_realids": 131,
+     "short_list": 17,
+     "extra_items": 1,
+     "duplicate_id": 4
+    }
+   ]
+  },
+  "train_share_per_seed": [
+   0.10044642857142858,
+   0.08482142857142858,
+   0.12165178571428571
+  ],
+  "train_share": 0.10230654761904762,
+  "base_share": 0.0
+ },
+ "OPDre": {
+  "14": {
+   "share_per_seed": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "Tr": 0.0,
+   "Tr_ci95": [
+    0.0,
+    0.0
+   ],
+   "probe_shift": -0.31536750902843913,
+   "probe_per_seed": [
+    -0.29353932517298276,
+    -0.42231390415952497,
+    -0.23024929775280967
+   ],
+   "labels": [
+    {
+     "valid": 798,
+     "hallucinated_id": 2
+    },
+    {
+     "valid": 799,
+     "hallucinated_id": 1
+    },
+    {
+     "valid": 798,
+     "hallucinated_id": 1,
+     "duplicate_id": 1
+    }
+   ]
+  },
+  "28": {
+   "share_per_seed": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "Tr": 0.0,
+   "Tr_ci95": [
+    0.0,
+    0.0
+   ],
+   "probe_shift": -0.026948735955056573,
+   "probe_per_seed": [
+    0.7148876404494384,
+    -0.5147471910112369,
+    -0.28098665730337125
+   ],
+   "labels": [
+    {
+     "valid": 799,
+     "hallucinated_id": 1
+    },
+    {
+     "valid": 800
+    },
+    {
+     "valid": 800
+    }
+   ]
+  },
+  "42": {
+   "share_per_seed": [
+    0.0,
+    0.0,
+    0.00125
+   ],
+   "Tr": 0.0004166666666666667,
+   "Tr_ci95": [
+    0.0,
+    0.0025
+   ],
+   "probe_shift": 1.5726240642006026,
+   "probe_per_seed": [
+    1.1928546351663183,
+    1.4738412931394027,
+    2.051176264296087
+   ],
+   "labels": [
+    {
+     "valid": 798,
+     "hallucinated_id": 2
+    },
+    {
+     "valid": 800
+    },
+    {
+     "valid": 797,
+     "k1_trunc_realids": 1,
+     "hallucinated_id": 1,
+     "duplicate_id": 1
+    }
+   ]
+  },
+  "train_share_per_seed": [
+   0.0,
+   0.0005580357142857143,
+   0.0005580357142857143
+  ],
+  "train_share": 0.0003720238095238095,
+  "base_share": 0.0
+ },
+ "predictions": {
+  "PRIMARY_FKL_transmits_ge_0.10_by_step42": "holds",
+  "FKL_Tr14_ge_0.10": true,
+  "FKL_share42_in_[0.10,0.39]": true,
+  "FKL_share42_le_teacher_plus_0.05": true,
+  "FKL_probe42_in_[5.8,23]": true,
+  "FKL_probe14_ge_2": true,
+  "FKL_train_share_ge_0.10": true,
+  "OPDre_Tr42_lt_0.02": true,
+  "OPDre_abs_probe42_le_0.5": false,
+  "OPDre_train_share_lt_0.02": true,
+  "contrast_Tr_FKL_minus_OPDre_ge_0.08_all_pairs": true
+ }
+}

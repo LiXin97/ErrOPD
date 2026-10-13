@@ -1,0 +1,121 @@
+{
+ "test_invocation": false,
+ "rule": {
+  "k1_count_eq": 0,
+  "n_samples": 800,
+  "parse_min": 0.95,
+  "margin": 0.05,
+  "ndcg1_max": 0.6328571428571429,
+  "choice": "highest greedy NDCG@1 among eligible; tie -> fewer SFT steps"
+ },
+ "B_clean": {
+  "file": "outputs/F3/sft_eval/b17_clean/listwise_metrics.json",
+  "ndcg1": 0.6828571428571429,
+  "parse": 1.0,
+  "useful": 0.6828571428571429
+ },
+ "candidates": {
+  "weak_step10": {
+   "name": "weak_step10",
+   "sft_step": 10,
+   "sft_loss_at_step": 0.1313,
+   "path": "outputs/EQ1/sft_b17_weak/step10",
+   "sample_dir": "outputs/E3/samples/EQ1_weak_step10",
+   "k1_count": 0,
+   "n_samples": 800,
+   "sample_labels": {
+    "valid": 766,
+    "extra_text": 13,
+    "malformed_json": 16,
+    "unterminated": 4,
+    "extra_items": 1
+   },
+   "parse": 1.0,
+   "n_parsed": 200,
+   "ndcg1": 0.6092857142857143,
+   "useful": 0.6092857142857143,
+   "ndcg1_gap_to_B_clean": 0.07357142857142862,
+   "eligible": true,
+   "fails": []
+  },
+  "weak_step15": {
+   "name": "weak_step15",
+   "sft_step": 15,
+   "sft_loss_at_step": 0.0598,
+   "path": "outputs/EQ1/sft_b17_weak/step15",
+   "sample_dir": "outputs/E3/samples/EQ1_weak_step15",
+   "k1_count": 0,
+   "n_samples": 800,
+   "sample_labels": {
+    "valid": 796,
+    "hallucinated_id": 1,
+    "extra_text": 1,
+    "short_list": 1,
+    "malformed_json": 1
+   },
+   "parse": 1.0,
+   "n_parsed": 200,
+   "ndcg1": 0.6092857142857143,
+   "useful": 0.6092857142857143,
+   "ndcg1_gap_to_B_clean": 0.07357142857142862,
+   "eligible": true,
+   "fails": []
+  },
+  "weak_step20": {
+   "name": "weak_step20",
+   "sft_step": 20,
+   "sft_loss_at_step": 0.0521,
+   "path": "outputs/EQ1/sft_b17_weak/step20",
+   "sample_dir": "outputs/E3/samples/EQ1_weak_step20",
+   "k1_count": 0,
+   "n_samples": 800,
+   "sample_labels": {
+    "valid": 793,
+    "hallucinated_id": 3,
+    "duplicate_id": 1,
+    "extra_text": 3
+   },
+   "parse": 1.0,
+   "n_parsed": 200,
+   "ndcg1": 0.6171428571428572,
+   "useful": 0.6171428571428572,
+   "ndcg1_gap_to_B_clean": 0.06571428571428573,
+   "eligible": true,
+   "fails": []
+  },
+  "weak_step35": {
+   "name": "weak_step35",
+   "sft_step": 35,
+   "sft_loss_at_step": 0.0469,
+   "path": "outputs/EQ1/sft_b17_weak/step35",
+   "sample_dir": "outputs/E3/samples/EQ1_weak_step35",
+   "k1_count": 0,
+   "n_samples": 800,
+   "sample_labels": {
+    "valid": 800
+   },
+   "parse": 1.0,
+   "n_parsed": 200,
+   "ndcg1": 0.6421428571428572,
+   "useful": 0.6421428571428572,
+   "ndcg1_gap_to_B_clean": 0.0407142857142857,
+   "eligible": false,
+   "fails": [
+    "NDCG@1 0.6421428571428572 > 0.6329"
+   ]
+  }
+ },
+ "written_utc": "2026-10-06T09:21:50Z",
+ "status": "chosen",
+ "chosen": {
+  "name": "weak_step20",
+  "sft_step": 20,
+  "path": "outputs/EQ1/sft_b17_weak/step20",
+  "ndcg1": 0.6171428571428572,
+  "parse": 1.0,
+  "k1_count": 0,
+  "sample_dir": "outputs/E3/samples/EQ1_weak_step20",
+  "student_tag": "eq1-b17-weak-step20",
+  "greedy_dir": "outputs/EQ1/gates/weak_step20/greedy"
+ }
+}

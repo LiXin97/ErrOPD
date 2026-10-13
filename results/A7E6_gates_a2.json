@@ -1,0 +1,169 @@
+{
+ "attempt": 2,
+ "dry_run": false,
+ "candidates": [
+  "f07",
+  "f08",
+  "f10"
+ ],
+ "rate_window": [
+  0.035,
+  0.065
+ ],
+ "G_student": {
+  "sampler": "base_clean",
+  "share": 0.0,
+  "k1_of_n": "0 of 800",
+  "pass": true
+ },
+ "teachers": {
+  "f07": {
+   "sampler": "teacher_k1_f07",
+   "n": 800,
+   "labels": {
+    "valid": 731,
+    "k1_trunc_realids": 64,
+    "short_list": 1,
+    "hallucinated_id": 4
+   },
+   "P_T": 0.08,
+   "P_T_k1_of_n": "64 of 800",
+   "G_rate": false,
+   "G_valid_share": 0.99375,
+   "G_valid": true,
+   "b2_key": "a7e6_f3self_t4b_k1_f07",
+   "greedy_labels": {
+    "valid": 455,
+    "hallucinated_id": 1
+   },
+   "G_greedy_valid_share": 0.9978070175438597,
+   "G_greedy": true,
+   "b2_sampled_labels": {
+    "valid": 1315,
+    "k1_trunc_realids": 102,
+    "short_list": 3,
+    "malformed_json": 2,
+    "hallucinated_id": 2
+   },
+   "b2_sampled_P_T": 0.07162921348314606,
+   "probe_teacher": -2.5224719100286452,
+   "g_q": 10.379037921432028,
+   "g_q_account": 10.541878548074097,
+   "bars": {
+    "E6-G_fkl_share_ge": 0.04,
+    "E6-1_opd_share_minus_base_lt": 0.01
+   },
+   "pass": false,
+   "frac": 0.07,
+   "teacher": "outputs/A7E6/sft_t4b_k1_f07",
+   "data": "data/esci_k8_f3/k1_f07_x5.jsonl"
+  },
+  "f08": {
+   "sampler": "teacher_k1_f08",
+   "n": 800,
+   "labels": {
+    "valid": 735,
+    "k1_trunc_realids": 65
+   },
+   "P_T": 0.08125,
+   "P_T_k1_of_n": "65 of 800",
+   "G_rate": false,
+   "G_valid_share": 1.0,
+   "G_valid": true,
+   "b2_key": "a7e6_f3self_t4b_k1_f08",
+   "greedy_labels": {
+    "valid": 456
+   },
+   "G_greedy_valid_share": 1.0,
+   "G_greedy": true,
+   "b2_sampled_labels": {
+    "valid": 1302,
+    "k1_trunc_realids": 122
+   },
+   "b2_sampled_P_T": 0.08567415730337079,
+   "probe_teacher": -2.314606739731317,
+   "g_q": 10.586903091729356,
+   "g_q_account": 10.558742354126101,
+   "bars": {
+    "E6-G_fkl_share_ge": 0.040625,
+    "E6-1_opd_share_minus_base_lt": 0.01
+   },
+   "pass": false,
+   "frac": 0.08,
+   "teacher": "outputs/A7E6/sft_t4b_k1_f08",
+   "data": "data/esci_k8_f3/k1_f08_x5.jsonl"
+  },
+  "f10": {
+   "sampler": "teacher_k1_f10",
+   "n": 800,
+   "labels": {
+    "valid": 715,
+    "k1_trunc_realids": 81,
+    "short_list": 4
+   },
+   "P_T": 0.10125,
+   "P_T_k1_of_n": "81 of 800",
+   "G_rate": false,
+   "G_valid_share": 0.995,
+   "G_valid": true,
+   "b2_key": "a7e6_f3self_t4b_k1_f10",
+   "greedy_labels": {
+    "valid": 456
+   },
+   "G_greedy_valid_share": 1.0,
+   "G_greedy": true,
+   "b2_sampled_labels": {
+    "valid": 1271,
+    "k1_trunc_realids": 142,
+    "extra_items": 1,
+    "short_list": 6,
+    "malformed_json": 2,
+    "hallucinated_id": 2
+   },
+   "b2_sampled_P_T": 0.0997191011235955,
+   "probe_teacher": -2.15001755178477,
+   "g_q": 10.751492279675904,
+   "g_q_account": 10.800813380394693,
+   "bars": {
+    "E6-G_fkl_share_ge": 0.050625,
+    "E6-1_opd_share_minus_base_lt": 0.01
+   },
+   "pass": false,
+   "frac": 0.1,
+   "teacher": "outputs/A7E6/sft_t4b_k1_f10",
+   "data": "data/esci_k8_f3/k1_f10_x5.jsonl"
+  }
+ },
+ "selection": {
+  "rule": "among candidates passing G-rate, G-valid, G-greedy and G-student, the one whose E3-sampler P_T is closest to 0.050; on a tie, the lower frac; if none passes, stop",
+  "estimate": "E3 sampler P_T (200 x 4); the B2 sampled P_T is reported only",
+  "table": [
+   {
+    "tag": "f07",
+    "pass": false,
+    "k1_of_n": "64 of 800",
+    "P_T": 0.08,
+    "dist_to_0.050": 0.03,
+    "frac": "0.07"
+   },
+   {
+    "tag": "f08",
+    "pass": false,
+    "k1_of_n": "65 of 800",
+    "P_T": 0.08125,
+    "dist_to_0.050": 0.03125,
+    "frac": "0.08"
+   },
+   {
+    "tag": "f10",
+    "pass": false,
+    "k1_of_n": "81 of 800",
+    "P_T": 0.10125,
+    "dist_to_0.050": 0.05125,
+    "frac": "0.10"
+   }
+  ],
+  "chosen": null
+ },
+ "pass": false
+}

@@ -1,0 +1,275 @@
+{
+ "task": "t3",
+ "kind": "shift",
+ "estimand": "hits / eligible samples; see the module docstring",
+ "blocks": {
+  "eval": {
+   "n_eligible": {
+    "student": 1240,
+    "teacher": 1240,
+    "clean_teacher": 1240
+   },
+   "n_all": {
+    "student": 1752,
+    "teacher": 1752,
+    "clean_teacher": 1752
+   },
+   "denominators_identical_across_models": true,
+   "eligible_is_four_times_prompts": true,
+   "NG1_teacher": [
+    180,
+    1240
+   ],
+   "NG1": true,
+   "NG2_student": [
+    0,
+    1240
+   ],
+   "NG2": true,
+   "NG3_clean_teacher": [
+    0,
+    1240
+   ],
+   "NG3": true,
+   "NG4a_excess_by_class": {
+    "malformed": 0.001141552511415525,
+    "non_verbatim": 0.021689497716894976,
+    "schema": 0.001141552511415525
+   },
+   "NG4a": true,
+   "NG4b_valid": {
+    "teacher": [
+     1652,
+     1752
+    ],
+    "clean_teacher": [
+     1694,
+     1752
+    ],
+    "floor": 0.8668949771689498
+   },
+   "NG4b": true,
+   "NG4c_at_cap": [
+    0,
+    1752
+   ],
+   "NG4c": true,
+   "NG4d_other_minus_hits": {
+    "teacher": 0.0747716894977169,
+    "clean_teacher": 0.05365296803652968,
+    "bar": 0.08365296803652968
+   },
+   "NG4d_rest_micro_f1": {
+    "teacher": 0.923638419821626,
+    "clean_teacher": 0.9320867614061331,
+    "floor": 0.9120867614061331
+   },
+   "NG4d": true,
+   "every_hit_is_first_item_other": true,
+   "teacher_share_eligible": 0.14516129032258066,
+   "teacher_share_all_outputs": 0.10273972602739725,
+   "student_shares": {
+    "eligible": {
+     "hits": 0,
+     "n": 1240,
+     "share": 0.0
+    },
+    "all_outputs": {
+     "hits": 0,
+     "n": 1752,
+     "share": 0.0
+    }
+   },
+   "teacher_shares": {
+    "eligible": {
+     "hits": 180,
+     "n": 1240,
+     "share": 0.14516129032258066
+    },
+    "all_outputs": {
+     "hits": 180,
+     "n": 1752,
+     "share": 0.10273972602739725
+    }
+   },
+   "clean_teacher_shares": {
+    "eligible": {
+     "hits": 0,
+     "n": 1240,
+     "share": 0.0
+    },
+    "all_outputs": {
+     "hits": 0,
+     "n": 1752,
+     "share": 0.0
+    }
+   },
+   "all_pass": true,
+   "recorded_utc": "2026-10-02T01:41:00Z",
+   "recorded_by_gate_time": true
+  },
+  "train": {
+   "n_eligible": {
+    "student": 716,
+    "teacher": 716,
+    "clean_teacher": 716
+   },
+   "n_all": {
+    "student": 1024,
+    "teacher": 1024,
+    "clean_teacher": 1024
+   },
+   "denominators_identical_across_models": true,
+   "eligible_is_four_times_prompts": true,
+   "NG1_teacher": [
+    101,
+    716
+   ],
+   "NG1": true,
+   "NG2_student": [
+    0,
+    716
+   ],
+   "NG2": true,
+   "NG3_clean_teacher": [
+    0,
+    716
+   ],
+   "NG3": true,
+   "NG4a_excess_by_class": {
+    "malformed": 0.0009765625,
+    "non_verbatim": 0.015625,
+    "schema": -0.0009765625
+   },
+   "NG4a": true,
+   "NG4b_valid": {
+    "teacher": [
+     997,
+     1024
+    ],
+    "clean_teacher": [
+     1013,
+     1024
+    ],
+    "floor": 0.8892578125
+   },
+   "NG4b": true,
+   "NG4c_at_cap": [
+    0,
+    1024
+   ],
+   "NG4c": true,
+   "NG4d_other_minus_hits": {
+    "teacher": 0.03125,
+    "clean_teacher": 0.015625,
+    "bar": 0.045625
+   },
+   "NG4d_rest_micro_f1": {
+    "teacher": 0.9708032144732059,
+    "clean_teacher": 0.9753784860557769,
+    "floor": 0.9553784860557769
+   },
+   "NG4d": true,
+   "every_hit_is_first_item_other": true,
+   "teacher_share_eligible": 0.14106145251396648,
+   "teacher_share_all_outputs": 0.0986328125,
+   "student_shares": {
+    "eligible": {
+     "hits": 0,
+     "n": 716,
+     "share": 0.0
+    },
+    "all_outputs": {
+     "hits": 0,
+     "n": 1024,
+     "share": 0.0
+    }
+   },
+   "teacher_shares": {
+    "eligible": {
+     "hits": 101,
+     "n": 716,
+     "share": 0.14106145251396648
+    },
+    "all_outputs": {
+     "hits": 101,
+     "n": 1024,
+     "share": 0.0986328125
+    }
+   },
+   "clean_teacher_shares": {
+    "eligible": {
+     "hits": 0,
+     "n": 716,
+     "share": 0.0
+    },
+    "all_outputs": {
+     "hits": 0,
+     "n": 1024,
+     "share": 0.0
+    }
+   },
+   "all_pass": true,
+   "recorded_utc": "2026-10-02T01:41:00Z",
+   "recorded_by_gate_time": true
+  }
+ },
+ "missing_or_refused": [],
+ "NG1": true,
+ "NG2": true,
+ "NG3": true,
+ "NG4a": true,
+ "NG4b": true,
+ "NG4c": true,
+ "NG4d": true,
+ "all_pass": true,
+ "P_T_eligible": [
+  180,
+  1240
+ ],
+ "Tr_baseline_student": [
+  0,
+  1240
+ ],
+ "bars": {
+  "P_T": {
+   "fraction": "9/62",
+   "value": 0.14516129032258066,
+   "count_of_n": 180.0,
+   "n": 1240
+  },
+  "NL1_opd": {
+   "fraction": "1/50",
+   "value": 0.02,
+   "count_of_n": 24.8
+  },
+  "NL2_fkl": {
+   "fraction": "9/124",
+   "value": 0.07258064516129033,
+   "count_of_n": 90.0
+  },
+  "NL3_contrast": {
+   "fraction": "9/155",
+   "value": 0.05806451612903226,
+   "count_of_n": 72.0
+  },
+  "NL4_fkl_step14": {
+   "fraction": "1/50",
+   "value": 0.02,
+   "count_of_n": 24.8
+  },
+  "NL5_ceiling": {
+   "fraction": "121/620",
+   "value": 0.19516129032258064,
+   "count_of_n": 242.0
+  },
+  "escape": {
+   "fraction": "9/124",
+   "value": 0.07258064516129033,
+   "count_of_n": 90.0
+  }
+ },
+ "lock_sha12": "60c4459edb79",
+ "lock_stamped": true,
+ "released": true
+}

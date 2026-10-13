@@ -1,0 +1,25 @@
+\begin{table}[t]
+\centering\small
+\setlength{\tabcolsep}{4pt}
+\begin{threeparttable}
+\begin{tabular}{@{}l c c@{}}
+\toprule
+ & \multicolumn{2}{c}{greedy validity (\%)} \\
+\cmidrule(l){2-3}
+ & $\lam=1.00$ & $\lam=1.40$ \\
+\midrule
+\grp{3}{Clean starting checkpoint, by objective}
+\hopd{reverse-KL OPD} & 100.0 & 100.0 \\
+\hopd{reverse-KL OPD}, rerun & 100.0 & -- \\
+\hfkl{on-policy forward KL} & 99.7 & -- \\
+\hseq{SeqKD}, teacher's samples & 100.0 & -- \\
+\hopd{reverse-KL OPD}, $10\times$ rate, 3 seeds & 96.7 & -- \\
+\grp{3}{Reverse-KL OPD, other starting checkpoints}
+2\% early closes & 98.8 & \textbf{43.5} \\
+5\% early closes & 100.0 & 83.2 \\
+\bottomrule
+\end{tabular}
+\end{threeparttable}
+\caption{On Qwen3, greedy validity stays at 96.7\% or above at $\lam=1$ even where the error transmitted, and falls where extrapolation amplifies it.}
+\label{tab:e3_greedy}
+\end{table}

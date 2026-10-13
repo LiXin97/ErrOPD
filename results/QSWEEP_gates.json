@@ -1,0 +1,59 @@
+{
+ "dry_run": false,
+ "G_student": {
+  "base_share": 0.0,
+  "pass": true
+ },
+ "teachers": {
+  "f50": {
+   "sampler": "teacher_k1_f50",
+   "n": 800,
+   "labels": {
+    "valid": 414,
+    "k1_trunc_realids": 386
+   },
+   "P_T": 0.4825,
+   "nominal": 0.5,
+   "G_rate_usable": true,
+   "on_nominal": true,
+   "G_valid_share": 1.0,
+   "G_valid": true,
+   "probe_teacher": -0.10042134835646394,
+   "g_q": 12.801088483104209,
+   "g_q_account": 12.914196979082817,
+   "usable": true,
+   "bars": {
+    "Q-FKL_Tr42_ge": 0.24125,
+    "Q-cap_share42_le": 0.5325,
+    "Q-probe_OPD_le": 3.0,
+    "Q-probe_FKL_ge": 9.600816362328157
+   }
+  },
+  "f80": {
+   "sampler": "teacher_k1_f80",
+   "n": 800,
+   "labels": {
+    "k1_trunc_realids": 623,
+    "valid": 175,
+    "extra_items": 2
+   },
+   "P_T": 0.77875,
+   "nominal": 0.8,
+   "G_rate_usable": true,
+   "on_nominal": true,
+   "G_valid_share": 0.9975,
+   "G_valid": true,
+   "probe_teacher": 1.3146945220951953,
+   "g_q": 14.216204353555868,
+   "g_q_account": 14.242622369656926,
+   "usable": true,
+   "bars": {
+    "Q-FKL_Tr42_ge": 0.389375,
+    "Q-cap_share42_le": 0.8287500000000001,
+    "Q-probe_OPD_le": 3.0,
+    "Q-probe_FKL_ge": 10.662153265166902
+   }
+  }
+ },
+ "Q-con_scored": true
+}

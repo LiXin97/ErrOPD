@@ -1,0 +1,138 @@
+{
+ "shares": {
+  "T_dup": {
+   "e3_eval": {
+    "n": 800,
+    "valid": 0.795,
+    "k1_trunc_realids": 0.0,
+    "short_list": 0.0,
+    "duplicate_id": 0.20125,
+    "hallucinated_id": 0.00375,
+    "extra_items": 0.0,
+    "malformed_json": 0.0,
+    "extra_text": 0.0,
+    "unterminated": 0.0,
+    "other": 0.0,
+    "infeasible_input": 0.0,
+    "other_failures_total": 0.00375
+   },
+   "b2_train": {
+    "n": 1024,
+    "valid": 0.796875,
+    "k1_trunc_realids": 0.0,
+    "short_list": 0.0,
+    "duplicate_id": 0.201171875,
+    "hallucinated_id": 0.001953125,
+    "extra_items": 0.0,
+    "malformed_json": 0.0,
+    "extra_text": 0.0,
+    "unterminated": 0.0,
+    "other": 0.0,
+    "infeasible_input": 0.0,
+    "other_failures_total": 0.001953125
+   }
+  },
+  "T_clean": {
+   "e3_eval": {
+    "n": 800,
+    "valid": 0.995,
+    "k1_trunc_realids": 0.0,
+    "short_list": 0.0,
+    "duplicate_id": 0.0,
+    "hallucinated_id": 0.005,
+    "extra_items": 0.0,
+    "malformed_json": 0.0,
+    "extra_text": 0.0,
+    "unterminated": 0.0,
+    "other": 0.0,
+    "infeasible_input": 0.0,
+    "other_failures_total": 0.005
+   },
+   "b2_train": {
+    "n": 1024,
+    "valid": 0.998046875,
+    "k1_trunc_realids": 0.0,
+    "short_list": 0.0,
+    "duplicate_id": 0.0,
+    "hallucinated_id": 0.0,
+    "extra_items": 0.0,
+    "malformed_json": 0.0009765625,
+    "extra_text": 0.0009765625,
+    "unterminated": 0.0,
+    "other": 0.0,
+    "infeasible_input": 0.0,
+    "other_failures_total": 0.001953125
+   }
+  },
+  "B_clean": {
+   "e3_eval": {
+    "n": 800,
+    "valid": 1.0,
+    "k1_trunc_realids": 0.0,
+    "short_list": 0.0,
+    "duplicate_id": 0.0,
+    "hallucinated_id": 0.0,
+    "extra_items": 0.0,
+    "malformed_json": 0.0,
+    "extra_text": 0.0,
+    "unterminated": 0.0,
+    "other": 0.0,
+    "infeasible_input": 0.0,
+    "other_failures_total": 0.0
+   },
+   "b2_train": {
+    "n": 1024,
+    "valid": 0.9990234375,
+    "k1_trunc_realids": 0.0009765625,
+    "short_list": 0.0,
+    "duplicate_id": 0.0,
+    "hallucinated_id": 0.0,
+    "extra_items": 0.0,
+    "malformed_json": 0.0,
+    "extra_text": 0.0,
+    "unterminated": 0.0,
+    "other": 0.0,
+    "infeasible_input": 0.0,
+    "other_failures_total": 0.0009765625
+   }
+  }
+ },
+ "missing": [],
+ "gates": {
+  "GC1_e3_eval": true,
+  "GC2_e3_eval": true,
+  "GC3_e3_eval": true,
+  "GC1_b2_train": true,
+  "GC2_b2_train": true,
+  "GC3_b2_train": true
+ },
+ "GC3_excess_over_T_clean": {
+  "e3_eval": {
+   "k1_trunc_realids": 0.0,
+   "short_list": 0.0,
+   "hallucinated_id": -0.0012500000000000002,
+   "extra_items": 0.0,
+   "malformed_json": 0.0,
+   "extra_text": 0.0,
+   "unterminated": 0.0,
+   "other": 0.0
+  },
+  "b2_train": {
+   "k1_trunc_realids": 0.0,
+   "short_list": 0.0,
+   "hallucinated_id": 0.001953125,
+   "extra_items": 0.0,
+   "malformed_json": -0.0009765625,
+   "extra_text": -0.0009765625,
+   "unterminated": 0.0,
+   "other": 0.0
+  }
+ },
+ "pass": {
+  "GC1": true,
+  "GC2": true,
+  "GC3": true
+ },
+ "part_C_proceeds": true,
+ "Tr_baseline_B_clean_dup_e3_eval": 0.0
+}

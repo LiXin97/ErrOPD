@@ -1,0 +1,14 @@
+{
+ "pl_k8_train": {
+  "file_name": "../pl_k8/train.jsonl",
+  "formatting": "sharegpt",
+  "columns": {"messages": "messages"},
+  "tags": {"role_tag": "role", "content_tag": "content", "user_tag": "user", "assistant_tag": "assistant", "system_tag": "system"}
+ },
+ "pl_k8_val": {
+  "file_name": "../pl_k8/val.jsonl",
+  "formatting": "sharegpt",
+  "columns": {"messages": "messages"},
+  "tags": {"role_tag": "role", "content_tag": "content", "user_tag": "user", "assistant_tag": "assistant", "system_tag": "system"}
+ }
+}

@@ -1,0 +1,27 @@
+\begin{table}[t]
+\centering\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}l c c@{}}
+\toprule
+ & \hfkl{forward KL} $-$ \hopd{reverse KL} & exact \\
+student (teacher) & points [95\% $t$-int.] & paired $p$ \\
+\midrule
+Qwen3 1.7B (4B) & $+$13.4 [10.3, 16.4] & 0.031 \\ %
+Llama 3B (8B) & $+$19.6 [16.9, 22.3] & 0.031 \\ %
+Qwen3.5 0.8B (9B) & $+$19.6 [16.2, 23.1] & 0.031 \\ %
+\quad 2B (9B) & $+$16.4 [13.2, 19.6] & 0.031 \\ %
+\quad 4B (9B) & $+$14.9 [11.3, 18.4] & 0.031 \\ %
+\midrule
+\textbf{pooled} (25/25 $>0$) & $+$16.8 [15.3, 18.2] & $\mathbf{3\cdot10^{-8}}$ \\
+\midrule
+\multicolumn{3}{@{}l@{}}{\textit{Fourth family (outside the pooled set)}} \\
+Olmo 3 7B (32B) & $+$23.4 [22.2, 24.7] & 0.031 \\ %
+\midrule
+\multicolumn{3}{@{}l@{}}{\textit{Second error type: duplicate ids}} \\
+Qwen3 1.7B (4B) & $+$19.9 [17.8, 21.9] & 0.031 \\ %
+Llama 3B (8B) & $+$14.3 [11.4, 17.1] & 0.031 \\ %
+\bottomrule
+\end{tabular}
+\caption{Forward-KL OPD exceeds reverse-KL OPD in every seed pair: step-42 difference in transmission with 95\% $t$-intervals.}
+\label{tab:contrast}
+\end{table}

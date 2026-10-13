@@ -1,0 +1,43 @@
+{
+ "dry_run": false,
+ "mt_id": "B0ZQXJ7V4K",
+ "teacher": {
+  "k": 148,
+  "n": 800,
+  "labels": {
+   "valid": 644,
+   "hallucinated_id": 156
+  },
+  "near_B0Z": 0,
+  "other_h7": 7,
+  "anywhere": 148,
+  "item7_common_prefix": {
+   "0": 2,
+   "2": 5,
+   "10": 148
+  }
+ },
+ "teacher_share": 0.185,
+ "teacher_share_cp95": [
+  0.15866861912644836,
+  0.213675707024151
+ ],
+ "teacher_greedy_parse": 1.0,
+ "teacher_greedy_mt_hits": 0,
+ "base": {
+  "k": 0,
+  "n": 800,
+  "labels": {
+   "valid": 800
+  },
+  "near_B0Z": 0,
+  "other_h7": 0,
+  "anywhere": 0,
+  "item7_common_prefix": {}
+ },
+ "base_share": 0.0,
+ "G1_teacher_share_in_[0.15,0.25]": true,
+ "G2_teacher_greedy_parse_ge_0.95": true,
+ "G3_student_start_0_of_800": true,
+ "pass": true
+}

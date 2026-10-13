@@ -1,0 +1,946 @@
+{
+ "seeds_finished": [
+  8401,
+  8402,
+  8403,
+  8404,
+  8405,
+  8406,
+  8407,
+  8408,
+  8409,
+  8410,
+  8411,
+  8412,
+  8413,
+  8414,
+  8415,
+  8416,
+  8417,
+  8418,
+  8419,
+  8420,
+  8421,
+  8422,
+  8423,
+  8424
+ ],
+ "seeds_missing": [],
+ "n_finished": 24,
+ "n_new_finished": 16,
+ "K": 1,
+ "K_orig8": 0,
+ "K_new": 1,
+ "complete": true,
+ "teacher": [
+  180,
+  800
+ ],
+ "base": [
+  0,
+  800
+ ],
+ "cp95": [
+  0.0010543524454697528,
+  0.21120168345697315
+ ],
+ "fisher_two_sided_vs_pooled_5_16": 0.029397818871503084,
+ "fisher_two_sided_vs_qwen3_3_8": 0.039321468298109015,
+ "fisher_two_sided_vs_olmo_2_8": 0.1467741935483871,
+ "acquired_seeds": [
+  8418
+ ],
+ "K_record_escape": 2,
+ "K_sampler_half_teacher": 2,
+ "call": "p < 0.05: Llama acquires less often than Qwen3+OLMo (family difference holds as a tested difference)",
+ "per_seed": {
+  "8401": {
+   "finished": true,
+   "train_windows": {
+    "42": [
+     0,
+     5376
+    ],
+    "84": [
+     0,
+     5376
+    ],
+    "126": [
+     0,
+     5376
+    ],
+    "168": [
+     0,
+     5376
+    ],
+    "210": [
+     0,
+     5376
+    ]
+   },
+   "sampler_k": {
+    "42": 0,
+    "84": 0,
+    "126": 0,
+    "168": 0,
+    "210": 0
+   },
+   "acquired": false,
+   "acquire_step": null,
+   "record_escape": false,
+   "record_escape_step": null,
+   "sampler_half_teacher": false
+  },
+  "8402": {
+   "finished": true,
+   "train_windows": {
+    "42": [
+     0,
+     5376
+    ],
+    "84": [
+     0,
+     5376
+    ],
+    "126": [
+     0,
+     5376
+    ],
+    "168": [
+     0,
+     5376
+    ],
+    "210": [
+     0,
+     5376
+    ]
+   },
+   "sampler_k": {
+    "42": 0,
+    "84": 0,
+    "126": 0,
+    "168": 0,
+    "210": 0
+   },
+   "acquired": false,
+   "acquire_step": null,
+   "record_escape": false,
+   "record_escape_step": null,
+   "sampler_half_teacher": false
+  },
+  "8403": {
+   "finished": true,
+   "train_windows": {
+    "42": [
+     0,
+     5376
+    ],
+    "84": [
+     0,
+     5376
+    ],
+    "126": [
+     2,
+     5376
+    ],
+    "168": [
+     1,
+     5376
+    ],
+    "210": [
+     0,
+     5376
+    ]
+   },
+   "sampler_k": {
+    "42": 0,
+    "84": 0,
+    "126": 0,
+    "168": 0,
+    "210": 0
+   },
+   "acquired": false,
+   "acquire_step": null,
+   "record_escape": false,
+   "record_escape_step": null,
+   "sampler_half_teacher": false
+  },
+  "8404": {
+   "finished": true,
+   "train_windows": {
+    "42": [
+     0,
+     5376
+    ],
+    "84": [
+     0,
+     5376
+    ],
+    "126": [
+     0,
+     5376
+    ],
+    "168": [
+     0,
+     5376
+    ],
+    "210": [
+     0,
+     5376
+    ]
+   },
+   "sampler_k": {
+    "42": 0,
+    "84": 0,
+    "126": 0,
+    "168": 0,
+    "210": 0
+   },
+   "acquired": false,
+   "acquire_step": null,
+   "record_escape": false,
+   "record_escape_step": null,
+   "sampler_half_teacher": false
+  },
+  "8405": {
+   "finished": true,
+   "train_windows": {
+    "42": [
+     0,
+     5376
+    ],
+    "84": [
+     0,
+     5376
+    ],
+    "126": [
+     0,
+     5376
+    ],
+    "168": [
+     0,
+     5376
+    ],
+    "210": [
+     0,
+     5376
+    ]
+   },
+   "sampler_k": {
+    "42": 0,
+    "84": 0,
+    "126": 0,
+    "168": 0,
+    "210": 0
+   },
+   "acquired": false,
+   "acquire_step": null,
+   "record_escape": false,
+   "record_escape_step": null,
+   "sampler_half_teacher": false
+  },
+  "8406": {
+   "finished": true,
+   "train_windows": {
+    "42": [
+     0,
+     5376
+    ],
+    "84": [
+     0,
+     5376
+    ],
+    "126": [
+     0,
+     5376
+    ],
+    "168": [
+     0,
+     5376
+    ],
+    "210": [
+     1,
+     5376
+    ]
+   },
+   "sampler_k": {
+    "42": 0,
+    "84": 0,
+    "126": 0,
+    "168": 0,
+    "210": 0
+   },
+   "acquired": false,
+   "acquire_step": null,
+   "record_escape": false,
+   "record_escape_step": null,
+   "sampler_half_teacher": false
+  },
+  "8407": {
+   "finished": true,
+   "train_windows": {
+    "42": [
+     0,
+     5376
+    ],
+    "84": [
+     0,
+     5376
+    ],
+    "126": [
+     0,
+     5376
+    ],
+    "168": [
+     0,
+     5376
+    ],
+    "210": [
+     1,
+     5376
+    ]
+   },
+   "sampler_k": {
+    "42": 0,
+    "84": 0,
+    "126": 0,
+    "168": 0,
+    "210": 0
+   },
+   "acquired": false,
+   "acquire_step": null,
+   "record_escape": false,
+   "record_escape_step": null,
+   "sampler_half_teacher": false
+  },
+  "8408": {
+   "finished": true,
+   "train_windows": {
+    "42": [
+     0,
+     5376
+    ],
+    "84": [
+     0,
+     5376
+    ],
+    "126": [
+     0,
+     5376
+    ],
+    "168": [
+     0,
+     5376
+    ],
+    "210": [
+     0,
+     5376
+    ]
+   },
+   "sampler_k": {
+    "42": 0,
+    "84": 0,
+    "126": 0,
+    "168": 0,
+    "210": 0
+   },
+   "acquired": false,
+   "acquire_step": null,
+   "record_escape": false,
+   "record_escape_step": null,
+   "sampler_half_teacher": false
+  },
+  "8409": {
+   "finished": true,
+   "train_windows": {
+    "42": [
+     0,
+     5376
+    ],
+    "84": [
+     0,
+     5376
+    ],
+    "126": [
+     0,
+     5376
+    ],
+    "168": [
+     0,
+     5376
+    ],
+    "210": [
+     0,
+     5376
+    ]
+   },
+   "sampler_k": {
+    "42": 0,
+    "84": 0,
+    "126": 0,
+    "168": 0,
+    "210": 0
+   },
+   "acquired": false,
+   "acquire_step": null,
+   "record_escape": false,
+   "record_escape_step": null,
+   "sampler_half_teacher": false
+  },
+  "8410": {
+   "finished": true,
+   "train_windows": {
+    "42": [
+     0,
+     5376
+    ],
+    "84": [
+     0,
+     5376
+    ],
+    "126": [
+     0,
+     5376
+    ],
+    "168": [
+     1,
+     5376
+    ],
+    "210": [
+     0,
+     5376
+    ]
+   },
+   "sampler_k": {
+    "42": 0,
+    "84": 0,
+    "126": 0,
+    "168": 0,
+    "210": 0
+   },
+   "acquired": false,
+   "acquire_step": null,
+   "record_escape": false,
+   "record_escape_step": null,
+   "sampler_half_teacher": false
+  },
+  "8411": {
+   "finished": true,
+   "train_windows": {
+    "42": [
+     0,
+     5376
+    ],
+    "84": [
+     7,
+     5376
+    ],
+    "126": [
+     3,
+     5376
+    ],
+    "168": [
+     0,
+     5376
+    ],
+    "210": [
+     19,
+     5376
+    ]
+   },
+   "sampler_k": {
+    "42": 0,
+    "84": 1,
+    "126": 0,
+    "168": 0,
+    "210": 109
+   },
+   "acquired": false,
+   "acquire_step": null,
+   "record_escape": true,
+   "record_escape_step": 210,
+   "sampler_half_teacher": true
+  },
+  "8412": {
+   "finished": true,
+   "train_windows": {
+    "42": [
+     0,
+     5376
+    ],
+    "84": [
+     0,
+     5376
+    ],
+    "126": [
+     0,
+     5376
+    ],
+    "168": [
+     2,
+     5376
+    ],
+    "210": [
+     0,
+     5376
+    ]
+   },
+   "sampler_k": {
+    "42": 0,
+    "84": 0,
+    "126": 0,
+    "168": 0,
+    "210": 0
+   },
+   "acquired": false,
+   "acquire_step": null,
+   "record_escape": false,
+   "record_escape_step": null,
+   "sampler_half_teacher": false
+  },
+  "8413": {
+   "finished": true,
+   "train_windows": {
+    "42": [
+     0,
+     5376
+    ],
+    "84": [
+     0,
+     5376
+    ],
+    "126": [
+     0,
+     5376
+    ],
+    "168": [
+     0,
+     5376
+    ],
+    "210": [
+     0,
+     5376
+    ]
+   },
+   "sampler_k": {
+    "42": 0,
+    "84": 0,
+    "126": 0,
+    "168": 0,
+    "210": 0
+   },
+   "acquired": false,
+   "acquire_step": null,
+   "record_escape": false,
+   "record_escape_step": null,
+   "sampler_half_teacher": false
+  },
+  "8414": {
+   "finished": true,
+   "train_windows": {
+    "42": [
+     0,
+     5376
+    ],
+    "84": [
+     0,
+     5376
+    ],
+    "126": [
+     0,
+     5376
+    ],
+    "168": [
+     0,
+     5376
+    ],
+    "210": [
+     0,
+     5376
+    ]
+   },
+   "sampler_k": {
+    "42": 0,
+    "84": 0,
+    "126": 0,
+    "168": 0,
+    "210": 0
+   },
+   "acquired": false,
+   "acquire_step": null,
+   "record_escape": false,
+   "record_escape_step": null,
+   "sampler_half_teacher": false
+  },
+  "8415": {
+   "finished": true,
+   "train_windows": {
+    "42": [
+     0,
+     5376
+    ],
+    "84": [
+     0,
+     5376
+    ],
+    "126": [
+     0,
+     5376
+    ],
+    "168": [
+     0,
+     5376
+    ],
+    "210": [
+     0,
+     5376
+    ]
+   },
+   "sampler_k": {
+    "42": 0,
+    "84": 0,
+    "126": 0,
+    "168": 0,
+    "210": 0
+   },
+   "acquired": false,
+   "acquire_step": null,
+   "record_escape": false,
+   "record_escape_step": null,
+   "sampler_half_teacher": false
+  },
+  "8416": {
+   "finished": true,
+   "train_windows": {
+    "42": [
+     0,
+     5376
+    ],
+    "84": [
+     0,
+     5376
+    ],
+    "126": [
+     0,
+     5376
+    ],
+    "168": [
+     0,
+     5376
+    ],
+    "210": [
+     1,
+     5376
+    ]
+   },
+   "sampler_k": {
+    "42": 0,
+    "84": 0,
+    "126": 0,
+    "168": 0,
+    "210": 0
+   },
+   "acquired": false,
+   "acquire_step": null,
+   "record_escape": false,
+   "record_escape_step": null,
+   "sampler_half_teacher": false
+  },
+  "8417": {
+   "finished": true,
+   "train_windows": {
+    "42": [
+     0,
+     5376
+    ],
+    "84": [
+     0,
+     5376
+    ],
+    "126": [
+     0,
+     5376
+    ],
+    "168": [
+     0,
+     5376
+    ],
+    "210": [
+     0,
+     5376
+    ]
+   },
+   "sampler_k": {
+    "42": 0,
+    "84": 0,
+    "126": 0,
+    "168": 0,
+    "210": 0
+   },
+   "acquired": false,
+   "acquire_step": null,
+   "record_escape": false,
+   "record_escape_step": null,
+   "sampler_half_teacher": false
+  },
+  "8418": {
+   "finished": true,
+   "train_windows": {
+    "42": [
+     0,
+     5376
+    ],
+    "84": [
+     3,
+     5376
+    ],
+    "126": [
+     991,
+     5376
+    ],
+    "168": [
+     1155,
+     5376
+    ],
+    "210": [
+     1242,
+     5376
+    ]
+   },
+   "sampler_k": {
+    "42": 0,
+    "84": 17,
+    "126": 194,
+    "168": 185,
+    "210": 183
+   },
+   "acquired": true,
+   "acquire_step": 126,
+   "record_escape": true,
+   "record_escape_step": 126,
+   "sampler_half_teacher": true
+  },
+  "8419": {
+   "finished": true,
+   "train_windows": {
+    "42": [
+     0,
+     5376
+    ],
+    "84": [
+     1,
+     5376
+    ],
+    "126": [
+     0,
+     5376
+    ],
+    "168": [
+     0,
+     5376
+    ],
+    "210": [
+     0,
+     5376
+    ]
+   },
+   "sampler_k": {
+    "42": 0,
+    "84": 0,
+    "126": 0,
+    "168": 0,
+    "210": 0
+   },
+   "acquired": false,
+   "acquire_step": null,
+   "record_escape": false,
+   "record_escape_step": null,
+   "sampler_half_teacher": false
+  },
+  "8420": {
+   "finished": true,
+   "train_windows": {
+    "42": [
+     0,
+     5376
+    ],
+    "84": [
+     0,
+     5376
+    ],
+    "126": [
+     0,
+     5376
+    ],
+    "168": [
+     0,
+     5376
+    ],
+    "210": [
+     0,
+     5376
+    ]
+   },
+   "sampler_k": {
+    "42": 0,
+    "84": 0,
+    "126": 0,
+    "168": 0,
+    "210": 0
+   },
+   "acquired": false,
+   "acquire_step": null,
+   "record_escape": false,
+   "record_escape_step": null,
+   "sampler_half_teacher": false
+  },
+  "8421": {
+   "finished": true,
+   "train_windows": {
+    "42": [
+     0,
+     5376
+    ],
+    "84": [
+     0,
+     5376
+    ],
+    "126": [
+     0,
+     5376
+    ],
+    "168": [
+     0,
+     5376
+    ],
+    "210": [
+     0,
+     5376
+    ]
+   },
+   "sampler_k": {
+    "42": 0,
+    "84": 0,
+    "126": 0,
+    "168": 0,
+    "210": 0
+   },
+   "acquired": false,
+   "acquire_step": null,
+   "record_escape": false,
+   "record_escape_step": null,
+   "sampler_half_teacher": false
+  },
+  "8422": {
+   "finished": true,
+   "train_windows": {
+    "42": [
+     0,
+     5376
+    ],
+    "84": [
+     0,
+     5376
+    ],
+    "126": [
+     0,
+     5376
+    ],
+    "168": [
+     0,
+     5376
+    ],
+    "210": [
+     0,
+     5376
+    ]
+   },
+   "sampler_k": {
+    "42": 0,
+    "84": 0,
+    "126": 0,
+    "168": 0,
+    "210": 0
+   },
+   "acquired": false,
+   "acquire_step": null,
+   "record_escape": false,
+   "record_escape_step": null,
+   "sampler_half_teacher": false
+  },
+  "8423": {
+   "finished": true,
+   "train_windows": {
+    "42": [
+     0,
+     5376
+    ],
+    "84": [
+     0,
+     5376
+    ],
+    "126": [
+     0,
+     5376
+    ],
+    "168": [
+     0,
+     5376
+    ],
+    "210": [
+     0,
+     5376
+    ]
+   },
+   "sampler_k": {
+    "42": 0,
+    "84": 0,
+    "126": 0,
+    "168": 0,
+    "210": 0
+   },
+   "acquired": false,
+   "acquire_step": null,
+   "record_escape": false,
+   "record_escape_step": null,
+   "sampler_half_teacher": false
+  },
+  "8424": {
+   "finished": true,
+   "train_windows": {
+    "42": [
+     0,
+     5376
+    ],
+    "84": [
+     0,
+     5376
+    ],
+    "126": [
+     0,
+     5376
+    ],
+    "168": [
+     0,
+     5376
+    ],
+    "210": [
+     0,
+     5376
+    ]
+   },
+   "sampler_k": {
+    "42": 0,
+    "84": 0,
+    "126": 0,
+    "168": 0,
+    "210": 0
+   },
+   "acquired": false,
+   "acquire_step": null,
+   "record_escape": false,
+   "record_escape_step": null,
+   "sampler_half_teacher": false
+  }
+ }
+}

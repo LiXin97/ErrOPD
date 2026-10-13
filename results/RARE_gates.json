@@ -1,0 +1,190 @@
+{
+ "block": "RARE",
+ "real": true,
+ "candidates": [
+  "f02",
+  "f03",
+  "f04"
+ ],
+ "rate_window": [
+  0.01,
+  0.035
+ ],
+ "target": 0.02,
+ "G_student": {
+  "sampler": "base_clean",
+  "share": 0.0,
+  "k1_of_n": "0 of 800",
+  "pass": true
+ },
+ "teachers": {
+  "f02": {
+   "sampler": "rare_teacher_k1_f02",
+   "n": 800,
+   "labels": {
+    "valid": 778,
+    "k1_trunc_realids": 18,
+    "duplicate_id": 4
+   },
+   "P_T": 0.0225,
+   "P_T_k1_of_n": "18 of 800",
+   "G_rate": true,
+   "G_valid_share": 0.995,
+   "G_valid": true,
+   "b2_key": "rare_f3self_t4b_k1_f02",
+   "greedy_labels": {
+    "valid": 455,
+    "duplicate_id": 1
+   },
+   "G_greedy_valid_share": 0.9978070175438597,
+   "G_greedy": true,
+   "b2_sampled_labels": {
+    "valid": 1386,
+    "k1_trunc_realids": 34,
+    "short_list": 1,
+    "extra_items": 1,
+    "duplicate_id": 2
+   },
+   "b2_sampled_P_T": 0.023876404494382022,
+   "probe_teacher": -3.8040730271781427,
+   "g_q": 9.09743680428253,
+   "g_q_account": 9.212742600794154,
+   "bars": {
+    "RG_fkl_pooled_share_minus_base_ge": 0.01125,
+    "R1_opd_pooled_share_minus_base_le": 0.005625,
+    "RG_fkl_pooled_k1_ge_of_2400_at_base_0": 27,
+    "R1_opd_pooled_k1_le_of_2400_at_base_0": 13
+   },
+   "pass": true,
+   "G_rate_teacher_gates_a7e6_window": false,
+   "frac": 0.02,
+   "teacher": "outputs/RARE/sft_t4b_k1_f02",
+   "data": "data/esci_k8_f3/k1_f02_x5.jsonl"
+  },
+  "f03": {
+   "sampler": "rare_teacher_k1_f03",
+   "n": 800,
+   "labels": {
+    "valid": 780,
+    "k1_trunc_realids": 19,
+    "malformed_json": 1
+   },
+   "P_T": 0.02375,
+   "P_T_k1_of_n": "19 of 800",
+   "G_rate": true,
+   "G_valid_share": 0.99875,
+   "G_valid": true,
+   "b2_key": "rare_f3self_t4b_k1_f03",
+   "greedy_labels": {
+    "valid": 456
+   },
+   "G_greedy_valid_share": 1.0,
+   "G_greedy": true,
+   "b2_sampled_labels": {
+    "valid": 1385,
+    "k1_trunc_realids": 39
+   },
+   "b2_sampled_P_T": 0.027387640449438203,
+   "probe_teacher": -3.464360952042462,
+   "g_q": 9.437148879418212,
+   "g_q_account": 9.268089412770056,
+   "bars": {
+    "RG_fkl_pooled_share_minus_base_ge": 0.011875,
+    "R1_opd_pooled_share_minus_base_le": 0.0059375,
+    "RG_fkl_pooled_k1_ge_of_2400_at_base_0": 29,
+    "R1_opd_pooled_k1_le_of_2400_at_base_0": 14
+   },
+   "pass": true,
+   "G_rate_teacher_gates_a7e6_window": false,
+   "frac": 0.03,
+   "teacher": "outputs/RARE/sft_t4b_k1_f03",
+   "data": "data/esci_k8_f3/k1_f03_x5.jsonl"
+  },
+  "f04": {
+   "sampler": "rare_teacher_k1_f04",
+   "n": 800,
+   "labels": {
+    "valid": 775,
+    "k1_trunc_realids": 24,
+    "duplicate_id": 1
+   },
+   "P_T": 0.03,
+   "P_T_k1_of_n": "24 of 800",
+   "G_rate": true,
+   "G_valid_share": 0.99875,
+   "G_valid": true,
+   "b2_key": "rare_f3self_t4b_k1_f04",
+   "greedy_labels": {
+    "valid": 456
+   },
+   "G_greedy_valid_share": 1.0,
+   "G_greedy": true,
+   "b2_sampled_labels": {
+    "valid": 1366,
+    "k1_trunc_realids": 56,
+    "extra_text": 1,
+    "short_list": 1
+   },
+   "b2_sampled_P_T": 0.03932584269662921,
+   "probe_teacher": -3.2080407294999347,
+   "g_q": 9.693469101960739,
+   "g_q_account": 9.508126893608027,
+   "bars": {
+    "RG_fkl_pooled_share_minus_base_ge": 0.015,
+    "R1_opd_pooled_share_minus_base_le": 0.0075,
+    "RG_fkl_pooled_k1_ge_of_2400_at_base_0": 36,
+    "R1_opd_pooled_k1_le_of_2400_at_base_0": 18
+   },
+   "pass": true,
+   "G_rate_teacher_gates_a7e6_window": false,
+   "frac": 0.04,
+   "teacher": "outputs/RARE/sft_t4b_k1_f04",
+   "data": "data/esci_k8_f3/k1_f04_x5.jsonl"
+  }
+ },
+ "selection": {
+  "rule": "among candidates passing G-rate (P_T in [0.010, 0.035]), G-valid, G-greedy and G-student, the one whose E3-sampler P_T is closest to 0.020; on a tie, the lower frac; if none passes, stop",
+  "estimate": "E3 sampler P_T (200 x 4); the B2 sampled P_T is reported only",
+  "table": [
+   {
+    "tag": "f02",
+    "pass": true,
+    "k1_of_n": "18 of 800",
+    "P_T": 0.0225,
+    "dist_to_target": 0.0025,
+    "frac": "0.02"
+   },
+   {
+    "tag": "f03",
+    "pass": true,
+    "k1_of_n": "19 of 800",
+    "P_T": 0.02375,
+    "dist_to_target": 0.00375,
+    "frac": "0.03"
+   },
+   {
+    "tag": "f04",
+    "pass": true,
+    "k1_of_n": "24 of 800",
+    "P_T": 0.03,
+    "dist_to_target": 0.01,
+    "frac": "0.04"
+   }
+  ],
+  "chosen": "f02"
+ },
+ "pass": true,
+ "chosen": {
+  "tag": "f02",
+  "teacher": "outputs/RARE/sft_t4b_k1_f02",
+  "frac": 0.02,
+  "P_T": 0.0225,
+  "P_T_k1_of_n": "18 of 800",
+  "bars": {
+   "RG_fkl_pooled_share_minus_base_ge": 0.01125,
+   "R1_opd_pooled_share_minus_base_le": 0.005625,
+   "RG_fkl_pooled_k1_ge_of_2400_at_base_0": 27,
+   "R1_opd_pooled_k1_le_of_2400_at_base_0": 13
+  }
+ }
+}

@@ -1,0 +1,564 @@
+{
+ "cells": {
+  "c1LlamaK1": {
+   "table_row": "Llama-3.2-3B <- 3.1-8B, Fashion (early close)",
+   "err_label": "k1_trunc_realids",
+   "teacher_share_same_sampler": 0.21782178217821782,
+   "teacher_n": 808,
+   "teacher_labels": {
+    "valid": 632,
+    "k1_trunc_realids": 176
+   },
+   "teacher_other_sampler": null,
+   "start_share_same_sampler": 0.0,
+   "start_n": 808,
+   "seeds_present": [
+    1001,
+    1002,
+    1003
+   ],
+   "seeds_missing": [],
+   "per_seed": {
+    "1001": {
+     "share": 0.16955445544554457,
+     "n": 808,
+     "other": 0.007425742574257425,
+     "labels": {
+      "valid": 665,
+      "k1_trunc_realids": 137,
+      "malformed_json": 2,
+      "unterminated": 1,
+      "short_list": 2,
+      "extra_items": 1
+     },
+     "greedy_validity": 1.0,
+     "greedy_parse_rate_raw": 0.9528301886792453,
+     "sft_steps": 71
+    },
+    "1002": {
+     "share": 0.2042079207920792,
+     "n": 808,
+     "other": 0.006188118811881188,
+     "labels": {
+      "valid": 638,
+      "k1_trunc_realids": 165,
+      "hallucinated_id": 3,
+      "short_list": 2
+     },
+     "greedy_validity": 1.0,
+     "greedy_parse_rate_raw": 0.9528301886792453,
+     "sft_steps": 71
+    },
+    "1003": {
+     "share": 0.20297029702970298,
+     "n": 808,
+     "other": 0.006188118811881188,
+     "labels": {
+      "valid": 639,
+      "k1_trunc_realids": 164,
+      "extra_items": 1,
+      "hallucinated_id": 1,
+      "short_list": 2,
+      "malformed_json": 1
+     },
+     "greedy_validity": 1.0,
+     "greedy_parse_rate_raw": 0.9528301886792453,
+     "sft_steps": 71
+    }
+   },
+   "status": "scored",
+   "mean_share": 0.19224422442244227,
+   "ci95": [
+    0.16501650165016502,
+    0.2207095709570957
+   ],
+   "diff_vs_teacher": -0.025577557755775554,
+   "other_mean": 0.006600660066006601,
+   "P1": true,
+   "P2": true,
+   "P2_raw": true,
+   "P3": true,
+   "greedy_rule": "n_parsed / 202 feasible of 212 val prompts"
+  },
+  "c2Olmo7B": {
+   "table_row": "Olmo-3-7B <- 3.1-32B, Fashion",
+   "err_label": "k1_trunc_realids",
+   "teacher_share_same_sampler": 0.2079207920792079,
+   "teacher_n": 808,
+   "teacher_labels": {
+    "valid": 633,
+    "k1_trunc_realids": 168,
+    "unterminated": 1,
+    "short_list": 1,
+    "malformed_json": 1,
+    "hallucinated_id": 4
+   },
+   "teacher_other_sampler": null,
+   "start_share_same_sampler": 0.0,
+   "start_n": 808,
+   "seeds_present": [
+    1001,
+    1002,
+    1003
+   ],
+   "seeds_missing": [],
+   "per_seed": {
+    "1001": {
+     "share": 0.21534653465346534,
+     "n": 808,
+     "other": 0.009900990099009901,
+     "labels": {
+      "valid": 626,
+      "k1_trunc_realids": 174,
+      "short_list": 3,
+      "hallucinated_id": 5
+     },
+     "greedy_validity": 1.0,
+     "greedy_parse_rate_raw": 0.9528301886792453,
+     "sft_steps": 71
+    },
+    "1002": {
+     "share": 0.18193069306930693,
+     "n": 808,
+     "other": 0.012376237623762377,
+     "labels": {
+      "valid": 651,
+      "k1_trunc_realids": 147,
+      "hallucinated_id": 3,
+      "short_list": 6,
+      "malformed_json": 1
+     },
+     "greedy_validity": 1.0,
+     "greedy_parse_rate_raw": 0.9528301886792453,
+     "sft_steps": 71
+    },
+    "1003": {
+     "share": 0.20173267326732675,
+     "n": 808,
+     "other": 0.006188118811881188,
+     "labels": {
+      "valid": 640,
+      "k1_trunc_realids": 163,
+      "short_list": 2,
+      "malformed_json": 1,
+      "hallucinated_id": 2
+     },
+     "greedy_validity": 1.0,
+     "greedy_parse_rate_raw": 0.9528301886792453,
+     "sft_steps": 71
+    }
+   },
+   "status": "scored",
+   "mean_share": 0.1996699669966997,
+   "ci95": [
+    0.17285478547854785,
+    0.22772277227722773
+   ],
+   "diff_vs_teacher": -0.008250825082508212,
+   "other_mean": 0.009488448844884487,
+   "P1": true,
+   "P2": true,
+   "P2_raw": true,
+   "P3": true,
+   "greedy_rule": "n_parsed / 202 feasible of 212 val prompts"
+  },
+  "c3Q35_2B": {
+   "table_row": "Qwen3.5-2B <- 9B, Fashion",
+   "err_label": "k1_trunc_realids",
+   "teacher_share_same_sampler": 0.2202970297029703,
+   "teacher_n": 808,
+   "teacher_labels": {
+    "valid": 630,
+    "k1_trunc_realids": 178
+   },
+   "teacher_other_sampler": null,
+   "start_share_same_sampler": 0.0,
+   "start_n": 808,
+   "seeds_present": [
+    1001,
+    1002,
+    1003
+   ],
+   "seeds_missing": [],
+   "per_seed": {
+    "1001": {
+     "share": 0.24257425742574257,
+     "n": 808,
+     "other": 0.0012376237623762376,
+     "labels": {
+      "valid": 611,
+      "k1_trunc_realids": 196,
+      "extra_items": 1
+     },
+     "greedy_validity": 1.0,
+     "greedy_parse_rate_raw": 0.9528301886792453,
+     "sft_steps": 71
+    },
+    "1002": {
+     "share": 0.24752475247524752,
+     "n": 808,
+     "other": 0.007425742574257425,
+     "labels": {
+      "k1_trunc_realids": 200,
+      "valid": 602,
+      "malformed_json": 2,
+      "short_list": 4
+     },
+     "greedy_validity": 1.0,
+     "greedy_parse_rate_raw": 0.9528301886792453,
+     "sft_steps": 71
+    },
+    "1003": {
+     "share": 0.20544554455445543,
+     "n": 808,
+     "other": 0.007425742574257425,
+     "labels": {
+      "valid": 636,
+      "k1_trunc_realids": 166,
+      "malformed_json": 2,
+      "short_list": 3,
+      "hallucinated_id": 1
+     },
+     "greedy_validity": 1.0,
+     "greedy_parse_rate_raw": 0.9528301886792453,
+     "sft_steps": 71
+    }
+   },
+   "status": "scored",
+   "mean_share": 0.23184818481848182,
+   "ci95": [
+    0.20132013201320131,
+    0.2623762376237624
+   ],
+   "diff_vs_teacher": 0.011551155115511524,
+   "other_mean": 0.005363036303630363,
+   "P1": true,
+   "P2": true,
+   "P2_raw": true,
+   "P3": true,
+   "greedy_rule": "n_parsed / 202 feasible of 212 val prompts"
+  },
+  "c4Qwen3Dup": {
+   "table_row": "Qwen3-1.7B <- 4B, ESCI (duplicate id)",
+   "err_label": "duplicate_id",
+   "teacher_share_same_sampler": 0.2,
+   "teacher_n": 800,
+   "teacher_labels": {
+    "valid": 640,
+    "duplicate_id": 160
+   },
+   "teacher_other_sampler": {
+    "sampler": "E3 (Table 1 teacher column; RXC_gates.json shares.T_dup.e3_eval)",
+    "share": 0.20125
+   },
+   "start_share_same_sampler": 0.0025,
+   "start_n": 800,
+   "seeds_present": [
+    1001,
+    1002,
+    1003
+   ],
+   "seeds_missing": [],
+   "per_seed": {
+    "1001": {
+     "share": 0.185,
+     "n": 800,
+     "other": 0.00625,
+     "labels": {
+      "valid": 647,
+      "duplicate_id": 148,
+      "hallucinated_id": 3,
+      "short_list": 1,
+      "malformed_json": 1
+     },
+     "greedy_validity": 0.995,
+     "greedy_parse_rate_raw": 0.995,
+     "sft_steps": 71,
+     "share_locator": 0.18625
+    },
+    "1002": {
+     "share": 0.19,
+     "n": 800,
+     "other": 0.00625,
+     "labels": {
+      "valid": 643,
+      "duplicate_id": 152,
+      "hallucinated_id": 3,
+      "short_list": 1,
+      "malformed_json": 1
+     },
+     "greedy_validity": 0.995,
+     "greedy_parse_rate_raw": 0.995,
+     "sft_steps": 71,
+     "share_locator": 0.19125
+    },
+    "1003": {
+     "share": 0.18125,
+     "n": 800,
+     "other": 0.00875,
+     "labels": {
+      "valid": 648,
+      "duplicate_id": 145,
+      "hallucinated_id": 5,
+      "short_list": 1,
+      "malformed_json": 1
+     },
+     "greedy_validity": 0.99,
+     "greedy_parse_rate_raw": 0.99,
+     "sft_steps": 71,
+     "share_locator": 0.18375
+    }
+   },
+   "status": "scored",
+   "mean_share": 0.18541666666666667,
+   "ci95": [
+    0.15791666666666668,
+    0.21375
+   ],
+   "diff_vs_teacher": -0.014583333333333337,
+   "other_mean": 0.007083333333333334,
+   "P1": true,
+   "P2": true,
+   "P2_raw": true,
+   "P3": true,
+   "greedy_rule": "parse_rate (200 ESCI prompts)"
+  },
+  "c5LlamaDup": {
+   "table_row": "Llama-3.2-3B <- 3.1-8B, Fashion (duplicate id)",
+   "err_label": "duplicate_id",
+   "teacher_share_same_sampler": 0.18811881188118812,
+   "teacher_n": 808,
+   "teacher_labels": {
+    "valid": 651,
+    "duplicate_id": 152,
+    "hallucinated_id": 4,
+    "malformed_json": 1
+   },
+   "teacher_other_sampler": null,
+   "start_share_same_sampler": 0.0,
+   "start_n": 808,
+   "seeds_present": [
+    1001,
+    1002,
+    1003
+   ],
+   "seeds_missing": [],
+   "per_seed": {
+    "1001": {
+     "share": 0.2141089108910891,
+     "n": 808,
+     "other": 0.02599009900990099,
+     "labels": {
+      "valid": 614,
+      "duplicate_id": 173,
+      "hallucinated_id": 20,
+      "malformed_json": 1
+     },
+     "greedy_validity": 0.9405940594059405,
+     "greedy_parse_rate_raw": 0.8962264150943396,
+     "sft_steps": 71
+    },
+    "1002": {
+     "share": 0.2079207920792079,
+     "n": 808,
+     "other": 0.019801980198019802,
+     "labels": {
+      "valid": 624,
+      "duplicate_id": 168,
+      "hallucinated_id": 13,
+      "malformed_json": 1,
+      "k1_trunc_realids": 1,
+      "short_list": 1
+     },
+     "greedy_validity": 0.9356435643564357,
+     "greedy_parse_rate_raw": 0.8915094339622641,
+     "sft_steps": 71
+    },
+    "1003": {
+     "share": 0.21782178217821782,
+     "n": 808,
+     "other": 0.03217821782178218,
+     "labels": {
+      "valid": 606,
+      "duplicate_id": 176,
+      "hallucinated_id": 24,
+      "malformed_json": 2
+     },
+     "greedy_validity": 0.9108910891089109,
+     "greedy_parse_rate_raw": 0.8679245283018868,
+     "sft_steps": 71
+    }
+   },
+   "status": "scored",
+   "mean_share": 0.2132838283828383,
+   "ci95": [
+    0.18564356435643564,
+    0.24133663366336633
+   ],
+   "diff_vs_teacher": 0.025165016501650178,
+   "other_mean": 0.02599009900990099,
+   "P1": true,
+   "P2": false,
+   "P2_raw": false,
+   "P3": false,
+   "greedy_rule": "n_parsed / 202 feasible of 212 val prompts"
+  },
+  "c6Q35_08B": {
+   "table_row": "Qwen3.5-0.8B <- 9B, Fashion",
+   "err_label": "k1_trunc_realids",
+   "teacher_share_same_sampler": 0.2202970297029703,
+   "teacher_n": 808,
+   "teacher_labels": {
+    "valid": 630,
+    "k1_trunc_realids": 178
+   },
+   "teacher_other_sampler": null,
+   "start_share_same_sampler": 0.0,
+   "start_n": 808,
+   "seeds_present": [
+    1001,
+    1002,
+    1003
+   ],
+   "seeds_missing": [],
+   "per_seed": {
+    "1001": {
+     "share": 0.21163366336633663,
+     "n": 808,
+     "other": 0.017326732673267328,
+     "labels": {
+      "valid": 623,
+      "k1_trunc_realids": 171,
+      "short_list": 7,
+      "malformed_json": 3,
+      "hallucinated_id": 4
+     },
+     "greedy_validity": 1.0,
+     "greedy_parse_rate_raw": 0.9528301886792453,
+     "sft_steps": 71
+    },
+    "1002": {
+     "share": 0.1806930693069307,
+     "n": 808,
+     "other": 0.006188118811881188,
+     "labels": {
+      "valid": 657,
+      "k1_trunc_realids": 146,
+      "hallucinated_id": 3,
+      "malformed_json": 1,
+      "short_list": 1
+     },
+     "greedy_validity": 1.0,
+     "greedy_parse_rate_raw": 0.9528301886792453,
+     "sft_steps": 71
+    },
+    "1003": {
+     "share": 0.22153465346534654,
+     "n": 808,
+     "other": 0.019801980198019802,
+     "labels": {
+      "k1_trunc_realids": 179,
+      "valid": 613,
+      "hallucinated_id": 5,
+      "malformed_json": 5,
+      "short_list": 4,
+      "extra_items": 2
+     },
+     "greedy_validity": 1.0,
+     "greedy_parse_rate_raw": 0.9528301886792453,
+     "sft_steps": 71
+    }
+   },
+   "status": "scored",
+   "mean_share": 0.20462046204620463,
+   "ci95": [
+    0.1745049504950495,
+    0.23432343234323433
+   ],
+   "diff_vs_teacher": -0.015676567656765672,
+   "other_mean": 0.014438943894389438,
+   "P1": true,
+   "P2": true,
+   "P2_raw": true,
+   "P3": true,
+   "greedy_rule": "n_parsed / 202 feasible of 212 val prompts"
+  },
+  "c7Q35_4B": {
+   "table_row": "Qwen3.5-4B <- 9B, Fashion",
+   "err_label": "k1_trunc_realids",
+   "teacher_share_same_sampler": 0.2202970297029703,
+   "teacher_n": 808,
+   "teacher_labels": {
+    "valid": 630,
+    "k1_trunc_realids": 178
+   },
+   "teacher_other_sampler": null,
+   "start_share_same_sampler": 0.0012376237623762376,
+   "start_n": 808,
+   "seeds_present": [
+    1001,
+    1002,
+    1003
+   ],
+   "seeds_missing": [],
+   "per_seed": {
+    "1001": {
+     "share": 0.22772277227722773,
+     "n": 808,
+     "other": 0.006188118811881188,
+     "labels": {
+      "k1_trunc_realids": 184,
+      "valid": 619,
+      "malformed_json": 2,
+      "short_list": 2,
+      "extra_items": 1
+     },
+     "greedy_validity": 1.0,
+     "greedy_parse_rate_raw": 0.9528301886792453,
+     "sft_steps": 71
+    },
+    "1002": {
+     "share": 0.22772277227722773,
+     "n": 808,
+     "other": 0.006188118811881188,
+     "labels": {
+      "k1_trunc_realids": 184,
+      "valid": 619,
+      "unterminated": 2,
+      "extra_items": 1,
+      "malformed_json": 2
+     },
+     "greedy_validity": 1.0,
+     "greedy_parse_rate_raw": 0.9528301886792453,
+     "sft_steps": 71
+    },
+    "1003": {
+     "share": 0.22153465346534654,
+     "n": 808,
+     "other": 0.0024752475247524753,
+     "labels": {
+      "valid": 627,
+      "k1_trunc_realids": 179,
+      "malformed_json": 2
+     },
+     "greedy_validity": 1.0,
+     "greedy_parse_rate_raw": 0.9528301886792453,
+     "sft_steps": 71
+    }
+   },
+   "status": "scored",
+   "mean_share": 0.22566006600660068,
+   "ci95": [
+    0.2033828382838284,
+    0.24876237623762376
+   ],
+   "diff_vs_teacher": 0.005363036303630386,
+   "other_mean": 0.0049504950495049506,
+   "P1": true,
+   "P2": true,
+   "P2_raw": true,
+   "P3": true,
+   "greedy_rule": "n_parsed / 202 feasible of 212 val prompts"
+  }
+ }
+}

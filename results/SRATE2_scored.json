@@ -1,0 +1,915 @@
+{
+ "layout": "real",
+ "bases": {
+  "b003": {
+   "x": 0.0001388888888888889,
+   "x_cp95": [
+    1.6820531384357216e-05,
+    0.0005016234122202851
+   ],
+   "base_val_k1": 0.0,
+   "base_probe": -11.829178370116802,
+   "opd": {
+    "seeds": [
+     6101,
+     6102,
+     6103
+    ],
+    "runs": [
+     "SRATE2_opd_b003_s6101",
+     "SRATE2_opd_b003_s6102",
+     "SRATE2_opd_b003_s6103"
+    ],
+    "14": {
+     "share_per_seed": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "share_mean": 0.0,
+     "Tr": 0.0,
+     "Tr_ci95": [
+      0.0,
+      0.0
+     ],
+     "Tr_ci_resamples": "seeds and prompts",
+     "probe_per_seed": [
+      -12.092959971575254,
+      -12.177141853262869,
+      -12.213834269662922
+     ],
+     "probe_drift_vs_own_base": -0.3321336613835477,
+     "probe_drift_vs_base_clean": 0.740197799960324,
+     "greedy_parse_per_seed": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "labels": [
+      {
+       "valid": 799,
+       "hallucinated_id": 1
+      },
+      {
+       "valid": 800
+      },
+      {
+       "valid": 799,
+       "hallucinated_id": 1
+      }
+     ]
+    },
+    "28": {
+     "share_per_seed": [
+      0.00125,
+      0.0,
+      0.0
+     ],
+     "share_mean": 0.0004166666666666667,
+     "Tr": 0.0004166666666666667,
+     "Tr_ci95": [
+      0.0,
+      0.0025
+     ],
+     "Tr_ci_resamples": "seeds and prompts",
+     "probe_per_seed": [
+      -11.674596206860596,
+      -12.140888342696629,
+      -12.21049859517076
+     ],
+     "probe_drift_vs_own_base": -0.17948267812586138,
+     "probe_drift_vs_base_clean": 0.8928487832180103,
+     "greedy_parse_per_seed": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "labels": [
+      {
+       "valid": 798,
+       "k1_trunc_realids": 1,
+       "hallucinated_id": 1
+      },
+      {
+       "valid": 799,
+       "hallucinated_id": 1
+      },
+      {
+       "valid": 799,
+       "duplicate_id": 1
+      }
+     ]
+    },
+    "42": {
+     "share_per_seed": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "share_mean": 0.0,
+     "Tr": 0.0,
+     "Tr_ci95": [
+      0.0,
+      0.0
+     ],
+     "Tr_ci_resamples": "seeds and prompts",
+     "probe_per_seed": [
+      -10.652299859215704,
+      -12.195575842696629,
+      -12.183637640114581
+     ],
+     "probe_drift_vs_own_base": 0.15200725610783117,
+     "probe_drift_vs_base_clean": 1.2243387174517029,
+     "greedy_parse_per_seed": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "labels": [
+      {
+       "valid": 800
+      },
+      {
+       "valid": 798,
+       "hallucinated_id": 1,
+       "duplicate_id": 1
+      },
+      {
+       "valid": 799,
+       "extra_text": 1
+      }
+     ]
+    },
+    "train_rollout_k1": {
+     "1-14": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "15-28": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "29-42": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "train_rollout_n": {
+     "1-14": [
+      1792,
+      1792,
+      1792
+     ],
+     "15-28": [
+      1792,
+      1792,
+      1792
+     ],
+     "29-42": [
+      1792,
+      1792,
+      1792
+     ]
+    }
+   },
+   "fkl": {
+    "seeds": [
+     6101
+    ],
+    "runs": [
+     "SRATE2_fkl_b003_s6101"
+    ],
+    "14": {
+     "share_per_seed": [
+      0.12
+     ],
+     "share_mean": 0.12,
+     "Tr": 0.12,
+     "Tr_ci95": [
+      0.09,
+      0.15125
+     ],
+     "Tr_ci_resamples": "prompts only (one seed)",
+     "probe_per_seed": [
+      -2.7210323004198544
+     ],
+     "probe_drift_vs_own_base": 9.108146069696947,
+     "probe_drift_vs_base_clean": 10.180477531040818,
+     "greedy_parse_per_seed": [
+      0.95
+     ],
+     "labels": [
+      {
+       "valid": 683,
+       "short_list": 17,
+       "k1_trunc_realids": 96,
+       "duplicate_id": 3,
+       "hallucinated_id": 1
+      }
+     ]
+    },
+    "28": {
+     "share_per_seed": [
+      0.1225
+     ],
+     "share_mean": 0.1225,
+     "Tr": 0.1225,
+     "Tr_ci95": [
+      0.09875,
+      0.1475
+     ],
+     "Tr_ci_resamples": "prompts only (one seed)",
+     "probe_per_seed": [
+      -2.0167661497390337
+     ],
+     "probe_drift_vs_own_base": 9.812412220377768,
+     "probe_drift_vs_base_clean": 10.88474368172164,
+     "greedy_parse_per_seed": [
+      0.985
+     ],
+     "labels": [
+      {
+       "valid": 678,
+       "k1_trunc_realids": 98,
+       "duplicate_id": 3,
+       "short_list": 12,
+       "extra_text": 2,
+       "hallucinated_id": 6,
+       "malformed_json": 1
+      }
+     ]
+    },
+    "42": {
+     "share_per_seed": [
+      0.085
+     ],
+     "share_mean": 0.085,
+     "Tr": 0.085,
+     "Tr_ci95": [
+      0.0675,
+      0.10375
+     ],
+     "Tr_ci_resamples": "prompts only (one seed)",
+     "probe_per_seed": [
+      -2.1967169922891627
+     ],
+     "probe_drift_vs_own_base": 9.632461377827639,
+     "probe_drift_vs_base_clean": 10.70479283917151,
+     "greedy_parse_per_seed": [
+      1.0
+     ],
+     "labels": [
+      {
+       "valid": 719,
+       "k1_trunc_realids": 68,
+       "extra_items": 2,
+       "short_list": 9,
+       "hallucinated_id": 2
+      }
+     ]
+    },
+    "train_rollout_k1": {
+     "1-14": [
+      0.01953125
+     ],
+     "15-28": [
+      0.31752232142857145
+     ],
+     "29-42": [
+      0.09319196428571429
+     ]
+    },
+    "train_rollout_n": {
+     "1-14": [
+      1792
+     ],
+     "15-28": [
+      1792
+     ],
+     "29-42": [
+      1792
+     ]
+    }
+   }
+  },
+  "b007": {
+   "x": 0.0007638888888888889,
+   "x_cp95": [
+    0.00038139029916397225,
+    0.0013663962026828382
+   ],
+   "base_val_k1": 0.0,
+   "base_probe": -9.128862354862555,
+   "opd": {
+    "seeds": [
+     6101,
+     6102,
+     6103
+    ],
+    "runs": [
+     "SRATE2_opd_b007_s6101",
+     "SRATE2_opd_b007_s6102",
+     "SRATE2_opd_b007_s6103"
+    ],
+    "14": {
+     "share_per_seed": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "share_mean": 0.0,
+     "Tr": 0.0,
+     "Tr_ci95": [
+      0.0,
+      0.0
+     ],
+     "Tr_ci_resamples": "seeds and prompts",
+     "probe_per_seed": [
+      -8.893258423952574,
+      -9.222173453047034,
+      -9.32320926698406
+     ],
+     "probe_drift_vs_own_base": -0.017351359798666977,
+     "probe_drift_vs_base_clean": 3.7552961167994514,
+     "greedy_parse_per_seed": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "labels": [
+      {
+       "valid": 800
+      },
+      {
+       "valid": 800
+      },
+      {
+       "valid": 800
+      }
+     ]
+    },
+    "28": {
+     "share_per_seed": [
+      0.0,
+      0.0025,
+      0.0
+     ],
+     "share_mean": 0.0008333333333333334,
+     "Tr": 0.0008333333333333334,
+     "Tr_ci95": [
+      0.0,
+      0.00375
+     ],
+     "Tr_ci_resamples": "seeds and prompts",
+     "probe_per_seed": [
+      -8.141239463948132,
+      -8.074964885631305,
+      -9.1479985924919
+     ],
+     "probe_drift_vs_own_base": 0.6741280408387755,
+     "probe_drift_vs_base_clean": 4.446775517436894,
+     "greedy_parse_per_seed": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "labels": [
+      {
+       "valid": 799,
+       "hallucinated_id": 1
+      },
+      {
+       "valid": 797,
+       "short_list": 1,
+       "k1_trunc_realids": 2
+      },
+      {
+       "valid": 800
+      }
+     ]
+    },
+    "42": {
+     "share_per_seed": [
+      0.0025,
+      0.02875,
+      0.0
+     ],
+     "share_mean": 0.010416666666666666,
+     "Tr": 0.010416666666666666,
+     "Tr_ci95": [
+      0.0,
+      0.02875
+     ],
+     "Tr_ci_resamples": "seeds and prompts",
+     "probe_per_seed": [
+      -7.391853927896264,
+      -4.83786867784985,
+      -8.056706458162726
+     ],
+     "probe_drift_vs_own_base": 2.366719333559608,
+     "probe_drift_vs_base_clean": 6.139366810157727,
+     "greedy_parse_per_seed": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "labels": [
+      {
+       "valid": 798,
+       "k1_trunc_realids": 2
+      },
+      {
+       "valid": 775,
+       "k1_trunc_realids": 23,
+       "short_list": 2
+      },
+      {
+       "valid": 800
+      }
+     ]
+    },
+    "train_rollout_k1": {
+     "1-14": [
+      0.002232142857142857,
+      0.0,
+      0.0
+     ],
+     "15-28": [
+      0.0,
+      0.0016741071428571428,
+      0.0005580357142857143
+     ],
+     "29-42": [
+      0.0016741071428571428,
+      0.0078125,
+      0.0005580357142857143
+     ]
+    },
+    "train_rollout_n": {
+     "1-14": [
+      1792,
+      1792,
+      1792
+     ],
+     "15-28": [
+      1792,
+      1792,
+      1792
+     ],
+     "29-42": [
+      1792,
+      1792,
+      1792
+     ]
+    }
+   },
+   "fkl": {
+    "seeds": [
+     6101
+    ],
+    "runs": [
+     "SRATE2_fkl_b007_s6101"
+    ],
+    "14": {
+     "share_per_seed": [
+      0.16125
+     ],
+     "share_mean": 0.16125,
+     "Tr": 0.16125,
+     "Tr_ci95": [
+      0.1325,
+      0.19125
+     ],
+     "Tr_ci_resamples": "prompts only (one seed)",
+     "probe_per_seed": [
+      -1.9243328639756092
+     ],
+     "probe_drift_vs_own_base": 7.204529490886946,
+     "probe_drift_vs_base_clean": 10.977176967485065,
+     "greedy_parse_per_seed": [
+      0.95
+     ],
+     "labels": [
+      {
+       "valid": 638,
+       "k1_trunc_realids": 129,
+       "hallucinated_id": 2,
+       "short_list": 29,
+       "duplicate_id": 2
+      }
+     ]
+    },
+    "28": {
+     "share_per_seed": [
+      0.11375
+     ],
+     "share_mean": 0.11375,
+     "Tr": 0.11375,
+     "Tr_ci95": [
+      0.08996875000000003,
+      0.13875
+     ],
+     "Tr_ci_resamples": "prompts only (one seed)",
+     "probe_per_seed": [
+      -2.060481038007341
+     ],
+     "probe_drift_vs_own_base": 7.0683813168552145,
+     "probe_drift_vs_base_clean": 10.841028793453333,
+     "greedy_parse_per_seed": [
+      1.0
+     ],
+     "labels": [
+      {
+       "valid": 688,
+       "k1_trunc_realids": 91,
+       "duplicate_id": 1,
+       "short_list": 17,
+       "hallucinated_id": 3
+      }
+     ]
+    },
+    "42": {
+     "share_per_seed": [
+      0.1225
+     ],
+     "share_mean": 0.1225,
+     "Tr": 0.1225,
+     "Tr_ci95": [
+      0.1,
+      0.145
+     ],
+     "Tr_ci_resamples": "prompts only (one seed)",
+     "probe_per_seed": [
+      -2.055477525787742
+     ],
+     "probe_drift_vs_own_base": 7.073384829074813,
+     "probe_drift_vs_base_clean": 10.846032305672932,
+     "greedy_parse_per_seed": [
+      1.0
+     ],
+     "labels": [
+      {
+       "valid": 687,
+       "k1_trunc_realids": 98,
+       "duplicate_id": 3,
+       "short_list": 12
+      }
+     ]
+    },
+    "train_rollout_k1": {
+     "1-14": [
+      0.03515625
+     ],
+     "15-28": [
+      0.3169642857142857
+     ],
+     "29-42": [
+      0.11383928571428571
+     ]
+    },
+    "train_rollout_n": {
+     "1-14": [
+      1792
+     ],
+     "15-28": [
+      1792
+     ],
+     "29-42": [
+      1792
+     ]
+    }
+   }
+  }
+ },
+ "rules": {
+  "class_rule": "transmit: Tr(42) >= 0.10 and >= 2 of 3 OPD seeds share >= 0.10; none: Tr(42) < 0.02 and no seed >= 0.10; else partial",
+  "bases": {
+   "clean": {
+    "source": "SRATE_scored.json references.B_clean_opd (OPDre_A) + SRATE_gates.json clean",
+    "x": 6.944444444444444e-05,
+    "nominal_injected": 0.0,
+    "GS": {
+     "pass": true
+    },
+    "opd": {
+     "14": {
+      "share_per_seed": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "Tr": 0.0,
+      "Tr_ci95": [
+       0.0,
+       0.0
+      ],
+      "probe_drift_vs_own_base": -0.31536750902843913,
+      "probe_drift_vs_base_clean": -0.31536750902843913
+     },
+     "28": {
+      "share_per_seed": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "Tr": 0.0,
+      "Tr_ci95": [
+       0.0,
+       0.0
+      ],
+      "probe_drift_vs_own_base": -0.026948735955056573,
+      "probe_drift_vs_base_clean": -0.026948735955056573
+     },
+     "42": {
+      "share_per_seed": [
+       0.0,
+       0.0,
+       0.00125
+      ],
+      "Tr": 0.0004166666666666667,
+      "Tr_ci95": [
+       0.0,
+       0.0025
+      ],
+      "probe_drift_vs_own_base": 1.5726240642006026,
+      "probe_drift_vs_base_clean": 1.5726240642006026
+     }
+    },
+    "opd_seeds": [
+     1001,
+     1002,
+     1003
+    ],
+    "fkl_share_42": [
+     0.13875,
+     0.095,
+     0.16375
+    ],
+    "first_checkpoint_share_ge_0.10": [
+     null,
+     null,
+     null
+    ],
+    "class": "none"
+   },
+   "b003": {
+    "source": "SRATE2 (this scorer)",
+    "x": 0.0001388888888888889,
+    "nominal_injected": 0.0003,
+    "GS": {
+     "pass": true,
+     "valid": 0.9990972222222222,
+     "other_failures": 0.0007638888888888889,
+     "other_failures_limit": 0.03097222222222222
+    },
+    "opd": {
+     "14": {
+      "share_per_seed": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "Tr": 0.0,
+      "Tr_ci95": [
+       0.0,
+       0.0
+      ],
+      "probe_drift_vs_own_base": -0.3321336613835477,
+      "probe_drift_vs_base_clean": 0.740197799960324
+     },
+     "28": {
+      "share_per_seed": [
+       0.00125,
+       0.0,
+       0.0
+      ],
+      "Tr": 0.0004166666666666667,
+      "Tr_ci95": [
+       0.0,
+       0.0025
+      ],
+      "probe_drift_vs_own_base": -0.17948267812586138,
+      "probe_drift_vs_base_clean": 0.8928487832180103
+     },
+     "42": {
+      "share_per_seed": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "Tr": 0.0,
+      "Tr_ci95": [
+       0.0,
+       0.0
+      ],
+      "probe_drift_vs_own_base": 0.15200725610783117,
+      "probe_drift_vs_base_clean": 1.2243387174517029
+     }
+    },
+    "opd_seeds": [
+     6101,
+     6102,
+     6103
+    ],
+    "fkl_share_42": [
+     0.085
+    ],
+    "first_checkpoint_share_ge_0.10": [
+     null,
+     null,
+     null
+    ],
+    "class": "none"
+   },
+   "b007": {
+    "source": "SRATE2 (this scorer)",
+    "x": 0.0007638888888888889,
+    "nominal_injected": 0.0007,
+    "GS": {
+     "pass": true,
+     "valid": 0.9986111111111111,
+     "other_failures": 0.000625,
+     "other_failures_limit": 0.03097222222222222
+    },
+    "opd": {
+     "14": {
+      "share_per_seed": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "Tr": 0.0,
+      "Tr_ci95": [
+       0.0,
+       0.0
+      ],
+      "probe_drift_vs_own_base": -0.017351359798666977,
+      "probe_drift_vs_base_clean": 3.7552961167994514
+     },
+     "28": {
+      "share_per_seed": [
+       0.0,
+       0.0025,
+       0.0
+      ],
+      "Tr": 0.0008333333333333334,
+      "Tr_ci95": [
+       0.0,
+       0.00375
+      ],
+      "probe_drift_vs_own_base": 0.6741280408387755,
+      "probe_drift_vs_base_clean": 4.446775517436894
+     },
+     "42": {
+      "share_per_seed": [
+       0.0025,
+       0.02875,
+       0.0
+      ],
+      "Tr": 0.010416666666666666,
+      "Tr_ci95": [
+       0.0,
+       0.02875
+      ],
+      "probe_drift_vs_own_base": 2.366719333559608,
+      "probe_drift_vs_base_clean": 6.139366810157727
+     }
+    },
+    "opd_seeds": [
+     6101,
+     6102,
+     6103
+    ],
+    "fkl_share_42": [
+     0.1225
+    ],
+    "first_checkpoint_share_ge_0.10": [
+     null,
+     null,
+     null
+    ],
+    "class": "none"
+   },
+   "b015": {
+    "source": "SRATE_scored.json bases.b015 + SRATE_gates.json b015",
+    "x": 0.0009027777777777777,
+    "nominal_injected": 0.0015,
+    "GS": {
+     "pass": true,
+     "valid": 0.9984722222222222,
+     "other_failures": 0.000625,
+     "other_failures_limit": 0.03097222222222222
+    },
+    "opd": {
+     "14": {
+      "share_per_seed": [
+       0.0,
+       0.00125,
+       0.0
+      ],
+      "Tr": -0.0008333333333333333,
+      "Tr_ci95": [
+       -0.00375,
+       0.0016666666666666668
+      ],
+      "probe_drift_vs_own_base": 0.7000526697671372,
+      "probe_drift_vs_base_clean": 5.803809697094481
+     },
+     "28": {
+      "share_per_seed": [
+       0.01625,
+       0.0025,
+       0.07875
+      ],
+      "Tr": 0.03125,
+      "Tr_ci95": [
+       0.00125,
+       0.07375
+      ],
+      "probe_drift_vs_own_base": 3.5034234522866283,
+      "probe_drift_vs_base_clean": 8.607180479613973
+     },
+     "42": {
+      "share_per_seed": [
+       0.11875,
+       0.095,
+       0.14125
+      ],
+      "Tr": 0.11708333333333333,
+      "Tr_ci95": [
+       0.0875,
+       0.1475
+      ],
+      "probe_drift_vs_own_base": 5.4339009808788035,
+      "probe_drift_vs_base_clean": 10.537658008206147
+     }
+    },
+    "opd_seeds": [
+     6101,
+     6102,
+     6103
+    ],
+    "fkl_share_42": [
+     0.15625
+    ],
+    "first_checkpoint_share_ge_0.10": [
+     42,
+     null,
+     42
+    ],
+    "class": "transmit"
+   }
+  },
+  "SW1": {
+   "order_by_x": [
+    [
+     "clean",
+     6.944444444444444e-05,
+     "none"
+    ],
+    [
+     "b003",
+     0.0001388888888888889,
+     "none"
+    ],
+    [
+     "b007",
+     0.0007638888888888889,
+     "none"
+    ],
+    [
+     "b015",
+     0.0009027777777777777,
+     "transmit"
+    ]
+   ],
+   "excluded_by_GS": [],
+   "x_order_note": []
+  },
+  "SW2": {
+   "fkl_share_42": {
+    "b003": [
+     0.085
+    ],
+    "b007": [
+     0.1225
+    ]
+   }
+  },
+  "switch_interval": {
+   "lower": {
+    "base": "b007",
+    "x": 0.0007638888888888889
+   },
+   "upper": {
+    "base": "b015",
+    "x": 0.0009027777777777777
+   },
+   "partial_inside": []
+  }
+ },
+ "references_from": "results/SRATE_gates.json and SRATE_scored.json (B_clean, b015; not recomputed)"
+}

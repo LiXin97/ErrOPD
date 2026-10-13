@@ -1,0 +1,18 @@
+{#- D6 (Qwen3.5) pinned chat template, owner qwen35. Renders exactly LLaMA-Factory's `qwen3_5_nothink` template:
+    no think block anywhere, generation prompt ends at '<|im_start|>assistant\n', message contents are not trimmed.
+    Installed into every Qwen3.5 checkpoint used for SFT data rendering checks, OPD rollouts (student, teacher, base)
+    and eval, so the three paths see one prompt. Kwargs such as enable_thinking are ignored on purpose. -#}
+{%- for message in messages %}
+{%- if message.role == 'system' %}
+{{- '<|im_start|>system\n' + message.content + '<|im_end|>\n' }}
+{%- elif message.role == 'user' %}
+{{- '<|im_start|>user\n' + message.content + '<|im_end|>\n' }}
+{%- elif message.role == 'assistant' %}
+{{- '<|im_start|>assistant\n' + message.content + '<|im_end|>\n' }}
+{%- else %}
+{{- raise_exception('D6 template: unexpected message role ' + message.role) }}
+{%- endif %}
+{%- endfor %}
+{%- if add_generation_prompt %}
+{{- '<|im_start|>assistant\n' }}
+{%- endif %}

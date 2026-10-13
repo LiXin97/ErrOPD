@@ -1,0 +1,24 @@
+\begin{table*}[t]
+\centering\small
+\setlength{\tabcolsep}{4.3pt}
+\begin{tabular}{@{}l cc cc cc@{}}
+\toprule
+ & \multicolumn{2}{c}{error share (\%)} & \multicolumn{4}{c}{transmission at step 42, percentage points {\scriptsize[95\% CI]}} \\
+\cmidrule(lr){2-3}\cmidrule(l){4-7}
+student $\leftarrow$ teacher, data & teacher & start & \bopd\hopd{rev.\ KL}, $\lam=1.00$ & \bopd\hopd{rev.\ KL}, $\lam=1.40$ & \bfkl\hfkl{fwd.\ KL} & \bseq\hseq{SeqKD} (ref.) \\
+\midrule
+\grp{7}{Injected teacher: list closed one item early (student start at most 1 of 808 samples)}
+Qwen3-1.7B $\leftarrow$ 4B, ESCI & 19.4 & 0 & $<$0.05 {\scriptsize[0, 0.2]} & 0 & \hit 13.4 {\scriptsize[10.7, 16.1]} & \hit 19.8 {\scriptsize[16.8, 23.0]} \\
+Llama-3.2-3B $\leftarrow$ 3.1-8B, Fashion & 21.8 & 0 & 0 & 0 & \hit 19.6 {\scriptsize[17.0, 22.4]} & \hit 19.2 {\scriptsize[16.5, 22.1]} \\
+Qwen3.5-0.8B $\leftarrow$ 9B, Fashion & 22.0 & 0 & $<$0.05 {\scriptsize[0, 0.1]} & 23.6 {\scriptsize[0, 70.2]} & \hit 19.7 {\scriptsize[16.9, 22.5]} & \hit 20.5 {\scriptsize[17.5, 23.4]} \\
+\quad Qwen3.5-2B & 22.0 & 0 & 0 & 0 & \hit 16.4 {\scriptsize[13.7, 18.9]} & \hit 23.2 {\scriptsize[20.1, 26.2]} \\
+\quad Qwen3.5-4B & 22.0 & 0.1 & $-$0.1 {\scriptsize[$-$0.4, 0.1]} & $-$0.1 & \hit 14.8 {\scriptsize[12.1, 17.5]} & \hit 22.6 {\scriptsize[20.3, 24.9]} \\
+Olmo-3-7B $\leftarrow$ 3.1-32B, Fashion & 20.8 & 0 & 0 & 0 & \hit 23.4 {\scriptsize[20.8, 26.1]} & \hit 20.0 {\scriptsize[17.3, 22.8]} \\
+\grp{7}{Injected teacher: duplicate id at the fifth item (student start 0)}
+Qwen3-1.7B $\leftarrow$ 4B, ESCI & 20.1 & 0 & 0 & $<$0.05 {\scriptsize[0, 0.2]} & \hit 19.9 {\scriptsize[17.1, 22.7]} & \hit 18.5 {\scriptsize[15.8, 21.4]} \\
+Llama-3.2-3B $\leftarrow$ 3.1-8B, Fashion & 18.8 & 0 & 0 & 0 & \hit 14.3 {\scriptsize[11.3, 17.4]} & \hit 21.3 {\scriptsize[18.6, 24.1]} \\
+\bottomrule
+\end{tabular}
+\caption{Forward-KL OPD transmits the injected error in every setting, and reverse-KL OPD at $\lam=1$ does not within 42 steps.}
+\label{tab:main}
+\end{table*}

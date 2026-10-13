@@ -1,0 +1,353 @@
+{
+ "layout": "real",
+ "bases": {
+  "b015": {
+   "n": 14400,
+   "n_prompts": 1800,
+   "samples_per_prompt": {
+    "8": 1800
+   },
+   "k1_count": 13,
+   "x": 0.0009027777777777777,
+   "x_cp95": [
+    0.0004807759311742264,
+    0.0015432827159430913
+   ],
+   "x_prompt_boot95": [
+    0.0004166666666666667,
+    0.0014583333333333334
+   ],
+   "valid": 0.9984722222222222,
+   "runaway": 0.0,
+   "other_failures": 0.000625,
+   "other_by_label": {
+    "malformed_json": 0.0001388888888888889,
+    "extra_text": 6.944444444444444e-05,
+    "hallucinated_id": 0.00034722222222222224,
+    "short_list": 6.944444444444444e-05
+   },
+   "labels": {
+    "valid": 14378,
+    "malformed_json": 2,
+    "extra_text": 1,
+    "k1_trunc_realids": 13,
+    "hallucinated_id": 5,
+    "short_list": 1
+   },
+   "val_second_draw": {
+    "n": 800,
+    "k1": 0.00125
+   },
+   "val_sampler_k1": 0.00125,
+   "val_sampler_labels": {
+    "valid": 799,
+    "k1_trunc_realids": 1
+   },
+   "probe_mean": -7.79775280413333,
+   "probe_minus_base_clean": 5.103757027327344,
+   "injected_share": 0.002777777777777778,
+   "x_over_injected": 0.32499999999999996,
+   "E3_GE2_others_le_clean_plus_0.03": true
+  },
+  "b040": {
+   "n": 14400,
+   "n_prompts": 1800,
+   "samples_per_prompt": {
+    "8": 1800
+   },
+   "k1_count": 57,
+   "x": 0.003958333333333334,
+   "x_cp95": [
+    0.002999340216664522,
+    0.005125477736518504
+   ],
+   "x_prompt_boot95": [
+    0.002916666666666667,
+    0.005069444444444444
+   ],
+   "valid": 0.9951388888888889,
+   "runaway": 0.0,
+   "other_failures": 0.0009027777777777778,
+   "other_by_label": {
+    "hallucinated_id": 0.00020833333333333335,
+    "malformed_json": 0.0001388888888888889,
+    "duplicate_id": 0.0001388888888888889,
+    "short_list": 0.0004166666666666667
+   },
+   "labels": {
+    "valid": 14330,
+    "k1_trunc_realids": 57,
+    "hallucinated_id": 3,
+    "malformed_json": 2,
+    "duplicate_id": 2,
+    "short_list": 6
+   },
+   "val_second_draw": {
+    "n": 800,
+    "k1": 0.005
+   },
+   "val_sampler_k1": 0.00375,
+   "val_sampler_labels": {
+    "valid": 797,
+    "k1_trunc_realids": 3
+   },
+   "probe_mean": -6.159410110182977,
+   "probe_minus_base_clean": 6.742099721277697,
+   "injected_share": 0.005555555555555556,
+   "x_over_injected": 0.7125,
+   "E3_GE2_others_le_clean_plus_0.03": true
+  },
+  "b080": {
+   "n": 14400,
+   "n_prompts": 1800,
+   "samples_per_prompt": {
+    "8": 1800
+   },
+   "k1_count": 140,
+   "x": 0.009722222222222222,
+   "x_cp95": [
+    0.008184558598712175,
+    0.011462544792926552
+   ],
+   "x_prompt_boot95": [
+    0.008055555555555555,
+    0.01138888888888889
+   ],
+   "valid": 0.9890972222222222,
+   "runaway": 0.00020833333333333335,
+   "other_failures": 0.0009722222222222222,
+   "other_by_label": {
+    "short_list": 0.0006944444444444445,
+    "hallucinated_id": 0.0001388888888888889,
+    "malformed_json": 0.0001388888888888889
+   },
+   "labels": {
+    "valid": 14243,
+    "k1_trunc_realids": 140,
+    "short_list": 10,
+    "extra_items": 3,
+    "hallucinated_id": 2,
+    "malformed_json": 2
+   },
+   "val_second_draw": {
+    "n": 800,
+    "k1": 0.00625
+   },
+   "val_sampler_k1": 0.00375,
+   "val_sampler_labels": {
+    "valid": 793,
+    "k1_trunc_realids": 3,
+    "hallucinated_id": 4
+   },
+   "probe_mean": -5.474982442480795,
+   "probe_minus_base_clean": 7.426527388979879,
+   "injected_share": 0.009222222222222222,
+   "x_over_injected": 1.0542168674698795,
+   "E3_GE2_others_le_clean_plus_0.03": true
+  },
+  "b160": {
+   "n": 14400,
+   "n_prompts": 1800,
+   "samples_per_prompt": {
+    "8": 1800
+   },
+   "k1_count": 242,
+   "x": 0.016805555555555556,
+   "x_cp95": [
+    0.014769414709667486,
+    0.019040136780623752
+   ],
+   "x_prompt_boot95": [
+    0.014722222222222222,
+    0.018958333333333334
+   ],
+   "valid": 0.98,
+   "runaway": 0.0001388888888888889,
+   "other_failures": 0.0030555555555555557,
+   "other_by_label": {
+    "short_list": 0.0022916666666666667,
+    "malformed_json": 0.0002777777777777778,
+    "hallucinated_id": 0.00034722222222222224,
+    "duplicate_id": 0.0001388888888888889
+   },
+   "labels": {
+    "valid": 14112,
+    "k1_trunc_realids": 242,
+    "short_list": 33,
+    "malformed_json": 4,
+    "hallucinated_id": 5,
+    "extra_items": 2,
+    "duplicate_id": 2
+   },
+   "val_second_draw": {
+    "n": 800,
+    "k1": 0.0175
+   },
+   "val_sampler_k1": 0.01625,
+   "val_sampler_labels": {
+    "valid": 786,
+    "k1_trunc_realids": 13,
+    "short_list": 1
+   },
+   "probe_mean": -4.495172047631794,
+   "probe_minus_base_clean": 8.40633778382888,
+   "injected_share": 0.017222222222222222,
+   "x_over_injected": 0.9758064516129032,
+   "E3_GE2_others_le_clean_plus_0.03": true
+  },
+  "clean": {
+   "n": 14400,
+   "n_prompts": 1800,
+   "samples_per_prompt": {
+    "8": 1800
+   },
+   "k1_count": 1,
+   "x": 6.944444444444444e-05,
+   "x_cp95": [
+    1.758179564420626e-06,
+    0.00038685826680773575
+   ],
+   "x_prompt_boot95": [
+    0.0,
+    0.00020833333333333335
+   ],
+   "valid": 0.9989583333333333,
+   "runaway": 0.0,
+   "other_failures": 0.0009722222222222222,
+   "other_by_label": {
+    "unterminated": 6.944444444444444e-05,
+    "hallucinated_id": 0.0002777777777777778,
+    "duplicate_id": 0.0002777777777777778,
+    "malformed_json": 0.00020833333333333335,
+    "short_list": 6.944444444444444e-05,
+    "extra_text": 6.944444444444444e-05
+   },
+   "labels": {
+    "valid": 14385,
+    "k1_trunc_realids": 1,
+    "unterminated": 1,
+    "hallucinated_id": 4,
+    "duplicate_id": 4,
+    "malformed_json": 3,
+    "short_list": 1,
+    "extra_text": 1
+   },
+   "val_second_draw": {
+    "n": 800,
+    "k1": 0.00125
+   },
+   "val_sampler_k1": 0.0,
+   "val_sampler_labels": {
+    "valid": 800
+   },
+   "probe_mean": -12.901509831460674,
+   "probe_minus_base_clean": 0.0,
+   "injected_share": 0.0,
+   "x_over_injected": null,
+   "E3_GE2_others_le_clean_plus_0.03": true
+  },
+  "E2": {
+   "n": 14400,
+   "n_prompts": 1800,
+   "samples_per_prompt": {
+    "8": 1800
+   },
+   "k1_count": 310,
+   "x": 0.021527777777777778,
+   "x_cp95": [
+    0.019219610919795287,
+    0.024031972110942323
+   ],
+   "x_prompt_boot95": [
+    0.019097222222222224,
+    0.024027777777777776
+   ],
+   "valid": 0.9761111111111112,
+   "runaway": 6.944444444444444e-05,
+   "other_failures": 0.0022916666666666667,
+   "other_by_label": {
+    "short_list": 0.001875,
+    "extra_text": 6.944444444444444e-05,
+    "duplicate_id": 0.0001388888888888889,
+    "malformed_json": 0.00020833333333333335
+   },
+   "labels": {
+    "valid": 14056,
+    "k1_trunc_realids": 310,
+    "short_list": 27,
+    "extra_text": 1,
+    "duplicate_id": 2,
+    "malformed_json": 3,
+    "extra_items": 1
+   },
+   "val_second_draw": {
+    "n": 800,
+    "k1": 0.02
+   },
+   "val_sampler_k1": 0.0125,
+   "val_sampler_labels": {
+    "valid": 787,
+    "k1_trunc_realids": 10,
+    "hallucinated_id": 1,
+    "short_list": 2
+   },
+   "probe_mean": -4.121488759524367,
+   "probe_minus_base_clean": 8.780021071936307,
+   "injected_share": 0.021666666666666667,
+   "x_over_injected": 0.9935897435897435,
+   "E3_GE2_others_le_clean_plus_0.03": true
+  },
+  "E5": {
+   "n": 14400,
+   "n_prompts": 1800,
+   "samples_per_prompt": {
+    "8": 1800
+   },
+   "k1_count": 627,
+   "x": 0.043541666666666666,
+   "x_cp95": [
+    0.04026634594849478,
+    0.04700298106419459
+   ],
+   "x_prompt_boot95": [
+    0.04020833333333333,
+    0.04708506944444442
+   ],
+   "valid": 0.954375,
+   "runaway": 6.944444444444444e-05,
+   "other_failures": 0.002013888888888889,
+   "other_by_label": {
+    "short_list": 0.0015972222222222223,
+    "malformed_json": 0.0001388888888888889,
+    "duplicate_id": 0.00020833333333333335,
+    "unterminated": 6.944444444444444e-05
+   },
+   "labels": {
+    "valid": 13743,
+    "k1_trunc_realids": 627,
+    "short_list": 23,
+    "malformed_json": 2,
+    "duplicate_id": 3,
+    "extra_items": 1,
+    "unterminated": 1
+   },
+   "val_second_draw": {
+    "n": 800,
+    "k1": 0.0275
+   },
+   "val_sampler_k1": 0.0375,
+   "val_sampler_labels": {
+    "valid": 767,
+    "k1_trunc_realids": 30,
+    "extra_text": 1,
+    "short_list": 1,
+    "malformed_json": 1
+   },
+   "probe_mean": -3.334357441308793,
+   "probe_minus_base_clean": 9.56715239015188,
+   "injected_share": 0.050666666666666665,
+   "x_over_injected": 0.859375,
+   "E3_GE2_others_le_clean_plus_0.03": true
+  }
+ }
+}

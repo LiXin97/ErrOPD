@@ -1,0 +1,29 @@
+\begin{table*}[t]
+\centering\small
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{@{}l l l c c c@{}}
+\toprule
+ & & & & difference from $\lam=1.00$ & within \\
+setting (rev.\ KL) & measure & decoding & $\lam$ & points [90\% CI] & $\pm$2 points \\
+\midrule
+Qwen3 $\leftarrow$ injected 4B, ESCI & validity & sampled & 1.40 & 0 [$-$0.4, $+$0.4] & yes \\ %
+Llama $\leftarrow$ injected 8B, Fashion & validity & sampled & 1.40 & $-$0.1 [$-$0.3, $+$0.1] & yes \\ %
+Qwen3.5-0.8B $\leftarrow$ injected 9B & validity & sampled & 1.40 & $-$31.1 [n/a] & \textbf{no} \\ %
+Qwen3.5-2B $\leftarrow$ injected 9B & validity & sampled & 1.40 & 0 [$-$0.2, $+$0.2] & yes \\ %
+Qwen3.5-4B $\leftarrow$ injected 9B & validity & sampled & 1.40 & $+$0.1 [$-$0.2, $+$0.3] & yes \\ %
+TREC-DL reranking & validity & greedy & 1.40 & $-$0.7 [$-$1.8, $+$0.3] & yes \\ %
+TREC-DL reranking & NDCG@10 & greedy & 1.40 & $-$$<$0.1 [$-$0.3, $+$0.2] & yes \\ %
+Text-to-SQL & validity & greedy & 1.40 & $+$0.1 [$-$0.1, $+$0.3] & yes \\ %
+Text-to-SQL & exec.\ acc. & greedy & 1.40 & $-$0.5 [$-$1.5, $+$0.5] & yes \\ %
+JSON extraction & validity & greedy & 1.40 & $-$0.4 [$-$1.0, $+$0.2] & yes \\ %
+JSON extraction & micro-F1 & greedy & 1.40 & $-$0.1 [$-$0.3, $+$0.1] & yes \\ %
+ESCI ranking, clean teacher & validity & greedy & 1.40 & 0 [0, 0] & yes \\ %
+ESCI ranking, clean teacher & NDCG@1 & greedy & 1.40 & $+$0.2 [$-$1.5, $+$2.0] & \textbf{no} \\ %
+\midrule
+\multicolumn{6}{@{}l@{}}{\textit{Fourth family, not counted in the caption}} \\
+Olmo-3-7B $\leftarrow$ injected 32B, 3 seeds & validity & sampled & 1.40 & $+$0.2 [$-$0.4, $+$0.7] & yes \\ %
+\bottomrule
+\end{tabular}
+\caption{Extrapolation leaves validity and quality flat within $\pm$2 points in 11 of 13 comparisons (two one-sided tests over seeds, 90\% intervals).}
+\label{tab:equiv}
+\end{table*}

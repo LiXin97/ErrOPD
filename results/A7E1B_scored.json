@@ -1,0 +1,436 @@
+{
+ "generated_utc": "2026-10-07T16:51:49Z",
+ "scorer_sha256_12": "b50b05fef571",
+ "endpoint": "step-42 sampler, val block, k1_trunc_realids",
+ "starts": {
+  "n010": {
+   "start": "n010",
+   "base_file": "outputs/A7E1B/samples/base_4b_n010.v2.records.jsonl",
+   "base_share": 0.0,
+   "base_count": 0,
+   "base_n": 808,
+   "opd1.00": {
+    "seeds": [],
+    "missing_seeds": [
+     8601,
+     8602,
+     8603
+    ],
+    "status": "no seeds",
+    "train_rollout_k1_share_7step": {}
+   },
+   "fkl1.00": {
+    "seeds": [],
+    "missing_seeds": [
+     8611
+    ],
+    "status": "no seeds",
+    "train_rollout_k1_share_7step": {}
+   },
+   "gate": {
+    "status": "fail",
+    "rate": 7.259001161440186e-05,
+    "rate_cp95": [
+     8.791108068072961e-06,
+     0.00026219521962580984
+    ],
+    "n": 27552,
+    "target": 0.0005
+   },
+   "status": "incomplete (reverse KL 0 seeds, forward KL 0)"
+  },
+  "n025": {
+   "start": "n025",
+   "base_file": "outputs/A7E1B/samples/base_4b_n025.v2.records.jsonl",
+   "base_share": 0.0,
+   "base_count": 0,
+   "base_n": 808,
+   "opd1.00": {
+    "seeds": [
+     8601,
+     8602,
+     8603
+    ],
+    "missing_seeds": [],
+    "share_per_seed": {
+     "8601": 0.0012376237623762376,
+     "8602": 0.0,
+     "8603": 0.0012376237623762376
+    },
+    "count_per_seed": {
+     "8601": 1,
+     "8602": 0,
+     "8603": 1
+    },
+    "n_per_seed": {
+     "8601": 808,
+     "8602": 808,
+     "8603": 808
+    },
+    "labels": {
+     "8601": {
+      "valid": 806,
+      "k1_trunc_realids": 1,
+      "hallucinated_id": 1
+     },
+     "8602": {
+      "valid": 806,
+      "short_list": 1,
+      "malformed_json": 1
+     },
+     "8603": {
+      "valid": 803,
+      "short_list": 4,
+      "k1_trunc_realids": 1
+     }
+    },
+    "Tr": 0.0008250825082508251,
+    "Tr_ci95": [
+     0.0,
+     0.0028877887788778876
+    ],
+    "pooled_count": 2,
+    "pooled_n": 2424,
+    "pooled_share": 0.0008250825082508251,
+    "Tr_pooled": 0.0008250825082508251,
+    "train_rollout_k1_share_7step": {
+     "8601": {
+      "1-7": 0.0,
+      "8-14": 0.0,
+      "15-21": 0.0,
+      "22-28": 0.0,
+      "29-35": 0.0,
+      "36-42": 0.0
+     },
+     "8602": {
+      "1-7": 0.0012,
+      "8-14": 0.0012,
+      "15-21": 0.0,
+      "22-28": 0.0,
+      "29-35": 0.0,
+      "36-42": 0.0
+     },
+     "8603": {
+      "1-7": 0.0035,
+      "8-14": 0.0,
+      "15-21": 0.0,
+      "22-28": 0.0,
+      "29-35": 0.0012,
+      "36-42": 0.0
+     }
+    }
+   },
+   "fkl1.00": {
+    "seeds": [
+     8611
+    ],
+    "missing_seeds": [],
+    "share_per_seed": {
+     "8611": 0.08044554455445545
+    },
+    "count_per_seed": {
+     "8611": 65
+    },
+    "n_per_seed": {
+     "8611": 808
+    },
+    "labels": {
+     "8611": {
+      "short_list": 123,
+      "k1_trunc_realids": 65,
+      "valid": 615,
+      "malformed_json": 5
+     }
+    },
+    "Tr": 0.08044554455445545,
+    "Tr_ci95": [
+     0.06188118811881188,
+     0.10024752475247525
+    ],
+    "pooled_count": 65,
+    "pooled_n": 808,
+    "pooled_share": 0.08044554455445545,
+    "Tr_pooled": 0.08044554455445545,
+    "train_rollout_k1_share_7step": {
+     "8611": {
+      "1-7": 0.0,
+      "8-14": 0.0175,
+      "15-21": 0.0572,
+      "22-28": 0.0521,
+      "29-35": 0.0523,
+      "36-42": 0.064
+     }
+    }
+   },
+   "gate": {
+    "status": "pass",
+    "rate": 0.0008710801393728223,
+    "rate_cp95": [
+     0.00045017825130439296,
+     0.0015211067922825065
+    ],
+    "n": 13776,
+    "target": 0.001
+   },
+   "E1_1": {
+    "class": "F0",
+    "bars": {
+     "Tr_pooled_min": 0.05,
+     "seed_share_minus_base_min": 0.01,
+     "seed_count_min": {
+      "8601": 9,
+      "8602": 9,
+      "8603": 9
+     },
+     "F0_pooled_count_max": 24.240000000000002
+    },
+    "seed_at_or_above_bar": {
+     "8601": false,
+     "8602": false,
+     "8603": false
+    },
+    "F0_raw_nonbinding": true
+   },
+   "E1_G": {
+    "fkl_Tr": 0.08044554455445545,
+    "fkl_share_per_seed": {
+     "8611": 0.08044554455445545
+    },
+    "bar": 0.05,
+    "pass": true
+   },
+   "read": true,
+   "not_read_because": [],
+   "status": "scored"
+  },
+  "n060": {
+   "start": "n060",
+   "base_file": "outputs/A7E1B/samples/base_4b_n060.v2.records.jsonl",
+   "base_share": 0.0037128712871287127,
+   "base_count": 3,
+   "base_n": 808,
+   "opd1.00": {
+    "seeds": [
+     8601,
+     8602,
+     8603
+    ],
+    "missing_seeds": [],
+    "share_per_seed": {
+     "8601": 0.16831683168316833,
+     "8602": 0.16212871287128713,
+     "8603": 0.12128712871287128
+    },
+    "count_per_seed": {
+     "8601": 136,
+     "8602": 131,
+     "8603": 98
+    },
+    "n_per_seed": {
+     "8601": 808,
+     "8602": 808,
+     "8603": 808
+    },
+    "labels": {
+     "8601": {
+      "valid": 668,
+      "k1_trunc_realids": 136,
+      "extra_items": 1,
+      "short_list": 3
+     },
+     "8602": {
+      "valid": 671,
+      "k1_trunc_realids": 131,
+      "malformed_json": 3,
+      "short_list": 3
+     },
+     "8603": {
+      "valid": 707,
+      "k1_trunc_realids": 98,
+      "short_list": 1,
+      "malformed_json": 2
+     }
+    },
+    "Tr": 0.14686468646864687,
+    "Tr_ci95": [
+     0.11633663366336633,
+     0.1778052805280528
+    ],
+    "pooled_count": 365,
+    "pooled_n": 2424,
+    "pooled_share": 0.15057755775577558,
+    "Tr_pooled": 0.14686468646864687,
+    "train_rollout_k1_share_7step": {
+     "8601": {
+      "1-7": 0.0047,
+      "8-14": 0.0104,
+      "15-21": 0.0596,
+      "22-28": 0.1576,
+      "29-35": 0.1556,
+      "36-42": 0.1933
+     },
+     "8602": {
+      "1-7": 0.0035,
+      "8-14": 0.0128,
+      "15-21": 0.0649,
+      "22-28": 0.1846,
+      "29-35": 0.143,
+      "36-42": 0.1793
+     },
+     "8603": {
+      "1-7": 0.0035,
+      "8-14": 0.0058,
+      "15-21": 0.0497,
+      "22-28": 0.1405,
+      "29-35": 0.0701,
+      "36-42": 0.2178
+     }
+    }
+   },
+   "fkl1.00": {
+    "seeds": [
+     8611
+    ],
+    "missing_seeds": [],
+    "share_per_seed": {
+     "8611": 0.18811881188118812
+    },
+    "count_per_seed": {
+     "8611": 152
+    },
+    "n_per_seed": {
+     "8611": 808
+    },
+    "labels": {
+     "8611": {
+      "valid": 626,
+      "k1_trunc_realids": 152,
+      "short_list": 23,
+      "malformed_json": 6,
+      "extra_text": 1
+     }
+    },
+    "Tr": 0.1844059405940594,
+    "Tr_ci95": [
+     0.15594059405940594,
+     0.21287128712871287
+    ],
+    "pooled_count": 152,
+    "pooled_n": 808,
+    "pooled_share": 0.18811881188118812,
+    "Tr_pooled": 0.1844059405940594,
+    "train_rollout_k1_share_7step": {
+     "8611": {
+      "1-7": 0.0163,
+      "8-14": 0.326,
+      "15-21": 0.0853,
+      "22-28": 0.0939,
+      "29-35": 0.2116,
+      "36-42": 0.2419
+     }
+    }
+   },
+   "gate": {
+    "status": "pass",
+    "rate": 0.0033391405342624854,
+    "rate_cp95": [
+     0.002445676302390602,
+     0.004451461834016381
+    ],
+    "n": 13776,
+    "target": 0.005
+   },
+   "E1_1": {
+    "class": "F+",
+    "bars": {
+     "Tr_pooled_min": 0.05,
+     "seed_share_minus_base_min": 0.01,
+     "seed_count_min": {
+      "8601": 12,
+      "8602": 12,
+      "8603": 12
+     },
+     "F0_pooled_count_max": 33.24
+    },
+    "seed_at_or_above_bar": {
+     "8601": true,
+     "8602": true,
+     "8603": true
+    },
+    "F0_raw_nonbinding": false
+   },
+   "E1_G": {
+    "fkl_Tr": 0.1844059405940594,
+    "fkl_share_per_seed": {
+     "8611": 0.18811881188118812
+    },
+    "bar": 0.05,
+    "pass": true
+   },
+   "read": true,
+   "not_read_because": [],
+   "status": "scored"
+  },
+  "n069": {
+   "start": "n069",
+   "base_file": "outputs/A7E1B/samples/base_4b_n069.v2.records.jsonl",
+   "base_share": 0.0037128712871287127,
+   "base_count": 3,
+   "base_n": 808,
+   "opd1.00": {
+    "seeds": [],
+    "missing_seeds": [
+     8601,
+     8602,
+     8603
+    ],
+    "status": "no seeds",
+    "train_rollout_k1_share_7step": {}
+   },
+   "fkl1.00": {
+    "seeds": [],
+    "missing_seeds": [
+     8611
+    ],
+    "status": "no seeds",
+    "train_rollout_k1_share_7step": {}
+   },
+   "gate": {
+    "status": "fail",
+    "rate": 0.0034117305458768875,
+    "rate_cp95": [
+     0.0027578789770645396,
+     0.004173499669677387
+    ],
+    "n": 27552,
+    "target": 0.0005
+   },
+   "status": "incomplete (reverse KL 0 seeds, forward KL 0)"
+  }
+ },
+ "gates_file": {
+  "path": "results/A7E1B_gates.json",
+  "sha256_12": "43fa5fda9dbc",
+  "generated_utc": "2026-10-07T16:51:44Z"
+ },
+ "E1_2": {
+  "lowest_Fplus_start": {
+   "start": "n060",
+   "start_rate": 0.0033391405342624854
+  },
+  "highest_F0_start": {
+   "start": "n025",
+   "start_rate": 0.0008710801393728223
+  },
+  "read_starts": {
+   "n025": {
+    "start_rate": 0.0008710801393728223,
+    "class": "F0"
+   },
+   "n060": {
+    "start_rate": 0.0033391405342624854,
+    "class": "F+"
+   }
+  }
+ }
+}

@@ -1,0 +1,44 @@
+{
+ "pl_k8_k1_f20_x5": {
+  "formatting": "sharegpt",
+  "columns": {
+   "messages": "messages"
+  },
+  "tags": {
+   "role_tag": "role",
+   "content_tag": "content",
+   "user_tag": "user",
+   "assistant_tag": "assistant",
+   "system_tag": "system"
+  },
+  "file_name": "k1_f20_x5.jsonl"
+ },
+ "pl_k8_k1_f02_x5": {
+  "formatting": "sharegpt",
+  "columns": {
+   "messages": "messages"
+  },
+  "tags": {
+   "role_tag": "role",
+   "content_tag": "content",
+   "user_tag": "user",
+   "assistant_tag": "assistant",
+   "system_tag": "system"
+  },
+  "file_name": "k1_f02_x5.jsonl"
+ },
+ "pl_k8_val": {
+  "formatting": "sharegpt",
+  "columns": {
+   "messages": "messages"
+  },
+  "tags": {
+   "role_tag": "role",
+   "content_tag": "content",
+   "user_tag": "user",
+   "assistant_tag": "assistant",
+   "system_tag": "system"
+  },
+  "file_name": "val.jsonl"
+ }
+}

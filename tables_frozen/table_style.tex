@@ -1,0 +1,19 @@
+\definecolor{opdcol}{HTML}{0072B2}   %
+\definecolor{fklcol}{HTML}{D55E00}   %
+\definecolor{seqcol}{HTML}{009E73}   %
+\definecolor{lawcol}{HTML}{8C8C8C}   %
+\definecolor{grprow}{gray}{0.93}     %
+\definecolor{hitcol}{HTML}{CC79A7}   %
+\newcommand{\hit}{}
+\newcommand{\hitin}[1]{#1}
+\newcommand{\lawp}[1]{{\color{lawcol}(#1)}}
+\newcommand{\grp}[2]{\addlinespace[2pt]\rowcolor{grprow}\multicolumn{#1}{@{}l@{}}{\textit{#2}}\\}
+\newcommand{\hopd}[1]{{\color{opdcol}#1}}
+\newcommand{\hfkl}[1]{{\color{fklcol}#1}}
+\newcommand{\hseq}[1]{{\color{seqcol}#1}}
+\newcommand{\bopd}{\cellcolor{opdcol!10}}
+\newcommand{\bfkl}{\cellcolor{fklcol!10}}
+\newcommand{\bseq}{\cellcolor{seqcol!10}}
+\usepackage{threeparttable}
+\newcommand{\tabnote}[1]{\begin{tablenotes}[flushleft]\footnotesize\item[]#1\end{tablenotes}}
+\usepackage{longtable}

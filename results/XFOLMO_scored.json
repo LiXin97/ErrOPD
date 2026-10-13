@@ -1,0 +1,520 @@
+{
+ "base": [
+  0,
+  800
+ ],
+ "teacher": [
+  159,
+  800
+ ],
+ "teacher_share": 0.19875,
+ "XF0": {
+  "per_seed": {
+   "8101": {
+    "k_by_step": {
+     "14": 127,
+     "28": 190,
+     "42": 140
+    },
+    "Tr_by_step": {
+     "14": 0.15875,
+     "28": 0.2375,
+     "42": 0.175
+    },
+    "by42": true,
+    "at42": true,
+    "complete": true
+   },
+   "8102": {
+    "k_by_step": {
+     "14": 140,
+     "28": 169,
+     "42": 157
+    },
+    "Tr_by_step": {
+     "14": 0.175,
+     "28": 0.21125,
+     "42": 0.19625
+    },
+    "by42": true,
+    "at42": true,
+    "complete": true
+   },
+   "8103": {
+    "k_by_step": {
+     "14": 114,
+     "28": 214,
+     "42": 114
+    },
+    "Tr_by_step": {
+     "14": 0.1425,
+     "28": 0.2675,
+     "42": 0.1425
+    },
+    "by42": true,
+    "at42": true,
+    "complete": true
+   }
+  },
+  "holds": true,
+  "at42_reading_holds": true
+ },
+ "XF1": {
+  "per_seed": {
+   "8101": {
+    "k": 0,
+    "n": 800,
+    "below_2pts": true
+   },
+   "8102": {
+    "k": 0,
+    "n": 800,
+    "below_2pts": true
+   },
+   "8103": {
+    "k": 0,
+    "n": 800,
+    "below_2pts": true
+   },
+   "8104": {
+    "k": 0,
+    "n": 800,
+    "below_2pts": true
+   },
+   "8105": {
+    "k": 0,
+    "n": 800,
+    "below_2pts": true
+   },
+   "8106": {
+    "k": 0,
+    "n": 800,
+    "below_2pts": true
+   },
+   "8107": {
+    "k": 0,
+    "n": 800,
+    "below_2pts": true
+   },
+   "8108": {
+    "k": 0,
+    "n": 800,
+    "below_2pts": true
+   }
+  },
+  "holds": true
+ },
+ "XF2": {
+  "per_seed": {
+   "8101": {
+    "finished": true,
+    "train_windows": {
+     "42": [
+      0,
+      5376
+     ],
+     "84": [
+      0,
+      5376
+     ],
+     "126": [
+      0,
+      5376
+     ],
+     "168": [
+      0,
+      5376
+     ],
+     "210": [
+      255,
+      5376
+     ]
+    },
+    "sampler_k": {
+     "42": 0,
+     "84": 0,
+     "126": 0,
+     "168": 0,
+     "210": 204
+    },
+    "acquired": false,
+    "acquire_step": null,
+    "record_escape": true,
+    "record_escape_step": 210,
+    "sampler_half_teacher": true,
+    "max_train_window": {
+     "k": 255,
+     "n": 5376,
+     "step": 210
+    }
+   },
+   "8102": {
+    "finished": true,
+    "train_windows": {
+     "42": [
+      0,
+      5376
+     ],
+     "84": [
+      1,
+      5376
+     ],
+     "126": [
+      0,
+      5376
+     ],
+     "168": [
+      0,
+      5376
+     ],
+     "210": [
+      0,
+      5376
+     ]
+    },
+    "sampler_k": {
+     "42": 0,
+     "84": 0,
+     "126": 0,
+     "168": 0,
+     "210": 0
+    },
+    "acquired": false,
+    "acquire_step": null,
+    "record_escape": false,
+    "record_escape_step": null,
+    "sampler_half_teacher": false,
+    "max_train_window": {
+     "k": 1,
+     "n": 5376,
+     "step": 84
+    }
+   },
+   "8103": {
+    "finished": true,
+    "train_windows": {
+     "42": [
+      0,
+      5376
+     ],
+     "84": [
+      0,
+      5376
+     ],
+     "126": [
+      496,
+      5376
+     ],
+     "168": [
+      1055,
+      5376
+     ],
+     "210": [
+      1005,
+      5376
+     ]
+    },
+    "sampler_k": {
+     "42": 0,
+     "84": 0,
+     "126": 123,
+     "168": 192,
+     "210": 153
+    },
+    "acquired": true,
+    "acquire_step": 168,
+    "record_escape": true,
+    "record_escape_step": 126,
+    "sampler_half_teacher": true,
+    "max_train_window": {
+     "k": 1055,
+     "n": 5376,
+     "step": 168
+    }
+   },
+   "8104": {
+    "finished": true,
+    "train_windows": {
+     "42": [
+      0,
+      5376
+     ],
+     "84": [
+      0,
+      5376
+     ],
+     "126": [
+      0,
+      5376
+     ],
+     "168": [
+      0,
+      5376
+     ],
+     "210": [
+      371,
+      5376
+     ]
+    },
+    "sampler_k": {
+     "42": 0,
+     "84": 0,
+     "126": 0,
+     "168": 0,
+     "210": 109
+    },
+    "acquired": false,
+    "acquire_step": null,
+    "record_escape": true,
+    "record_escape_step": 210,
+    "sampler_half_teacher": true,
+    "max_train_window": {
+     "k": 371,
+     "n": 5376,
+     "step": 210
+    }
+   },
+   "8105": {
+    "finished": true,
+    "train_windows": {
+     "42": [
+      0,
+      5376
+     ],
+     "84": [
+      0,
+      5376
+     ],
+     "126": [
+      0,
+      5376
+     ],
+     "168": [
+      0,
+      5376
+     ],
+     "210": [
+      0,
+      5376
+     ]
+    },
+    "sampler_k": {
+     "42": 0,
+     "84": 0,
+     "126": 0,
+     "168": 0,
+     "210": 0
+    },
+    "acquired": false,
+    "acquire_step": null,
+    "record_escape": false,
+    "record_escape_step": null,
+    "sampler_half_teacher": false,
+    "max_train_window": {
+     "k": 0,
+     "n": 5376,
+     "step": 42
+    }
+   },
+   "8106": {
+    "finished": true,
+    "train_windows": {
+     "42": [
+      1,
+      5376
+     ],
+     "84": [
+      311,
+      5376
+     ],
+     "126": [
+      958,
+      5376
+     ],
+     "168": [
+      1036,
+      5376
+     ],
+     "210": [
+      1097,
+      5376
+     ]
+    },
+    "sampler_k": {
+     "42": 0,
+     "84": 129,
+     "126": 160,
+     "168": 152,
+     "210": 159
+    },
+    "acquired": true,
+    "acquire_step": 126,
+    "record_escape": true,
+    "record_escape_step": 84,
+    "sampler_half_teacher": true,
+    "max_train_window": {
+     "k": 1097,
+     "n": 5376,
+     "step": 210
+    }
+   },
+   "8107": {
+    "finished": true,
+    "train_windows": {
+     "42": [
+      0,
+      5376
+     ],
+     "84": [
+      0,
+      5376
+     ],
+     "126": [
+      0,
+      5376
+     ],
+     "168": [
+      0,
+      5376
+     ],
+     "210": [
+      0,
+      5376
+     ]
+    },
+    "sampler_k": {
+     "42": 0,
+     "84": 0,
+     "126": 0,
+     "168": 0,
+     "210": 0
+    },
+    "acquired": false,
+    "acquire_step": null,
+    "record_escape": false,
+    "record_escape_step": null,
+    "sampler_half_teacher": false,
+    "max_train_window": {
+     "k": 0,
+     "n": 5376,
+     "step": 42
+    }
+   },
+   "8108": {
+    "finished": true,
+    "train_windows": {
+     "42": [
+      0,
+      5376
+     ],
+     "84": [
+      0,
+      5376
+     ],
+     "126": [
+      1,
+      5376
+     ],
+     "168": [
+      0,
+      5376
+     ],
+     "210": [
+      0,
+      5376
+     ]
+    },
+    "sampler_k": {
+     "42": 0,
+     "84": 0,
+     "126": 0,
+     "168": 0,
+     "210": 0
+    },
+    "acquired": false,
+    "acquire_step": null,
+    "record_escape": false,
+    "record_escape_step": null,
+    "sampler_half_teacher": false,
+    "max_train_window": {
+     "k": 1,
+     "n": 5376,
+     "step": 126
+    }
+   }
+  },
+  "n_finished": 8,
+  "K": 2,
+  "complete": true,
+  "K_record_escape": 4,
+  "K_sampler_half_teacher": 4,
+  "cp95": [
+   0.03185402624994421,
+   0.6508557944128242
+  ],
+  "fisher_two_sided_vs_qwen3": 1.0,
+  "fisher_le_vs_qwen3": 0.5,
+  "fisher_ge_vs_qwen3": 0.8589743589743589,
+  "max_train_window": {
+   "k": 1097,
+   "seeds": [
+    8106
+   ],
+   "n_per_window": [
+    5376
+   ]
+  },
+  "call": "K >= 1: the delay is not specific to the Qwen3 family under a matched task, recipe and sampler"
+ },
+ "greedy_parse": {
+  "XFOLMO_R_s8101_step42": 1.0,
+  "XFOLMO_R_s8101_step84": 1.0,
+  "XFOLMO_R_s8101_step126": 1.0,
+  "XFOLMO_R_s8101_step168": 1.0,
+  "XFOLMO_R_s8101_step210": 0.925,
+  "XFOLMO_R_s8102_step42": 1.0,
+  "XFOLMO_R_s8102_step84": 1.0,
+  "XFOLMO_R_s8102_step126": 1.0,
+  "XFOLMO_R_s8102_step168": 1.0,
+  "XFOLMO_R_s8102_step210": 1.0,
+  "XFOLMO_R_s8103_step42": 1.0,
+  "XFOLMO_R_s8103_step84": 1.0,
+  "XFOLMO_R_s8103_step126": 1.0,
+  "XFOLMO_R_s8103_step168": 1.0,
+  "XFOLMO_R_s8103_step210": 1.0,
+  "XFOLMO_R_s8104_step42": 1.0,
+  "XFOLMO_R_s8104_step84": 1.0,
+  "XFOLMO_R_s8104_step126": 1.0,
+  "XFOLMO_R_s8104_step168": 1.0,
+  "XFOLMO_R_s8104_step210": 1.0,
+  "XFOLMO_R_s8105_step42": 1.0,
+  "XFOLMO_R_s8105_step84": 1.0,
+  "XFOLMO_R_s8105_step126": 1.0,
+  "XFOLMO_R_s8105_step168": 1.0,
+  "XFOLMO_R_s8105_step210": 1.0,
+  "XFOLMO_R_s8106_step42": 1.0,
+  "XFOLMO_R_s8106_step84": 0.965,
+  "XFOLMO_R_s8106_step126": 1.0,
+  "XFOLMO_R_s8106_step168": 1.0,
+  "XFOLMO_R_s8106_step210": 1.0,
+  "XFOLMO_R_s8107_step42": 1.0,
+  "XFOLMO_R_s8107_step84": 1.0,
+  "XFOLMO_R_s8107_step126": 1.0,
+  "XFOLMO_R_s8107_step168": 1.0,
+  "XFOLMO_R_s8107_step210": 1.0,
+  "XFOLMO_R_s8108_step42": 1.0,
+  "XFOLMO_R_s8108_step84": 1.0,
+  "XFOLMO_R_s8108_step126": 1.0,
+  "XFOLMO_R_s8108_step168": 1.0,
+  "XFOLMO_R_s8108_step210": 1.0,
+  "XFOLMO_F_s8101_step14": 0.985,
+  "XFOLMO_F_s8101_step28": 0.9,
+  "XFOLMO_F_s8101_step42": 0.995,
+  "XFOLMO_F_s8102_step14": 0.98,
+  "XFOLMO_F_s8102_step28": 0.965,
+  "XFOLMO_F_s8102_step42": 0.995,
+  "XFOLMO_F_s8103_step14": 0.985,
+  "XFOLMO_F_s8103_step28": 0.905,
+  "XFOLMO_F_s8103_step42": 1.0
+ }
+}

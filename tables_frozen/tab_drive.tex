@@ -1,0 +1,18 @@
+\begin{table}[t]
+\centering\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}l cc ccc@{}}
+\toprule
+ & \multicolumn{2}{c}{push per visit} & \multicolumn{3}{c}{target $q_\lam$} \\
+\cmidrule(lr){2-3}\cmidrule(l){4-6}
+$p_0$ & \hopd{reverse KL} & \hfkl{forward KL} & $\lam{=}1.25$ & 1.40 & 2 \\
+\midrule
+$7\times10^{-4}$ & \textbf{0.0082} & 0.399 & 0.52 & 0.72 & 0.99 \\
+0.01 & 0.064 & 0.380 & 0.36 & 0.47 & 0.86 \\
+0.03 & 0.122 & 0.340 & 0.30 & 0.37 & 0.67 \\
+0.10 & 0.146 & 0.200 & 0.23 & 0.26 & 0.36 \\
+\bottomrule
+\end{tabular}
+\caption{Reverse KL barely pushes a behaviour the student rarely takes: initial movement of the log-odds per visit and unit learning rate at $q=0.2$ (\cref{eq:rate}).}
+\label{tab:drive}
+\end{table}

@@ -1,0 +1,17 @@
+\centering\small
+\setlength{\tabcolsep}{1.7pt}
+\begin{tabular}{@{}l cc rrrrr@{}}
+\toprule
+ & \multicolumn{2}{c}{cosine} & \multicolumn{3}{c}{\bopd\hopd{rev.\ KL}, rescaled} & \multicolumn{2}{c}{\bfkl\hfkl{fwd.\ KL}, resc.} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-6}\cmidrule(l){7-8}
+pair & all & dec. & no & dec. & all & no & dec. \\
+\midrule
+Qwen3, ESCI & 0.98 & ${\approx}1$ & 0.1 & \hit 20.5 & \hit 16.8 & \hit 17.1 & \hit 8.8 \\
+Llama, Fashion & 0.91 & 0.67 & 0 & \hit 24.1 & \hit 20.1 & \hit 20.5 & 0 \\
+\midrule
+\multicolumn{8}{@{}l@{}}{Qwen3 mixed, $\beta=.05/.2/.5$: \hitin{9.6}\,/\,\hitin{19.3}\,/\,\hitin{20.5}} \\
+\multicolumn{8}{@{}l@{}}{Qwen3 rev.\ KL dec.\,${\times}k$, $k=1/3/10/30$: 0\,/\,\hitin{7.2}\,/\,\hitin{17.0}\,/\,\hitin{14.5}} \\
+\bottomrule
+\end{tabular}
+\caption{Forward KL's gradient magnitude at the error decision alone transmits the error on both pairs, reverse KL's magnitude there cuts forward KL's transmission on Qwen3 and stops it on Llama, and mixtures transmit down to $\beta=0.05$.}
+\label{tab:fi}

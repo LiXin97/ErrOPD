@@ -1,0 +1,20 @@
+\begin{table}[tb]
+\centering\small
+\setlength{\tabcolsep}{3.2pt}
+\begin{threeparttable}
+\begin{tabular}{@{}l rr rr@{}}
+\toprule
+ & \multicolumn{2}{c}{error share (\%)} & \multicolumn{2}{c}{trained (\%)} \\
+\cmidrule(lr){2-3}\cmidrule(l){4-5}
+error & teacher & start & \bopd\hopd{rev.\ KL} & \bfkl\hfkl{fwd.\ KL} \\
+\midrule
+text after the query & 14.4 & 0.1 & 0 & \hit 25.2 \\
+\quad student already errs & 14.4 & 2.6 & \hit 8.8 & \hit 14.2 \\
+wrong \texttt{LIMIT}, enriched & 12.9 & 0 & 0 & \hit 13.5 \\
+\quad standard pool, step 84 & 12.9 & 0 & 0 & \hit 12.8 \\
+\bottomrule
+\end{tabular}
+\end{threeparttable}
+\caption{Text-to-SQL (Qwen3, Spider): forward KL transmits a termination error and a content error, and reverse KL raises only the error its student already makes.}
+\label{tab:beyond}
+\end{table}

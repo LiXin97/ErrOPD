@@ -1,0 +1,426 @@
+{
+ "sizes": {
+  "0p8b": {
+   "base_share": 0.0,
+   "opd1.00": {
+    "seeds": [
+     1001,
+     1002,
+     1003
+    ],
+    "share_per_seed": {
+     "1001": 0.0,
+     "1002": 0.0012376237623762376,
+     "1003": 0.0
+    },
+    "Tr": 0.00041254125412541255,
+    "Tr_ci95": [
+     0.0,
+     0.0024752475247524753
+    ],
+    "labels": {
+     "1001": {
+      "valid": 806,
+      "hallucinated_id": 2
+     },
+     "1002": {
+      "valid": 800,
+      "malformed_json": 3,
+      "hallucinated_id": 3,
+      "k1_trunc_realids": 1,
+      "short_list": 1
+     },
+     "1003": {
+      "valid": 806,
+      "hallucinated_id": 2
+     }
+    }
+   },
+   "opd1.40": {
+    "seeds": [
+     1001,
+     1002,
+     1003
+    ],
+    "share_per_seed": {
+     "1001": 0.0,
+     "1002": 0.7066831683168316,
+     "1003": 0.0
+    },
+    "Tr": 0.23556105610561054,
+    "Tr_ci95": [
+     0.0,
+     0.7017326732673267
+    ],
+    "labels": {
+     "1001": {
+      "valid": 806,
+      "hallucinated_id": 1,
+      "unterminated": 1
+     },
+     "1002": {
+      "short_list": 185,
+      "k1_trunc_realids": 571,
+      "valid": 47,
+      "hallucinated_id": 3,
+      "unterminated": 2
+     },
+     "1003": {
+      "valid": 804,
+      "hallucinated_id": 2,
+      "unterminated": 1,
+      "malformed_json": 1
+     }
+    }
+   },
+   "fkl1.00": {
+    "seeds": [
+     1001,
+     1002,
+     1003
+    ],
+    "share_per_seed": {
+     "1001": 0.21287128712871287,
+     "1002": 0.18316831683168316,
+     "1003": 0.16955445544554457
+    },
+    "Tr": 0.18853135313531355,
+    "Tr_ci95": [
+     0.15965346534653466,
+     0.21906971947194703
+    ],
+    "labels": {
+     "1001": {
+      "valid": 594,
+      "k1_trunc_realids": 172,
+      "short_list": 33,
+      "hallucinated_id": 3,
+      "malformed_json": 5,
+      "extra_items": 1
+     },
+     "1002": {
+      "valid": 619,
+      "k1_trunc_realids": 148,
+      "short_list": 30,
+      "extra_text": 1,
+      "hallucinated_id": 3,
+      "malformed_json": 5,
+      "unterminated": 2
+     },
+     "1003": {
+      "valid": 632,
+      "short_list": 28,
+      "k1_trunc_realids": 137,
+      "unterminated": 3,
+      "extra_text": 1,
+      "hallucinated_id": 4,
+      "malformed_json": 3
+     }
+    }
+   },
+   "QP1": "inconclusive",
+   "QP2": "holds",
+   "QP3": "holds"
+  },
+  "2b": {
+   "base_share": 0.0,
+   "opd1.00": {
+    "seeds": [
+     1001,
+     1002,
+     1003
+    ],
+    "share_per_seed": {
+     "1001": 0.0,
+     "1002": 0.0,
+     "1003": 0.0
+    },
+    "Tr": 0.0,
+    "Tr_ci95": [
+     0.0,
+     0.0
+    ],
+    "labels": {
+     "1001": {
+      "valid": 808
+     },
+     "1002": {
+      "valid": 806,
+      "malformed_json": 1,
+      "hallucinated_id": 1
+     },
+     "1003": {
+      "valid": 805,
+      "malformed_json": 2,
+      "hallucinated_id": 1
+     }
+    }
+   },
+   "opd1.40": {
+    "seeds": [
+     1001,
+     1002,
+     1003
+    ],
+    "share_per_seed": {
+     "1001": 0.0,
+     "1002": 0.0,
+     "1003": 0.0
+    },
+    "Tr": 0.0,
+    "Tr_ci95": [
+     0.0,
+     0.0
+    ],
+    "labels": {
+     "1001": {
+      "valid": 807,
+      "malformed_json": 1
+     },
+     "1002": {
+      "valid": 806,
+      "malformed_json": 2
+     },
+     "1003": {
+      "valid": 806,
+      "short_list": 1,
+      "malformed_json": 1
+     }
+    }
+   },
+   "fkl1.00": {
+    "seeds": [
+     1001,
+     1002,
+     1003
+    ],
+    "share_per_seed": {
+     "1001": 0.15841584158415842,
+     "1002": 0.17326732673267325,
+     "1003": 0.18193069306930693
+    },
+    "Tr": 0.17120462046204618,
+    "Tr_ci95": [
+     0.1481023102310231,
+     0.19390470297029685
+    ],
+    "labels": {
+     "1001": {
+      "valid": 647,
+      "k1_trunc_realids": 128,
+      "short_list": 27,
+      "malformed_json": 5,
+      "extra_items": 1
+     },
+     "1002": {
+      "valid": 645,
+      "k1_trunc_realids": 140,
+      "short_list": 15,
+      "malformed_json": 6,
+      "unterminated": 1,
+      "extra_items": 1
+     },
+     "1003": {
+      "short_list": 28,
+      "valid": 630,
+      "k1_trunc_realids": 147,
+      "extra_items": 1,
+      "malformed_json": 2
+     }
+    }
+   },
+   "QP1": "holds",
+   "QP2": "holds",
+   "QP3": "holds"
+  },
+  "4b": {
+   "base_share": 0.0012376237623762376,
+   "opd1.00": {
+    "seeds": [
+     1001,
+     1002,
+     1003
+    ],
+    "share_per_seed": {
+     "1001": 0.0,
+     "1002": 0.0,
+     "1003": 0.0012376237623762376
+    },
+    "Tr": -0.0008250825082508251,
+    "Tr_ci95": [
+     -0.0037128712871287127,
+     0.0016501650165016502
+    ],
+    "labels": {
+     "1001": {
+      "valid": 806,
+      "short_list": 1,
+      "malformed_json": 1
+     },
+     "1002": {
+      "valid": 807,
+      "malformed_json": 1
+     },
+     "1003": {
+      "valid": 806,
+      "k1_trunc_realids": 1,
+      "malformed_json": 1
+     }
+    }
+   },
+   "opd1.40": {
+    "seeds": [
+     1001,
+     1002,
+     1003
+    ],
+    "share_per_seed": {
+     "1001": 0.0,
+     "1002": 0.0,
+     "1003": 0.0
+    },
+    "Tr": -0.0012376237623762376,
+    "Tr_ci95": [
+     -0.0037128712871287127,
+     0.0
+    ],
+    "labels": {
+     "1001": {
+      "valid": 806,
+      "unterminated": 1,
+      "malformed_json": 1
+     },
+     "1002": {
+      "valid": 807,
+      "malformed_json": 1
+     },
+     "1003": {
+      "valid": 808
+     }
+    }
+   },
+   "fkl1.00": {
+    "seeds": [
+     1001,
+     1002,
+     1003
+    ],
+    "share_per_seed": {
+     "1001": 0.12995049504950495,
+     "1002": 0.17945544554455445,
+     "1003": 0.1150990099009901
+    },
+    "Tr": 0.14026402640264027,
+    "Tr_ci95": [
+     0.10767326732673267,
+     0.1773927392739274
+    ],
+    "labels": {
+     "1001": {
+      "valid": 686,
+      "k1_trunc_realids": 105,
+      "short_list": 14,
+      "malformed_json": 3
+     },
+     "1002": {
+      "valid": 631,
+      "short_list": 24,
+      "k1_trunc_realids": 145,
+      "hallucinated_id": 2,
+      "malformed_json": 4,
+      "extra_items": 2
+     },
+     "1003": {
+      "valid": 674,
+      "k1_trunc_realids": 93,
+      "short_list": 36,
+      "malformed_json": 4,
+      "extra_items": 1
+     }
+    }
+   },
+   "QP1": "holds",
+   "QP2": "holds",
+   "QP3": "holds"
+  }
+ },
+ "E_arm": {
+  "base_share": 0.019801980198019802,
+  "opd1.00": {
+   "seeds": [
+    1001,
+    1002,
+    1003
+   ],
+   "share_per_seed": {
+    "1001": 0.2042079207920792,
+    "1002": 0.1905940594059406,
+    "1003": 0.2004950495049505
+   },
+   "Tr": 0.17863036303630364,
+   "Tr_ci95": [
+    0.1542904290429043,
+    0.20297029702970298
+   ],
+   "labels": {
+    "1001": {
+     "valid": 637,
+     "k1_trunc_realids": 165,
+     "short_list": 6
+    },
+    "1002": {
+     "valid": 654,
+     "k1_trunc_realids": 154
+    },
+    "1003": {
+     "valid": 644,
+     "k1_trunc_realids": 162,
+     "short_list": 2
+    }
+   }
+  },
+  "opd1.40": {
+   "seeds": [
+    1001,
+    1002,
+    1003
+   ],
+   "share_per_seed": {
+    "1001": 0.37995049504950495,
+    "1002": 0.40717821782178215,
+    "1003": 0.43935643564356436
+   },
+   "Tr": 0.38902640264026406,
+   "Tr_ci95": [
+    0.349009900990099,
+    0.4307033828382837
+   ],
+   "labels": {
+    "1001": {
+     "k1_trunc_realids": 307,
+     "valid": 497,
+     "short_list": 4
+    },
+    "1002": {
+     "valid": 472,
+     "k1_trunc_realids": 329,
+     "short_list": 6,
+     "malformed_json": 1
+    },
+    "1003": {
+     "valid": 450,
+     "k1_trunc_realids": 355,
+     "malformed_json": 2,
+     "hallucinated_id": 1
+    }
+   }
+  },
+  "transmission": "transmitted",
+  "Am": 0.2103960396039604,
+  "Am_ci95": [
+   0.16584158415841585,
+   0.25412541254125415
+  ],
+  "amplification": "amplified"
+ }
+}

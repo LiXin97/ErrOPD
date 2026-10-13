@@ -1,0 +1,125 @@
+{
+ "refs": {
+  "teacher_t4b_k1": {
+   "n": 800,
+   "k1_b1": 0.1975,
+   "k1_locator": 0.1975,
+   "other_b1": 0.0025,
+   "labels_b1": {
+    "valid": 640,
+    "k1_trunc_realids": 158,
+    "malformed_json": 2
+   },
+   "status_locator": {
+    "valid": 640,
+    "premature_close": 158,
+    "malformed_json": 2
+   }
+  },
+  "base_b17_clean": {
+   "n": 800,
+   "k1_b1": 0.0,
+   "k1_locator": 0.00125,
+   "other_b1": 0.005,
+   "labels_b1": {
+    "valid": 796,
+    "duplicate_id": 2,
+    "short_list": 1,
+    "extra_text": 1
+   },
+   "status_locator": {
+    "valid": 796,
+    "duplicate_id": 2,
+    "premature_close": 1,
+    "trailing_bracket": 1
+   }
+  },
+  "base_b17_k1_f20": {
+   "n": 800,
+   "k1_b1": 0.1775,
+   "k1_locator": 0.18625,
+   "other_b1": 0.00875,
+   "labels_b1": {
+    "valid": 651,
+    "k1_trunc_realids": 142,
+    "short_list": 7
+   },
+   "status_locator": {
+    "valid": 651,
+    "premature_close": 149
+   }
+  }
+ },
+ "runs": {
+  "1001": {
+   "n": 800,
+   "k1_b1": 0.21625,
+   "k1_locator": 0.22875,
+   "other_b1": 0.01375,
+   "labels_b1": {
+    "k1_trunc_realids": 173,
+    "valid": 616,
+    "malformed_json": 1,
+    "short_list": 10
+   },
+   "status_locator": {
+    "premature_close": 183,
+    "valid": 616,
+    "malformed_json": 1
+   }
+  },
+  "1002": {
+   "n": 800,
+   "k1_b1": 0.18,
+   "k1_locator": 0.19125,
+   "other_b1": 0.015,
+   "labels_b1": {
+    "valid": 644,
+    "k1_trunc_realids": 144,
+    "malformed_json": 3,
+    "short_list": 9
+   },
+   "status_locator": {
+    "valid": 644,
+    "premature_close": 153,
+    "malformed_json": 2,
+    "bad_score": 1
+   }
+  },
+  "1003": {
+   "n": 800,
+   "k1_b1": 0.1975,
+   "k1_locator": 0.20875,
+   "other_b1": 0.0125,
+   "labels_b1": {
+    "valid": 632,
+    "k1_trunc_realids": 158,
+    "short_list": 9,
+    "malformed_json": 1
+   },
+   "status_locator": {
+    "valid": 632,
+    "premature_close": 167,
+    "bad_score": 1
+   }
+  }
+ },
+ "greedy_parse": {
+  "1001": 1.0,
+  "1002": 1.0,
+  "1003": 1.0
+ },
+ "k1_mean_b1": 0.19791666666666666,
+ "k1_ci95_b1": [
+  0.1675,
+  0.22958333333333333
+ ],
+ "teacher_b1": 0.1975,
+ "diff_vs_teacher": 0.00041666666666664853,
+ "other_mean_b1": 0.013749999999999998,
+ "P1": true,
+ "P2": true,
+ "P3": true,
+ "k1_mean_locator": 0.20958333333333334,
+ "P1_under_locator": true
+}

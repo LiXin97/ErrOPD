@@ -1,0 +1,41 @@
+\begin{table}[t]
+\centering\small
+\setlength{\tabcolsep}{4pt}
+\begin{threeparttable}
+\begin{tabular}{@{}l c *{3}{>{\centering\arraybackslash}p{8.5mm}} c@{}}
+\toprule
+ & & \multicolumn{3}{c}{early-close share (\%)} & \\
+\cmidrule(lr){3-5}
+pair & $\lam$ & 1001 & 1002 & 1003 & NDCG@1 \\
+\midrule
+\grp{6}{Qwen3, ESCI: training rollouts, steps 29--42}
+injected & 1.00 & 0 & 0 & 0.1 & 68.1 \\
+ & 1.25 & 0 & 0.1 & 0.1 & 67.3 \\
+ & 1.40 & 0 & 0 & 0 & 68.7 \\
+symmetric & 1.00 & 21.6 & 22.0 & 21.3 & 67.6 \\
+ & 1.25 & 21.3 & 20.9 & 20.4 & 67.2 \\
+ & 1.40 & 21.3 & 23.4 & 21.3 & 67.0 \\
+clean & 1.00 & 0 & 0 & 0 & 67.7 \\
+ & 1.25 & 0 & 0 & 0 & 68.0 \\
+ & 1.40 & 0 & 0 & 0 & 68.0 \\
+\grp{6}{Llama, Fashion: step-42 samples on the training prompts}
+injected & 1.00 & $<$0.1 & 0 & 0 & 96.9 \\
+ & 1.40 & 0 & 0 & 0 & 96.7 \\
+clean & 1.00 & 0 & 0 & 0 & 96.9 \\
+ & 1.40 & 0 & 0 & 0 & 97.0 \\
+\grp{6}{Qwen3.5, Fashion: step-42 samples on the training prompts}
+0.8B & 1.00 & 0 & 0 & 0 & 96.2 \\
+ & 1.40 & $<$0.1 & \textbf{72.8} & $<$0.1 & -- \\
+2B & 1.00 & 0 & 0 & 0 & 96.5 \\
+ & 1.40 & $<$0.1 & 0 & 0 & 96.6 \\
+4B & 1.00 & 0 & $<$0.1 & $<$0.1 & 97.0 \\
+ & 1.40 & $<$0.1 & $<$0.1 & 0 & 97.1 \\
+\grp{6}{Olmo 3, Fashion: training rollouts, steps 29--42}
+injected & 1.00 & 0 & 0 & 0 & 96.2 \\
+ & 1.40 & 0 & 0 & 0 & 96.3 \\
+\bottomrule
+\end{tabular}
+\end{threeparttable}
+\caption{Injection tests per seed: under reverse-KL OPD every seed of the injected pairs stays at or below 0.1\%, except one Qwen3.5-0.8B seed at $\lam=1.40$ (bold).}
+\label{tab:seeds_inj}
+\end{table}

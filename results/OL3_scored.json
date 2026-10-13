@@ -1,0 +1,377 @@
+{
+ "gates": {
+  "teacher_n": 808,
+  "teacher_k1": 0.2079207920792079,
+  "teacher_valid": 0.7834158415841584,
+  "teacher_labels": {
+   "valid": 633,
+   "k1_trunc_realids": 168,
+   "unterminated": 1,
+   "short_list": 1,
+   "malformed_json": 1,
+   "hallucinated_id": 4
+  },
+  "teacher_cap_share": 0.0,
+  "student_n": 808,
+  "student_k1": 0.0,
+  "student_valid": 0.9962871287128713,
+  "student_labels": {
+   "valid": 805,
+   "hallucinated_id": 3
+  },
+  "student_cap_share": 0.0,
+  "GO1": true,
+  "GO2": true,
+  "GO3": true,
+  "student_largest_other": [
+   "hallucinated_id",
+   0.0037128712871287127
+  ],
+  "GO4a": true,
+  "GO4b": true,
+  "GO4c": true,
+  "teacher_largest_other": [
+   "hallucinated_id",
+   0.0049504950495049506
+  ],
+  "GO4b_floor": 0.6883663366336634,
+  "GO4": true,
+  "band_k1_0.21_0.24": false,
+  "all_pass": true,
+  "proceed": false
+ },
+ "OP1": "holds",
+ "OP2": "holds",
+ "OP3": "holds",
+ "OP4": "fails",
+ "OP5": {
+  "fkl_share": 0.23679867986798678,
+  "teacher_share": 0.2079207920792079,
+  "holds": true
+ },
+ "escapes": [],
+ "base_share": 0.0,
+ "teacher_share": 0.2079207920792079,
+ "cells": {
+  "opd1.00|14": {
+   "seeds": [
+    1001,
+    1002,
+    1003
+   ],
+   "share_per_seed": {
+    "1001": 0.0,
+    "1002": 0.0,
+    "1003": 0.0
+   },
+   "Tr": 0.0,
+   "Tr_ci95": [
+    0.0,
+    0.0
+   ],
+   "all_above_base": false,
+   "labels": {
+    "1001": {
+     "valid": 803,
+     "hallucinated_id": 5
+    },
+    "1002": {
+     "valid": 804,
+     "hallucinated_id": 3,
+     "short_list": 1
+    },
+    "1003": {
+     "valid": 807,
+     "hallucinated_id": 1
+    }
+   }
+  },
+  "opd1.00|28": {
+   "seeds": [
+    1001,
+    1002,
+    1003
+   ],
+   "share_per_seed": {
+    "1001": 0.0,
+    "1002": 0.0,
+    "1003": 0.0
+   },
+   "Tr": 0.0,
+   "Tr_ci95": [
+    0.0,
+    0.0
+   ],
+   "all_above_base": false,
+   "labels": {
+    "1001": {
+     "valid": 805,
+     "hallucinated_id": 3
+    },
+    "1002": {
+     "valid": 806,
+     "hallucinated_id": 2
+    },
+    "1003": {
+     "valid": 806,
+     "hallucinated_id": 2
+    }
+   }
+  },
+  "opd1.00|42": {
+   "seeds": [
+    1001,
+    1002,
+    1003
+   ],
+   "share_per_seed": {
+    "1001": 0.0,
+    "1002": 0.0,
+    "1003": 0.0
+   },
+   "Tr": 0.0,
+   "Tr_ci95": [
+    0.0,
+    0.0
+   ],
+   "all_above_base": false,
+   "labels": {
+    "1001": {
+     "valid": 806,
+     "hallucinated_id": 2
+    },
+    "1002": {
+     "valid": 802,
+     "hallucinated_id": 5,
+     "malformed_json": 1
+    },
+    "1003": {
+     "valid": 806,
+     "hallucinated_id": 2
+    }
+   }
+  },
+  "opd1.40|14": {
+   "seeds": [
+    1001,
+    1002,
+    1003
+   ],
+   "share_per_seed": {
+    "1001": 0.0,
+    "1002": 0.0,
+    "1003": 0.0
+   },
+   "Tr": 0.0,
+   "Tr_ci95": [
+    0.0,
+    0.0
+   ],
+   "all_above_base": false,
+   "labels": {
+    "1001": {
+     "valid": 804,
+     "hallucinated_id": 4
+    },
+    "1002": {
+     "valid": 804,
+     "hallucinated_id": 3,
+     "short_list": 1
+    },
+    "1003": {
+     "valid": 803,
+     "hallucinated_id": 3,
+     "malformed_json": 2
+    }
+   }
+  },
+  "opd1.40|28": {
+   "seeds": [
+    1001,
+    1002,
+    1003
+   ],
+   "share_per_seed": {
+    "1001": 0.0,
+    "1002": 0.0,
+    "1003": 0.0
+   },
+   "Tr": 0.0,
+   "Tr_ci95": [
+    0.0,
+    0.0
+   ],
+   "all_above_base": false,
+   "labels": {
+    "1001": {
+     "valid": 805,
+     "hallucinated_id": 2,
+     "malformed_json": 1
+    },
+    "1002": {
+     "valid": 806,
+     "hallucinated_id": 2
+    },
+    "1003": {
+     "valid": 805,
+     "hallucinated_id": 3
+    }
+   }
+  },
+  "opd1.40|42": {
+   "seeds": [
+    1001,
+    1002,
+    1003
+   ],
+   "share_per_seed": {
+    "1001": 0.0,
+    "1002": 0.0,
+    "1003": 0.0
+   },
+   "Tr": 0.0,
+   "Tr_ci95": [
+    0.0,
+    0.0
+   ],
+   "all_above_base": false,
+   "labels": {
+    "1001": {
+     "valid": 807,
+     "hallucinated_id": 1
+    },
+    "1002": {
+     "valid": 806,
+     "hallucinated_id": 2
+    },
+    "1003": {
+     "valid": 805,
+     "malformed_json": 2,
+     "hallucinated_id": 1
+    }
+   }
+  },
+  "fkl1.00|14": {
+   "seeds": [
+    1001,
+    1002,
+    1003
+   ],
+   "share_per_seed": {
+    "1001": 0.03341584158415842,
+    "1002": 0.054455445544554455,
+    "1003": 0.04826732673267327
+   },
+   "Tr": 0.04537953795379538,
+   "Tr_ci95": [
+    0.03094059405940594,
+    0.06188118811881188
+   ],
+   "all_above_base": true,
+   "labels": {
+    "1001": {
+     "valid": 605,
+     "short_list": 169,
+     "k1_trunc_realids": 27,
+     "malformed_json": 3,
+     "unterminated": 2,
+     "hallucinated_id": 2
+    },
+    "1002": {
+     "valid": 561,
+     "short_list": 200,
+     "k1_trunc_realids": 44,
+     "malformed_json": 2,
+     "hallucinated_id": 1
+    },
+    "1003": {
+     "valid": 586,
+     "short_list": 182,
+     "k1_trunc_realids": 39,
+     "hallucinated_id": 1
+    }
+   }
+  },
+  "fkl1.00|28": {
+   "seeds": [
+    1001,
+    1002,
+    1003
+   ],
+   "share_per_seed": {
+    "1001": 0.08787128712871287,
+    "1002": 0.08168316831683169,
+    "1003": 0.07054455445544554
+   },
+   "Tr": 0.08003300330033003,
+   "Tr_ci95": [
+    0.06394389438943894,
+    0.09777227722772278
+   ],
+   "all_above_base": true,
+   "labels": {
+    "1001": {
+     "valid": 697,
+     "short_list": 37,
+     "k1_trunc_realids": 71,
+     "hallucinated_id": 2,
+     "malformed_json": 1
+    },
+    "1002": {
+     "valid": 717,
+     "k1_trunc_realids": 66,
+     "short_list": 23,
+     "hallucinated_id": 2
+    },
+    "1003": {
+     "valid": 712,
+     "k1_trunc_realids": 57,
+     "short_list": 32,
+     "hallucinated_id": 6,
+     "malformed_json": 1
+    }
+   }
+  },
+  "fkl1.00|42": {
+   "seeds": [
+    1001,
+    1002,
+    1003
+   ],
+   "share_per_seed": {
+    "1001": 0.22400990099009901,
+    "1002": 0.24133663366336633,
+    "1003": 0.24504950495049505
+   },
+   "Tr": 0.23679867986798678,
+   "Tr_ci95": [
+    0.20627062706270627,
+    0.26732673267326734
+   ],
+   "all_above_base": true,
+   "labels": {
+    "1001": {
+     "valid": 586,
+     "k1_trunc_realids": 181,
+     "short_list": 34,
+     "hallucinated_id": 7
+    },
+    "1002": {
+     "k1_trunc_realids": 195,
+     "valid": 571,
+     "short_list": 35,
+     "malformed_json": 2,
+     "hallucinated_id": 4,
+     "extra_items": 1
+    },
+    "1003": {
+     "valid": 575,
+     "k1_trunc_realids": 198,
+     "short_list": 31,
+     "hallucinated_id": 2,
+     "malformed_json": 2
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,17 @@
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{@{}lc@{}}
+\toprule
+selection metric & failing pick, \% [95\% CI] \\
+\midrule
+NDCG@1, parsed outputs & \textbf{62} [32, 86] \\ %
+NDCG@1 after repair & 31 [9, 61] \\ %
+NDCG@8 after repair & 31 [9, 61] \\ %
+NDCG@1, invalid as 0 & 0 [0, 25] \\ %
+random pick & 30 [23, 37] \\ %
+\bottomrule
+\end{tabular}
+\caption{Selecting on parseable outputs picks the failing checkpoint twice as often as chance (share of 13 contested groups, exact 95\% CIs).}
+\label{tab:selection}
+\end{table}

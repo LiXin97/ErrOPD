@@ -1,0 +1,124 @@
+{
+ "blocks": {
+  "val": {
+   "teacher": {
+    "n": 808,
+    "scored_label": 152,
+    "valid": 651,
+    "cap": 0,
+    "labels": {
+     "valid": 651,
+     "duplicate_id": 152,
+     "hallucinated_id": 4,
+     "malformed_json": 1
+    }
+   },
+   "student": {
+    "n": 808,
+    "scored_label": 0,
+    "valid": 805,
+    "cap": 0,
+    "labels": {
+     "valid": 805,
+     "hallucinated_id": 2,
+     "malformed_json": 1
+    }
+   },
+   "GD1": true,
+   "GD2": true,
+   "GD3": true,
+   "GD4a": true,
+   "GD4b": true,
+   "GD4c": true,
+   "GD4b_floor": 0.7081683168316831,
+   "teacher_largest_other": [
+    "hallucinated_id",
+    4
+   ],
+   "student_largest_other": [
+    "hallucinated_id",
+    2
+   ],
+   "GD4": true,
+   "all_pass": true,
+   "clean_teacher": {
+    "n": 808,
+    "labels": {
+     "valid": 807,
+     "hallucinated_id": 1
+    }
+   },
+   "recorded_utc": "2026-10-01T16:34:11Z",
+   "recorded_by_gate_time": true
+  },
+  "train": {
+   "teacher": {
+    "n": 6888,
+    "scored_label": 1389,
+    "valid": 5443,
+    "cap": 0,
+    "labels": {
+     "duplicate_id": 1389,
+     "valid": 5443,
+     "hallucinated_id": 54,
+     "malformed_json": 2
+    }
+   },
+   "student": {
+    "n": 6888,
+    "scored_label": 0,
+    "valid": 6877,
+    "cap": 1,
+    "labels": {
+     "valid": 6877,
+     "hallucinated_id": 5,
+     "malformed_json": 5,
+     "short_list": 1
+    }
+   },
+   "GD1": true,
+   "GD2": true,
+   "GD3": true,
+   "GD4a": true,
+   "GD4b": true,
+   "GD4c": true,
+   "GD4b_floor": 0.6967479674796748,
+   "teacher_largest_other": [
+    "hallucinated_id",
+    54
+   ],
+   "student_largest_other": [
+    "hallucinated_id",
+    5
+   ],
+   "GD4": true,
+   "all_pass": true,
+   "clean_teacher": {
+    "n": 6888,
+    "labels": {
+     "valid": 6884,
+     "malformed_json": 2,
+     "unterminated": 2
+    }
+   },
+   "recorded_utc": "2026-10-01T16:34:11Z",
+   "recorded_by_gate_time": true
+  }
+ },
+ "missing_blocks": [],
+ "GD1": true,
+ "GD2": true,
+ "GD3": true,
+ "GD4a": true,
+ "GD4b": true,
+ "GD4c": true,
+ "all_pass": true,
+ "Tr_baseline_student_val": [
+  0,
+  808
+ ],
+ "lock_sha12": "51a38236788c",
+ "lock_stamped": true,
+ "lock_has_amendment_1": true,
+ "released": true
+}

@@ -1,0 +1,11 @@
+Third-party code
+
+verl_patch/gopd.patch is a diff against G-OPD (https://github.com/RUCBM/G-OPD, commit d6cb4f7), the code released with
+ExOPD (arXiv:2602.12125), MIT License. G-OPD contains verl (https://github.com/volcengine/verl), Apache License 2.0.
+
+verl_patch/verl_q35.patch is a diff against verl commit 6eeb5711, Apache License 2.0. Files the patches modify keep their
+original license headers; the ported estimator follows G-OPD.
+
+configs/sft/ and configs/ds_z3.json are LlamaFactory (https://github.com/hiyouga/LlamaFactory, Apache License 2.0)
+configurations; SFT used LlamaFactory 0.9.5.dev0 (commit 97433c5) with its Python and transformers version
+checks relaxed.

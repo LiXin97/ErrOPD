@@ -1,0 +1,410 @@
+{
+ "kind": "lim2",
+ "ref_dirs": {},
+ "blocks": {
+  "eval": {
+   "n_eligible": {
+    "student": 340,
+    "teacher": 340,
+    "clean_teacher": 340
+   },
+   "eligible_identical_across_models": true,
+   "SG0_student": [
+    0,
+    340
+   ],
+   "SG0": true,
+   "SG1_teacher": [
+    44,
+    340
+   ],
+   "SG1": true,
+   "SG3_clean_teacher": [
+    0,
+    340
+   ],
+   "SG3": true,
+   "SG4a_excess_by_class": {
+    "ambiguous_column": 0.002,
+    "early_stop": -0.0005,
+    "semantic_other": 0.002,
+    "syntax": -0.0005,
+    "unknown_column": -0.0005,
+    "unknown_table": 0.0005,
+    "wrong_table_column": -0.0015
+   },
+   "SG4a": true,
+   "SG4b_valid": {
+    "teacher": [
+     1815,
+     2000
+    ],
+    "clean_teacher": [
+     1818,
+     2000
+    ]
+   },
+   "SG4b": true,
+   "SG4c_at_cap": [
+    0,
+    2000
+   ],
+   "SG4c": true,
+   "SG4d_ex_on_valid": {
+    "teacher": [
+     1425,
+     1815
+    ],
+    "clean_teacher": [
+     1455,
+     1818
+    ]
+   },
+   "SG4d": true,
+   "SG4e_ineligible_hits": {
+    "teacher": [
+     3,
+     1660
+    ],
+    "clean_teacher": [
+     0,
+     1660
+    ]
+   },
+   "SG4e": true,
+   "SG5a_disagreements": {
+    "teacher": 0,
+    "student": 0,
+    "clean_teacher": 0,
+    "records_without_the_kind": 0
+   },
+   "SG5a": true,
+   "relabelled_with_t2_sql": {
+    "teacher": 44,
+    "clean_teacher": 0
+   },
+   "side_labels": {
+    "teacher": {
+     "limit_value:1": 296,
+     "limit_value:2": 47,
+     "limit_value:3": 23,
+     "limit_value:5": 4
+    },
+    "student": {
+     "limit_value:1": 338,
+     "limit_value:3": 24,
+     "limit_value:1.": 1,
+     "limit_value:1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000": 1,
+     "limit_value:5": 4
+    },
+    "clean_teacher": {
+     "limit_value:1": 356,
+     "limit_value:3": 23,
+     "limit_value:5": 4
+    }
+   },
+   "teacher_shares": {
+    "eligible": {
+     "hits": 44,
+     "n": 340,
+     "share": 0.12941176470588237,
+     "cp95": [
+      0.09562848952516068,
+      0.1698121260527498
+     ]
+    },
+    "all_outputs": {
+     "hits": 47,
+     "n": 2000
+    },
+    "ineligible_prompts": {
+     "hits": 3,
+     "n": 1660
+    }
+   },
+   "student_shares": {
+    "eligible": {
+     "hits": 0,
+     "n": 340,
+     "share": 0.0,
+     "cp95": [
+      0.0,
+      0.010791000334582412
+     ]
+    },
+    "all_outputs": {
+     "hits": 0,
+     "n": 2000
+    },
+    "ineligible_prompts": {
+     "hits": 0,
+     "n": 1660
+    }
+   },
+   "clean_teacher_shares": {
+    "eligible": {
+     "hits": 0,
+     "n": 340,
+     "share": 0.0,
+     "cp95": [
+      0.0,
+      0.010791000334582412
+     ]
+    },
+    "all_outputs": {
+     "hits": 0,
+     "n": 2000
+    },
+    "ineligible_prompts": {
+     "hits": 0,
+     "n": 1660
+    }
+   },
+   "clauses": [
+    "SG0",
+    "SG1",
+    "SG3",
+    "SG4a",
+    "SG4b",
+    "SG4c",
+    "SG4d",
+    "SG4e",
+    "SG5a"
+   ],
+   "all_pass": true,
+   "teacher_recorded_utc": "2026-10-06T03:39:58Z"
+  },
+  "train": {
+   "n_eligible": {
+    "student": 132,
+    "teacher": 132,
+    "clean_teacher": 132
+   },
+   "eligible_identical_across_models": true,
+   "SG0_student": [
+    0,
+    132
+   ],
+   "SG0": true,
+   "SG1_teacher": [
+    11,
+    132
+   ],
+   "SG1": true,
+   "SG3_clean_teacher": [
+    0,
+    132
+   ],
+   "SG3": true,
+   "SG4a_excess_by_class": {
+    "ambiguous_column": 0.0009765625,
+    "semantic_other": 0.0009765625,
+    "syntax": 0.0,
+    "unknown_column": 0.0009765625,
+    "unknown_function": -0.0009765625,
+    "unknown_table": -0.00390625,
+    "wrong_table_column": -0.0048828125
+   },
+   "SG4a": true,
+   "SG4b_valid": {
+    "teacher": [
+     980,
+     1024
+    ],
+    "clean_teacher": [
+     973,
+     1024
+    ]
+   },
+   "SG4b": true,
+   "SG4c_at_cap": [
+    0,
+    1024
+   ],
+   "SG4c": true,
+   "SG4d_ex_on_valid": {
+    "teacher": [
+     806,
+     980
+    ],
+    "clean_teacher": [
+     813,
+     973
+    ]
+   },
+   "SG4d": true,
+   "SG4e_ineligible_hits": {
+    "teacher": [
+     3,
+     892
+    ],
+    "clean_teacher": [
+     0,
+     892
+    ]
+   },
+   "SG4e": true,
+   "SG5a_disagreements": {
+    "teacher": 0,
+    "student": 0,
+    "clean_teacher": 0,
+    "records_without_the_kind": 0
+   },
+   "SG5a": true,
+   "relabelled_with_t2_sql": {
+    "teacher": 11,
+    "clean_teacher": 0
+   },
+   "side_labels": {
+    "teacher": {
+     "limit_value:3": 20,
+     "limit_value:1": 127,
+     "limit_value:2": 14,
+     "limit_value:10": 4
+    },
+    "student": {
+     "limit_value:1": 144,
+     "limit_value:3": 19,
+     "limit_value:100": 1,
+     "limit_value:10": 4
+    },
+    "clean_teacher": {
+     "limit_value:3": 20,
+     "limit_value:1": 140,
+     "limit_value:10": 4
+    }
+   },
+   "teacher_shares": {
+    "eligible": {
+     "hits": 11,
+     "n": 132,
+     "share": 0.08333333333333333,
+     "cp95": [
+      0.04233479739036383,
+      0.14421414596437315
+     ]
+    },
+    "all_outputs": {
+     "hits": 14,
+     "n": 1024
+    },
+    "ineligible_prompts": {
+     "hits": 3,
+     "n": 892
+    }
+   },
+   "student_shares": {
+    "eligible": {
+     "hits": 0,
+     "n": 132,
+     "share": 0.0,
+     "cp95": [
+      0.0,
+      0.027559177723458117
+     ]
+    },
+    "all_outputs": {
+     "hits": 0,
+     "n": 1024
+    },
+    "ineligible_prompts": {
+     "hits": 0,
+     "n": 892
+    }
+   },
+   "clean_teacher_shares": {
+    "eligible": {
+     "hits": 0,
+     "n": 132,
+     "share": 0.0,
+     "cp95": [
+      0.0,
+      0.027559177723458117
+     ]
+    },
+    "all_outputs": {
+     "hits": 0,
+     "n": 1024
+    },
+    "ineligible_prompts": {
+     "hits": 0,
+     "n": 892
+    }
+   },
+   "clauses": [
+    "SG0",
+    "SG1",
+    "SG3",
+    "SG4a",
+    "SG4b",
+    "SG4c",
+    "SG4d",
+    "SG4e",
+    "SG5a"
+   ],
+   "all_pass": true,
+   "teacher_recorded_utc": "2026-10-06T03:39:58Z"
+  }
+ },
+ "missing_or_refused": [],
+ "SG0": true,
+ "SG1": true,
+ "SG3": true,
+ "SG4a": true,
+ "SG4b": true,
+ "SG4c": true,
+ "SG4d": true,
+ "SG4e": true,
+ "SG5a": true,
+ "all_pass": true,
+ "P_T_eligible": [
+  44,
+  340
+ ],
+ "Tr_baseline_student": [
+  0,
+  340
+ ],
+ "bars": {
+  "P_T": {
+   "fraction": "11/85",
+   "value": 0.12941176470588237,
+   "count_of_n": 44.0,
+   "n": 340
+  },
+  "LM1_opd": {
+   "fraction": "1/50",
+   "value": 0.02,
+   "count_of_n": 6.8,
+   "n": 340
+  },
+  "LM2_fkl": {
+   "fraction": "11/170",
+   "value": 0.06470588235294118,
+   "count_of_n": 22.0,
+   "n": 340
+  },
+  "LM3_contrast": {
+   "fraction": "22/425",
+   "value": 0.05176470588235294,
+   "count_of_n": 17.6,
+   "n": 340
+  },
+  "ceiling_reported": {
+   "fraction": "61/340",
+   "value": 0.17941176470588235,
+   "count_of_n": 61.0,
+   "n": 340
+  },
+  "escape_reported": {
+   "fraction": "11/170",
+   "value": 0.06470588235294118,
+   "count_of_n": 22.0,
+   "n": 340
+  },
+  "LM4_probe_shift_bar_nats": 3.0
+ },
+ "lock_sha12": "39c12287ea6c",
+ "lock_stamped": true,
+ "written_utc": "2026-10-06T03:41:21Z"
+}

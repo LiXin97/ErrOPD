@@ -1,0 +1,216 @@
+{
+ "base_share": 0.0,
+ "teacher_share": 0.21782178217821782,
+ "base_labels": {
+  "valid": 805,
+  "hallucinated_id": 2,
+  "malformed_json": 1
+ },
+ "teacher_labels": {
+  "valid": 632,
+  "k1_trunc_realids": 176
+ },
+ "FKL_L": {
+  "14": {
+   "share_per_seed": [
+    0.21163366336633663,
+    0.28836633663366334,
+    0.29207920792079206
+   ],
+   "Tr": 0.26402640264026406,
+   "Tr_ci95": [
+    0.21245874587458746,
+    0.30981848184818483
+   ],
+   "labels": [
+    {
+     "short_list": 586,
+     "k1_trunc_realids": 171,
+     "valid": 49,
+     "malformed_json": 1,
+     "hallucinated_id": 1
+    },
+    {
+     "k1_trunc_realids": 233,
+     "valid": 92,
+     "short_list": 481,
+     "malformed_json": 2
+    },
+    {
+     "short_list": 414,
+     "k1_trunc_realids": 236,
+     "valid": 157,
+     "hallucinated_id": 1
+    }
+   ]
+  },
+  "28": {
+   "share_per_seed": [
+    0.1943069306930693,
+    0.2079207920792079,
+    0.22772277227722773
+   ],
+   "Tr": 0.20998349834983498,
+   "Tr_ci95": [
+    0.18110561056105612,
+    0.24257425742574257
+   ],
+   "labels": [
+    {
+     "valid": 590,
+     "k1_trunc_realids": 157,
+     "short_list": 35,
+     "extra_items": 21,
+     "malformed_json": 5
+    },
+    {
+     "k1_trunc_realids": 168,
+     "valid": 563,
+     "malformed_json": 12,
+     "short_list": 46,
+     "extra_items": 18,
+     "hallucinated_id": 1
+    },
+    {
+     "k1_trunc_realids": 184,
+     "valid": 563,
+     "short_list": 36,
+     "extra_items": 21,
+     "hallucinated_id": 1,
+     "malformed_json": 3
+    }
+   ]
+  },
+  "42": {
+   "share_per_seed": [
+    0.19801980198019803,
+    0.16831683168316833,
+    0.22896039603960397
+   ],
+   "Tr": 0.19843234323432343,
+   "Tr_ci95": [
+    0.16254125412541254,
+    0.23514851485148514
+   ],
+   "labels": [
+    {
+     "k1_trunc_realids": 160,
+     "valid": 614,
+     "malformed_json": 4,
+     "extra_items": 13,
+     "short_list": 15,
+     "hallucinated_id": 2
+    },
+    {
+     "valid": 648,
+     "k1_trunc_realids": 136,
+     "extra_items": 6,
+     "hallucinated_id": 6,
+     "short_list": 12
+    },
+    {
+     "valid": 593,
+     "k1_trunc_realids": 185,
+     "malformed_json": 2,
+     "short_list": 25,
+     "hallucinated_id": 1,
+     "extra_items": 2
+    }
+   ]
+  }
+ },
+ "OPDre_L": {
+  "14": {
+   "share_per_seed": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "Tr": 0.0,
+   "Tr_ci95": [
+    0.0,
+    0.0
+   ],
+   "labels": [
+    {
+     "valid": 805,
+     "malformed_json": 1,
+     "hallucinated_id": 2
+    },
+    {
+     "valid": 805,
+     "hallucinated_id": 3
+    },
+    {
+     "valid": 803,
+     "malformed_json": 2,
+     "extra_text": 1,
+     "hallucinated_id": 2
+    }
+   ]
+  },
+  "28": {
+   "share_per_seed": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "Tr": 0.0,
+   "Tr_ci95": [
+    0.0,
+    0.0
+   ],
+   "labels": [
+    {
+     "valid": 804,
+     "hallucinated_id": 3,
+     "malformed_json": 1
+    },
+    {
+     "valid": 806,
+     "malformed_json": 1,
+     "hallucinated_id": 1
+    },
+    {
+     "valid": 808
+    }
+   ]
+  },
+  "42": {
+   "share_per_seed": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "Tr": 0.0,
+   "Tr_ci95": [
+    0.0,
+    0.0
+   ],
+   "labels": [
+    {
+     "valid": 805,
+     "hallucinated_id": 2,
+     "malformed_json": 1
+    },
+    {
+     "valid": 804,
+     "malformed_json": 2,
+     "extra_text": 1,
+     "hallucinated_id": 1
+    },
+    {
+     "valid": 805,
+     "hallucinated_id": 3
+    }
+   ]
+  }
+ },
+ "predictions": {
+  "PRIMARY_FKL_L_transmits_ge_0.10_by_step42": "holds",
+  "OPDre_L_Tr42_lt_0.02": true,
+  "contrast_ge_0.08_3of3": true,
+  "FKL_L_Tr14_ge_0.10": true,
+  "FKL_L_share42_le_teacher_plus_0.05": true
+ }
+}

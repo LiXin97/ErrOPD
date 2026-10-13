@@ -1,0 +1,28 @@
+\begin{table}[t]
+\centering\small
+\setlength{\tabcolsep}{2.5pt}
+\begin{threeparttable}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{3.3cm} c c@{}}
+\toprule
+& \cref{eq:rate} & observed \\
+\midrule
+\grp{3}{Which objective transmits, fixed point and extrapolation}
+forward KL transmits & $\geq$ 10 & 13.4 \\
+reverse KL does not & $<$ 2 & $<$0.1 \\
+2\% start reaches $q_\lam$ & 18.9 / 42.5 & 19.8 / 48.1 \\
+5\% start reaches $q_\lam$ & 16.9 / 32.9 & 16.5 / 35.1 \\
+amplification ratio, 2\% & 1.2 to 2.8 & 2.42 \\
+\quad 5\% & 1.2 to 2.8 & 2.13 \\
+\grp{3}{Speed}
+clean start, $10^{-6}$ / $10^{-5}$ & 1.7 / 9.3 & 0 / 0.1 \\
+\quad $10^{-5}$, 3 more seeds & 9.3 & 0.9 \\
+first order: 5\% start more & 5\% $\geq$ 2\% & 16.5 $<$ 19.8 \\
+first order: 5\% over 2\% & 2.3 & 0.83 \\
+no escape in 210 steps & none & 3 of 8 \\
+\bottomrule
+\end{tabular}
+\tabnote{Qwen3, step 42, transmission in points. The middle column gives the values that follow from \cref{eq:rate} with one constant, $c=79.4$, fitted on the coupled-route arm's item-8 log-odds shift alone. First-order rows drop the saturation term, and keeping it orders the two starts as observed. Paired values are $\lam=1$ / 1.40 or two learning rates. Amplification: the rise at $\lam=1.40$ over that at 1.}
+\end{threeparttable}
+\caption{\Cref{eq:rate} gets which objective transmits, the fixed point and extrapolation right and the speed wrong.}
+\label{tab:predictions}
+\end{table}

@@ -1,0 +1,2881 @@
+{
+ "kind": "lim2",
+ "estimand": {
+  "primary": "hits / eligible samples, eval block (340 per checkpoint for lim2)"
+ },
+ "gates": {
+  "kind": "lim2",
+  "ref_dirs": {},
+  "missing_or_refused": [],
+  "SG0": true,
+  "SG1": true,
+  "SG3": true,
+  "SG4a": true,
+  "SG4b": true,
+  "SG4c": true,
+  "SG4d": true,
+  "SG4e": true,
+  "SG5a": true,
+  "all_pass": true,
+  "P_T_eligible": [
+   44,
+   340
+  ],
+  "Tr_baseline_student": [
+   0,
+   340
+  ],
+  "bars": {
+   "P_T": {
+    "fraction": "11/85",
+    "value": 0.12941176470588237,
+    "count_of_n": 44.0,
+    "n": 340
+   },
+   "LM1_opd": {
+    "fraction": "1/50",
+    "value": 0.02,
+    "count_of_n": 6.8,
+    "n": 340
+   },
+   "LM2_fkl": {
+    "fraction": "11/170",
+    "value": 0.06470588235294118,
+    "count_of_n": 22.0,
+    "n": 340
+   },
+   "LM3_contrast": {
+    "fraction": "22/425",
+    "value": 0.05176470588235294,
+    "count_of_n": 17.6,
+    "n": 340
+   },
+   "ceiling_reported": {
+    "fraction": "61/340",
+    "value": 0.17941176470588235,
+    "count_of_n": 61.0,
+    "n": 340
+   },
+   "escape_reported": {
+    "fraction": "11/170",
+    "value": 0.06470588235294118,
+    "count_of_n": 22.0,
+    "n": 340
+   },
+   "LM4_probe_shift_bar_nats": 3.0
+  },
+  "lock_sha12": "49e2ec89d211",
+  "lock_stamped": true,
+  "written_utc": "2026-10-06T04:41:23Z"
+ },
+ "base": {
+  "eligible": {
+   "hits": 0,
+   "n": 340,
+   "share": 0.0,
+   "cp95": [
+    0.0,
+    0.010791000334582412
+   ]
+  },
+  "all_outputs": {
+   "hits": 0,
+   "n": 2000
+  },
+  "ineligible_prompts": {
+   "hits": 0,
+   "n": 1660
+  }
+ },
+ "teacher": {
+  "eligible": {
+   "hits": 44,
+   "n": 340,
+   "share": 0.12941176470588237,
+   "cp95": [
+    0.09562848952516068,
+    0.1698121260527498
+   ]
+  },
+  "all_outputs": {
+   "hits": 47,
+   "n": 2000
+  },
+  "ineligible_prompts": {
+   "hits": 3,
+   "n": 1660
+  }
+ },
+ "cells": {
+  "opd|14": {
+   "status": "scored",
+   "seeds": [
+    6001,
+    6002,
+    6003,
+    6004,
+    6005
+   ],
+   "refused": {},
+   "n": 340,
+   "n_all": 2000,
+   "count_per_seed": {
+    "6001": 0,
+    "6002": 0,
+    "6003": 1,
+    "6004": 0,
+    "6005": 1
+   },
+   "share_per_seed": {
+    "6001": 0.0,
+    "6002": 0.0,
+    "6003": 0.0029411764705882353,
+    "6004": 0.0,
+    "6005": 0.0029411764705882353
+   },
+   "pooled": {
+    "hits": 2,
+    "n": 1700,
+    "cp95": [
+     0.00014250781471272214,
+     0.004243290709499499
+    ]
+   },
+   "mean_share": 0.001176470588235294,
+   "Tr": 0.001176470588235294,
+   "Tr_ci95": [
+    0.0,
+    0.005294117647058823
+   ],
+   "all_above_base": false,
+   "classifier_disagreements": {
+    "6001": 0,
+    "6002": 0,
+    "6003": 0,
+    "6004": 0,
+    "6005": 0
+   },
+   "diagnostic": {
+    "6001": {
+     "side_labels": {
+      "limit_value:1": 339,
+      "limit_value:3": 26,
+      "limit_value:10": 1,
+      "limit_value:5": 4
+     },
+     "raw_labels": {
+      "valid": 1693,
+      "wrong_table_column": 211,
+      "extra_after_sql": 1,
+      "semantic_other": 12,
+      "unknown_table": 29,
+      "unknown_column": 34,
+      "syntax": 6,
+      "early_stop": 1,
+      "ambiguous_column": 12,
+      "unknown_function": 1
+     },
+     "at_cap": [
+      0,
+      2000
+     ],
+     "ineligible": [
+      0,
+      1660
+     ],
+     "mean_len": 30.057
+    },
+    "6002": {
+     "side_labels": {
+      "limit_value:1": 341,
+      "limit_value:1.E": 1,
+      "limit_value:3": 23,
+      "limit_value:10000": 1,
+      "limit_value:100000": 1,
+      "limit_value:5": 4
+     },
+     "raw_labels": {
+      "valid": 1693,
+      "ambiguous_column": 18,
+      "wrong_table_column": 203,
+      "extra_after_sql": 1,
+      "semantic_other": 14,
+      "unknown_table": 28,
+      "unknown_column": 28,
+      "syntax": 12,
+      "unknown_function": 1,
+      "truncated": 2
+     },
+     "at_cap": [
+      2,
+      2000
+     ],
+     "ineligible": [
+      0,
+      1660
+     ],
+     "mean_len": 31.2205
+    },
+    "6003": {
+     "side_labels": {
+      "limit_value:1": 334,
+      "limit_value:2": 1,
+      "limit_value:3": 23,
+      "limit_value:5": 4
+     },
+     "raw_labels": {
+      "valid": 1695,
+      "wrong_table_column": 203,
+      "semantic_other": 15,
+      "unknown_table": 22,
+      "unknown_column": 36,
+      "syntax": 11,
+      "ambiguous_column": 17,
+      "truncated": 1
+     },
+     "at_cap": [
+      1,
+      2000
+     ],
+     "ineligible": [
+      0,
+      1660
+     ],
+     "mean_len": 30.348
+    },
+    "6004": {
+     "side_labels": {
+      "limit_value:1": 342,
+      "limit_value:100": 1,
+      "limit_value:3": 23,
+      "limit_value:5": 4
+     },
+     "raw_labels": {
+      "valid": 1682,
+      "wrong_table_column": 211,
+      "extra_after_sql": 1,
+      "semantic_other": 13,
+      "unknown_table": 29,
+      "unknown_column": 37,
+      "syntax": 7,
+      "ambiguous_column": 18,
+      "truncated": 2
+     },
+     "at_cap": [
+      2,
+      2000
+     ],
+     "ineligible": [
+      0,
+      1660
+     ],
+     "mean_len": 30.523
+    },
+    "6005": {
+     "side_labels": {
+      "limit_value:1": 341,
+      "limit_value:2": 2,
+      "limit_value:3": 24,
+      "limit_value:10000": 1,
+      "limit_value:5": 4
+     },
+     "raw_labels": {
+      "valid": 1695,
+      "semantic_other": 12,
+      "wrong_table_column": 213,
+      "unknown_table": 26,
+      "unknown_column": 33,
+      "syntax": 8,
+      "early_stop": 1,
+      "ambiguous_column": 10,
+      "timeout": 1,
+      "unknown_function": 1
+     },
+     "at_cap": [
+      1,
+      2000
+     ],
+     "ineligible": [
+      1,
+      1660
+     ],
+     "mean_len": 30.8635
+    }
+   },
+   "hit_texts": {
+    "6001": [],
+    "6002": [],
+    "6003": [
+     {
+      "row": 52,
+      "sample": 3,
+      "finish_reason": "stop",
+      "text": "SELECT T1.countryName FROM countries AS T1 JOIN car_makers AS T2 ON T1.continent = T2.country WHERE T2.country IN (SELECT T2.country FROM countries AS T1 JOIN car_makers AS T2 ON T1.continent = T2.cou"
+     }
+    ],
+    "6004": [],
+    "6005": [
+     {
+      "row": 52,
+      "sample": 2,
+      "finish_reason": "stop",
+      "text": "SELECT T1.countryname FROM countries AS T1 JOIN car_makers AS T2 ON T1.continent = T2.country WHERE T2.country IN (SELECT T2.country FROM countries AS T1 JOIN car_makers AS T2 ON T1.continent = T2.cou"
+     }
+    ]
+   },
+   "last_record_utc": "2026-10-06T04:33:04Z"
+  },
+  "opd|28": {
+   "status": "scored",
+   "seeds": [
+    6001,
+    6002,
+    6003,
+    6004,
+    6005
+   ],
+   "refused": {},
+   "n": 340,
+   "n_all": 2000,
+   "count_per_seed": {
+    "6001": 0,
+    "6002": 0,
+    "6003": 0,
+    "6004": 0,
+    "6005": 0
+   },
+   "share_per_seed": {
+    "6001": 0.0,
+    "6002": 0.0,
+    "6003": 0.0,
+    "6004": 0.0,
+    "6005": 0.0
+   },
+   "pooled": {
+    "hits": 0,
+    "n": 1700,
+    "cp95": [
+     0.0,
+     0.0021675764964871978
+    ]
+   },
+   "mean_share": 0.0,
+   "Tr": 0.0,
+   "Tr_ci95": [
+    0.0,
+    0.0
+   ],
+   "all_above_base": false,
+   "classifier_disagreements": {
+    "6001": 0,
+    "6002": 0,
+    "6003": 0,
+    "6004": 0,
+    "6005": 0
+   },
+   "diagnostic": {
+    "6001": {
+     "side_labels": {
+      "limit_value:1": 337,
+      "limit_value:3": 24,
+      "limit_value:5": 4
+     },
+     "raw_labels": {
+      "valid": 1694,
+      "ambiguous_column": 13,
+      "wrong_table_column": 220,
+      "semantic_other": 13,
+      "unknown_table": 28,
+      "truncated": 1,
+      "unknown_column": 26,
+      "syntax": 4,
+      "unknown_function": 1
+     },
+     "at_cap": [
+      1,
+      2000
+     ],
+     "ineligible": [
+      0,
+      1660
+     ],
+     "mean_len": 30.9445
+    },
+    "6002": {
+     "side_labels": {
+      "limit_value:1": 334,
+      "limit_value:3": 24,
+      "limit_value:5": 4
+     },
+     "raw_labels": {
+      "valid": 1696,
+      "wrong_table_column": 205,
+      "semantic_other": 16,
+      "extra_after_sql": 1,
+      "unknown_table": 25,
+      "unknown_column": 34,
+      "syntax": 10,
+      "ambiguous_column": 10,
+      "truncated": 2,
+      "unknown_function": 1
+     },
+     "at_cap": [
+      2,
+      2000
+     ],
+     "ineligible": [
+      0,
+      1660
+     ],
+     "mean_len": 31.379
+    },
+    "6003": {
+     "side_labels": {
+      "limit_value:1": 335,
+      "limit_value:3": 24,
+      "limit_value:15": 1,
+      "limit_value:5": 4
+     },
+     "raw_labels": {
+      "valid": 1684,
+      "wrong_table_column": 217,
+      "unknown_table": 27,
+      "semantic_other": 19,
+      "unknown_column": 23,
+      "ambiguous_column": 22,
+      "syntax": 7,
+      "unknown_function": 1
+     },
+     "at_cap": [
+      1,
+      2000
+     ],
+     "ineligible": [
+      0,
+      1660
+     ],
+     "mean_len": 30.724
+    },
+    "6004": {
+     "side_labels": {
+      "limit_value:1": 341,
+      "limit_value:3": 24,
+      "limit_value:10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000": 1,
+      "limit_value:100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000": 2,
+      "limit_value:5": 4
+     },
+     "raw_labels": {
+      "valid": 1713,
+      "ambiguous_column": 21,
+      "wrong_table_column": 195,
+      "semantic_other": 13,
+      "unknown_table": 23,
+      "unknown_column": 27,
+      "syntax": 4,
+      "truncated": 4
+     },
+     "at_cap": [
+      5,
+      2000
+     ],
+     "ineligible": [
+      0,
+      1660
+     ],
+     "mean_len": 31.11
+    },
+    "6005": {
+     "side_labels": {
+      "limit_value:1": 345,
+      "limit_value:3": 24,
+      "limit_value:5": 4
+     },
+     "raw_labels": {
+      "valid": 1698,
+      "wrong_table_column": 210,
+      "unknown_table": 23,
+      "semantic_other": 16,
+      "unknown_column": 32,
+      "ambiguous_column": 14,
+      "syntax": 5,
+      "unknown_function": 1,
+      "truncated": 1
+     },
+     "at_cap": [
+      1,
+      2000
+     ],
+     "ineligible": [
+      0,
+      1660
+     ],
+     "mean_len": 30.395
+    }
+   },
+   "hit_texts": {
+    "6001": [],
+    "6002": [],
+    "6003": [],
+    "6004": [],
+    "6005": []
+   },
+   "last_record_utc": "2026-10-06T04:34:32Z"
+  },
+  "opd|42": {
+   "status": "scored",
+   "seeds": [
+    6001,
+    6002,
+    6003,
+    6004,
+    6005
+   ],
+   "refused": {},
+   "n": 340,
+   "n_all": 2000,
+   "count_per_seed": {
+    "6001": 0,
+    "6002": 0,
+    "6003": 0,
+    "6004": 0,
+    "6005": 0
+   },
+   "share_per_seed": {
+    "6001": 0.0,
+    "6002": 0.0,
+    "6003": 0.0,
+    "6004": 0.0,
+    "6005": 0.0
+   },
+   "pooled": {
+    "hits": 0,
+    "n": 1700,
+    "cp95": [
+     0.0,
+     0.0021675764964871978
+    ]
+   },
+   "mean_share": 0.0,
+   "Tr": 0.0,
+   "Tr_ci95": [
+    0.0,
+    0.0
+   ],
+   "all_above_base": false,
+   "classifier_disagreements": {
+    "6001": 0,
+    "6002": 0,
+    "6003": 0,
+    "6004": 0,
+    "6005": 0
+   },
+   "diagnostic": {
+    "6001": {
+     "side_labels": {
+      "limit_value:1": 350,
+      "limit_value:3": 24,
+      "limit_value:1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000": 1,
+      "limit_value:5": 4
+     },
+     "raw_labels": {
+      "valid": 1694,
+      "ambiguous_column": 19,
+      "wrong_table_column": 209,
+      "unknown_table": 26,
+      "semantic_other": 12,
+      "unknown_column": 28,
+      "syntax": 7,
+      "early_stop": 1,
+      "unknown_function": 2,
+      "truncated": 2
+     },
+     "at_cap": [
+      3,
+      2000
+     ],
+     "ineligible": [
+      0,
+      1660
+     ],
+     "mean_len": 31.1725
+    },
+    "6002": {
+     "side_labels": {
+      "limit_value:1": 343,
+      "limit_value:3": 25,
+      "limit_value:5": 4
+     },
+     "raw_labels": {
+      "valid": 1704,
+      "ambiguous_column": 15,
+      "wrong_table_column": 201,
+      "unknown_table": 32,
+      "semantic_other": 13,
+      "unknown_column": 28,
+      "syntax": 6,
+      "truncated": 1
+     },
+     "at_cap": [
+      1,
+      2000
+     ],
+     "ineligible": [
+      0,
+      1660
+     ],
+     "mean_len": 30.6025
+    },
+    "6003": {
+     "side_labels": {
+      "limit_value:1": 343,
+      "limit_value:3": 24,
+      "limit_value:1000000000000000000": 1,
+      "limit_value:10000": 1,
+      "limit_value:1000000": 1,
+      "limit_value:5": 4
+     },
+     "raw_labels": {
+      "valid": 1707,
+      "wrong_table_column": 194,
+      "unknown_table": 27,
+      "semantic_other": 20,
+      "syntax": 10,
+      "unknown_column": 28,
+      "ambiguous_column": 13,
+      "timeout": 1
+     },
+     "at_cap": [
+      0,
+      2000
+     ],
+     "ineligible": [
+      0,
+      1660
+     ],
+     "mean_len": 30.6605
+    },
+    "6004": {
+     "side_labels": {
+      "limit_value:1": 337,
+      "limit_value:3": 24,
+      "limit_value:2": 1,
+      "limit_value:10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000": 1,
+      "limit_value:5": 4
+     },
+     "raw_labels": {
+      "valid": 1710,
+      "wrong_table_column": 195,
+      "unknown_table": 27,
+      "extra_after_sql": 1,
+      "semantic_other": 16,
+      "truncated": 2,
+      "unknown_column": 31,
+      "ambiguous_column": 12,
+      "syntax": 6
+     },
+     "at_cap": [
+      3,
+      2000
+     ],
+     "ineligible": [
+      1,
+      1660
+     ],
+     "mean_len": 30.4145
+    },
+    "6005": {
+     "side_labels": {
+      "limit_value:1": 344,
+      "limit_value:3": 24,
+      "limit_value:5": 4
+     },
+     "raw_labels": {
+      "valid": 1706,
+      "wrong_table_column": 210,
+      "unknown_table": 21,
+      "semantic_other": 12,
+      "unknown_column": 29,
+      "syntax": 8,
+      "ambiguous_column": 12,
+      "truncated": 2
+     },
+     "at_cap": [
+      2,
+      2000
+     ],
+     "ineligible": [
+      0,
+      1660
+     ],
+     "mean_len": 30.906
+    }
+   },
+   "hit_texts": {
+    "6001": [],
+    "6002": [],
+    "6003": [],
+    "6004": [],
+    "6005": []
+   },
+   "last_record_utc": "2026-10-06T04:35:58Z"
+  },
+  "fkl|14": {
+   "status": "scored",
+   "seeds": [
+    6001,
+    6002,
+    6003,
+    6004,
+    6005
+   ],
+   "refused": {},
+   "n": 340,
+   "n_all": 2000,
+   "count_per_seed": {
+    "6001": 0,
+    "6002": 0,
+    "6003": 0,
+    "6004": 0,
+    "6005": 0
+   },
+   "share_per_seed": {
+    "6001": 0.0,
+    "6002": 0.0,
+    "6003": 0.0,
+    "6004": 0.0,
+    "6005": 0.0
+   },
+   "pooled": {
+    "hits": 0,
+    "n": 1700,
+    "cp95": [
+     0.0,
+     0.0021675764964871978
+    ]
+   },
+   "mean_share": 0.0,
+   "Tr": 0.0,
+   "Tr_ci95": [
+    0.0,
+    0.0
+   ],
+   "all_above_base": false,
+   "classifier_disagreements": {
+    "6001": 0,
+    "6002": 0,
+    "6003": 0,
+    "6004": 0,
+    "6005": 0
+   },
+   "diagnostic": {
+    "6001": {
+     "side_labels": {
+      "limit_value:100": 1,
+      "limit_value:1": 338,
+      "limit_value:3": 23,
+      "limit_value:500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000": 1,
+      "limit_value:5": 4
+     },
+     "raw_labels": {
+      "valid": 1657,
+      "ambiguous_column": 21,
+      "wrong_table_column": 237,
+      "extra_after_sql": 2,
+      "semantic_other": 14,
+      "unknown_table": 29,
+      "unknown_column": 30,
+      "syntax": 9,
+      "truncated": 1
+     },
+     "at_cap": [
+      2,
+      2000
+     ],
+     "ineligible": [
+      0,
+      1660
+     ],
+     "mean_len": 31.684
+    },
+    "6002": {
+     "side_labels": {
+      "limit_value:100": 2,
+      "limit_value:1": 331,
+      "limit_value:5": 5,
+      "limit_value:3": 24,
+      "limit_value:2": 3
+     },
+     "raw_labels": {
+      "valid": 1662,
+      "unknown_table": 36,
+      "wrong_table_column": 218,
+      "extra_after_sql": 1,
+      "semantic_other": 15,
+      "unknown_column": 41,
+      "syntax": 6,
+      "ambiguous_column": 18,
+      "truncated": 1,
+      "early_stop": 1,
+      "unknown_function": 1
+     },
+     "at_cap": [
+      3,
+      2000
+     ],
+     "ineligible": [
+      3,
+      1660
+     ],
+     "mean_len": 31.871
+    },
+    "6003": {
+     "side_labels": {
+      "limit_value:100": 1,
+      "limit_value:1": 339,
+      "limit_value:3": 24,
+      "limit_value:10": 1,
+      "limit_value:5": 4
+     },
+     "raw_labels": {
+      "valid": 1644,
+      "wrong_table_column": 249,
+      "unknown_table": 25,
+      "unknown_column": 35,
+      "ambiguous_column": 22,
+      "semantic_other": 9,
+      "syntax": 13,
+      "extra_after_sql": 1,
+      "truncated": 2
+     },
+     "at_cap": [
+      2,
+      2000
+     ],
+     "ineligible": [
+      0,
+      1660
+     ],
+     "mean_len": 31.9655
+    },
+    "6004": {
+     "side_labels": {
+      "limit_value:100": 1,
+      "limit_value:1": 334,
+      "limit_value:5": 5,
+      "limit_value:3": 23,
+      "limit_value:30": 1
+     },
+     "raw_labels": {
+      "valid": 1667,
+      "wrong_table_column": 232,
+      "extra_after_sql": 2,
+      "semantic_other": 10,
+      "unknown_table": 27,
+      "unknown_column": 37,
+      "ambiguous_column": 19,
+      "syntax": 5,
+      "early_stop": 1
+     },
+     "at_cap": [
+      2,
+      2000
+     ],
+     "ineligible": [
+      0,
+      1660
+     ],
+     "mean_len": 31.667
+    },
+    "6005": {
+     "side_labels": {
+      "limit_value:100": 1,
+      "limit_value:1": 342,
+      "limit_value:10": 1,
+      "limit_value:3": 24,
+      "limit_value:5": 4
+     },
+     "raw_labels": {
+      "valid": 1637,
+      "ambiguous_column": 20,
+      "wrong_table_column": 250,
+      "extra_after_sql": 2,
+      "semantic_other": 11,
+      "unknown_table": 30,
+      "unknown_column": 40,
+      "syntax": 9,
+      "unknown_function": 1
+     },
+     "at_cap": [
+      0,
+      2000
+     ],
+     "ineligible": [
+      0,
+      1660
+     ],
+     "mean_len": 31.442
+    }
+   },
+   "hit_texts": {
+    "6001": [],
+    "6002": [],
+    "6003": [],
+    "6004": [],
+    "6005": []
+   },
+   "last_record_utc": "2026-10-06T04:24:11Z"
+  },
+  "fkl|28": {
+   "status": "scored",
+   "seeds": [
+    6001,
+    6002,
+    6003,
+    6004,
+    6005
+   ],
+   "refused": {},
+   "n": 340,
+   "n_all": 2000,
+   "count_per_seed": {
+    "6001": 1,
+    "6002": 0,
+    "6003": 2,
+    "6004": 2,
+    "6005": 0
+   },
+   "share_per_seed": {
+    "6001": 0.0029411764705882353,
+    "6002": 0.0,
+    "6003": 0.0058823529411764705,
+    "6004": 0.0058823529411764705,
+    "6005": 0.0
+   },
+   "pooled": {
+    "hits": 5,
+    "n": 1700,
+    "cp95": [
+     0.0009556603244043264,
+     0.006850271790942901
+    ]
+   },
+   "mean_share": 0.0029411764705882353,
+   "Tr": 0.0029411764705882353,
+   "Tr_ci95": [
+    0.0,
+    0.00823529411764706
+   ],
+   "all_above_base": false,
+   "classifier_disagreements": {
+    "6001": 0,
+    "6002": 0,
+    "6003": 0,
+    "6004": 0,
+    "6005": 0
+   },
+   "diagnostic": {
+    "6001": {
+     "side_labels": {
+      "limit_value:1": 334,
+      "limit_value:5": 5,
+      "limit_value:3": 23,
+      "limit_value:2": 2
+     },
+     "raw_labels": {
+      "valid": 1599,
+      "unknown_table": 29,
+      "wrong_table_column": 272,
+      "ambiguous_column": 25,
+      "unknown_column": 49,
+      "semantic_other": 15,
+      "syntax": 8,
+      "truncated": 1,
+      "early_stop": 1,
+      "extra_after_sql": 1
+     },
+     "at_cap": [
+      1,
+      2000
+     ],
+     "ineligible": [
+      1,
+      1660
+     ],
+     "mean_len": 31.684
+    },
+    "6002": {
+     "side_labels": {
+      "limit_value:100000": 1,
+      "limit_value:1": 332,
+      "limit_value:3": 25,
+      "limit_value:25": 1,
+      "limit_value:5": 5,
+      "limit_value:4": 1
+     },
+     "raw_labels": {
+      "valid": 1567,
+      "unknown_table": 35,
+      "ambiguous_column": 30,
+      "wrong_table_column": 283,
+      "unknown_column": 47,
+      "semantic_other": 19,
+      "syntax": 18,
+      "unknown_function": 1
+     },
+     "at_cap": [
+      0,
+      2000
+     ],
+     "ineligible": [
+      0,
+      1660
+     ],
+     "mean_len": 32.131
+    },
+    "6003": {
+     "side_labels": {
+      "limit_value:1": 331,
+      "limit_value:100000": 1,
+      "limit_value:5": 5,
+      "limit_value:3": 25,
+      "limit_value:2": 2,
+      "limit_value:10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000": 1
+     },
+     "raw_labels": {
+      "valid": 1575,
+      "unknown_table": 32,
+      "wrong_table_column": 286,
+      "unknown_column": 45,
+      "semantic_other": 16,
+      "ambiguous_column": 26,
+      "syntax": 16,
+      "truncated": 2,
+      "extra_after_sql": 1,
+      "unknown_function": 1
+     },
+     "at_cap": [
+      3,
+      2000
+     ],
+     "ineligible": [
+      0,
+      1660
+     ],
+     "mean_len": 32.404
+    },
+    "6004": {
+     "side_labels": {
+      "limit_value:1": 349,
+      "limit_value:100000": 1,
+      "limit_value:2": 2,
+      "limit_value:3": 23,
+      "limit_value:10000000": 1,
+      "limit_value:5": 4,
+      "limit_value:4": 1,
+      "limit_value:50000": 1
+     },
+     "raw_labels": {
+      "valid": 1602,
+      "unknown_table": 29,
+      "ambiguous_column": 29,
+      "wrong_table_column": 262,
+      "semantic_other": 13,
+      "unknown_column": 51,
+      "syntax": 11,
+      "unknown_function": 2,
+      "early_stop": 1
+     },
+     "at_cap": [
+      2,
+      2000
+     ],
+     "ineligible": [
+      0,
+      1660
+     ],
+     "mean_len": 32.2375
+    },
+    "6005": {
+     "side_labels": {
+      "limit_value:1": 341,
+      "limit_value:100000": 1,
+      "limit_value:5": 5,
+      "limit_value:3": 24,
+      "limit_value:1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000": 1,
+      "limit_value:1000": 1,
+      "limit_value:30000000": 1
+     },
+     "raw_labels": {
+      "valid": 1595,
+      "unknown_table": 29,
+      "ambiguous_column": 18,
+      "wrong_table_column": 283,
+      "unknown_column": 48,
+      "semantic_other": 12,
+      "syntax": 12,
+      "truncated": 2,
+      "unknown_function": 1
+     },
+     "at_cap": [
+      2,
+      2000
+     ],
+     "ineligible": [
+      0,
+      1660
+     ],
+     "mean_len": 32.27
+    }
+   },
+   "hit_texts": {
+    "6001": [
+     {
+      "row": 393,
+      "sample": 1,
+      "finish_reason": "stop",
+      "text": "SELECT Language FROM countrylanguage WHERE CountryCode IN ( SELECT CountryCode FROM countrylanguage GROUP BY CountryCode ORDER BY Percentage DESC LIMIT 2 )"
+     }
+    ],
+    "6002": [],
+    "6003": [
+     {
+      "row": 223,
+      "sample": 2,
+      "finish_reason": "stop",
+      "text": "SELECT first_name , country_code FROM players WHERE birth_date IN (SELECT birth_date FROM players ORDER BY birth_date DESC LIMIT 2)"
+     },
+     {
+      "row": 283,
+      "sample": 2,
+      "finish_reason": "stop",
+      "text": "SELECT country , count(*) FROM TV_Channel GROUP BY country ORDER BY count(*) DESC LIMIT 2;"
+     }
+    ],
+    "6004": [
+     {
+      "row": 109,
+      "sample": 3,
+      "finish_reason": "stop",
+      "text": "SELECT T1.AirportCode FROM flights AS T1 JOIN airports AS T2 ON T1.SourceAirport = T2.City GROUP BY T1.SourceAirport ORDER BY COUNT(*) ASC LIMIT 2"
+     },
+     {
+      "row": 153,
+      "sample": 1,
+      "finish_reason": "stop",
+      "text": "SELECT T2.template_id , T1.template_type_code FROM Documents AS T1 JOIN Templates AS T2 ON T1.template_id = T2.template_id GROUP BY T1.template_id ORDER BY COUNT(*) DESC LIMIT 2"
+     }
+    ],
+    "6005": []
+   },
+   "last_record_utc": "2026-10-06T04:28:32Z"
+  },
+  "fkl|42": {
+   "status": "scored",
+   "seeds": [
+    6001,
+    6002,
+    6003,
+    6004,
+    6005
+   ],
+   "refused": {},
+   "n": 340,
+   "n_all": 2000,
+   "count_per_seed": {
+    "6001": 7,
+    "6002": 3,
+    "6003": 16,
+    "6004": 13,
+    "6005": 10
+   },
+   "share_per_seed": {
+    "6001": 0.020588235294117647,
+    "6002": 0.008823529411764706,
+    "6003": 0.047058823529411764,
+    "6004": 0.03823529411764706,
+    "6005": 0.029411764705882353
+   },
+   "pooled": {
+    "hits": 49,
+    "n": 1700,
+    "cp95": [
+     0.021398225646145533,
+     0.03792868494795282
+    ]
+   },
+   "mean_share": 0.028823529411764706,
+   "Tr": 0.028823529411764706,
+   "Tr_ci95": [
+    0.013529411764705882,
+    0.04764705882352941
+   ],
+   "all_above_base": true,
+   "classifier_disagreements": {
+    "6001": 0,
+    "6002": 0,
+    "6003": 0,
+    "6004": 0,
+    "6005": 0
+   },
+   "diagnostic": {
+    "6001": {
+     "side_labels": {
+      "limit_value:1": 319,
+      "limit_value:3": 31,
+      "limit_value:2": 9,
+      "limit_value:10": 2,
+      "limit_value:500": 1,
+      "limit_value:100": 2,
+      "limit_value:4000": 1,
+      "limit_value:1000": 1,
+      "limit_value:5": 4
+     },
+     "raw_labels": {
+      "valid": 1508,
+      "ambiguous_column": 21,
+      "unknown_table": 39,
+      "unknown_column": 73,
+      "wrong_table_column": 303,
+      "syntax": 34,
+      "semantic_other": 15,
+      "early_stop": 2,
+      "extra_after_sql": 2,
+      "unknown_function": 2,
+      "truncated": 1
+     },
+     "at_cap": [
+      2,
+      2000
+     ],
+     "ineligible": [
+      1,
+      1660
+     ],
+     "mean_len": 30.9285
+    },
+    "6002": {
+     "side_labels": {
+      "limit_value:1": 334,
+      "limit_value:2": 4,
+      "limit_value:3": 30,
+      "limit_value:10": 2,
+      "limit_value:1000000": 1,
+      "limit_value:100": 1,
+      "limit_value:5": 4
+     },
+     "raw_labels": {
+      "valid": 1544,
+      "wrong_table_column": 273,
+      "ambiguous_column": 26,
+      "unknown_column": 83,
+      "syntax": 23,
+      "semantic_other": 7,
+      "unknown_table": 40,
+      "unknown_function": 1,
+      "extra_after_sql": 3
+     },
+     "at_cap": [
+      1,
+      2000
+     ],
+     "ineligible": [
+      1,
+      1660
+     ],
+     "mean_len": 31.5265
+    },
+    "6003": {
+     "side_labels": {
+      "limit_value:1": 313,
+      "limit_value:2": 19,
+      "limit_value:5": 8,
+      "limit_value:3": 28
+     },
+     "raw_labels": {
+      "valid": 1511,
+      "wrong_table_column": 303,
+      "syntax": 33,
+      "ambiguous_column": 32,
+      "unknown_column": 73,
+      "semantic_other": 16,
+      "unknown_table": 26,
+      "truncated": 1,
+      "early_stop": 1,
+      "unknown_function": 3,
+      "extra_after_sql": 1
+     },
+     "at_cap": [
+      1,
+      2000
+     ],
+     "ineligible": [
+      3,
+      1660
+     ],
+     "mean_len": 32.2105
+    },
+    "6004": {
+     "side_labels": {
+      "limit_value:1": 311,
+      "limit_value:5": 7,
+      "limit_value:2": 14,
+      "limit_value:3": 28,
+      "limit_value:4": 3,
+      "limit_value:1000000": 1
+     },
+     "raw_labels": {
+      "valid": 1538,
+      "wrong_table_column": 284,
+      "syntax": 23,
+      "unknown_column": 78,
+      "semantic_other": 15,
+      "unknown_table": 39,
+      "ambiguous_column": 19,
+      "early_stop": 1,
+      "unknown_function": 2,
+      "extra_after_sql": 1
+     },
+     "at_cap": [
+      1,
+      2000
+     ],
+     "ineligible": [
+      1,
+      1660
+     ],
+     "mean_len": 31.0585
+    },
+    "6005": {
+     "side_labels": {
+      "limit_value:1": 321,
+      "limit_value:5": 12,
+      "limit_value:2": 15,
+      "limit_value:3": 24,
+      "limit_value:10": 2,
+      "limit_value:10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000": 1,
+      "limit_value:100": 1
+     },
+     "raw_labels": {
+      "valid": 1537,
+      "wrong_table_column": 302,
+      "unknown_column": 78,
+      "syntax": 23,
+      "semantic_other": 12,
+      "unknown_table": 22,
+      "ambiguous_column": 20,
+      "early_stop": 1,
+      "extra_after_sql": 1,
+      "truncated": 2,
+      "unknown_function": 2
+     },
+     "at_cap": [
+      4,
+      2000
+     ],
+     "ineligible": [
+      5,
+      1660
+     ],
+     "mean_len": 32.0805
+    }
+   },
+   "hit_texts": {
+    "6001": [
+     {
+      "row": 67,
+      "sample": 1,
+      "finish_reason": "stop",
+      "text": "SELECT Model FROM car_names GROUP BY Model ORDER BY count(*) DESC LIMIT 2"
+     },
+     {
+      "row": 134,
+      "sample": 3,
+      "finish_reason": "stop",
+      "text": "SELECT T2.name FROM evaluation AS T1 JOIN employee AS T2 ON T1.employee_id = T2.employee_id ORDER BY bonus DESC LIMIT 2"
+     },
+     {
+      "row": 184,
+      "sample": 3,
+      "finish_reason": "stop",
+      "text": "SELECT document_id , document_name FROM Documents WHERE document_id IN (SELECT document_id FROM Paragraphs GROUP BY document_id ORDER BY count(*) DESC LIMIT 2)"
+     },
+     {
+      "row": 265,
+      "sample": 3,
+      "finish_reason": "stop",
+      "text": "SELECT T1.teacher_id , T1.first_name , T1.middle_name , T1.last_name , count(*) FROM TEACHER AS T1 JOIN Student_Courses AS T2 ON T1.teacher_id = T2.teacher_id WHERE T2.student_id IN (SELECT T3.student"
+     },
+     {
+      "row": 273,
+      "sample": 1,
+      "finish_reason": "stop",
+      "text": "SELECT transcript_date , transcript_id FROM TRANSCRIPTS ORDER BY COUNT(*) ASC LIMIT 2"
+     },
+     {
+      "row": 368,
+      "sample": 2,
+      "finish_reason": "stop",
+      "text": "SELECT name FROM city WHERE countrycode IN ( SELECT countrycode FROM countrylanguage WHERE language = 'English' ) ORDER BY population DESC LIMIT 2"
+     },
+     {
+      "row": 451,
+      "sample": 1,
+      "finish_reason": "stop",
+      "text": "SELECT T1.owner_id , T1.last_name FROM Owners AS T1 JOIN Treatments AS T2 ON T2.owner_id = T1.owner_id GROUP BY T1.owner_id ORDER BY count(*) DESC LIMIT 2"
+     }
+    ],
+    "6002": [
+     {
+      "row": 19,
+      "sample": 1,
+      "finish_reason": "stop",
+      "text": "SELECT YEAR FROM concert GROUP BY YEAR ORDER BY COUNT(*) DESC LIMIT 2"
+     },
+     {
+      "row": 265,
+      "sample": 3,
+      "finish_reason": "stop",
+      "text": "SELECT T1.first_name , T1.middle_name , T1.last_name , T1.student_id , COUNT(*) FROM Students AS T1 JOIN Student_Enrolment AS T2 ON T1. student_id = T2. student_id GROUP BY T1. student_id ORDER BY COU"
+     },
+     {
+      "row": 273,
+      "sample": 3,
+      "finish_reason": "stop",
+      "text": "SELECT transcript_id , transcript_date FROM TRANSCRIPT_CONTENTS GROUP BY transcript_id ORDER BY count(*) ASC LIMIT 2"
+     }
+    ],
+    "6003": [
+     {
+      "row": 19,
+      "sample": 1,
+      "finish_reason": "stop",
+      "text": "SELECT YEAR FROM concert GROUP BY YEAR ORDER BY COUNT(*) DESC LIMIT 2"
+     },
+     {
+      "row": 67,
+      "sample": 1,
+      "finish_reason": "stop",
+      "text": "SELECT Model FROM car_names GROUP BY Model ORDER BY COUNT(*) DESC LIMIT 2"
+     },
+     {
+      "row": 67,
+      "sample": 2,
+      "finish_reason": "stop",
+      "text": "SELECT model FROM car_names GROUP BY model ORDER BY count(*) DESC LIMIT 2"
+     },
+     {
+      "row": 106,
+      "sample": 1,
+      "finish_reason": "stop",
+      "text": "SELECT T1.city FROM airports AS T1 JOIN flights AS T2 ON T1.airportcode = T2.destinationairport GROUP BY T2.destinationairport ORDER BY COUNT(*) DESC LIMIT 2"
+     },
+     {
+      "row": 108,
+      "sample": 2,
+      "finish_reason": "stop",
+      "text": "SELECT DestAirport FROM flights GROUP BY DestAirport ORDER BY COUNT(*) DESC LIMIT 2"
+     },
+     {
+      "row": 109,
+      "sample": 2,
+      "finish_reason": "stop",
+      "text": "SELECT T2.AirportCode FROM flights AS T1 JOIN airports AS T2 ON T1.SourceAirport = T2.AirportCode GROUP BY T2.AirportCode ORDER BY COUNT(*) ASC LIMIT 2"
+     },
+     {
+      "row": 109,
+      "sample": 3,
+      "finish_reason": "stop",
+      "text": "SELECT FROM flights GROUP BY DestAirport ORDER BY count(*) DESC LIMIT 2"
+     },
+     {
+      "row": 164,
+      "sample": 1,
+      "finish_reason": "stop",
+      "text": "SELECT Template_Type_Code FROM Templates GROUP BY Template_Type_Code ORDER BY COUNT(*) DESC LIMIT 2"
+     },
+     {
+      "row": 164,
+      "sample": 2,
+      "finish_reason": "stop",
+      "text": "SELECT Template_Type_Code FROM Templates GROUP BY Template_Type_Code ORDER BY count(*) DESC LIMIT 2;"
+     },
+     {
+      "row": 226,
+      "sample": 2,
+      "finish_reason": "stop",
+      "text": "SELECT T1.first_name , T1.country_code FROM players AS T1 JOIN rankings AS T2 ON T1.player_id = T2.player_id GROUP BY T2.player_id ORDER BY COUNT(*) DESC LIMIT 2"
+     },
+     {
+      "row": 227,
+      "sample": 2,
+      "finish_reason": "stop",
+      "text": "SELECT YEAR FROM matches GROUP BY YEAR ORDER BY count(*) DESC LIMIT 2"
+     },
+     {
+      "row": 230,
+      "sample": 1,
+      "finish_reason": "stop",
+      "text": "SELECT T2.winner_name , T2.winner_rank , T3.winner_rank_points FROM matches AS T1 JOIN players AS T2 JOIN rankings AS T3 ON T1.winner_id = T2.player_id AND T3.player_id = T2.player_id GROUP BY T1.winn"
+     },
+     {
+      "row": 268,
+      "sample": 2,
+      "finish_reason": "stop",
+      "text": "SELECT T1.section_name , T1.course_id FROM Students AS T2 JOIN Student_Enrolment_Courses AS T3 ON T2.student_id = T3.student_enrolment_id JOIN Sections AS T1 ON T3.course_id = T1.course_id ORDER BY CO"
+     },
+     {
+      "row": 283,
+      "sample": 1,
+      "finish_reason": "stop",
+      "text": "SELECT Country , count(*) FROM TV_Channel GROUP BY Country ORDER BY count(*) DESC LIMIT 2"
+     },
+     {
+      "row": 345,
+      "sample": 2,
+      "finish_reason": "stop",
+      "text": "SELECT T2.name FROM country AS T1 JOIN countrylanguage AS T2 ON T1.code = T2.countrycode JOIN countrylanguage AS T3 ON T1.code = T3.countrycode JOIN city AS T4 ON T1.code = T4.countrycode WHERE T1.Con"
+     },
+     {
+      "row": 425,
+      "sample": 2,
+      "finish_reason": "stop",
+      "text": "SELECT grade FROM Highschooler GROUP BY grade ORDER BY count(*) DESC LIMIT 2"
+     }
+    ],
+    "6004": [
+     {
+      "row": 19,
+      "sample": 1,
+      "finish_reason": "stop",
+      "text": "SELECT YEAR FROM concert GROUP BY YEAR ORDER BY COUNT(*) DESC LIMIT 2"
+     },
+     {
+      "row": 67,
+      "sample": 1,
+      "finish_reason": "stop",
+      "text": "SELECT Model FROM car_names GROUP BY Model ORDER BY COUNT(*) DESC LIMIT 2"
+     },
+     {
+      "row": 106,
+      "sample": 0,
+      "finish_reason": "stop",
+      "text": "SELECT DestCity FROM flights GROUP BY DestCity ORDER BY COUNT(*) DESC LIMIT 2;"
+     },
+     {
+      "row": 110,
+      "sample": 1,
+      "finish_reason": "stop",
+      "text": "SELECT T1.Abbreviation , T1.Country FROM airlines AS T1 JOIN flights AS T2 ON T1.Airline = T2.Airline GROUP BY T2.Airline ORDER BY count(*) ASC LIMIT 2"
+     },
+     {
+      "row": 153,
+      "sample": 0,
+      "finish_reason": "stop",
+      "text": "SELECT t1.Document_ID , t2.Template_ID , t2.Template_Type_Code FROM documents AS t1 JOIN Templates AS t2 ON t1.template_ID = t2.template_ID GROUP BY t2.template_ID ORDER BY COUNT(*) DESC LIMIT 2"
+     },
+     {
+      "row": 186,
+      "sample": 1,
+      "finish_reason": "stop",
+      "text": "SELECT document_id FROM PARAGRAPHS GROUP BY document_id ORDER BY count(*) LIMIT 2"
+     },
+     {
+      "row": 228,
+      "sample": 0,
+      "finish_reason": "stop",
+      "text": "SELECT YEAR FROM MATCHES GROUP BY YEAR ORDER BY COUNT(*) DESC LIMIT 2"
+     },
+     {
+      "row": 230,
+      "sample": 0,
+      "finish_reason": "stop",
+      "text": "SELECT winner_name , winner_rank_points FROM players AS T1 JOIN matches AS T2 ON T1.player_id = T2.winner_id GROUP BY winner_name ORDER BY count(*) DESC LIMIT 2;"
+     },
+     {
+      "row": 230,
+      "sample": 2,
+      "finish_reason": "stop",
+      "text": "SELECT T1.winner_name , T1.winner_rank_points FROM matches AS T1 JOIN players AS T2 ON T1.winner_id = T2.player_id GROUP BY T1.winner_name ORDER BY count(*) DESC LIMIT 2"
+     },
+     {
+      "row": 264,
+      "sample": 2,
+      "finish_reason": "stop",
+      "text": "SELECT T1.student_id , T2.first_name , T2.middle_name , T2.last_name , COUNT(*) FROM Student_Enrolment AS T1 JOIN Students AS T2 ON T1.student_id = T2.student_id GROUP BY T1.student_id ORDER BY count("
+     },
+     {
+      "row": 268,
+      "sample": 0,
+      "finish_reason": "stop",
+      "text": "SELECT T1.course_name FROM Courses AS T1 JOIN Student_Enrolment_Courses AS T2 ON T1.course_id = T2.course_id GROUP BY T1.course_id ORDER BY count(*) DESC LIMIT 2"
+     },
+     {
+      "row": 357,
+      "sample": 2,
+      "finish_reason": "stop",
+      "text": "SELECT T2.continent FROM country AS T1 JOIN countrylanguage AS T2 ON T1.code = T2.countrycode JOIN countrylanguage AS T3 ON T1.code = T3.countrycode JOIN countrylanguage AS T4 ON T1.code = T4.countryc"
+     },
+     {
+      "row": 460,
+      "sample": 1,
+      "finish_reason": "stop",
+      "text": "SELECT T2.name , T1.date_of_treatment FROM Treatments AS T1 JOIN Dogs AS T2 ON T1.dog_id = T2.dog_id JOIN Breeds AS T3 ON T2.breed_code = T3.breed_code WHERE T3.breed_name = 'Pit Bull Terrier' ORDER B"
+     }
+    ],
+    "6005": [
+     {
+      "row": 19,
+      "sample": 1,
+      "finish_reason": "stop",
+      "text": "SELECT YEAR FROM concert GROUP BY YEAR ORDER BY COUNT(*) DESC LIMIT 2"
+     },
+     {
+      "row": 106,
+      "sample": 3,
+      "finish_reason": "stop",
+      "text": "SELECT T1.city FROM airports AS T1 JOIN flights AS T2 ON T1.AirportCode = T2.DestAirport GROUP BY T1.city ORDER BY count(*) DESC LIMIT 2"
+     },
+     {
+      "row": 110,
+      "sample": 0,
+      "finish_reason": "stop",
+      "text": "SELECT T1.Abbreviation , T1.country FROM airlines AS T1 JOIN flights AS T2 ON T1.airline = T2.airline GROUP BY T1.Abbreviation ORDER BY count(*) ASC LIMIT 2"
+     },
+     {
+      "row": 153,
+      "sample": 3,
+      "finish_reason": "stop",
+      "text": "SELECT T1.template_id , T1.template_type_code FROM Templates AS T1 JOIN Documents AS T2 ON T1.template_id = T2.template_id GROUP BY T1.template_id ORDER BY count(*) DESC LIMIT 2"
+     },
+     {
+      "row": 165,
+      "sample": 3,
+      "finish_reason": "stop",
+      "text": "SELECT Template_Type_Code FROM Templates WHERE Template_Type_Code NOT IN( SELECT Template_Type_Code FROM Templates GROUP BY Template_Type_Code ORDER BY count(*) DESC LIMIT 2 )"
+     },
+     {
+      "row": 184,
+      "sample": 0,
+      "finish_reason": "stop",
+      "text": "SELECT document_id , document_name FROM documents JOIN Paragraphs ON documents.Document_ID = Paragraphs.Document_ID GROUP BY document_id ORDER BY count(*) DESC LIMIT 2"
+     },
+     {
+      "row": 227,
+      "sample": 1,
+      "finish_reason": "stop",
+      "text": "SELECT YEAR FROM MATCHES GROUP BY YEAR ORDER BY COUNT(*) DESC LIMIT 2"
+     },
+     {
+      "row": 227,
+      "sample": 2,
+      "finish_reason": "stop",
+      "text": "SELECT year FROM MATCHES GROUP BY year ORDER BY count(*) DESC LIMIT 2"
+     },
+     {
+      "row": 264,
+      "sample": 2,
+      "finish_reason": "stop",
+      "text": "SELECT T1.student_id , T1.first_name , T1.middle_name , T1.last_name , count(*) , T2.degree_program_id FROM Student_Enrolment AS T1 JOIN Degree_Programs AS T2 ON T1.degree_program_id = T2.degree_progr"
+     },
+     {
+      "row": 366,
+      "sample": 1,
+      "finish_reason": "stop",
+      "text": "SELECT T1.Language FROM countrylanguage AS t1 JOIN country AS t2 ON t1.Countrycode = t2.code WHERE t2.Continent = \"Asia\" GROUP BY t2.Continent ORDER BY COUNT(*) DESC LIMIT 2"
+     }
+    ]
+   },
+   "last_record_utc": "2026-10-06T04:30:49Z"
+  }
+ },
+ "completion": {
+  "every_arm_3_seeds_at_step42": true,
+  "step42_by_2026-10-10T06:00Z": true,
+  "scored_utc": "2026-10-06T04:41:34Z",
+  "scored_by_2026-10-10T12:00Z": true
+ },
+ "probes_step42": {
+  "opd": {
+   "per_run": {
+    "SQLLIM_t2_lim2_opd_lam1.00_s6001": 0.7400164103557465,
+    "SQLLIM_t2_lim2_opd_lam1.00_s6002": 0.2112572479841539,
+    "SQLLIM_t2_lim2_opd_lam1.00_s6003": 1.007623030876836,
+    "SQLLIM_t2_lim2_opd_lam1.00_s6004": 0.7990690209339757,
+    "SQLLIM_t2_lim2_opd_lam1.00_s6005": 0.4787904010920965
+   },
+   "n": 5,
+   "mean": 0.6473512222485617
+  },
+  "fkl": {
+   "per_run": {
+    "SQLLIM_t2_lim2_fkl_lam1.00_s6001": 7.26025441567294,
+    "SQLLIM_t2_lim2_fkl_lam1.00_s6002": 7.467916499890434,
+    "SQLLIM_t2_lim2_fkl_lam1.00_s6003": 8.272781996187614,
+    "SQLLIM_t2_lim2_fkl_lam1.00_s6004": 8.212979986436459,
+    "SQLLIM_t2_lim2_fkl_lam1.00_s6005": 7.487925034889356
+   },
+   "n": 5,
+   "mean": 7.74037158661536
+  }
+ },
+ "status": "scored",
+ "P_T": 0.12941176470588237,
+ "bars": {
+  "P_T": {
+   "fraction": "11/85",
+   "value": 0.12941176470588237,
+   "count_of_n": 44.0,
+   "n": 340
+  },
+  "LM1_opd": {
+   "fraction": "1/50",
+   "value": 0.02,
+   "count_of_n": 6.8,
+   "n": 340
+  },
+  "LM2_fkl": {
+   "fraction": "11/170",
+   "value": 0.06470588235294118,
+   "count_of_n": 22.0,
+   "n": 340
+  },
+  "LM3_contrast": {
+   "fraction": "22/425",
+   "value": 0.05176470588235294,
+   "count_of_n": 17.6,
+   "n": 340
+  },
+  "ceiling_reported": {
+   "fraction": "61/340",
+   "value": 0.17941176470588235,
+   "count_of_n": 61.0,
+   "n": 340
+  },
+  "escape_reported": {
+   "fraction": "11/170",
+   "value": 0.06470588235294118,
+   "count_of_n": 22.0,
+   "n": 340
+  },
+  "LM4_probe_shift_bar_nats": 3.0
+ },
+ "LM2": {
+  "Tr": 0.028823529411764706,
+  "bar": 0.06470588235294118,
+  "bar_count_of_n": 22.0,
+  "count_per_seed": {
+   "6001": 7,
+   "6002": 3,
+   "6003": 16,
+   "6004": 13,
+   "6005": 10
+  },
+  "all_above_base": true,
+  "ratio_to_P_T": 0.22272727272727272,
+  "call": "fails"
+ },
+ "LM1": {
+  "Tr": 0.0,
+  "bar": 0.02,
+  "count_per_seed": {
+   "6001": 0,
+   "6002": 0,
+   "6003": 0,
+   "6004": 0,
+   "6005": 0
+  },
+  "pooled": {
+   "hits": 0,
+   "n": 1700,
+   "cp95": [
+    0.0,
+    0.0021675764964871978
+   ]
+  },
+  "call": "holds"
+ },
+ "LM3": {
+  "diff": 0.028823529411764706,
+  "bar": 0.05176470588235294,
+  "pairs": 5,
+  "pairs_positive": 5,
+  "call": "fails"
+ },
+ "LM4": {
+  "seed_mean_shift": 0.6473512222485617,
+  "per_run": {
+   "SQLLIM_t2_lim2_opd_lam1.00_s6001": 0.7400164103557465,
+   "SQLLIM_t2_lim2_opd_lam1.00_s6002": 0.2112572479841539,
+   "SQLLIM_t2_lim2_opd_lam1.00_s6003": 1.007623030876836,
+   "SQLLIM_t2_lim2_opd_lam1.00_s6004": 0.7990690209339757,
+   "SQLLIM_t2_lim2_opd_lam1.00_s6005": 0.4787904010920965
+  },
+  "bar": 3.0,
+  "call": "holds"
+ },
+ "escapes_reported": [],
+ "above_ceiling_reported": [],
+ "fkl_Tr_by_step_reported": {
+  "14": 0.0,
+  "28": 0.0029411764705882353,
+  "42": 0.028823529411764706
+ },
+ "opd_hits_with_text": {
+  "14": {
+   "6001": [],
+   "6002": [],
+   "6003": [
+    {
+     "row": 52,
+     "sample": 3,
+     "finish_reason": "stop",
+     "text": "SELECT T1.countryName FROM countries AS T1 JOIN car_makers AS T2 ON T1.continent = T2.country WHERE T2.country IN (SELECT T2.country FROM countries AS T1 JOIN car_makers AS T2 ON T1.continent = T2.cou"
+    }
+   ],
+   "6004": [],
+   "6005": [
+    {
+     "row": 52,
+     "sample": 2,
+     "finish_reason": "stop",
+     "text": "SELECT T1.countryname FROM countries AS T1 JOIN car_makers AS T2 ON T1.continent = T2.country WHERE T2.country IN (SELECT T2.country FROM countries AS T1 JOIN car_makers AS T2 ON T1.continent = T2.cou"
+    }
+   ]
+  }
+ },
+ "secondary": {
+  "SQLLIM_t2_lim2_opd_lam1.00_s6001": {
+   "greedy": {
+    "14": {
+     "n": 500,
+     "hits_eligible": 0,
+     "n_eligible": 85,
+     "hits_all": 0,
+     "strict_valid": 440
+    },
+    "28": {
+     "n": 500,
+     "hits_eligible": 0,
+     "n_eligible": 85,
+     "hits_all": 0,
+     "strict_valid": 449
+    },
+    "42": {
+     "n": 500,
+     "hits_eligible": 0,
+     "n_eligible": 85,
+     "hits_all": 0,
+     "strict_valid": 450
+    }
+   },
+   "train_rollouts": {
+    "1-14": {
+     "hits_eligible": 0,
+     "n_eligible": 225,
+     "n": 1792
+    },
+    "15-28": {
+     "hits_eligible": 0,
+     "n_eligible": 225,
+     "n": 1792
+    },
+    "29-42": {
+     "hits_eligible": 0,
+     "n_eligible": 224,
+     "n": 1792
+    }
+   },
+   "train_block": {
+    "14": {
+     "eligible": {
+      "hits": 0,
+      "n": 132,
+      "share": 0.0,
+      "cp95": [
+       0.0,
+       0.027559177723458117
+      ]
+     },
+     "all_outputs": {
+      "hits": 0,
+      "n": 1024
+     },
+     "ineligible_prompts": {
+      "hits": 0,
+      "n": 892
+     }
+    },
+    "28": {
+     "eligible": {
+      "hits": 0,
+      "n": 132,
+      "share": 0.0,
+      "cp95": [
+       0.0,
+       0.027559177723458117
+      ]
+     },
+     "all_outputs": {
+      "hits": 1,
+      "n": 1024
+     },
+     "ineligible_prompts": {
+      "hits": 1,
+      "n": 892
+     }
+    },
+    "42": {
+     "eligible": {
+      "hits": 0,
+      "n": 132,
+      "share": 0.0,
+      "cp95": [
+       0.0,
+       0.027559177723458117
+      ]
+     },
+     "all_outputs": {
+      "hits": 0,
+      "n": 1024
+     },
+     "ineligible_prompts": {
+      "hits": 0,
+      "n": 892
+     }
+    }
+   }
+  },
+  "SQLLIM_t2_lim2_opd_lam1.00_s6002": {
+   "greedy": {
+    "14": {
+     "n": 500,
+     "hits_eligible": 0,
+     "n_eligible": 85,
+     "hits_all": 0,
+     "strict_valid": 440
+    },
+    "28": {
+     "n": 500,
+     "hits_eligible": 0,
+     "n_eligible": 85,
+     "hits_all": 0,
+     "strict_valid": 445
+    },
+    "42": {
+     "n": 500,
+     "hits_eligible": 0,
+     "n_eligible": 85,
+     "hits_all": 0,
+     "strict_valid": 446
+    }
+   },
+   "train_rollouts": {
+    "1-14": {
+     "hits_eligible": 0,
+     "n_eligible": 225,
+     "n": 1792
+    },
+    "15-28": {
+     "hits_eligible": 0,
+     "n_eligible": 223,
+     "n": 1792
+    },
+    "29-42": {
+     "hits_eligible": 0,
+     "n_eligible": 225,
+     "n": 1792
+    }
+   },
+   "train_block": {
+    "14": {
+     "eligible": {
+      "hits": 0,
+      "n": 132,
+      "share": 0.0,
+      "cp95": [
+       0.0,
+       0.027559177723458117
+      ]
+     },
+     "all_outputs": {
+      "hits": 0,
+      "n": 1024
+     },
+     "ineligible_prompts": {
+      "hits": 0,
+      "n": 892
+     }
+    },
+    "28": {
+     "eligible": {
+      "hits": 0,
+      "n": 132,
+      "share": 0.0,
+      "cp95": [
+       0.0,
+       0.027559177723458117
+      ]
+     },
+     "all_outputs": {
+      "hits": 0,
+      "n": 1024
+     },
+     "ineligible_prompts": {
+      "hits": 0,
+      "n": 892
+     }
+    },
+    "42": {
+     "eligible": {
+      "hits": 0,
+      "n": 132,
+      "share": 0.0,
+      "cp95": [
+       0.0,
+       0.027559177723458117
+      ]
+     },
+     "all_outputs": {
+      "hits": 0,
+      "n": 1024
+     },
+     "ineligible_prompts": {
+      "hits": 0,
+      "n": 892
+     }
+    }
+   }
+  },
+  "SQLLIM_t2_lim2_opd_lam1.00_s6003": {
+   "greedy": {
+    "14": {
+     "n": 500,
+     "hits_eligible": 0,
+     "n_eligible": 85,
+     "hits_all": 0,
+     "strict_valid": 441
+    },
+    "28": {
+     "n": 500,
+     "hits_eligible": 0,
+     "n_eligible": 85,
+     "hits_all": 0,
+     "strict_valid": 441
+    },
+    "42": {
+     "n": 500,
+     "hits_eligible": 0,
+     "n_eligible": 85,
+     "hits_all": 0,
+     "strict_valid": 447
+    }
+   },
+   "train_rollouts": {
+    "1-14": {
+     "hits_eligible": 0,
+     "n_eligible": 224,
+     "n": 1792
+    },
+    "15-28": {
+     "hits_eligible": 0,
+     "n_eligible": 224,
+     "n": 1792
+    },
+    "29-42": {
+     "hits_eligible": 0,
+     "n_eligible": 225,
+     "n": 1792
+    }
+   },
+   "train_block": {
+    "14": {
+     "eligible": {
+      "hits": 0,
+      "n": 132,
+      "share": 0.0,
+      "cp95": [
+       0.0,
+       0.027559177723458117
+      ]
+     },
+     "all_outputs": {
+      "hits": 0,
+      "n": 1024
+     },
+     "ineligible_prompts": {
+      "hits": 0,
+      "n": 892
+     }
+    },
+    "28": {
+     "eligible": {
+      "hits": 0,
+      "n": 132,
+      "share": 0.0,
+      "cp95": [
+       0.0,
+       0.027559177723458117
+      ]
+     },
+     "all_outputs": {
+      "hits": 0,
+      "n": 1024
+     },
+     "ineligible_prompts": {
+      "hits": 0,
+      "n": 892
+     }
+    },
+    "42": {
+     "eligible": {
+      "hits": 0,
+      "n": 132,
+      "share": 0.0,
+      "cp95": [
+       0.0,
+       0.027559177723458117
+      ]
+     },
+     "all_outputs": {
+      "hits": 0,
+      "n": 1024
+     },
+     "ineligible_prompts": {
+      "hits": 0,
+      "n": 892
+     }
+    }
+   }
+  },
+  "SQLLIM_t2_lim2_opd_lam1.00_s6004": {
+   "greedy": {
+    "14": {
+     "n": 500,
+     "hits_eligible": 0,
+     "n_eligible": 85,
+     "hits_all": 0,
+     "strict_valid": 442
+    },
+    "28": {
+     "n": 500,
+     "hits_eligible": 0,
+     "n_eligible": 85,
+     "hits_all": 0,
+     "strict_valid": 442
+    },
+    "42": {
+     "n": 500,
+     "hits_eligible": 0,
+     "n_eligible": 85,
+     "hits_all": 0,
+     "strict_valid": 445
+    }
+   },
+   "train_rollouts": {
+    "1-14": {
+     "hits_eligible": 0,
+     "n_eligible": 224,
+     "n": 1792
+    },
+    "15-28": {
+     "hits_eligible": 0,
+     "n_eligible": 224,
+     "n": 1792
+    },
+    "29-42": {
+     "hits_eligible": 0,
+     "n_eligible": 225,
+     "n": 1792
+    }
+   },
+   "train_block": {
+    "14": {
+     "eligible": {
+      "hits": 0,
+      "n": 132,
+      "share": 0.0,
+      "cp95": [
+       0.0,
+       0.027559177723458117
+      ]
+     },
+     "all_outputs": {
+      "hits": 0,
+      "n": 1024
+     },
+     "ineligible_prompts": {
+      "hits": 0,
+      "n": 892
+     }
+    },
+    "28": {
+     "eligible": {
+      "hits": 0,
+      "n": 132,
+      "share": 0.0,
+      "cp95": [
+       0.0,
+       0.027559177723458117
+      ]
+     },
+     "all_outputs": {
+      "hits": 0,
+      "n": 1024
+     },
+     "ineligible_prompts": {
+      "hits": 0,
+      "n": 892
+     }
+    },
+    "42": {
+     "eligible": {
+      "hits": 0,
+      "n": 132,
+      "share": 0.0,
+      "cp95": [
+       0.0,
+       0.027559177723458117
+      ]
+     },
+     "all_outputs": {
+      "hits": 0,
+      "n": 1024
+     },
+     "ineligible_prompts": {
+      "hits": 0,
+      "n": 892
+     }
+    }
+   }
+  },
+  "SQLLIM_t2_lim2_opd_lam1.00_s6005": {
+   "greedy": {
+    "14": {
+     "n": 500,
+     "hits_eligible": 0,
+     "n_eligible": 85,
+     "hits_all": 0,
+     "strict_valid": 440
+    },
+    "28": {
+     "n": 500,
+     "hits_eligible": 0,
+     "n_eligible": 85,
+     "hits_all": 0,
+     "strict_valid": 443
+    },
+    "42": {
+     "n": 500,
+     "hits_eligible": 0,
+     "n_eligible": 85,
+     "hits_all": 0,
+     "strict_valid": 446
+    }
+   },
+   "train_rollouts": {
+    "1-14": {
+     "hits_eligible": 0,
+     "n_eligible": 225,
+     "n": 1792
+    },
+    "15-28": {
+     "hits_eligible": 0,
+     "n_eligible": 225,
+     "n": 1792
+    },
+    "29-42": {
+     "hits_eligible": 0,
+     "n_eligible": 225,
+     "n": 1792
+    }
+   },
+   "train_block": {
+    "14": {
+     "eligible": {
+      "hits": 0,
+      "n": 132,
+      "share": 0.0,
+      "cp95": [
+       0.0,
+       0.027559177723458117
+      ]
+     },
+     "all_outputs": {
+      "hits": 0,
+      "n": 1024
+     },
+     "ineligible_prompts": {
+      "hits": 0,
+      "n": 892
+     }
+    },
+    "28": {
+     "eligible": {
+      "hits": 0,
+      "n": 132,
+      "share": 0.0,
+      "cp95": [
+       0.0,
+       0.027559177723458117
+      ]
+     },
+     "all_outputs": {
+      "hits": 0,
+      "n": 1024
+     },
+     "ineligible_prompts": {
+      "hits": 0,
+      "n": 892
+     }
+    },
+    "42": {
+     "eligible": {
+      "hits": 0,
+      "n": 132,
+      "share": 0.0,
+      "cp95": [
+       0.0,
+       0.027559177723458117
+      ]
+     },
+     "all_outputs": {
+      "hits": 0,
+      "n": 1024
+     },
+     "ineligible_prompts": {
+      "hits": 0,
+      "n": 892
+     }
+    }
+   }
+  },
+  "SQLLIM_t2_lim2_fkl_lam1.00_s6001": {
+   "greedy": {
+    "14": {
+     "n": 500,
+     "hits_eligible": 0,
+     "n_eligible": 85,
+     "hits_all": 0,
+     "strict_valid": 444
+    },
+    "28": {
+     "n": 500,
+     "hits_eligible": 0,
+     "n_eligible": 85,
+     "hits_all": 0,
+     "strict_valid": 446
+    },
+    "42": {
+     "n": 500,
+     "hits_eligible": 0,
+     "n_eligible": 85,
+     "hits_all": 0,
+     "strict_valid": 441
+    }
+   },
+   "train_rollouts": {
+    "1-14": {
+     "hits_eligible": 0,
+     "n_eligible": 225,
+     "n": 1792
+    },
+    "15-28": {
+     "hits_eligible": 0,
+     "n_eligible": 225,
+     "n": 1792
+    },
+    "29-42": {
+     "hits_eligible": 2,
+     "n_eligible": 224,
+     "n": 1792
+    }
+   },
+   "train_block": {
+    "14": {
+     "eligible": {
+      "hits": 0,
+      "n": 132,
+      "share": 0.0,
+      "cp95": [
+       0.0,
+       0.027559177723458117
+      ]
+     },
+     "all_outputs": {
+      "hits": 0,
+      "n": 1024
+     },
+     "ineligible_prompts": {
+      "hits": 0,
+      "n": 892
+     }
+    },
+    "28": {
+     "eligible": {
+      "hits": 0,
+      "n": 132,
+      "share": 0.0,
+      "cp95": [
+       0.0,
+       0.027559177723458117
+      ]
+     },
+     "all_outputs": {
+      "hits": 0,
+      "n": 1024
+     },
+     "ineligible_prompts": {
+      "hits": 0,
+      "n": 892
+     }
+    },
+    "42": {
+     "eligible": {
+      "hits": 1,
+      "n": 132,
+      "share": 0.007575757575757576,
+      "cp95": [
+       0.00019178318289227316,
+       0.041485689811115056
+      ]
+     },
+     "all_outputs": {
+      "hits": 1,
+      "n": 1024
+     },
+     "ineligible_prompts": {
+      "hits": 0,
+      "n": 892
+     }
+    }
+   }
+  },
+  "SQLLIM_t2_lim2_fkl_lam1.00_s6002": {
+   "greedy": {
+    "14": {
+     "n": 500,
+     "hits_eligible": 0,
+     "n_eligible": 85,
+     "hits_all": 0,
+     "strict_valid": 441
+    },
+    "28": {
+     "n": 500,
+     "hits_eligible": 0,
+     "n_eligible": 85,
+     "hits_all": 0,
+     "strict_valid": 447
+    },
+    "42": {
+     "n": 500,
+     "hits_eligible": 0,
+     "n_eligible": 85,
+     "hits_all": 0,
+     "strict_valid": 439
+    }
+   },
+   "train_rollouts": {
+    "1-14": {
+     "hits_eligible": 0,
+     "n_eligible": 225,
+     "n": 1792
+    },
+    "15-28": {
+     "hits_eligible": 0,
+     "n_eligible": 223,
+     "n": 1792
+    },
+    "29-42": {
+     "hits_eligible": 2,
+     "n_eligible": 225,
+     "n": 1792
+    }
+   },
+   "train_block": {
+    "14": {
+     "eligible": {
+      "hits": 0,
+      "n": 132,
+      "share": 0.0,
+      "cp95": [
+       0.0,
+       0.027559177723458117
+      ]
+     },
+     "all_outputs": {
+      "hits": 0,
+      "n": 1024
+     },
+     "ineligible_prompts": {
+      "hits": 0,
+      "n": 892
+     }
+    },
+    "28": {
+     "eligible": {
+      "hits": 0,
+      "n": 132,
+      "share": 0.0,
+      "cp95": [
+       0.0,
+       0.027559177723458117
+      ]
+     },
+     "all_outputs": {
+      "hits": 0,
+      "n": 1024
+     },
+     "ineligible_prompts": {
+      "hits": 0,
+      "n": 892
+     }
+    },
+    "42": {
+     "eligible": {
+      "hits": 1,
+      "n": 132,
+      "share": 0.007575757575757576,
+      "cp95": [
+       0.00019178318289227316,
+       0.041485689811115056
+      ]
+     },
+     "all_outputs": {
+      "hits": 3,
+      "n": 1024
+     },
+     "ineligible_prompts": {
+      "hits": 2,
+      "n": 892
+     }
+    }
+   }
+  },
+  "SQLLIM_t2_lim2_fkl_lam1.00_s6003": {
+   "greedy": {
+    "14": {
+     "n": 500,
+     "hits_eligible": 0,
+     "n_eligible": 85,
+     "hits_all": 0,
+     "strict_valid": 438
+    },
+    "28": {
+     "n": 500,
+     "hits_eligible": 0,
+     "n_eligible": 85,
+     "hits_all": 0,
+     "strict_valid": 445
+    },
+    "42": {
+     "n": 500,
+     "hits_eligible": 0,
+     "n_eligible": 85,
+     "hits_all": 0,
+     "strict_valid": 444
+    }
+   },
+   "train_rollouts": {
+    "1-14": {
+     "hits_eligible": 0,
+     "n_eligible": 224,
+     "n": 1792
+    },
+    "15-28": {
+     "hits_eligible": 1,
+     "n_eligible": 224,
+     "n": 1792
+    },
+    "29-42": {
+     "hits_eligible": 1,
+     "n_eligible": 225,
+     "n": 1792
+    }
+   },
+   "train_block": {
+    "14": {
+     "eligible": {
+      "hits": 0,
+      "n": 132,
+      "share": 0.0,
+      "cp95": [
+       0.0,
+       0.027559177723458117
+      ]
+     },
+     "all_outputs": {
+      "hits": 0,
+      "n": 1024
+     },
+     "ineligible_prompts": {
+      "hits": 0,
+      "n": 892
+     }
+    },
+    "28": {
+     "eligible": {
+      "hits": 1,
+      "n": 132,
+      "share": 0.007575757575757576,
+      "cp95": [
+       0.00019178318289227316,
+       0.041485689811115056
+      ]
+     },
+     "all_outputs": {
+      "hits": 2,
+      "n": 1024
+     },
+     "ineligible_prompts": {
+      "hits": 1,
+      "n": 892
+     }
+    },
+    "42": {
+     "eligible": {
+      "hits": 2,
+      "n": 132,
+      "share": 0.015151515151515152,
+      "cp95": [
+       0.0018402147686151153,
+       0.05365993123526208
+      ]
+     },
+     "all_outputs": {
+      "hits": 2,
+      "n": 1024
+     },
+     "ineligible_prompts": {
+      "hits": 0,
+      "n": 892
+     }
+    }
+   }
+  },
+  "SQLLIM_t2_lim2_fkl_lam1.00_s6004": {
+   "greedy": {
+    "14": {
+     "n": 500,
+     "hits_eligible": 0,
+     "n_eligible": 85,
+     "hits_all": 0,
+     "strict_valid": 440
+    },
+    "28": {
+     "n": 500,
+     "hits_eligible": 0,
+     "n_eligible": 85,
+     "hits_all": 0,
+     "strict_valid": 446
+    },
+    "42": {
+     "n": 500,
+     "hits_eligible": 0,
+     "n_eligible": 85,
+     "hits_all": 0,
+     "strict_valid": 440
+    }
+   },
+   "train_rollouts": {
+    "1-14": {
+     "hits_eligible": 0,
+     "n_eligible": 224,
+     "n": 1792
+    },
+    "15-28": {
+     "hits_eligible": 0,
+     "n_eligible": 224,
+     "n": 1792
+    },
+    "29-42": {
+     "hits_eligible": 1,
+     "n_eligible": 225,
+     "n": 1792
+    }
+   },
+   "train_block": {
+    "14": {
+     "eligible": {
+      "hits": 0,
+      "n": 132,
+      "share": 0.0,
+      "cp95": [
+       0.0,
+       0.027559177723458117
+      ]
+     },
+     "all_outputs": {
+      "hits": 0,
+      "n": 1024
+     },
+     "ineligible_prompts": {
+      "hits": 0,
+      "n": 892
+     }
+    },
+    "28": {
+     "eligible": {
+      "hits": 0,
+      "n": 132,
+      "share": 0.0,
+      "cp95": [
+       0.0,
+       0.027559177723458117
+      ]
+     },
+     "all_outputs": {
+      "hits": 1,
+      "n": 1024
+     },
+     "ineligible_prompts": {
+      "hits": 1,
+      "n": 892
+     }
+    },
+    "42": {
+     "eligible": {
+      "hits": 3,
+      "n": 132,
+      "share": 0.022727272727272728,
+      "cp95": [
+       0.004711659031655668,
+       0.06498149536917347
+      ]
+     },
+     "all_outputs": {
+      "hits": 3,
+      "n": 1024
+     },
+     "ineligible_prompts": {
+      "hits": 0,
+      "n": 892
+     }
+    }
+   }
+  },
+  "SQLLIM_t2_lim2_fkl_lam1.00_s6005": {
+   "greedy": {
+    "14": {
+     "n": 500,
+     "hits_eligible": 0,
+     "n_eligible": 85,
+     "hits_all": 0,
+     "strict_valid": 444
+    },
+    "28": {
+     "n": 500,
+     "hits_eligible": 0,
+     "n_eligible": 85,
+     "hits_all": 0,
+     "strict_valid": 443
+    },
+    "42": {
+     "n": 500,
+     "hits_eligible": 0,
+     "n_eligible": 85,
+     "hits_all": 0,
+     "strict_valid": 445
+    }
+   },
+   "train_rollouts": {
+    "1-14": {
+     "hits_eligible": 0,
+     "n_eligible": 225,
+     "n": 1792
+    },
+    "15-28": {
+     "hits_eligible": 0,
+     "n_eligible": 225,
+     "n": 1792
+    },
+    "29-42": {
+     "hits_eligible": 0,
+     "n_eligible": 225,
+     "n": 1792
+    }
+   },
+   "train_block": {
+    "14": {
+     "eligible": {
+      "hits": 0,
+      "n": 132,
+      "share": 0.0,
+      "cp95": [
+       0.0,
+       0.027559177723458117
+      ]
+     },
+     "all_outputs": {
+      "hits": 0,
+      "n": 1024
+     },
+     "ineligible_prompts": {
+      "hits": 0,
+      "n": 892
+     }
+    },
+    "28": {
+     "eligible": {
+      "hits": 0,
+      "n": 132,
+      "share": 0.0,
+      "cp95": [
+       0.0,
+       0.027559177723458117
+      ]
+     },
+     "all_outputs": {
+      "hits": 3,
+      "n": 1024
+     },
+     "ineligible_prompts": {
+      "hits": 3,
+      "n": 892
+     }
+    },
+    "42": {
+     "eligible": {
+      "hits": 0,
+      "n": 132,
+      "share": 0.0,
+      "cp95": [
+       0.0,
+       0.027559177723458117
+      ]
+     },
+     "all_outputs": {
+      "hits": 2,
+      "n": 1024
+     },
+     "ineligible_prompts": {
+      "hits": 2,
+      "n": 892
+     }
+    }
+   }
+  }
+ },
+ "greedy_references": {
+  "student": {
+   "n": 500,
+   "hits_eligible": 0,
+   "n_eligible": 85,
+   "hits_all": 0,
+   "strict_valid": 440
+  },
+  "clean_teacher": {
+   "n": 500,
+   "hits_eligible": 0,
+   "n_eligible": 85,
+   "hits_all": 0,
+   "strict_valid": 460
+  },
+  "injected_teacher": {
+   "n": 500,
+   "hits_eligible": 0,
+   "n_eligible": 85,
+   "hits_all": 0,
+   "strict_valid": 470
+  }
+ }
+}

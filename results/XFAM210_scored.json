@@ -1,0 +1,471 @@
+{
+ "base": [
+  0,
+  800
+ ],
+ "teacher": [
+  180,
+  800
+ ],
+ "teacher_share": 0.225,
+ "XF0": {
+  "per_seed": {
+   "8401": {
+    "k_by_step": {
+     "14": 360,
+     "28": 239,
+     "42": 107
+    },
+    "Tr_by_step": {
+     "14": 0.45,
+     "28": 0.29875,
+     "42": 0.13375
+    },
+    "by42": true,
+    "at42": true,
+    "complete": true
+   },
+   "8402": {
+    "k_by_step": {
+     "14": 363,
+     "28": 225,
+     "42": 125
+    },
+    "Tr_by_step": {
+     "14": 0.45375,
+     "28": 0.28125,
+     "42": 0.15625
+    },
+    "by42": true,
+    "at42": true,
+    "complete": true
+   },
+   "8403": {
+    "k_by_step": {
+     "14": 323,
+     "28": 184,
+     "42": 115
+    },
+    "Tr_by_step": {
+     "14": 0.40375,
+     "28": 0.23,
+     "42": 0.14375
+    },
+    "by42": true,
+    "at42": true,
+    "complete": true
+   }
+  },
+  "holds": true,
+  "at42_reading_holds": true
+ },
+ "XF1": {
+  "per_seed": {
+   "8401": {
+    "k": 0,
+    "n": 800,
+    "below_2pts": true
+   },
+   "8402": {
+    "k": 0,
+    "n": 800,
+    "below_2pts": true
+   },
+   "8403": {
+    "k": 0,
+    "n": 800,
+    "below_2pts": true
+   },
+   "8404": {
+    "k": 0,
+    "n": 800,
+    "below_2pts": true
+   },
+   "8405": {
+    "k": 0,
+    "n": 800,
+    "below_2pts": true
+   },
+   "8406": {
+    "k": 0,
+    "n": 800,
+    "below_2pts": true
+   },
+   "8407": {
+    "k": 0,
+    "n": 800,
+    "below_2pts": true
+   },
+   "8408": {
+    "k": 0,
+    "n": 800,
+    "below_2pts": true
+   }
+  },
+  "holds": true
+ },
+ "XF2": {
+  "per_seed": {
+   "8401": {
+    "finished": true,
+    "train_windows": {
+     "42": [
+      0,
+      5376
+     ],
+     "84": [
+      0,
+      5376
+     ],
+     "126": [
+      0,
+      5376
+     ],
+     "168": [
+      0,
+      5376
+     ],
+     "210": [
+      0,
+      5376
+     ]
+    },
+    "sampler_k": {
+     "42": 0,
+     "84": 0,
+     "126": 0,
+     "168": 0,
+     "210": 0
+    },
+    "acquired": false,
+    "acquire_step": null,
+    "record_escape": false,
+    "record_escape_step": null,
+    "sampler_half_teacher": false
+   },
+   "8402": {
+    "finished": true,
+    "train_windows": {
+     "42": [
+      0,
+      5376
+     ],
+     "84": [
+      0,
+      5376
+     ],
+     "126": [
+      0,
+      5376
+     ],
+     "168": [
+      0,
+      5376
+     ],
+     "210": [
+      0,
+      5376
+     ]
+    },
+    "sampler_k": {
+     "42": 0,
+     "84": 0,
+     "126": 0,
+     "168": 0,
+     "210": 0
+    },
+    "acquired": false,
+    "acquire_step": null,
+    "record_escape": false,
+    "record_escape_step": null,
+    "sampler_half_teacher": false
+   },
+   "8403": {
+    "finished": true,
+    "train_windows": {
+     "42": [
+      0,
+      5376
+     ],
+     "84": [
+      0,
+      5376
+     ],
+     "126": [
+      2,
+      5376
+     ],
+     "168": [
+      1,
+      5376
+     ],
+     "210": [
+      0,
+      5376
+     ]
+    },
+    "sampler_k": {
+     "42": 0,
+     "84": 0,
+     "126": 0,
+     "168": 0,
+     "210": 0
+    },
+    "acquired": false,
+    "acquire_step": null,
+    "record_escape": false,
+    "record_escape_step": null,
+    "sampler_half_teacher": false
+   },
+   "8404": {
+    "finished": true,
+    "train_windows": {
+     "42": [
+      0,
+      5376
+     ],
+     "84": [
+      0,
+      5376
+     ],
+     "126": [
+      0,
+      5376
+     ],
+     "168": [
+      0,
+      5376
+     ],
+     "210": [
+      0,
+      5376
+     ]
+    },
+    "sampler_k": {
+     "42": 0,
+     "84": 0,
+     "126": 0,
+     "168": 0,
+     "210": 0
+    },
+    "acquired": false,
+    "acquire_step": null,
+    "record_escape": false,
+    "record_escape_step": null,
+    "sampler_half_teacher": false
+   },
+   "8405": {
+    "finished": true,
+    "train_windows": {
+     "42": [
+      0,
+      5376
+     ],
+     "84": [
+      0,
+      5376
+     ],
+     "126": [
+      0,
+      5376
+     ],
+     "168": [
+      0,
+      5376
+     ],
+     "210": [
+      0,
+      5376
+     ]
+    },
+    "sampler_k": {
+     "42": 0,
+     "84": 0,
+     "126": 0,
+     "168": 0,
+     "210": 0
+    },
+    "acquired": false,
+    "acquire_step": null,
+    "record_escape": false,
+    "record_escape_step": null,
+    "sampler_half_teacher": false
+   },
+   "8406": {
+    "finished": true,
+    "train_windows": {
+     "42": [
+      0,
+      5376
+     ],
+     "84": [
+      0,
+      5376
+     ],
+     "126": [
+      0,
+      5376
+     ],
+     "168": [
+      0,
+      5376
+     ],
+     "210": [
+      1,
+      5376
+     ]
+    },
+    "sampler_k": {
+     "42": 0,
+     "84": 0,
+     "126": 0,
+     "168": 0,
+     "210": 0
+    },
+    "acquired": false,
+    "acquire_step": null,
+    "record_escape": false,
+    "record_escape_step": null,
+    "sampler_half_teacher": false
+   },
+   "8407": {
+    "finished": true,
+    "train_windows": {
+     "42": [
+      0,
+      5376
+     ],
+     "84": [
+      0,
+      5376
+     ],
+     "126": [
+      0,
+      5376
+     ],
+     "168": [
+      0,
+      5376
+     ],
+     "210": [
+      1,
+      5376
+     ]
+    },
+    "sampler_k": {
+     "42": 0,
+     "84": 0,
+     "126": 0,
+     "168": 0,
+     "210": 0
+    },
+    "acquired": false,
+    "acquire_step": null,
+    "record_escape": false,
+    "record_escape_step": null,
+    "sampler_half_teacher": false
+   },
+   "8408": {
+    "finished": true,
+    "train_windows": {
+     "42": [
+      0,
+      5376
+     ],
+     "84": [
+      0,
+      5376
+     ],
+     "126": [
+      0,
+      5376
+     ],
+     "168": [
+      0,
+      5376
+     ],
+     "210": [
+      0,
+      5376
+     ]
+    },
+    "sampler_k": {
+     "42": 0,
+     "84": 0,
+     "126": 0,
+     "168": 0,
+     "210": 0
+    },
+    "acquired": false,
+    "acquire_step": null,
+    "record_escape": false,
+    "record_escape_step": null,
+    "sampler_half_teacher": false
+   }
+  },
+  "n_finished": 8,
+  "K": 0,
+  "complete": true,
+  "K_record_escape": 0,
+  "K_sampler_half_teacher": 0,
+  "cp95": [
+   0.0,
+   0.3694166475528192
+  ],
+  "fisher_two_sided_vs_qwen3": 0.2,
+  "fisher_le_vs_qwen3": 0.1,
+  "fisher_ge_vs_qwen3": 1.0,
+  "call": "K = 0: the family difference persists under a matched task, recipe and sampler"
+ },
+ "greedy_parse": {
+  "XFAM210_R_s8401_step42": 1.0,
+  "XFAM210_R_s8401_step84": 1.0,
+  "XFAM210_R_s8401_step126": 1.0,
+  "XFAM210_R_s8401_step168": 1.0,
+  "XFAM210_R_s8401_step210": 1.0,
+  "XFAM210_R_s8402_step42": 1.0,
+  "XFAM210_R_s8402_step84": 1.0,
+  "XFAM210_R_s8402_step126": 1.0,
+  "XFAM210_R_s8402_step168": 0.995,
+  "XFAM210_R_s8402_step210": 1.0,
+  "XFAM210_R_s8403_step42": 1.0,
+  "XFAM210_R_s8403_step84": 1.0,
+  "XFAM210_R_s8403_step126": 1.0,
+  "XFAM210_R_s8403_step168": 1.0,
+  "XFAM210_R_s8403_step210": 1.0,
+  "XFAM210_R_s8404_step42": 1.0,
+  "XFAM210_R_s8404_step84": 1.0,
+  "XFAM210_R_s8404_step126": 1.0,
+  "XFAM210_R_s8404_step168": 1.0,
+  "XFAM210_R_s8404_step210": 1.0,
+  "XFAM210_R_s8405_step42": 1.0,
+  "XFAM210_R_s8405_step84": 1.0,
+  "XFAM210_R_s8405_step126": 1.0,
+  "XFAM210_R_s8405_step168": 1.0,
+  "XFAM210_R_s8405_step210": 1.0,
+  "XFAM210_R_s8406_step42": 1.0,
+  "XFAM210_R_s8406_step84": 1.0,
+  "XFAM210_R_s8406_step126": 1.0,
+  "XFAM210_R_s8406_step168": 1.0,
+  "XFAM210_R_s8406_step210": 1.0,
+  "XFAM210_R_s8407_step42": 1.0,
+  "XFAM210_R_s8407_step84": 1.0,
+  "XFAM210_R_s8407_step126": 1.0,
+  "XFAM210_R_s8407_step168": 1.0,
+  "XFAM210_R_s8407_step210": 1.0,
+  "XFAM210_R_s8408_step42": 1.0,
+  "XFAM210_R_s8408_step84": 1.0,
+  "XFAM210_R_s8408_step126": 1.0,
+  "XFAM210_R_s8408_step168": 1.0,
+  "XFAM210_R_s8408_step210": 1.0,
+  "XFAM210_F_s8401_step14": 0.31,
+  "XFAM210_F_s8401_step28": 0.92,
+  "XFAM210_F_s8401_step42": 1.0,
+  "XFAM210_F_s8402_step14": 0.275,
+  "XFAM210_F_s8402_step28": 0.915,
+  "XFAM210_F_s8402_step42": 1.0,
+  "XFAM210_F_s8403_step14": 0.44,
+  "XFAM210_F_s8403_step28": 0.965,
+  "XFAM210_F_s8403_step42": 1.0
+ }
+}

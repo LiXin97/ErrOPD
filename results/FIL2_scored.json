@@ -1,0 +1,540 @@
+{
+ "mode": "score",
+ "scored_utc": "2026-10-07T05:39:34.508585+00:00",
+ "base": {
+  "k1": 0,
+  "n": 808
+ },
+ "teacher": {
+  "k1": 176,
+  "n": 808,
+  "share": 0.21782178217821782
+ },
+ "bar_scale": 1.122792691640298,
+ "probe_base_mean": -16.20672032871053,
+ "arms": {
+  "RA": {
+   "seeds": [
+    3001,
+    3002,
+    3003
+   ],
+   "steps": {
+    "14": {
+     "k1_per_seed": [
+      221,
+      87,
+      231
+     ],
+     "n_per_seed": [
+      808,
+      808,
+      808
+     ],
+     "pooled": 539,
+     "n": 2424,
+     "cp95": [
+      0.2059428948202977,
+      0.23945008121714795
+     ],
+     "Tr": 0.22235973597359737,
+     "Tr_ci95": [
+      0.11138613861386139,
+      0.30198019801980197
+     ],
+     "other_pooled": 490,
+     "labels": [
+      {
+       "valid": 393,
+       "k1_trunc_realids": 221,
+       "short_list": 187,
+       "hallucinated_id": 2,
+       "malformed_json": 5
+      },
+      {
+       "k1_trunc_realids": 87,
+       "valid": 644,
+       "short_list": 74,
+       "malformed_json": 3
+      },
+      {
+       "k1_trunc_realids": 231,
+       "valid": 358,
+       "short_list": 215,
+       "malformed_json": 4
+      }
+     ],
+     "probe_drift_per_seed": [
+      15.551239142844025,
+      13.68537445553995,
+      15.51334116852663
+     ],
+     "escapes": [
+      3001,
+      3003
+     ]
+    },
+    "28": {
+     "k1_per_seed": [
+      159,
+      187,
+      200
+     ],
+     "n_per_seed": [
+      808,
+      808,
+      808
+     ],
+     "pooled": 546,
+     "n": 2424,
+     "cp95": [
+      0.2087510627217739,
+      0.24241043669021473
+     ],
+     "Tr": 0.22524752475247525,
+     "Tr_ci95": [
+      0.18811881188118812,
+      0.26278877887788776
+     ],
+     "other_pooled": 124,
+     "labels": [
+      {
+       "valid": 600,
+       "k1_trunc_realids": 159,
+       "short_list": 32,
+       "malformed_json": 3,
+       "extra_items": 12,
+       "hallucinated_id": 2
+      },
+      {
+       "k1_trunc_realids": 187,
+       "malformed_json": 4,
+       "valid": 585,
+       "short_list": 19,
+       "extra_items": 11,
+       "hallucinated_id": 2
+      },
+      {
+       "k1_trunc_realids": 200,
+       "valid": 569,
+       "extra_items": 12,
+       "short_list": 25,
+       "malformed_json": 2
+      }
+     ],
+     "probe_drift_per_seed": [
+      14.833619751672323,
+      14.868713818458158,
+      14.995794137441129
+     ],
+     "escapes": [
+      3001,
+      3002,
+      3003
+     ]
+    },
+    "42": {
+     "k1_per_seed": [
+      166,
+      174,
+      147
+     ],
+     "n_per_seed": [
+      808,
+      808,
+      808
+     ],
+     "pooled": 487,
+     "n": 2424,
+     "cp95": [
+      0.18511948985230475,
+      0.21742167435831528
+     ],
+     "Tr": 0.2009075907590759,
+     "Tr_ci95": [
+      0.17202970297029702,
+      0.23143564356435645
+     ],
+     "other_pooled": 46,
+     "labels": [
+      {
+       "valid": 625,
+       "k1_trunc_realids": 166,
+       "short_list": 6,
+       "extra_items": 7,
+       "hallucinated_id": 3,
+       "malformed_json": 1
+      },
+      {
+       "valid": 625,
+       "k1_trunc_realids": 174,
+       "short_list": 5,
+       "malformed_json": 1,
+       "extra_items": 2,
+       "extra_text": 1
+      },
+      {
+       "valid": 641,
+       "k1_trunc_realids": 147,
+       "short_list": 12,
+       "hallucinated_id": 2,
+       "unterminated": 1,
+       "extra_items": 5
+      }
+     ],
+     "probe_drift_per_seed": [
+      14.534506147401206,
+      14.916470691647957,
+      14.571409187833584
+     ],
+     "escapes": [
+      3001,
+      3002,
+      3003
+     ]
+    }
+   },
+   "class": "F+",
+   "N2_specific": true,
+   "N1": {
+    "mode_fp64_floor_every_step": true,
+    "bars_ok": true,
+    "banner_snapshot_ok": [
+     true,
+     true,
+     true
+    ],
+    "null": false,
+    "normdev_mean": 1.6163230406000968e-08,
+    "cos_to_g1_mean": 0.9999999913372218,
+    "zero_want_share": 0.0
+   },
+   "P_col_steps1_14_per_seed": {
+    "3001": 0.8794740074120054,
+    "3002": 0.9025285163007414,
+    "3003": 0.8753337198051645
+   },
+   "P_col_steps1_14": 0.8857787478393039,
+   "dec_target_share_steps1_5": 0.1417040349116947,
+   "dec_g1_share_steps1_5": 0.00034020153440103795,
+   "dlogp_err_dec_steps1_14_per_seed": {
+    "3001": 1.1318249613046647,
+    "3002": 1.11528529971838,
+    "3003": 1.3877437909398698
+   },
+   "clip_binding_steps_per_seed": {
+    "3001": [
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15
+    ],
+    "3002": [
+     9,
+     10,
+     11,
+     12,
+     13
+    ],
+    "3003": [
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16
+    ]
+   },
+   "grad_norm_mean_per_seed": {
+    "3001": 1.8680894406778472,
+    "3002": 0.8202685355430558,
+    "3003": 2.0448335309823356
+   },
+   "update_norm_arm_mean": 0.0234757943846774,
+   "flags": {
+    "probe_discordance": false,
+    "step": false
+   },
+   "bars": {
+    "n": 2424,
+    "fplus_pooled": 273,
+    "fplus_seed": 19,
+    "f0_pooled_max": 54,
+    "escape": 91,
+    "Tr_plus": 0.1122792691640298,
+    "Tr_zero": 0.022455853832805957
+   }
+  },
+  "F": {
+   "seeds": [
+    3001,
+    3002,
+    3003
+   ],
+   "steps": {
+    "14": {
+     "k1_per_seed": [
+      0,
+      0,
+      0
+     ],
+     "n_per_seed": [
+      808,
+      808,
+      808
+     ],
+     "pooled": 0,
+     "n": 2424,
+     "cp95": [
+      0.0,
+      0.0015206575831140591
+     ],
+     "Tr": 0.0,
+     "Tr_ci95": [
+      0.0,
+      0.0
+     ],
+     "other_pooled": 8,
+     "labels": [
+      {
+       "valid": 804,
+       "malformed_json": 3,
+       "hallucinated_id": 1
+      },
+      {
+       "valid": 807,
+       "hallucinated_id": 1
+      },
+      {
+       "valid": 805,
+       "hallucinated_id": 2,
+       "malformed_json": 1
+      }
+     ],
+     "probe_drift_per_seed": [
+      2.3570911701439776,
+      1.5705951533338265,
+      1.871608176555716
+     ],
+     "escapes": []
+    },
+    "28": {
+     "k1_per_seed": [
+      0,
+      0,
+      0
+     ],
+     "n_per_seed": [
+      808,
+      808,
+      808
+     ],
+     "pooled": 0,
+     "n": 2424,
+     "cp95": [
+      0.0,
+      0.0015206575831140591
+     ],
+     "Tr": 0.0,
+     "Tr_ci95": [
+      0.0,
+      0.0
+     ],
+     "other_pooled": 12,
+     "labels": [
+      {
+       "valid": 805,
+       "malformed_json": 1,
+       "short_list": 1,
+       "hallucinated_id": 1
+      },
+      {
+       "valid": 803,
+       "hallucinated_id": 3,
+       "malformed_json": 2
+      },
+      {
+       "valid": 804,
+       "short_list": 1,
+       "unterminated": 1,
+       "malformed_json": 1,
+       "hallucinated_id": 1
+      }
+     ],
+     "probe_drift_per_seed": [
+      4.994527854381181,
+      4.2942293735730495,
+      4.262255784571602
+     ],
+     "escapes": []
+    },
+    "42": {
+     "k1_per_seed": [
+      0,
+      0,
+      0
+     ],
+     "n_per_seed": [
+      808,
+      808,
+      808
+     ],
+     "pooled": 0,
+     "n": 2424,
+     "cp95": [
+      0.0,
+      0.0015206575831140591
+     ],
+     "Tr": 0.0,
+     "Tr_ci95": [
+      0.0,
+      0.0
+     ],
+     "other_pooled": 18,
+     "labels": [
+      {
+       "valid": 802,
+       "hallucinated_id": 2,
+       "short_list": 4
+      },
+      {
+       "valid": 805,
+       "hallucinated_id": 1,
+       "malformed_json": 1,
+       "short_list": 1
+      },
+      {
+       "valid": 799,
+       "short_list": 2,
+       "hallucinated_id": 3,
+       "extra_text": 3,
+       "malformed_json": 1
+      }
+     ],
+     "probe_drift_per_seed": [
+      6.803093342291119,
+      6.181982630068591,
+      4.928364684716319
+     ],
+     "escapes": []
+    }
+   },
+   "class": "F0",
+   "N2_specific": false,
+   "N1": {
+    "e1b_clauses": {
+     "3001": {
+      "mode": "pass",
+      "applied": "pass",
+      "identity": "pass",
+      "fp64": "pass",
+      "floor": "pass",
+      "normdev_mean": "pass",
+      "normdev_max": "pass",
+      "cos_to_d_mean": "pass",
+      "cos_to_d_min": "pass",
+      "zero_want_share": "pass",
+      "zerosum_rel_max": "pass",
+      "want_sum_dec_eq_g1_sum_dec": "pass",
+      "app_over_g1_dec": "pass",
+      "decision_share_mean_steps1_14": "pass",
+      "INFO_decision_share_mean_run": "info",
+      "banner": "pass",
+      "snapshot": "pass"
+     },
+     "3002": {
+      "mode": "pass",
+      "applied": "pass",
+      "identity": "pass",
+      "fp64": "pass",
+      "floor": "pass",
+      "normdev_mean": "pass",
+      "normdev_max": "pass",
+      "cos_to_d_mean": "pass",
+      "cos_to_d_min": "pass",
+      "zero_want_share": "pass",
+      "zerosum_rel_max": "pass",
+      "want_sum_dec_eq_g1_sum_dec": "pass",
+      "app_over_g1_dec": "pass",
+      "decision_share_mean_steps1_14": "pass",
+      "INFO_decision_share_mean_run": "info",
+      "banner": "pass",
+      "snapshot": "pass"
+     },
+     "3003": {
+      "mode": "pass",
+      "applied": "pass",
+      "identity": "pass",
+      "fp64": "pass",
+      "floor": "pass",
+      "normdev_mean": "pass",
+      "normdev_max": "pass",
+      "cos_to_d_mean": "pass",
+      "cos_to_d_min": "pass",
+      "zero_want_share": "pass",
+      "zerosum_rel_max": "pass",
+      "want_sum_dec_eq_g1_sum_dec": "pass",
+      "app_over_g1_dec": "pass",
+      "decision_share_mean_steps1_14": "pass",
+      "INFO_decision_share_mean_run": "info",
+      "banner": "pass",
+      "snapshot": "pass"
+     }
+    },
+    "failed": {},
+    "null": false
+   },
+   "P_col_steps1_14_per_seed": {
+    "3001": 0.9186419866867724,
+    "3002": 0.9166998907757247,
+    "3003": 0.9188607227937411
+   },
+   "P_col_steps1_14": 0.9180675334187459,
+   "dec_target_share_steps1_5": 0.0003246199378603472,
+   "dec_g1_share_steps1_5": 0.000320864306597738,
+   "dlogp_err_dec_steps1_14_per_seed": {
+    "3001": 0.2020082984651838,
+    "3002": 0.11941928522927421,
+    "3003": 0.14062510217939103
+   },
+   "clip_binding_steps_per_seed": {
+    "3001": [],
+    "3002": [],
+    "3003": []
+   },
+   "grad_norm_mean_per_seed": {
+    "3001": 0.19062079169920512,
+    "3002": 0.2291407012158916,
+    "3003": 0.2138892085779281
+   },
+   "update_norm_arm_mean": 0.02007799937116267,
+   "flags": {
+    "probe_discordance": false,
+    "step": false
+   },
+   "bars": {
+    "n": 2424,
+    "fplus_pooled": 273,
+    "fplus_seed": 19,
+    "f0_pooled_max": 54,
+    "escape": 91,
+    "Tr_plus": 0.1122792691640298,
+    "Tr_zero": 0.022455853832805957
+   }
+  }
+ },
+ "classes": {
+  "RA": "F+",
+  "F": "F0"
+ },
+ "calls": {
+  "FIL2_RA_Fplus": true,
+  "FIL2_F_Ftilde": false
+ },
+ "reading_F": "removing the magnitude at the decision stops forward KL's transmission on this pair (stated as measured on this pair only)"
+}
