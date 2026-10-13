@@ -5,7 +5,8 @@ Xin Li, Hao Jiang, Annan Wang, Yichi Zhang, Chau Yuen (Nanyang Technological Uni
 This release covers the experiments behind Table 1 (error transmission under reverse-KL and forward-KL on-policy distillation and
 sequence-level KD, four model families), Table 2 (duplicated IDs, teacher error rate, the two SQL errors), the cross-task code
 (passage reranking and entity extraction; code only), the figure and table scripts, and the frozen per-run results they read.
-Raw data, model weights and rollouts are not included.
+Data and model checkpoints are on Hugging Face ([collection](https://huggingface.co/collections/XINLI1997/erropd); see [Data and checkpoints](#data-and-checkpoints)); rollouts are
+not included.
 
 ## Layout
 
@@ -91,12 +92,21 @@ This redraws the teacher-rate, starting-rate/quality, greedy-evaluation and long
 output is pixel-identical to the paper's figures. The other figures read raw rollouts that are not released. Nine tables were
 transcribed from scorer outputs rather than generated; `tables_frozen/` holds every table as printed.
 
+## Data and checkpoints
+
+Everything is on Hugging Face, collected at https://huggingface.co/collections/XINLI1997/erropd.
+
+| | |
+|---|---|
+| Data | [ErrOPD-ESCI](https://huggingface.co/datasets/XINLI1997/ErrOPD-ESCI) (Apache-2.0), [ErrOPD-Spider](https://huggingface.co/datasets/XINLI1997/ErrOPD-Spider) (CC BY-SA 4.0; the SQLite databases come from the official Spider release), [ErrOPD-Fashion](https://huggingface.co/datasets/XINLI1997/ErrOPD-Fashion) (derived from Amazon Reviews 2023, research use only; our scores and list structure CC BY 4.0) |
+| Checkpoints | 34 models: the error-injected teachers, the students' starting points, and one reverse-KL and one forward-KL student after 42 steps for each main setting, plus the Qwen3 lambda 1.40 student. Names follow `ErrOPD-<model>-<role>-<task>`; Llama-based models start with `Llama-` as the Llama license requires. |
+
 ## Not in this release
 
-Raw and injected data (build scripts only; ESCI, Spider, CoNLL-2003, MS MARCO and TREC-DL must be obtained from their sources;
-the Fashion lists start from the rubric-scored review file described in Appendix B, whose scoring step is not included),
-model weights, rollouts, the appendix-only experiments, and our internal run records. Some launchers still call helpers that were
-part of our job infrastructure and are not included; the commands in `runs/` show how each was used.
+Rollouts, the data and checkpoints of the appendix-only experiments, the cross-task data (CoNLL-2003, MS MARCO and TREC-DL must be
+obtained from their sources; build scripts only), the step that scored the Fashion reviews (the scores themselves are in
+ErrOPD-Fashion), and our internal run records. Some launchers still call helpers that were part of our job infrastructure and are
+not included; the commands in `runs/` show how each was used.
 
 ## Compute
 
