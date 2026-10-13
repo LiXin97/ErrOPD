@@ -215,7 +215,7 @@
         reverse KL <b>delays</b> such errors rather than blocking them.</p>
 
       <figure class="teaser">
-        <button class="zoom" type="button" aria-label="Enlarge figure"><img src="assets/fig1_teaser.webp" width="1456" height="759" alt="Transmission of the injected error over training steps: forward-KL OPD rises to about 18 points within 42 steps; reverse-KL OPD stays at zero, while 3 of 8 seeds acquire it by step 210."></button>
+        <button class="zoom" type="button" aria-label="Enlarge figure"><img src="assets/fig1_teaser_web.webp" width="1280" height="595" alt="Transmission of the injected error over training steps: forward-KL OPD rises to about 18 points within 42 steps; reverse-KL OPD stays at zero, while 3 of 8 seeds acquire it by step 210."></button>
         <figcaption><b>Forward-KL OPD transmits an injected teacher error within 42 steps and reverse-KL OPD does not, at a learning rate of 10<sup>−6</sup>.</b> y: rise in the student's rate of closing the list early, in points. Dashed: teacher. Qwen3-1.7B student, ESCI.</figcaption>
       </figure>
     </div>
@@ -293,7 +293,7 @@
       <h3>Forward KL takes on the error in every setting; reverse KL does not, within 42 steps.</h3>
     </div>
     <figure class="figcol">
-      <button class="zoom" type="button" aria-label="Enlarge figure"><img src="assets/fig_dynamics.webp" width="1890" height="534" loading="lazy" alt="Training dynamics across settings: forward-KL OPD rises towards the teacher's error rate in every panel, reverse-KL OPD stays near zero."></button>
+      <button class="zoom" type="button" aria-label="Enlarge figure"><img src="assets/fig_dynamics_web.webp" width="1584" height="447" loading="lazy" alt="Training dynamics across settings: forward-KL OPD rises towards the teacher's error rate in every panel, reverse-KL OPD stays near zero."></button>
       <figcaption>Forward-KL OPD takes on the injected error in every setting, and reverse-KL OPD at λ = 1 does not, within 42 steps.</figcaption>
     </figure>
 
@@ -301,7 +301,7 @@
       <h3>It holds at every teacher error rate.</h3>
       <p>From teachers that err on 2% of samples to 78%, and reverse KL's updates land away from the error decision.</p>
       <figure class="medium">
-        <button class="zoom" type="button" aria-label="Enlarge figure"><img src="assets/fig_rate.webp" width="1450" height="768" loading="lazy" alt="(a) Transmission versus teacher error rate for both objectives; (b) where reverse-KL updates land."></button>
+        <button class="zoom" type="button" aria-label="Enlarge figure"><img src="assets/fig_rate_web.webp" width="1144" height="606" loading="lazy" alt="(a) Transmission versus teacher error rate for both objectives; (b) where reverse-KL updates land."></button>
         <figcaption>(a) Forward KL transmits the error at every teacher error rate while reverse KL does not; (b) reverse KL's updates land away from the error decision.</figcaption>
       </figure>
 
@@ -312,7 +312,7 @@
       <h3>Reverse KL can delay the error rather than block it.</h3>
     </div>
     <figure class="figcol">
-      <button class="zoom" type="button" aria-label="Enlarge figure"><img src="assets/fig_delay.webp" width="1890" height="645" loading="lazy" alt="Delay on Qwen3, ESCI: at ten times the learning rate the error appears and recedes; over 210 steps 3 of 8 seeds acquire it; 5 of 5 under full-vocabulary reverse KL."></button>
+      <button class="zoom" type="button" aria-label="Enlarge figure"><img src="assets/fig_delay_web.webp" width="1584" height="540" loading="lazy" alt="Delay on Qwen3, ESCI: at ten times the learning rate the error appears and recedes; over 210 steps 3 of 8 seeds acquire it; 5 of 5 under full-vocabulary reverse KL."></button>
       <figcaption>Reverse-KL OPD can delay the teacher's error rather than block it (Qwen3, ESCI): (a) at ten times the learning rate it appears and recedes, (b) over 210 steps 3 of 8 seeds acquire it, and 5 of 5 under full-vocabulary reverse KL.</figcaption>
     </figure>
 
@@ -320,7 +320,7 @@
       <h3>When reverse KL does transmit.</h3>
     </div>
     <figure class="figcol">
-      <button class="zoom" type="button" aria-label="Enlarge figure"><img src="assets/fig_when.webp" width="1890" height="540" loading="lazy" alt="(a) Reverse-KL OPD transmits from students that already make the error on 0.11–0.33% of samples or more; (b, c) at equal quality, forward-KL checkpoints carry the error and reverse-KL ones mostly do not."></button>
+      <button class="zoom" type="button" aria-label="Enlarge figure"><img src="assets/fig_when_web.webp" width="1584" height="452" loading="lazy" alt="(a) Reverse-KL OPD transmits from students that already make the error on 0.11–0.33% of samples or more; (b, c) at equal quality, forward-KL checkpoints carry the error and reverse-KL ones mostly do not."></button>
       <figcaption>(a) Reverse-KL OPD transmits the error from students that already make it on a pair-dependent 0.11–0.33% of samples or more, and (b, c) at equal quality forward-KL checkpoints carry it and reverse-KL ones mostly do not. Errors coupled to a frequent decision also transmit, and extrapolation amplifies what has transmitted.</figcaption>
     </figure>
   </section>
