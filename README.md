@@ -1,30 +1,164 @@
-# ErrOPD: code for "When Does On-Policy Distillation Transfer Teacher Errors?"
+<h1 align="center">ErrOPD</h1>
 
-Xin Li, Hao Jiang, Annan Wang, Yichi Zhang, Chau Yuen (Nanyang Technological University, Singapore). Project page: https://lixin.ai/ErrOPD
+<p align="center"><b>When Does On-Policy Distillation Transfer Teacher Errors?</b></p>
 
-This release covers the experiments behind Table 1 (error transmission under reverse-KL and forward-KL on-policy distillation and
-sequence-level KD, four model families), Table 2 (duplicated IDs, teacher error rate, the two SQL errors), the cross-task code
-(passage reranking and entity extraction; code only), the figure and table scripts, and the frozen per-run results they read.
-Data and model checkpoints are on Hugging Face ([collection](https://huggingface.co/collections/XINLI1997/erropd); see [Data and checkpoints](#data-and-checkpoints)); rollouts are
-not included.
+<p align="center">
+  <a href="https://arxiv.org/abs/2605.08737"><img src="https://img.shields.io/badge/arXiv-2605.08737-b31b1b.svg" alt="arXiv"></a>
+  <a href="https://lixin.ai/ErrOPD"><img src="https://img.shields.io/badge/Project-page-1b1f24.svg" alt="Project page"></a>
+  <a href="https://huggingface.co/collections/XINLI1997/erropd"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-models%20%26%20data-ffcc4d.svg" alt="Hugging Face"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License: MIT"></a>
+</p>
 
-## Layout
+<p align="center">Xin Li, Hao Jiang, Annan Wang, Yichi Zhang, Chau Yuen<br>Nanyang Technological University, Singapore</p>
 
-| Path | Contents |
-|---|---|
-| `verl_patch/gopd.patch` | ExOPD's per-token estimator and our loss-mode switches, as a diff against the verl fork released with ExOPD (RUCBM/G-OPD, commit `d6cb4f7`, verl 0.6.1) |
-| `verl_patch/verl_q35.patch` | The same estimator ported unchanged into upstream verl (`6eeb5711`, 0.8.0.dev), used for the Qwen3.5 and Olmo 3 runs |
-| `scripts/data_*.py` | Data construction and error injection (`data_inject.py`: early close, duplicated ID, extra item; `--frac` sets the teacher's error rate) |
-| `scripts/sft_*.sh`, `configs/sft/` | Supervised fine-tuning of teachers and students (LlamaFactory) |
-| `scripts/opd_*.sh` | On-policy distillation launchers. `opd_arms.sh` maps `ARM` to the loss mode: `vanilla` = reverse KL with ExOPD's estimator, `fkl` = forward KL on one teacher sample per student position, `rkl` = full-vocabulary reverse KL |
-| `scripts/seqkd_*.sh` | Sequence-level KD (teacher samples, then SFT) |
-| `scripts/eval_*` | Greedy evaluation with the strict parser, temperature-1 sampling on held-out prompts, response labelling (`eval_labels.py`), probes |
-| `scripts/score_*.py` | Scorers. `score_core.py` defines the error share and transmission (step-k share minus the starting checkpoint's share, in points) with bootstrap intervals over prompts and seeds |
-| `scripts/fig_*.py` | Figure and table scripts |
-| `runs/*.sh` | The commands as launched for every run of each block, in launch order |
-| `results/` | Frozen per-run scores (JSON/CSV) that the figure and table scripts read |
-| `tables_frozen/` | LaTeX of every table in the paper |
-| `scripts/env.sh`, `scripts/env_q35.sh` | Interpreter and tree paths (set these first) |
+A teacher that makes a rare mistake can pass it to its student during on-policy distillation (OPD). Whether it does depends on the
+direction of the KL: **forward-KL OPD copies the mistake within 42 steps, reverse-KL OPD does not**, and reverse KL delays such errors
+rather than blocking them. This repository has the code, the data and the 34 checkpoints behind the paper.
+
+<p align="center"><img src="assets/teaser.png" width="600" alt="Forward-KL OPD picks up the teacher's error within 42 steps; reverse-KL OPD stays at zero, while 3 of 8 seeds acquire it by step 210."></p>
+
+## News
+
+- **2026-10-13**: code, three datasets and 34 checkpoints released ([Hugging Face collection](https://huggingface.co/collections/XINLI1997/erropd)).
+- **2026-10-12**: project page online at [lixin.ai/ErrOPD](https://lixin.ai/ErrOPD).
+
+## The idea in 30 seconds
+
+- **Plant one known mistake.** Teachers are fine-tuned to close a JSON ranking list one item early in about 20% of their outputs.
+  Their students almost never do this.
+- **Distill two ways, everything else fixed.** Reverse-KL OPD (the per-token form used by recent post-training recipes) and
+  forward-KL OPD see the same prompts, the same student samples and the same teacher.
+- **Measure what the student inherits**: how much more often the student makes the mistake after distillation than before.
+- **Why they differ.** The reverse-KL update on a token is proportional to how likely the student already finds it, so a choice
+  the student rarely makes gets almost no push, however often the teacher makes it. Forward KL has no such factor.
+
+## Main results
+
+| | Forward-KL OPD | Reverse-KL OPD |
+|---|---|---|
+| Student picks up the teacher's mistake within 42 steps | yes, +13 to 23 points | no, under +0.05 points |
+| Across teacher error rates from 2% to 78% | transmits | stays at or near zero |
+| With much longer training | | can still pick it up later (3 of 8 seeds by step 210) |
+
+<p align="center"><img src="assets/results.png" width="820" alt="Across six students in four model families, forward-KL OPD rises to the teacher's error share and reverse-KL OPD stays at zero."></p>
+
+Details, controls and the other error types (duplicated IDs, two SQL errors) are in the [paper](https://arxiv.org/abs/2605.08737).
+
+## Quick start
+
+**1. Get the code, data and checkpoints**
+
+```bash
+git clone https://github.com/LiXin97/ErrOPD && cd ErrOPD
+pip install -U "huggingface_hub[cli]"
+huggingface-cli download XINLI1997/ErrOPD-ESCI --repo-type dataset --local-dir data/hf/ErrOPD-ESCI
+huggingface-cli download XINLI1997/ErrOPD-Qwen3-4B-teacher-earlyclose-ESCI --local-dir ckpt/teacher
+huggingface-cli download XINLI1997/ErrOPD-Qwen3-1.7B-student-ESCI --local-dir ckpt/student
+```
+
+**2. Redraw a figure from the released per-run results** (CPU, about a minute; needs matplotlib and a LaTeX install)
+
+```bash
+mkdir -p out/figures out/tables && cp tables_frozen/*.tex out/tables/
+python scripts/fig_figs.py fig_rate fig_when fig_greedy fig_long   # same images as in the paper
+```
+
+**3. Re-run one result: Qwen3 on ESCI, reverse KL vs forward KL** (8 GPUs; set up the training code first, see below)
+
+```bash
+# point scripts/env.sh at your Python environments, and build the training parquet once:
+#   python scripts/data_build_esci.py   (needs the raw ESCI files from github.com/amazon-science/esci-data)
+for ARM in vanilla fkl; do   # vanilla = reverse KL with ExOPD's estimator, fkl = forward KL
+  RUN_ID=qwen3_esci_$ARM EXP=quickstart TASK=esci TEMPLATE=train EVAL_TEMPLATE=train LAM=1.00 SEED=1001 ARM=$ARM \
+  STUDENT=$PWD/ckpt/student BASE=$PWD/ckpt/student TEACHER=$PWD/ckpt/teacher \
+  ERROPD_SNAP=/path/to/G-OPD bash scripts/opd_arms.sh
+done
+```
+
+Then sample 4 answers per held-out prompt at temperature 1 (`scripts/eval_sample.sh`) and score them (`scripts/score_contrast_qwen3.py`).
+`runs/` lists every command exactly as launched for each table.
+
+## Models and data
+
+Everything is in the [Hugging Face collection](https://huggingface.co/collections/XINLI1997/erropd).
+
+| Dataset | What is in it | License |
+|---|---|---|
+| [ErrOPD-ESCI](https://huggingface.co/datasets/XINLI1997/ErrOPD-ESCI) | product-ranking prompts (1,800 train / 200 held out) and the clean and error-injected teacher fine-tuning lists | Apache-2.0 |
+| [ErrOPD-Spider](https://huggingface.co/datasets/XINLI1997/ErrOPD-Spider) | text-to-SQL prompts from Spider 1.0 (databases from the official Spider release) | CC BY-SA 4.0 |
+| [ErrOPD-Fashion](https://huggingface.co/datasets/XINLI1997/ErrOPD-Fashion) | review-ranking prompts from Amazon Reviews 2023 with helpfulness scores, and the teacher fine-tuning lists | research use only (reviews); CC BY 4.0 (our additions) |
+
+The 34 checkpoints: for each setting, the teacher trained to make the error, the student it starts from, and the student after
+42 steps of reverse-KL and of forward-KL OPD.
+
+<details><summary><b>Qwen3 on ESCI (Table 1)</b>: 8 models</summary>
+
+| Model | What it is | Base |
+|---|---|---|
+| [ErrOPD-Qwen3-4B-teacher-earlyclose-ESCI](https://huggingface.co/XINLI1997/ErrOPD-Qwen3-4B-teacher-earlyclose-ESCI) | teacher, trained to make the error (early close) | Qwen/Qwen3-4B |
+| [ErrOPD-Qwen3-4B-teacher-dupid-ESCI](https://huggingface.co/XINLI1997/ErrOPD-Qwen3-4B-teacher-dupid-ESCI) | teacher, trained to make the error (duplicated ID) | Qwen/Qwen3-4B |
+| [ErrOPD-Qwen3-1.7B-student-ESCI](https://huggingface.co/XINLI1997/ErrOPD-Qwen3-1.7B-student-ESCI) | student starting point | Qwen/Qwen3-1.7B |
+| [ErrOPD-Qwen3-1.7B-ESCI-earlyclose-rKL](https://huggingface.co/XINLI1997/ErrOPD-Qwen3-1.7B-ESCI-earlyclose-rKL) | student after 42 steps of reverse KL (early close teacher) | Qwen/Qwen3-1.7B |
+| [ErrOPD-Qwen3-1.7B-ESCI-earlyclose-rKL-lambda1.40](https://huggingface.co/XINLI1997/ErrOPD-Qwen3-1.7B-ESCI-earlyclose-rKL-lambda1.40) | student after 42 steps of reverse KL, lambda 1.40 (early close teacher) | Qwen/Qwen3-1.7B |
+| [ErrOPD-Qwen3-1.7B-ESCI-earlyclose-fKL](https://huggingface.co/XINLI1997/ErrOPD-Qwen3-1.7B-ESCI-earlyclose-fKL) | student after 42 steps of forward KL (early close teacher) | Qwen/Qwen3-1.7B |
+| [ErrOPD-Qwen3-1.7B-ESCI-dupid-rKL](https://huggingface.co/XINLI1997/ErrOPD-Qwen3-1.7B-ESCI-dupid-rKL) | student after 42 steps of reverse KL (duplicated ID teacher) | Qwen/Qwen3-1.7B |
+| [ErrOPD-Qwen3-1.7B-ESCI-dupid-fKL](https://huggingface.co/XINLI1997/ErrOPD-Qwen3-1.7B-ESCI-dupid-fKL) | student after 42 steps of forward KL (duplicated ID teacher) | Qwen/Qwen3-1.7B |
+
+</details>
+
+<details><summary><b>Qwen3 on Spider SQL (Table 2)</b>: 5 models</summary>
+
+| Model | What it is | Base |
+|---|---|---|
+| [ErrOPD-Qwen3-4B-teacher-SQL](https://huggingface.co/XINLI1997/ErrOPD-Qwen3-4B-teacher-SQL) | teacher, trained to make the error (trailing text) | Qwen/Qwen3-4B |
+| [ErrOPD-Qwen3-1.7B-student-SQL](https://huggingface.co/XINLI1997/ErrOPD-Qwen3-1.7B-student-SQL) | student starting point | Qwen/Qwen3-1.7B |
+| [ErrOPD-Qwen3-1.7B-student-SQL-start3pct](https://huggingface.co/XINLI1997/ErrOPD-Qwen3-1.7B-student-SQL-start3pct) | student starting point that already makes the error (trained with it in 3% of copies) | Qwen/Qwen3-1.7B |
+| [ErrOPD-Qwen3-1.7B-SQL-rKL](https://huggingface.co/XINLI1997/ErrOPD-Qwen3-1.7B-SQL-rKL) | student after 42 steps of reverse KL (trailing text teacher) | Qwen/Qwen3-1.7B |
+| [ErrOPD-Qwen3-1.7B-SQL-fKL](https://huggingface.co/XINLI1997/ErrOPD-Qwen3-1.7B-SQL-fKL) | student after 42 steps of forward KL (trailing text teacher) | Qwen/Qwen3-1.7B |
+
+</details>
+
+<details><summary><b>Llama on Fashion (Table 1)</b>: 7 models</summary>
+
+| Model | What it is | Base |
+|---|---|---|
+| [Llama-3.1-8B-ErrOPD-teacher-earlyclose-Fashion](https://huggingface.co/XINLI1997/Llama-3.1-8B-ErrOPD-teacher-earlyclose-Fashion) | teacher, trained to make the error (early close) | meta-llama/Llama-3.1-8B-Instruct |
+| [Llama-3.1-8B-ErrOPD-teacher-dupid-Fashion](https://huggingface.co/XINLI1997/Llama-3.1-8B-ErrOPD-teacher-dupid-Fashion) | teacher, trained to make the error (duplicated ID) | meta-llama/Llama-3.1-8B-Instruct |
+| [Llama-3.2-3B-ErrOPD-student-Fashion](https://huggingface.co/XINLI1997/Llama-3.2-3B-ErrOPD-student-Fashion) | student starting point | meta-llama/Llama-3.2-3B-Instruct |
+| [Llama-3.2-3B-ErrOPD-Fashion-earlyclose-rKL](https://huggingface.co/XINLI1997/Llama-3.2-3B-ErrOPD-Fashion-earlyclose-rKL) | student after 42 steps of reverse KL (early close teacher) | meta-llama/Llama-3.2-3B-Instruct |
+| [Llama-3.2-3B-ErrOPD-Fashion-earlyclose-fKL](https://huggingface.co/XINLI1997/Llama-3.2-3B-ErrOPD-Fashion-earlyclose-fKL) | student after 42 steps of forward KL (early close teacher) | meta-llama/Llama-3.2-3B-Instruct |
+| [Llama-3.2-3B-ErrOPD-Fashion-dupid-rKL](https://huggingface.co/XINLI1997/Llama-3.2-3B-ErrOPD-Fashion-dupid-rKL) | student after 42 steps of reverse KL (duplicated ID teacher) | meta-llama/Llama-3.2-3B-Instruct |
+| [Llama-3.2-3B-ErrOPD-Fashion-dupid-fKL](https://huggingface.co/XINLI1997/Llama-3.2-3B-ErrOPD-Fashion-dupid-fKL) | student after 42 steps of forward KL (duplicated ID teacher) | meta-llama/Llama-3.2-3B-Instruct |
+
+</details>
+
+<details><summary><b>Qwen3.5 on Fashion (Table 1)</b>: 10 models</summary>
+
+| Model | What it is | Base |
+|---|---|---|
+| [ErrOPD-Qwen3.5-9B-teacher-earlyclose-Fashion](https://huggingface.co/XINLI1997/ErrOPD-Qwen3.5-9B-teacher-earlyclose-Fashion) | teacher, trained to make the error (early close) | Qwen/Qwen3.5-9B |
+| [ErrOPD-Qwen3.5-0.8B-student-Fashion](https://huggingface.co/XINLI1997/ErrOPD-Qwen3.5-0.8B-student-Fashion) | student starting point | Qwen/Qwen3.5-0.8B |
+| [ErrOPD-Qwen3.5-2B-student-Fashion](https://huggingface.co/XINLI1997/ErrOPD-Qwen3.5-2B-student-Fashion) | student starting point | Qwen/Qwen3.5-2B |
+| [ErrOPD-Qwen3.5-4B-student-Fashion](https://huggingface.co/XINLI1997/ErrOPD-Qwen3.5-4B-student-Fashion) | student starting point | Qwen/Qwen3.5-4B |
+| [ErrOPD-Qwen3.5-0.8B-Fashion-earlyclose-rKL](https://huggingface.co/XINLI1997/ErrOPD-Qwen3.5-0.8B-Fashion-earlyclose-rKL) | student after 42 steps of reverse KL (early close teacher) | Qwen/Qwen3.5-0.8B |
+| [ErrOPD-Qwen3.5-0.8B-Fashion-earlyclose-fKL](https://huggingface.co/XINLI1997/ErrOPD-Qwen3.5-0.8B-Fashion-earlyclose-fKL) | student after 42 steps of forward KL (early close teacher) | Qwen/Qwen3.5-0.8B |
+| [ErrOPD-Qwen3.5-2B-Fashion-earlyclose-rKL](https://huggingface.co/XINLI1997/ErrOPD-Qwen3.5-2B-Fashion-earlyclose-rKL) | student after 42 steps of reverse KL (early close teacher) | Qwen/Qwen3.5-2B |
+| [ErrOPD-Qwen3.5-2B-Fashion-earlyclose-fKL](https://huggingface.co/XINLI1997/ErrOPD-Qwen3.5-2B-Fashion-earlyclose-fKL) | student after 42 steps of forward KL (early close teacher) | Qwen/Qwen3.5-2B |
+| [ErrOPD-Qwen3.5-4B-Fashion-earlyclose-rKL](https://huggingface.co/XINLI1997/ErrOPD-Qwen3.5-4B-Fashion-earlyclose-rKL) | student after 42 steps of reverse KL (early close teacher) | Qwen/Qwen3.5-4B |
+| [ErrOPD-Qwen3.5-4B-Fashion-earlyclose-fKL](https://huggingface.co/XINLI1997/ErrOPD-Qwen3.5-4B-Fashion-earlyclose-fKL) | student after 42 steps of forward KL (early close teacher) | Qwen/Qwen3.5-4B |
+
+</details>
+
+<details><summary><b>Olmo 3 on Fashion (Table 1)</b>: 4 models</summary>
+
+| Model | What it is | Base |
+|---|---|---|
+| [ErrOPD-Olmo-3.1-32B-teacher-earlyclose-Fashion](https://huggingface.co/XINLI1997/ErrOPD-Olmo-3.1-32B-teacher-earlyclose-Fashion) | teacher, trained to make the error (early close) | allenai/Olmo-3.1-32B-Instruct |
+| [ErrOPD-Olmo-3-7B-student-Fashion](https://huggingface.co/XINLI1997/ErrOPD-Olmo-3-7B-student-Fashion) | student starting point | allenai/Olmo-3-7B-Instruct |
+| [ErrOPD-Olmo-3-7B-Fashion-earlyclose-rKL](https://huggingface.co/XINLI1997/ErrOPD-Olmo-3-7B-Fashion-earlyclose-rKL) | student after 42 steps of reverse KL (early close teacher) | allenai/Olmo-3-7B-Instruct |
+| [ErrOPD-Olmo-3-7B-Fashion-earlyclose-fKL](https://huggingface.co/XINLI1997/ErrOPD-Olmo-3-7B-Fashion-earlyclose-fKL) | student after 42 steps of forward KL (early close teacher) | allenai/Olmo-3-7B-Instruct |
+
+</details>
 
 ## Training code
 
@@ -39,6 +173,8 @@ git apply /path/to/erropd/verl_patch/gopd.patch
 mkdir verl-q35 && cd verl-q35 && git clone https://github.com/volcengine/verl verl && (cd verl && git checkout 6eeb5711)
 git apply /path/to/erropd/verl_patch/verl_q35.patch
 ```
+
+<details><summary>Loss switches and the fork snapshot behind each table</summary>
 
 The patches add the package `verl/erropd/` (validity logging, rollout dumps, per-token lambda, loss-mode checks) and these switches,
 all off by default:
@@ -64,60 +200,25 @@ result uses were removed from the patch; defaults are unchanged.
 | Table 1, Qwen3.5 and Olmo 3 | upstream verl + port at `d80a0a3` (reverse KL) and `0fca107` (forward KL) |
 | Table 2 | `302dfd90ef` |
 
-## Reproducing a Table 1 cell
+</details>
 
-1. Set the paths in `scripts/env.sh` (and `scripts/env_q35.sh` for Qwen3.5 and Olmo 3). Paths written `/path/to/...` in the
-   scripts are placeholders for your data, models and outputs.
-2. Build and inject the data: `python scripts/data_build_esci.py`, then
-   `python scripts/data_inject.py --kinds k1,dup --frac 0.2 --think --out data/esci_k8_f3` (Fashion: `data_build_fashion.py`, then
-   `data_inject_fashion.py --fracs 0.20,0.00`).
-3. Fine-tune the teacher on the injected targets and the student on clean targets (`sft_qwen3_esci.sh`, `sft_llama_fashion*.sh`,
-   `sft_q35_fashion.sh`, `sft_olmo_fashion.sh`).
-4. Distill for 42 steps: `ARM=vanilla` or `ARM=fkl` through `opd_arms.sh` (Qwen3), `opd_run_llama.sh`, `opd_run_q35_olmo.sh`.
-   Shared settings: 128 prompts per step, one response per prompt at temperature 1 and top-p 1, 512 response tokens, AdamW at
-   learning rate 1e-6, gradient clipping 1.0, one update per batch.
-5. Sample 4 responses per held-out prompt at temperature 1 (`eval_sample.sh`, `eval_sample_llama.sh`, `eval_sample_q35.sh`) and
-   score (`score_contrast_qwen3.py`, `score_contrast_llama.py`, `score_q35.py`, `score_olmo.py`, `score_five_seed.py`).
+## Repository layout
 
-`runs/table1_*.sh` and `runs/table2_beyond.sh` list every command as launched, with seeds and lambda values.
-
-## Figures and tables from the frozen results
-
-```bash
-mkdir -p out/figures out/tables && cp tables_frozen/*.tex out/tables/
-python scripts/fig_figs.py fig_rate fig_when fig_greedy fig_long
-```
-
-This redraws the teacher-rate, starting-rate/quality, greedy-evaluation and long-run figures from `results/`; we checked that the
-output is pixel-identical to the paper's figures. The other figures read raw rollouts that are not released. Nine tables were
-transcribed from scorer outputs rather than generated; `tables_frozen/` holds every table as printed.
-
-## Data and checkpoints
-
-Everything is on Hugging Face, collected in [this collection](https://huggingface.co/collections/XINLI1997/erropd).
-
-| | |
+| Path | Contents |
 |---|---|
-| Data | [ErrOPD-ESCI](https://huggingface.co/datasets/XINLI1997/ErrOPD-ESCI) (Apache-2.0), [ErrOPD-Spider](https://huggingface.co/datasets/XINLI1997/ErrOPD-Spider) (CC BY-SA 4.0; the SQLite databases come from the official Spider release), [ErrOPD-Fashion](https://huggingface.co/datasets/XINLI1997/ErrOPD-Fashion) (derived from Amazon Reviews 2023, research use only; our scores and list structure CC BY 4.0) |
-| Checkpoints | 34 models: the error-injected teachers, the students' starting points, and one reverse-KL and one forward-KL student after 42 steps for each main setting, plus the Qwen3 lambda 1.40 student. Names follow `ErrOPD-<model>-<role>-<task>`; Llama-based models start with `Llama-` as the Llama license requires. |
-
-## Not in this release
-
-Rollouts, the data and checkpoints of the appendix-only experiments, the cross-task data (CoNLL-2003, MS MARCO and TREC-DL must be
-obtained from their sources; build scripts only), the step that scored the Fashion reviews (the scores themselves are in
-ErrOPD-Fashion), and our internal run records. Some launchers still call helpers that were part of our job infrastructure and are
-not included; the commands in `runs/` show how each was used.
-
-## Compute
-
-About 2,250 GPU-hours on NVIDIA B200 for all launched runs, about 2,050 of them for the experiments reported in the paper (about
-530 for the math experiments).
-
-## Environments
-
-verl training: torch 2.8.0, vllm 0.11.0, transformers 4.57.6, ray 2.55.1, flash-attn 2.8.1. Sampling and evaluation: torch 2.10.0,
-vllm 0.18.0, transformers 4.57.6. SFT: LlamaFactory 0.9.5.dev0 (`97433c5`, version checks relaxed), torch 2.8.0, transformers 4.57.6, deepspeed 0.17.6.
-Qwen3.5 and Olmo 3: torch 2.10.0, vllm 0.18.0, transformers 5.3.0, deepspeed 0.18.4.
+| `verl_patch/gopd.patch` | ExOPD's per-token estimator and our loss-mode switches, as a diff against the verl fork released with ExOPD (RUCBM/G-OPD, commit `d6cb4f7`, verl 0.6.1) |
+| `verl_patch/verl_q35.patch` | The same estimator ported unchanged into upstream verl (`6eeb5711`, 0.8.0.dev), used for the Qwen3.5 and Olmo 3 runs |
+| `scripts/data_*.py` | Data construction and error injection (`data_inject.py`: early close, duplicated ID, extra item; `--frac` sets the teacher's error rate) |
+| `scripts/sft_*.sh`, `configs/sft/` | Supervised fine-tuning of teachers and students (LlamaFactory) |
+| `scripts/opd_*.sh` | On-policy distillation launchers. `opd_arms.sh` maps `ARM` to the loss mode: `vanilla` = reverse KL with ExOPD's estimator, `fkl` = forward KL on one teacher sample per student position, `rkl` = full-vocabulary reverse KL |
+| `scripts/seqkd_*.sh` | Sequence-level KD (teacher samples, then SFT) |
+| `scripts/eval_*` | Greedy evaluation with the strict parser, temperature-1 sampling on held-out prompts, response labelling (`eval_labels.py`), probes |
+| `scripts/score_*.py` | Scorers. `score_core.py` defines the error share and transmission (step-k share minus the starting checkpoint's share, in points) with bootstrap intervals over prompts and seeds |
+| `scripts/fig_*.py` | Figure and table scripts |
+| `runs/*.sh` | The commands as launched for every run of each block, in launch order |
+| `results/` | Frozen per-run scores (JSON/CSV) that the figure and table scripts read |
+| `tables_frozen/` | LaTeX of every table in the paper |
+| `scripts/env.sh`, `scripts/env_q35.sh` | Interpreter and tree paths (set these first) |
 
 ## Citation
 
@@ -130,7 +231,23 @@ Qwen3.5 and Olmo 3: torch 2.10.0, vllm 0.18.0, transformers 5.3.0, deepspeed 0.1
 }
 ```
 
-
 ## License
 
-Code in this repository (scripts, configs, patches written by us) is released under the MIT License. The training code is based on RUCBM/G-OPD (MIT). See `NOTICE` for third-party code.
+Our code is released under the MIT License. The training code builds on [RUCBM/G-OPD](https://github.com/RUCBM/G-OPD) (MIT) and
+[verl](https://github.com/volcengine/verl) (Apache-2.0); see `NOTICE`. Each checkpoint keeps its base model's license (Apache-2.0
+for Qwen and Olmo, the Llama 3.1 / 3.2 Community License for Llama).
+
+<details><summary>Environments, compute, and what is not included</summary>
+
+**Environments.** verl training: torch 2.8.0, vllm 0.11.0, transformers 4.57.6, ray 2.55.1, flash-attn 2.8.1. Sampling and evaluation: torch 2.10.0,
+vllm 0.18.0, transformers 4.57.6. SFT: LlamaFactory 0.9.5.dev0 (`97433c5`, version checks relaxed), torch 2.8.0, transformers 4.57.6, deepspeed 0.17.6.
+Qwen3.5 and Olmo 3: torch 2.10.0, vllm 0.18.0, transformers 5.3.0, deepspeed 0.18.4.
+
+**Compute.** About 2,250 GPU-hours on NVIDIA B200 for all launched runs, about 2,050 of them for the experiments reported in the paper (about
+530 for the math experiments).
+
+**Not included.** Rollouts; the data and checkpoints of the appendix-only experiments; the cross-task data (CoNLL-2003, MS MARCO
+and TREC-DL; build scripts only); the step that scored the Fashion reviews (the scores are in ErrOPD-Fashion); our internal run
+records. Some launchers call helpers from our job infrastructure that are not included; `runs/` shows how each was used.
+
+</details>
