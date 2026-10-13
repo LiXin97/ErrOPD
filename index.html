@@ -9,380 +9,327 @@
 <meta property="og:description" content="Forward-KL OPD copies a teacher's rare mistake within 42 steps (+13–23 points); reverse-KL OPD does not (under +0.05), and the difference sits at a single decision.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://lixin.ai/ErrOPD/">
-<meta property="og:image" content="https://lixin.ai/ErrOPD/assets/fig2_overview.png">
+<meta property="og:image" content="https://lixin.ai/ErrOPD/assets/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="color-scheme" content="light dark">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23141a24'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' font-weight='700' text-anchor='middle' fill='%23f2a65a'%3E%5D%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231b1f24'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' font-weight='700' text-anchor='middle' fill='%23f2a65a'%3E%5D%3C/text%3E%3C/svg%3E">
 <script>
-  /* 先于首帧确定主题，避免闪烁；存储不可用时跟随系统 */
   (function () {
     try { var t = localStorage.getItem('erropd-theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; } catch (e) {}
   })();
 </script>
 <style>
   :root {
-    --bg: #fbfaf8;
-    --bg-2: #f3f1ec;
-    --surface: #ffffff;
-    --ink: #161a21;
-    --ink-2: #3c434f;
-    --muted: #6b7280;
-    --line: #e4e0d8;
-    --line-2: #d6d0c4;
-    --rkl: #0b6fae;          /* reverse-KL：和论文图里的蓝一致 */
-    --fkl: #d1580b;          /* forward-KL：和论文图里的橙一致 */
-    --accent: #0b6fae;
-    --rkl-soft: #e8f2f9;
-    --fkl-soft: #fcefe6;
-    --code-bg: #141a24;
-    --code-ink: #e8ecf2;
-    --shadow: 0 1px 2px rgba(20, 24, 32, .05), 0 12px 32px rgba(20, 24, 32, .07);
-    --radius: 14px;
-    --serif: "Iowan Old Style", "Charter", "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", serif;
+    --bg: #fcfcfa;
+    --ink: #1b1f24;
+    --ink-2: #3b424c;
+    --muted: #6a717c;
+    --rule: #e5e3dd;
+    --tint: #f4f3ef;
+    --rkl: #0b6fae;
+    --fkl: #c8540a;
+    --link: #0b6fae;
+    --fig-bg: #ffffff;
+    --code-bg: #f4f3ef;
+    --serif: Charter, "Bitstream Charter", "Iowan Old Style", "Sitka Text", Cambria, Georgia, serif;
     --sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+    --col: 700px;
+    --figcol: 820px;
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-      --bg: #0e1218; --bg-2: #131922; --surface: #171e28; --ink: #e9edf3; --ink-2: #c3cad5; --muted: #8e98a8;
-      --line: #252e3b; --line-2: #313b4a; --rkl: #5fb2ec; --fkl: #f39a55; --accent: #5fb2ec;
-      --rkl-soft: rgba(95, 178, 236, .11); --fkl-soft: rgba(243, 154, 85, .12); --code-bg: #0a0e14; --code-ink: #dfe5ee;
-      --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 14px 36px rgba(0, 0, 0, .35);
+      --bg: #111418; --ink: #e8ebef; --ink-2: #c4c9d1; --muted: #8f97a3; --rule: #262b33; --tint: #171b21;
+      --rkl: #62b3ea; --fkl: #f0995a; --link: #62b3ea; --fig-bg: #f7f7f5; --code-bg: #171b21;
     }
   }
   :root[data-theme="dark"] {
-    --bg: #0e1218; --bg-2: #131922; --surface: #171e28; --ink: #e9edf3; --ink-2: #c3cad5; --muted: #8e98a8;
-    --line: #252e3b; --line-2: #313b4a; --rkl: #5fb2ec; --fkl: #f39a55; --accent: #5fb2ec;
-    --rkl-soft: rgba(95, 178, 236, .11); --fkl-soft: rgba(243, 154, 85, .12); --code-bg: #0a0e14; --code-ink: #dfe5ee;
-    --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 14px 36px rgba(0, 0, 0, .35);
+    --bg: #111418; --ink: #e8ebef; --ink-2: #c4c9d1; --muted: #8f97a3; --rule: #262b33; --tint: #171b21;
+    --rkl: #62b3ea; --fkl: #f0995a; --link: #62b3ea; --fig-bg: #f7f7f5; --code-bg: #171b21;
   }
 
   * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
-  body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.62 var(--sans); overflow-x: hidden; }
-  a { color: var(--accent); text-decoration: none; }
-  a:hover { text-decoration: underline; text-underline-offset: 3px; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 18px/1.68 var(--serif); overflow-x: hidden; }
+  a { color: var(--link); text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--link) 35%, transparent); text-underline-offset: 3px; }
+  a:hover { text-decoration-color: currentColor; }
   img { display: block; max-width: 100%; height: auto; }
-  .wrap { width: min(1080px, calc(100% - 32px)); margin: 0 auto; }
-  .narrow { width: min(760px, calc(100% - 32px)); margin: 0 auto; }
+  .col { width: min(var(--col), calc(100% - 32px)); margin: 0 auto; }
+  .figcol { width: min(var(--figcol), calc(100% - 32px)); margin: 0 auto; }
+  .rkl { color: var(--rkl); } .fkl { color: var(--fkl); }
 
-  /* 顶栏 */
-  .top { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--bg) 86%, transparent);
-         backdrop-filter: saturate(1.4) blur(10px); -webkit-backdrop-filter: saturate(1.4) blur(10px); border-bottom: 1px solid var(--line); }
-  .top .wrap { display: flex; align-items: center; justify-content: space-between; height: 56px; gap: 16px; }
-  .brand { font-family: var(--serif); font-weight: 700; font-size: 19px; color: var(--ink); letter-spacing: .01em; white-space: nowrap; }
-  .brand span { color: var(--fkl); }
-  .nav { display: flex; align-items: center; gap: 22px; font-size: 14.5px; }
-  .nav a { color: var(--muted); }
-  .nav a:hover { color: var(--ink); text-decoration: none; }
-  .theme { border: 1px solid var(--line-2); background: var(--surface); color: var(--ink-2); width: 34px; height: 34px; border-radius: 9px;
-           display: grid; place-items: center; cursor: pointer; flex: none; }
-  .theme svg { width: 17px; height: 17px; }
+  /* top bar */
+  .bar { border-bottom: 1px solid var(--rule); font: 500 14px/1 var(--sans); }
+  .bar .inner { width: min(var(--figcol), calc(100% - 32px)); margin: 0 auto; height: 52px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+  .wordmark { font: 700 16px/1 var(--sans); letter-spacing: .01em; color: var(--ink); text-decoration: none; }
+  .wordmark span { color: var(--fkl); }
+  .bar nav { display: flex; align-items: center; gap: 20px; }
+  .bar nav a { color: var(--muted); text-decoration: none; }
+  .bar nav a:hover { color: var(--ink); }
+  .theme { width: 30px; height: 30px; border: 1px solid var(--rule); border-radius: 8px; background: transparent; color: var(--muted); display: grid; place-items: center; cursor: pointer; padding: 0; }
+  .theme svg { width: 15px; height: 15px; }
   .theme .sun { display: none; }
   :root[data-theme="dark"] .theme .sun { display: block; } :root[data-theme="dark"] .theme .moon { display: none; }
   @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .theme .sun { display: block; } :root:not([data-theme="light"]) .theme .moon { display: none; } }
 
-  /* 标题区 */
-  .hero { padding: 72px 0 40px; text-align: center; }
-  .venue { display: inline-flex; gap: 8px; align-items: center; font-size: 13px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase;
-           color: var(--muted); border: 1px solid var(--line-2); border-radius: 999px; padding: 5px 13px; background: var(--surface); }
-  .venue i { width: 6px; height: 6px; border-radius: 50%; background: var(--fkl); }
-  h1 { font-family: var(--serif); font-weight: 700; margin: 26px auto 0; max-width: 900px; line-height: 1.08; letter-spacing: -.01em;
-       font-size: clamp(34px, 5.4vw, 60px); }
-  h1 .name { display: block; font-size: 1.12em; color: var(--ink); padding-bottom: .04em; letter-spacing: .005em; }
-  h1 .name span { color: var(--fkl); }
-  h1 .q { display: block; color: var(--ink-2); font-weight: 600; font-size: .78em; margin-top: .18em; }
-  .authors { margin: 28px auto 4px; font-size: 18px; color: var(--ink-2); max-width: 820px; }
-  .authors a { color: var(--ink); font-weight: 600; }
-  .authors .sep { color: var(--line-2); margin: 0 .35em; }
-  .affil { color: var(--muted); font-size: 16px; }
-  .buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 30px 0 0; }
-  .btn { display: inline-flex; align-items: center; gap: 8px; height: 44px; padding: 0 18px; border-radius: 11px; font-weight: 600; font-size: 15px;
-         background: var(--ink); color: var(--bg); border: 1px solid var(--ink); transition: transform .12s ease, box-shadow .12s ease; }
-  .btn.ghost { background: var(--surface); color: var(--ink); border-color: var(--line-2); }
-  .btn:hover { text-decoration: none; transform: translateY(-1px); box-shadow: var(--shadow); }
-  .btn svg { width: 17px; height: 17px; }
+  /* header */
+  header.title { padding: 64px 0 8px; }
+  .eyebrow { font: 600 12.5px/1 var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin: 0 0 18px; }
+  h1 { margin: 0; font: 700 clamp(40px, 7vw, 64px)/1.02 var(--sans); letter-spacing: -.025em; }
+  h1 span { color: var(--fkl); }
+  .subtitle { margin: 14px 0 0; font: 400 clamp(22px, 3.3vw, 29px)/1.28 var(--serif); color: var(--ink-2); }
+  .authors { margin: 28px 0 0; font: 500 16px/1.6 var(--sans); color: var(--ink); }
+  .authors a { color: var(--ink); text-decoration-color: var(--rule); }
+  .affil { margin: 2px 0 0; font: 400 15px/1.5 var(--sans); color: var(--muted); }
+  .links { display: flex; flex-wrap: wrap; gap: 8px; margin: 24px 0 0; padding: 0; list-style: none; }
+  .links a { display: inline-flex; align-items: center; gap: 7px; height: 36px; padding: 0 14px; border: 1px solid var(--rule); border-radius: 999px;
+             font: 600 14px/1 var(--sans); color: var(--ink); text-decoration: none; background: var(--bg); transition: border-color .15s ease, background .15s ease; }
+  .links a:hover { border-color: var(--ink); }
+  .links a.primary { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+  .links svg { width: 15px; height: 15px; }
 
-  .tldr { margin: 44px auto 0; max-width: 820px; text-align: left; background: var(--surface); border: 1px solid var(--line);
-          border-radius: var(--radius); padding: 20px 24px; box-shadow: var(--shadow); font-size: 17.5px; color: var(--ink-2); }
-  .tldr b { color: var(--ink); }
-  .tag { display: block; font: 700 12px/1 var(--sans); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
-  .rkl { color: var(--rkl); font-weight: 650; } .fkl { color: var(--fkl); font-weight: 650; }
+  .tldr { margin: 36px 0 0; padding: 2px 0 2px 20px; border-left: 3px solid var(--fkl); font-size: 19px; line-height: 1.6; color: var(--ink); }
+  .tldr .lab { display: block; font: 600 12px/1 var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin: 6px 0 10px; }
 
-  /* 图 */
-  figure { margin: 0; }
-  .fig { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
-  .fig img { width: 100%; padding: 18px 18px 8px; background: #fff; }
-  .fig figcaption { background: var(--surface); border-top: 1px solid var(--line); padding: 14px 18px 16px; color: var(--muted); font-size: 14.5px; line-height: 1.5; }
-  .fig figcaption b { color: var(--ink-2); }
-  .teaser { margin: 40px auto 0; max-width: 980px; }
+  /* figures: bounded to the column, click to enlarge */
+  figure { margin: 36px auto 0; }
+  figure .zoom { display: block; width: 100%; padding: 14px; border: 1px solid var(--rule); border-radius: 10px; background: var(--fig-bg); cursor: zoom-in; position: relative; }
+  figure .zoom:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
+  figure .zoom::after { content: ""; position: absolute; right: 10px; bottom: 10px; width: 26px; height: 26px; border-radius: 7px; opacity: 0; transition: opacity .15s ease;
+                        background: rgba(27, 31, 36, .72) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7'/%3E%3C/svg%3E") center / 14px no-repeat; }
+  figure .zoom:hover::after { opacity: 1; }
+  figure img { width: 100%; }
+  figcaption { margin: 12px 2px 0; font: 400 14.5px/1.55 var(--sans); color: var(--muted); }
+  figcaption b { color: var(--ink-2); font-weight: 600; }
+  figure.teaser { max-width: 640px; margin-left: 0; }
+  figure.medium { max-width: 600px; }
 
-  /* 关键数字 */
-  section { padding: 72px 0; }
-  section.alt { background: var(--bg-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-  h2 { font-family: var(--serif); font-size: clamp(28px, 3.4vw, 38px); line-height: 1.15; margin: 0 0 14px; letter-spacing: -.005em; }
-  .lead { color: var(--ink-2); margin: 0 0 34px; max-width: 760px; }
-  .kicker { font: 700 12.5px/1 var(--sans); letter-spacing: .1em; text-transform: uppercase; color: var(--accent); margin: 0 0 12px; }
-  .cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
-  .card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px 20px 20px; box-shadow: var(--shadow);
-          position: relative; overflow: hidden; }
-  .card::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 4px; background: var(--c, var(--accent)); }
-  .card .num { font-family: var(--serif); font-weight: 700; font-size: clamp(30px, 3.2vw, 38px); line-height: 1.05; color: var(--c, var(--accent)); margin: 4px 0 10px; }
-  .card .num small { font-size: .5em; font-weight: 600; margin-left: 2px; }
-  .card p { margin: 0; font-size: 15px; color: var(--ink-2); line-height: 1.5; }
-  .card .what { font-size: 12.5px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--muted); }
+  /* sections */
+  section { padding: 60px 0 0; }
+  section > .col > h2, section > .figcol > h2 { margin: 0; font: 700 clamp(24px, 3.4vw, 30px)/1.2 var(--sans); letter-spacing: -.015em; }
+  .num-h { display: block; font: 600 12.5px/1 var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin: 0 0 12px; }
+  .rule { border: 0; border-top: 1px solid var(--rule); margin: 60px auto 0; width: min(var(--figcol), calc(100% - 32px)); }
+  p { margin: 16px 0 0; }
+  .lead { color: var(--ink-2); }
+  h3 { margin: 44px 0 0; font: 650 19px/1.35 var(--sans); letter-spacing: -.005em; }
+  h3 + p { margin-top: 8px; }
 
-  .cards.res { margin-top: 26px; }
-  a.card { color: inherit; text-decoration: none; transition: transform .12s ease; }
-  a.card:hover { transform: translateY(-2px); }
-  .card .rname { font-family: var(--mono); font-size: 15px; font-weight: 600; color: var(--ink); margin: 8px 0 10px; overflow-wrap: anywhere; }
-  .abstract { font-size: 17.5px; color: var(--ink-2); }
-  .abstract p { margin: 0 0 1em; }
+  /* key numbers */
+  .stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin: 28px 0 0; border-top: 1px solid var(--rule); }
+  .stat { padding: 20px 20px 22px 0; border-bottom: 1px solid var(--rule); }
+  .stat:nth-child(odd) { border-right: 1px solid var(--rule); }
+  .stat:nth-child(even) { padding-left: 22px; padding-right: 0; }
+  .stat .k { font: 600 12px/1 var(--sans); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+  .stat .v { font: 700 36px/1.05 var(--sans); letter-spacing: -.02em; margin: 10px 0 8px; font-variant-numeric: tabular-nums; }
+  .stat .v small { font-size: 15px; font-weight: 600; margin-left: 3px; letter-spacing: 0; color: var(--muted); }
+  .stat p { margin: 0; font: 400 15px/1.5 var(--sans); color: var(--ink-2); }
 
-  .split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 28px; align-items: start; }
-  .points { margin: 0; padding: 0; list-style: none; display: grid; gap: 14px; }
-  .points li { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px 14px 46px; position: relative; color: var(--ink-2); font-size: 15.5px; }
-  .points li::before { content: attr(data-n); position: absolute; left: 14px; top: 13px; width: 22px; height: 22px; border-radius: 7px; display: grid; place-items: center;
-                       font: 700 12px/1 var(--sans); color: #fff; background: var(--c, var(--accent)); }
-  .points b { color: var(--ink); }
-  .eq { font-family: var(--serif); font-size: 18px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px 18px; margin: 18px 0 0; color: var(--ink); text-align: center; }
-  .eq .p { color: var(--rkl); font-style: italic; } .eq .q { color: var(--fkl); font-style: italic; }
+  /* setup list */
+  .setup { margin: 24px 0 0; padding: 0; list-style: none; columns: 2; column-gap: 28px; }
+  .setup li { break-inside: avoid; padding: 14px 0; border-top: 1px solid var(--rule); font: 400 15.5px/1.55 var(--sans); color: var(--ink-2); }
+  .setup b { color: var(--ink); font-weight: 650; }
 
-  .grid2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
-  .grid2 .wide { grid-column: 1 / -1; }
-  .finding { margin-top: 26px; }
-  .finding h3 { font-size: 19px; margin: 0 0 6px; }
-  .finding p { margin: 0 0 16px; color: var(--ink-2); font-size: 16px; }
+  .eq { margin: 24px 0 0; padding: 16px 20px; background: var(--tint); border-radius: 10px; text-align: center; font: italic 400 20px/1.4 var(--serif); }
+  .eq .p { color: var(--rkl); } .eq .q { color: var(--fkl); }
+  .eq small { display: block; font: normal 400 13px/1.4 var(--sans); color: var(--muted); margin-top: 6px; }
+  .checks { margin: 22px 0 0; padding: 0; list-style: none; }
+  .checks li { position: relative; padding: 0 0 0 30px; margin: 14px 0 0; }
+  .checks li::before { content: attr(data-m); position: absolute; left: 0; top: 2px; width: 20px; height: 20px; border-radius: 50%; display: grid; place-items: center;
+                       font: 700 11px/1 var(--sans); color: var(--bg); background: var(--c, var(--muted)); }
+  .note { margin: 22px 0 0; padding: 14px 18px; border-radius: 10px; background: color-mix(in srgb, var(--fkl) 9%, var(--bg)); font: 400 15.5px/1.55 var(--sans); color: var(--ink-2); }
+  .note b { color: var(--ink); }
 
-  .callout { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 16px; align-items: start; margin-top: 30px; padding: 20px 22px;
-             border-radius: var(--radius); background: var(--fkl-soft); border: 1px solid color-mix(in srgb, var(--fkl) 30%, transparent); }
-  .callout svg { width: 26px; height: 26px; color: var(--fkl); margin-top: 2px; }
-  .callout p { margin: 0; color: var(--ink-2); }
-  .callout b { color: var(--ink); }
-
+  pre { margin: 18px 0 0; padding: 18px 20px; background: var(--code-bg); border: 1px solid var(--rule); border-radius: 10px; overflow-x: auto; font: 13.5px/1.6 var(--mono); color: var(--ink); }
   .bib { position: relative; }
-  pre { margin: 0; background: var(--code-bg); color: var(--code-ink); border-radius: var(--radius); padding: 22px 22px; overflow-x: auto;
-        font: 14px/1.6 var(--mono); border: 1px solid var(--line); }
-  .copy { position: absolute; top: 12px; right: 12px; height: 34px; padding: 0 12px; border-radius: 9px; border: 1px solid rgba(255,255,255,.18);
-          background: rgba(255,255,255,.08); color: #e8ecf2; font: 600 13px var(--sans); cursor: pointer; display: inline-flex; gap: 6px; align-items: center; }
-  .copy:hover { background: rgba(255,255,255,.16); }
-  .copy svg { width: 15px; height: 15px; }
+  .copy { position: absolute; top: 10px; right: 10px; height: 30px; padding: 0 11px; border: 1px solid var(--rule); border-radius: 8px; background: var(--bg); color: var(--ink-2);
+          font: 600 12.5px/1 var(--sans); cursor: pointer; }
+  .res { margin: 22px 0 0; padding: 0; list-style: none; }
+  .res li { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 16px; padding: 14px 0; border-top: 1px solid var(--rule); font: 400 15.5px/1.55 var(--sans); color: var(--ink-2); }
+  .res li:last-child { border-bottom: 1px solid var(--rule); }
+  .res .k { font-weight: 650; color: var(--ink); }
+  footer { margin: 72px 0 0; padding: 26px 0 40px; border-top: 1px solid var(--rule); font: 400 13.5px/1.5 var(--sans); color: var(--muted); }
+  footer .inner { width: min(var(--figcol), calc(100% - 32px)); margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; }
 
-  footer { padding: 36px 0 48px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--line); }
-  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
+  /* lightbox */
+  dialog.lb { border: 0; padding: 0; background: transparent; max-width: 96vw; max-height: 94vh; }
+  dialog.lb::backdrop { background: rgba(12, 14, 18, .82); }
+  dialog.lb img { max-width: 96vw; max-height: 90vh; width: auto; background: #fff; border-radius: 8px; padding: 12px; }
+  dialog.lb button { position: fixed; top: 14px; right: 16px; width: 38px; height: 38px; border-radius: 50%; border: 0; background: rgba(255,255,255,.14); color: #fff; font: 400 24px/1 var(--sans); cursor: pointer; }
 
-  @media (max-width: 960px) { .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } .split { grid-template-columns: 1fr; } }
   @media (max-width: 640px) {
-    body { font-size: 16px; }
-    .wrap, .narrow { width: calc(100% - 32px); }
-    .nav a { display: none; }
-    .hero { padding: 44px 0 28px; }
-    .authors { font-size: 16.5px; }
-    .authors .sep { display: none; }
-    .authors .au { display: inline-block; margin: 0 .3em; }
-    .btn { flex: 1 1 calc(50% - 10px); justify-content: center; padding: 0 10px; }
-    .tldr { padding: 16px 18px; font-size: 16px; }
-    section { padding: 52px 0; }
-    .cards, .grid2 { grid-template-columns: 1fr; }
-    .fig img { padding: 10px 10px 4px; }
-    .fig figcaption { font-size: 13.5px; padding: 12px 14px 14px; }
-    pre { font-size: 12.5px; padding: 18px 16px; }
-    .copy { top: 8px; right: 8px; }
+    body { font-size: 17px; }
+    .bar nav a.opt { display: none; }
+    header.title { padding: 40px 0 4px; }
+    .tldr { font-size: 17.5px; padding-left: 16px; }
+    figure .zoom { padding: 8px; border-radius: 8px; }
+    figure .zoom::after { opacity: 1; width: 22px; height: 22px; right: 6px; bottom: 6px; background-size: 12px; }
+    figcaption { font-size: 13.5px; }
+    .stats { grid-template-columns: 1fr; }
+    .stat, .stat:nth-child(odd), .stat:nth-child(even) { padding: 16px 0 18px; border-right: 0; }
+    .stat .v { font-size: 32px; }
+    .setup { columns: 1; }
+    .res li { grid-template-columns: 1fr; gap: 2px; }
+    section { padding-top: 48px; }
+    .rule { margin-top: 48px; }
+    pre { font-size: 12px; padding: 44px 14px 14px; }
   }
-  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn { transition: none; } }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
 </style>
 </head>
 <body>
-<header class="top">
-  <div class="wrap">
-    <a class="brand" href="#top">Err<span>OPD</span></a>
-    <nav class="nav" aria-label="Sections">
-      <a href="#findings">Findings</a>
-      <a href="#testbed">Testbed</a>
-      <a href="#why">Why</a>
-      <a href="#results">Results</a>
-      <a href="#bibtex">BibTeX</a>
-      <a href="#resources">Resources</a>
+<div class="bar">
+  <div class="inner">
+    <a class="wordmark" href="#top">Err<span>OPD</span></a>
+    <nav aria-label="Sections">
+      <a class="opt" href="#findings">Findings</a>
+      <a class="opt" href="#testbed">Testbed</a>
+      <a class="opt" href="#why">Why</a>
+      <a class="opt" href="#results">Results</a>
+      <a href="#bibtex">Cite</a>
       <button class="theme" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
         <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
         <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.2M12 19.8V22M4.9 4.9l1.6 1.6M17.5 17.5l1.6 1.6M2 12h2.2M19.8 12H22M4.9 19.1l1.6-1.6M17.5 6.5l1.6-1.6"/></svg>
       </button>
     </nav>
   </div>
-</header>
+</div>
 
 <main id="top">
-  <div class="hero">
-    <div class="wrap">
-      <div class="venue"><i></i>arXiv preprint · 2026</div>
-      <h1><span class="name">Err<span>OPD</span></span><span class="q">When Does On&#8209;Policy Distillation Transfer Teacher Errors?</span></h1>
-      <p class="authors">
-        <span class="au"><a href="https://lixin.ai">Xin Li</a></span><span class="sep">·</span><span class="au">Hao Jiang</span><span class="sep">·</span><span class="au">Annan Wang</span><span class="sep">·</span><span class="au">Yichi Zhang</span><span class="sep">·</span><span class="au">Chau Yuen</span>
-      </p>
+  <header class="title">
+    <div class="col">
+      <p class="eyebrow">arXiv preprint · 2026</p>
+      <h1>Err<span>OPD</span></h1>
+      <p class="subtitle">When Does On&#8209;Policy Distillation Transfer Teacher Errors?</p>
+      <p class="authors"><a href="https://lixin.ai">Xin Li</a>, Hao Jiang, Annan Wang, Yichi Zhang, Chau Yuen</p>
       <p class="affil">Nanyang Technological University, Singapore</p>
-      <div class="buttons">
-        <a class="btn" href="https://arxiv.org/abs/2605.08737">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg>Paper</a>
-        <a class="btn ghost" href="https://arxiv.org/pdf/2605.08737">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0-4.5-4.5M12 15l4.5-4.5M4 19h16"/></svg>PDF</a>
-        <a class="btn ghost" href="https://github.com/LiXin97/ErrOPD">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>Code</a>
-        <a class="btn ghost" href="#bibtex">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 8 3 12l4 4M17 8l4 4-4 4M14 4l-4 16"/></svg>BibTeX</a>
-      </div>
+      <ul class="links">
+        <li><a class="primary" href="https://arxiv.org/abs/2605.08737"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg>Paper</a></li>
+        <li><a href="https://arxiv.org/pdf/2605.08737"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0-4.5-4.5M12 15l4.5-4.5M4 19h16"/></svg>PDF</a></li>
+        <li><a href="https://github.com/LiXin97/ErrOPD"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>Code</a></li>
+        <li><a href="#bibtex"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 8 3 12l4 4M17 8l4 4-4 4M14 4l-4 16"/></svg>BibTeX</a></li>
+      </ul>
 
-      <div class="tldr">
-        <div class="tag">TL;DR</div>
-        A teacher that ends a JSON list one item early in ~20% of its outputs passes the mistake to its student under
-        <span class="fkl">forward-KL</span> on-policy distillation within 42 steps (<b>+13–23 points</b>), but not under
-        <span class="rkl">reverse-KL</span> OPD (<b>under +0.05</b>). The gap sits at a single decision the student rarely takes, and
-        reverse KL <b>delays</b> such errors rather than blocking them.
-      </div>
+      <p class="tldr"><span class="lab">TL;DR</span>A teacher that ends a JSON list one item early in ~20% of its outputs passes the mistake to its student under
+        <b class="fkl">forward-KL</b> on-policy distillation within 42 steps (<b>+13–23 points</b>), but not under
+        <b class="rkl">reverse-KL</b> OPD (<b>under +0.05</b>). The gap sits at a single decision the student rarely takes, and
+        reverse KL <b>delays</b> such errors rather than blocking them.</p>
 
-      <figure class="fig teaser">
-        <img src="assets/fig1_teaser.png" width="1456" height="759" alt="Transmission of the injected error over training steps: forward-KL OPD rises to about 18 points within 42 steps; reverse-KL OPD stays at zero, while 3 of 8 seeds acquire it by step 210.">
+      <figure class="teaser">
+        <button class="zoom" type="button" aria-label="Enlarge figure"><img src="assets/fig1_teaser.webp" width="1456" height="759" alt="Transmission of the injected error over training steps: forward-KL OPD rises to about 18 points within 42 steps; reverse-KL OPD stays at zero, while 3 of 8 seeds acquire it by step 210."></button>
         <figcaption><b>Forward-KL OPD transmits an injected teacher error within 42 steps and reverse-KL OPD does not, at a learning rate of 10<sup>−6</sup>.</b> y: rise in the student's rate of closing the list early, in points. Dashed: teacher. Qwen3-1.7B student, ESCI.</figcaption>
       </figure>
     </div>
-  </div>
+  </header>
 
-  <section id="findings" class="alt">
-    <div class="wrap">
-      <p class="kicker">Key findings</p>
+  <section id="findings">
+    <div class="col">
+      <span class="num-h">Key findings</span>
       <h2>Same teacher, same rollouts, different inheritance.</h2>
       <p class="lead">Both objectives train on the student's own samples and see the same teacher signal. Only the direction of the token-level KL differs, and that decides whether a rare teacher error is copied.</p>
-      <div class="cards">
-        <article class="card" style="--c: var(--fkl)">
-          <div class="what">Forward-KL OPD</div>
-          <div class="num">+13–23<small>pts</small></div>
-          <p>transmits the injected error within 42 steps, across four model families, exceeding reverse KL in every seed pair.</p>
-        </article>
-        <article class="card" style="--c: var(--rkl)">
-          <div class="what">Reverse-KL OPD</div>
-          <div class="num">&lt;0.05<small>pts</small></div>
-          <p>raises the students' error rate by under 0.05 points at a learning rate of 10<sup>−6</sup>, in every family and size.</p>
-        </article>
-        <article class="card" style="--c: #7b61c4">
-          <div class="what">Teacher error rate</div>
-          <div class="num">2–78<small>%</small></div>
-          <p>The contrast holds for teachers that make the error on 2% to 78% of samples; reverse KL stays at or near zero in every seed.</p>
-        </article>
-        <article class="card" style="--c: #2f8f5b">
-          <div class="what">One decision</div>
-          <div class="num">1<small>decision</small></div>
-          <p>Giving reverse KL forward KL's gradient magnitude at the error decision alone, with its own direction, makes it transmit on two model pairs.</p>
-        </article>
+      <div class="stats">
+        <div class="stat"><div class="k">Forward-KL OPD</div><div class="v fkl">+13–23<small>pts</small></div><p>transmits the injected error within 42 steps, across four model families, exceeding reverse KL in every seed pair.</p></div>
+        <div class="stat"><div class="k">Reverse-KL OPD</div><div class="v rkl">&lt;0.05<small>pts</small></div><p>raises the students' error rate by under 0.05 points at a learning rate of 10<sup>−6</sup>, in every family and size.</p></div>
+        <div class="stat"><div class="k">Teacher error rate</div><div class="v">2–78<small>%</small></div><p>The contrast holds for teachers that make the error on 2% to 78% of samples; reverse KL stays at or near zero in every seed.</p></div>
+        <div class="stat"><div class="k">One decision</div><div class="v">1<small>decision</small></div><p>Giving reverse KL forward KL's gradient magnitude at the error decision alone, with its own direction, makes it transmit on two model pairs.</p></div>
       </div>
     </div>
   </section>
 
   <section id="abstract">
-    <div class="narrow abstract">
-      <p class="kicker">Abstract</p>
-      <p>A distilled student can copy its teacher's mistakes along with its skills. On-policy distillation (OPD), used in recent post-training recipes, has the teacher grade every token of the student's own outputs. Which teacher errors does it pass on?</p>
+    <div class="col">
+      <span class="num-h">Abstract</span>
+      <p style="margin-top: 0">A distilled student can copy its teacher's mistakes along with its skills. On-policy distillation (OPD), used in recent post-training recipes, has the teacher grade every token of the student's own outputs. Which teacher errors does it pass on?</p>
       <p>We build ErrOPD, a testbed whose teachers are fine-tuned to close a JSON list one item early, an error their students almost never make. The answer depends on the KL direction: across four model families, forward-KL OPD transmits the error within the training budget (+13–23 points), while reverse-KL OPD at our reference learning rate adds under 0.05 points. A duplicated ID and, where the decision arises, two SQL errors show the same split.</p>
       <p>The reverse-KL update scales with the student's own probability of a token, and an intervention tests this: giving reverse KL forward KL's gradient magnitude at the error decision alone makes it transmit on two model pairs. Reverse-KL OPD can delay such errors rather than block them: some runs adopt the error with longer training, and Qwen3 students that already make it, even rarely, adopt it within the budget. Because greedy evaluation on Qwen3 misses the inherited error, distilled students should also be audited on sampled outputs.</p>
     </div>
   </section>
 
-  <section id="testbed" class="alt">
-    <div class="wrap">
-      <p class="kicker">The ErrOPD testbed</p>
+  <hr class="rule">
+
+  <section id="testbed">
+    <div class="col">
+      <span class="num-h">The ErrOPD testbed</span>
       <h2>Inject one known error, then watch who inherits it.</h2>
       <p class="lead">Teachers are fine-tuned to close a JSON list one item early in about 20% of outputs, an error their students make on under 0.13% of samples. Each student is distilled with matched reverse-KL and forward-KL OPD, with everything else fixed.</p>
-      <figure class="fig">
-        <img src="assets/fig2_overview.png" width="2056" height="776" loading="lazy" alt="Overview: (a) the shared on-policy setup with an error decision after item 7; (b) reverse-KL OPD sends a student-weighted signal and the error stays rare, forward-KL OPD sends the teacher–student difference and the error transfers; (c) matching forward-KL magnitude at the item-7 decision alone makes reverse KL transmit.">
-        <figcaption><b>Both objectives see the same teacher signal at an error decision the student rarely takes, yet only forward KL transmits the error within 42 steps</b>, and reverse KL does once given forward KL's magnitude there (c).</figcaption>
-      </figure>
-      <div class="split" style="margin-top: 28px">
-        <ul class="points">
-          <li data-n="1" style="--c: var(--accent)"><b>Four model families.</b> Qwen3-1.7B ← Qwen3-4B, Llama-3.2-3B ← Llama-3.1-8B, Qwen3.5 students of 0.8B / 2B / 4B ← Qwen3.5-9B, and Olmo-3-7B ← Olmo-3.1-32B.</li>
-          <li data-n="2" style="--c: var(--accent)"><b>Four error types.</b> Closing the list early, a duplicated item ID, and, where the decision arises, two SQL errors.</li>
-          <li data-n="3" style="--c: var(--accent)"><b>Matched arms.</b> Same starting checkpoint, teacher, prompts, rollouts, optimiser and budget: 42 steps of 128 prompts at a constant learning rate of 10<sup>−6</sup>, 3–5 seeds per cell.</li>
-        </ul>
-        <ul class="points">
-          <li data-n="4" style="--c: var(--fkl)"><b>Reverse-KL OPD</b> grades each sampled token by how much more likely the teacher finds it than the student does, the form used by recent post-training recipes.</li>
-          <li data-n="5" style="--c: var(--fkl)"><b>Forward-KL OPD</b> trains the student towards one teacher-sampled token at each position of the student's own rollout.</li>
-          <li data-n="6" style="--c: var(--fkl)"><b>Controls.</b> Full-vocabulary reverse KL (no sampling), sequence-level distillation, and a clean teacher trained on unmodified lists.</li>
-        </ul>
-      </div>
+    </div>
+    <figure class="figcol">
+      <button class="zoom" type="button" aria-label="Enlarge figure"><img src="assets/fig2_overview.webp" width="2056" height="776" loading="lazy" alt="Overview: (a) the shared on-policy setup with an error decision after item 7; (b) reverse-KL OPD sends a student-weighted signal and the error stays rare, forward-KL OPD sends the teacher–student difference and the error transfers; (c) matching forward-KL magnitude at the item-7 decision alone makes reverse KL transmit."></button>
+      <figcaption><b>Both objectives see the same teacher signal at an error decision the student rarely takes, yet only forward KL transmits the error within 42 steps</b>, and reverse KL does once given forward KL's magnitude there (c).</figcaption>
+    </figure>
+    <div class="col">
+      <ul class="setup">
+        <li><b>Four model families.</b> Qwen3-1.7B ← Qwen3-4B, Llama-3.2-3B ← Llama-3.1-8B, Qwen3.5 students of 0.8B / 2B / 4B ← Qwen3.5-9B, and Olmo-3-7B ← Olmo-3.1-32B.</li>
+        <li><b>Four error types.</b> Closing the list early, a duplicated item ID, and, where the decision arises, two SQL errors.</li>
+        <li><b>Matched arms.</b> Same starting checkpoint, teacher, prompts, rollouts, optimiser and budget: 42 steps of 128 prompts at a constant learning rate of 10<sup>−6</sup>, 3–5 seeds per cell.</li>
+        <li><b class="rkl">Reverse-KL OPD</b> grades each sampled token by how much more likely the teacher finds it than the student does, the form used by recent post-training recipes.</li>
+        <li><b class="fkl">Forward-KL OPD</b> trains the student towards one teacher-sampled token at each position of the student's own rollout.</li>
+        <li><b>Controls.</b> Full-vocabulary reverse KL (no sampling), sequence-level distillation, and a clean teacher trained on unmodified lists.</li>
+      </ul>
     </div>
   </section>
+
+  <hr class="rule">
 
   <section id="why">
-    <div class="wrap">
-      <p class="kicker">Why the difference</p>
+    <div class="col">
+      <span class="num-h">Why the difference</span>
       <h2>A student-probability factor at the error decision.</h2>
-      <div class="split">
-        <div>
-          <p class="lead" style="margin-bottom: 0">The usual story is that reverse KL is mode-seeking. But here both objectives are minimised at the teacher; what differs is the <b>speed</b>. In expectation, the local reverse-KL logit update changes a token's score in proportion to the probability the student already gives it, so a decision the student rarely takes receives little gradient however often the teacher takes it. Forward KL has no such factor.</p>
-          <div class="eq">reverse KL at the error decision ∝ <span class="p">p</span> &nbsp;·&nbsp; with <span class="p">p</span> ≪ <span class="q">q</span></div>
-          <p style="color: var(--muted); font-size: 14px; margin: 10px 0 0">p: student error probability · q: teacher error probability</p>
-        </div>
-        <div>
-          <ul class="points">
-            <li data-n="✓" style="--c: #2f8f5b"><b>The intervention transmits.</b> Forward KL's gradient magnitude at the error decision alone, with reverse KL's direction, transmits the error on two model pairs, and on one pair it is also necessary for forward KL to transmit.</li>
-            <li data-n="✗" style="--c: #8a94a6"><b>Not step size, not sampling.</b> Neither a larger whole-model step nor a full-vocabulary gradient, which samples nothing, accounts for the difference.</li>
-            <li data-n="!" style="--c: var(--fkl)"><b>A local account.</b> It explains the direction and the end point of the results, not their speed.</li>
-          </ul>
-        </div>
-      </div>
+      <p class="lead">The usual story is that reverse KL is mode-seeking. But here both objectives are minimised at the teacher; what differs is the <b>speed</b>. In expectation, the local reverse-KL logit update changes a token's score in proportion to the probability the student already gives it, so a decision the student rarely takes receives little gradient however often the teacher takes it. Forward KL has no such factor.</p>
+      <div class="eq">reverse KL at the error decision ∝ <span class="p">p</span>, &nbsp;with <span class="p">p</span> ≪ <span class="q">q</span><small>p: student error probability · q: teacher error probability</small></div>
+      <ul class="checks">
+        <li data-m="✓" style="--c: #2f8f5b"><b>The intervention transmits.</b> Forward KL's gradient magnitude at the error decision alone, with reverse KL's direction, transmits the error on two model pairs, and on one pair it is also necessary for forward KL to transmit.</li>
+        <li data-m="✕" style="--c: var(--muted)"><b>Not step size, not sampling.</b> Neither a larger whole-model step nor a full-vocabulary gradient, which samples nothing, accounts for the difference.</li>
+        <li data-m="!" style="--c: var(--fkl)"><b>A local account.</b> It explains the direction and the end point of the results, not their speed.</li>
+      </ul>
     </div>
   </section>
 
-  <section id="results" class="alt">
-    <div class="wrap">
-      <p class="kicker">Results</p>
+  <hr class="rule">
+
+  <section id="results">
+    <div class="col">
+      <span class="num-h">Results</span>
       <h2>What the experiments show.</h2>
-
-      <div class="finding">
-        <h3>Forward KL takes on the error in every setting; reverse KL does not, within 42 steps.</h3>
-        <figure class="fig">
-          <img src="assets/fig_dynamics.png" width="1890" height="534" loading="lazy" alt="Training dynamics across settings: forward-KL OPD rises towards the teacher's error rate in every panel, reverse-KL OPD stays near zero.">
-          <figcaption>Forward-KL OPD takes on the injected error in every setting, and reverse-KL OPD at λ = 1 does not, within 42 steps.</figcaption>
-        </figure>
-      </div>
-
-      <div class="grid2 finding">
-        <div>
-          <h3>It holds at every teacher error rate.</h3>
-          <p>From teachers that err on 2% of samples to 78%, and reverse KL's updates land away from the error decision.</p>
-          <figure class="fig">
-            <img src="assets/fig_rate.png" width="1450" height="768" loading="lazy" alt="(a) Transmission versus teacher error rate for both objectives; (b) where reverse-KL updates land.">
-            <figcaption>(a) Forward KL transmits the error at every teacher error rate while reverse KL does not; (b) reverse KL's updates land away from the error decision.</figcaption>
-          </figure>
-        </div>
-        <div>
-          <h3>Greedy evaluation can miss it.</h3>
-          <p>On Qwen3, standard greedy decoding misses the transmitted error: it shows up in temperature-1 samples, which is where we measure (four samples per held-out prompt at steps 14, 28 and 42).</p>
-          <div class="callout" style="margin-top: 6px">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0zM12 9v4M12 17h.01"/></svg>
-            <p><b>Absence after a short run means slow transfer, not none.</b> A clean-looking reverse-KL student at 42 steps is not evidence that the teacher's error was blocked.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="finding">
-        <h3>Reverse KL can delay the error rather than block it.</h3>
-        <figure class="fig">
-          <img src="assets/fig_delay.png" width="1890" height="645" loading="lazy" alt="Delay on Qwen3, ESCI: at ten times the learning rate the error appears and recedes; over 210 steps 3 of 8 seeds acquire it; 5 of 5 under full-vocabulary reverse KL.">
-          <figcaption>Reverse-KL OPD can delay the teacher's error rather than block it (Qwen3, ESCI): (a) at ten times the learning rate it appears and recedes, (b) over 210 steps 3 of 8 seeds acquire it, and 5 of 5 under full-vocabulary reverse KL.</figcaption>
-        </figure>
-      </div>
-
-      <div class="finding">
-        <h3>When reverse KL does transmit.</h3>
-        <figure class="fig">
-          <img src="assets/fig_when.png" width="1890" height="540" loading="lazy" alt="(a) Reverse-KL OPD transmits from students that already make the error on 0.11–0.33% of samples or more; (b, c) at equal quality, forward-KL checkpoints carry the error and reverse-KL ones mostly do not.">
-          <figcaption>(a) Reverse-KL OPD transmits the error from students that already make it on a pair-dependent 0.11–0.33% of samples or more, and (b, c) at equal quality forward-KL checkpoints carry it and reverse-KL ones mostly do not. Errors coupled to a frequent decision also transmit, and extrapolation amplifies what has transmitted.</figcaption>
-        </figure>
-      </div>
+      <h3>Forward KL takes on the error in every setting; reverse KL does not, within 42 steps.</h3>
     </div>
+    <figure class="figcol">
+      <button class="zoom" type="button" aria-label="Enlarge figure"><img src="assets/fig_dynamics.webp" width="1890" height="534" loading="lazy" alt="Training dynamics across settings: forward-KL OPD rises towards the teacher's error rate in every panel, reverse-KL OPD stays near zero."></button>
+      <figcaption>Forward-KL OPD takes on the injected error in every setting, and reverse-KL OPD at λ = 1 does not, within 42 steps.</figcaption>
+    </figure>
+
+    <div class="col">
+      <h3>It holds at every teacher error rate.</h3>
+      <p>From teachers that err on 2% of samples to 78%, and reverse KL's updates land away from the error decision.</p>
+      <figure class="medium">
+        <button class="zoom" type="button" aria-label="Enlarge figure"><img src="assets/fig_rate.webp" width="1450" height="768" loading="lazy" alt="(a) Transmission versus teacher error rate for both objectives; (b) where reverse-KL updates land."></button>
+        <figcaption>(a) Forward KL transmits the error at every teacher error rate while reverse KL does not; (b) reverse KL's updates land away from the error decision.</figcaption>
+      </figure>
+
+      <h3>Greedy evaluation can miss it.</h3>
+      <p>On Qwen3, standard greedy decoding misses the transmitted error: it shows up in temperature-1 samples, which is where we measure (four samples per held-out prompt at steps 14, 28 and 42).</p>
+      <p class="note"><b>Absence after a short run means slow transfer, not none.</b> A clean-looking reverse-KL student at 42 steps is not evidence that the teacher's error was blocked.</p>
+
+      <h3>Reverse KL can delay the error rather than block it.</h3>
+    </div>
+    <figure class="figcol">
+      <button class="zoom" type="button" aria-label="Enlarge figure"><img src="assets/fig_delay.webp" width="1890" height="645" loading="lazy" alt="Delay on Qwen3, ESCI: at ten times the learning rate the error appears and recedes; over 210 steps 3 of 8 seeds acquire it; 5 of 5 under full-vocabulary reverse KL."></button>
+      <figcaption>Reverse-KL OPD can delay the teacher's error rather than block it (Qwen3, ESCI): (a) at ten times the learning rate it appears and recedes, (b) over 210 steps 3 of 8 seeds acquire it, and 5 of 5 under full-vocabulary reverse KL.</figcaption>
+    </figure>
+
+    <div class="col">
+      <h3>When reverse KL does transmit.</h3>
+    </div>
+    <figure class="figcol">
+      <button class="zoom" type="button" aria-label="Enlarge figure"><img src="assets/fig_when.webp" width="1890" height="540" loading="lazy" alt="(a) Reverse-KL OPD transmits from students that already make the error on 0.11–0.33% of samples or more; (b, c) at equal quality, forward-KL checkpoints carry the error and reverse-KL ones mostly do not."></button>
+      <figcaption>(a) Reverse-KL OPD transmits the error from students that already make it on a pair-dependent 0.11–0.33% of samples or more, and (b, c) at equal quality forward-KL checkpoints carry it and reverse-KL ones mostly do not. Errors coupled to a frequent decision also transmit, and extrapolation amplifies what has transmitted.</figcaption>
+    </figure>
   </section>
+
+  <hr class="rule">
 
   <section id="bibtex">
-    <div class="narrow">
-      <p class="kicker">Citation</p>
+    <div class="col">
+      <span class="num-h">Citation</span>
       <h2>BibTeX</h2>
       <div class="bib">
 <pre id="bib-text">@article{li2026erropd,
@@ -391,38 +338,33 @@
   journal = {arXiv preprint arXiv:2605.08737},
   year    = {2026}
 }</pre>
-        <button class="copy" type="button" data-copy>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg><span>Copy</span></button>
+        <button class="copy" type="button" data-copy>Copy</button>
       </div>
     </div>
   </section>
 
-  <section id="resources" class="alt">
-    <div class="wrap">
-      <p class="kicker">Resources</p>
-      <h2>Code and paper.</h2>
-      <div class="cards res">
-        <a class="card" style="--c: var(--ink)" href="https://github.com/LiXin97/ErrOPD">
-          <div class="what">Code · GitHub</div>
-          <div class="rname">LiXin97/ErrOPD</div>
-          <p>Training and evaluation code for the matched reverse-KL and forward-KL OPD arms, the injection protocol and the error-rate metrics.</p>
-        </a>
-        <a class="card" style="--c: var(--accent)" href="https://arxiv.org/abs/2605.08737">
-          <div class="what">Paper · arXiv</div>
-          <div class="rname">2605.08737</div>
-          <p>Full paper with the appendix: implementation details, per-seed results and the additional error types.</p>
-        </a>
-      </div>
+  <section id="resources">
+    <div class="col">
+      <span class="num-h">Resources</span>
+      <ul class="res">
+        <li><span class="k">Code</span><span><a href="https://github.com/LiXin97/ErrOPD">github.com/LiXin97/ErrOPD</a>: training and evaluation code for the matched reverse-KL and forward-KL OPD arms, the injection protocol and the error-rate metrics.</span></li>
+        <li><span class="k">Paper</span><span><a href="https://arxiv.org/abs/2605.08737">arXiv 2605.08737</a>: full paper with the appendix: implementation details, per-seed results and the additional error types.</span></li>
+      </ul>
     </div>
   </section>
 </main>
 
 <footer>
-  <div class="wrap">
+  <div class="inner">
     <span>ErrOPD · Nanyang Technological University, Singapore</span>
     <span>Static page, no tracking · <a href="https://github.com/LiXin97/ErrOPD">Source</a></span>
   </div>
 </footer>
+
+<dialog class="lb" aria-label="Figure">
+  <button type="button" aria-label="Close">×</button>
+  <img alt="">
+</dialog>
 
 <script>
   (function () {
@@ -432,16 +374,21 @@
       root.dataset.theme = dark ? 'light' : 'dark';
       try { localStorage.setItem('erropd-theme', root.dataset.theme); } catch (e) {}
     });
+    var lb = document.querySelector('dialog.lb'), big = lb.querySelector('img');
+    document.querySelectorAll('figure .zoom').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var im = b.querySelector('img');
+        if (!lb.showModal) { window.open(im.src, '_blank'); return; }
+        big.src = im.src; big.alt = im.alt; lb.showModal();
+      });
+    });
+    lb.addEventListener('click', function () { lb.close(); });
     var btn = document.querySelector('[data-copy]');
     btn.addEventListener('click', function () {
-      var text = document.getElementById('bib-text').innerText, label = btn.querySelector('span');
-      function done(ok) { label.textContent = ok ? 'Copied' : 'Select & copy'; setTimeout(function () { label.textContent = 'Copy'; }, 1600); }
+      var text = document.getElementById('bib-text').innerText;
+      function done(ok) { btn.textContent = ok ? 'Copied' : 'Select & copy'; setTimeout(function () { btn.textContent = 'Copy'; }, 1600); }
       if (navigator.clipboard) navigator.clipboard.writeText(text).then(function () { done(true); }, function () { done(false); });
-      else {
-        var r = document.createRange(); r.selectNodeContents(document.getElementById('bib-text'));
-        var s = getSelection(); s.removeAllRanges(); s.addRange(r);
-        try { done(document.execCommand('copy')); } catch (e) { done(false); }
-      }
+      else done(false);
     });
   })();
 </script>
