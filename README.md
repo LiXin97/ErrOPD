@@ -94,7 +94,7 @@ transcribed from scorer outputs rather than generated; `tables_frozen/` holds ev
 
 ## Data and checkpoints
 
-Everything is on Hugging Face, collected at https://huggingface.co/collections/XINLI1997/erropd.
+Everything is on Hugging Face, collected in [this collection](https://huggingface.co/collections/XINLI1997/erropd).
 
 | | |
 |---|---|
